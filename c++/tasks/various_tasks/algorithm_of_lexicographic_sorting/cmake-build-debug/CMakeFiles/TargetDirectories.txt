@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c++/algorithms/tasks/algorithm_of_lexicographic_sorting/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/educationalProjects/c++/algorithms/tasks/algorithm_of_lexicographic_sorting/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c++/algorithms/tasks/algorithm_of_lexicographic_sorting/cmake-build-debug/CMakeFiles/algorithm_of_lexicographic_sorting.dir

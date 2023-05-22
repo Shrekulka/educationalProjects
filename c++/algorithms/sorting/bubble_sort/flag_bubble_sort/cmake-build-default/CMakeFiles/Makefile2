@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/flag_bubble_sort
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/flag_bubble_sort.dir/clean
 CMakeFiles/flag_bubble_sort.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flag_bubble_sort.dir/build.make CMakeFiles/flag_bubble_sort.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flag_bubble_sort.dir/build.make CMakeFiles/flag_bubble_sort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default/CMakeFiles --progress-num=1,2 "Built target flag_bubble_sort"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default/CMakeFiles --progress-num=1,2 "Built target flag_bubble_sort"
 .PHONY : CMakeFiles/flag_bubble_sort.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/flag_bubble_sort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/flag_bubble_sort.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default/CMakeFiles 0
 .PHONY : CMakeFiles/flag_bubble_sort.dir/rule
 
 # Convenience name for target.

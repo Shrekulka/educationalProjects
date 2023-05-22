@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c++/working_with_dynamic_arrays/dynamic_array_copy/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/educationalProjects/c++/working_with_dynamic_arrays/dynamic_array_copy/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c++/working_with_dynamic_arrays/dynamic_array_copy/cmake-build-default/CMakeFiles/dynamic_array_copy.dir

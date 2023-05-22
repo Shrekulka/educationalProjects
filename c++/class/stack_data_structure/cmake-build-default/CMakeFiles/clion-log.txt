@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/shrekulka/educationalProjects/c++/class/stack_data_structure
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/shrekulka/educationalProjects/c++/class/stack_data_structure/cmake-build-default

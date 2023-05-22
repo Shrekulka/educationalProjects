@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/parentheses/stack_parentheses/main.cpp
+iostream
+-
+stack
+-
+

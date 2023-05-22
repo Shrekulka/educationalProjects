@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/finding_the_mode_of_a_number.dir/clean
 CMakeFiles/finding_the_mode_of_a_number.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finding_the_mode_of_a_number.dir/build.make CMakeFiles/finding_the_mode_of_a_number.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finding_the_mode_of_a_number.dir/build.make CMakeFiles/finding_the_mode_of_a_number.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target finding_the_mode_of_a_number"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target finding_the_mode_of_a_number"
 .PHONY : CMakeFiles/finding_the_mode_of_a_number.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/finding_the_mode_of_a_number.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/finding_the_mode_of_a_number.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/finding_the_mode_of_a_number.dir/rule
 
 # Convenience name for target.

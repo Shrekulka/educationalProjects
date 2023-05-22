@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/Solution283.cpp" "/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o"
-  "/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/main.cpp" "/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.o"
+  "/Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/Solution283.cpp" "/Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o"
+  "/Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/main.cpp" "/Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

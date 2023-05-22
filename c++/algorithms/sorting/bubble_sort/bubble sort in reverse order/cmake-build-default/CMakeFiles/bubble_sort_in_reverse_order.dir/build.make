@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order"
+CMAKE_SOURCE_DIR = "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default"
+CMAKE_BINARY_DIR = "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/bubble_sort_in_reverse_order.dir/depend.make
@@ -68,16 +68,16 @@ include CMakeFiles/bubble_sort_in_reverse_order.dir/flags.make
 
 CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.o: CMakeFiles/bubble_sort_in_reverse_order.dir/flags.make
 CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.o -c "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.o -c "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/main.cpp"
 
 CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/main.cpp" > CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/main.cpp" > CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.i
 
 CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/main.cpp" -o CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/main.cpp" -o CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.s
 
 # Object files for target bubble_sort_in_reverse_order
 bubble_sort_in_reverse_order_OBJECTS = \
@@ -89,7 +89,7 @@ bubble_sort_in_reverse_order_EXTERNAL_OBJECTS =
 bubble_sort_in_reverse_order: CMakeFiles/bubble_sort_in_reverse_order.dir/main.cpp.o
 bubble_sort_in_reverse_order: CMakeFiles/bubble_sort_in_reverse_order.dir/build.make
 bubble_sort_in_reverse_order: CMakeFiles/bubble_sort_in_reverse_order.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bubble_sort_in_reverse_order"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bubble_sort_in_reverse_order"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bubble_sort_in_reverse_order.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +101,6 @@ CMakeFiles/bubble_sort_in_reverse_order.dir/clean:
 .PHONY : CMakeFiles/bubble_sort_in_reverse_order.dir/clean
 
 CMakeFiles/bubble_sort_in_reverse_order.dir/depend:
-	cd "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order" "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order" "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default" "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default" "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default/CMakeFiles/bubble_sort_in_reverse_order.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order" "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order" "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default" "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default" "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-default/CMakeFiles/bubble_sort_in_reverse_order.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/bubble_sort_in_reverse_order.dir/depend
 

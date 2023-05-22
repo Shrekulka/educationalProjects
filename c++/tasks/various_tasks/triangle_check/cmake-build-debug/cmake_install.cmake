@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check
+# Install script for directory: /Users/shrekulka/educationalProjects/c++/tasks/various_tasks/triangle_check
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/triangle_check/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

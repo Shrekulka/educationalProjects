@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order"
+CMAKE_SOURCE_DIR = "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/bubble_sort_in_reverse_order.dir/clean
 CMakeFiles/bubble_sort_in_reverse_order.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubble_sort_in_reverse_order.dir/build.make CMakeFiles/bubble_sort_in_reverse_order.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubble_sort_in_reverse_order.dir/build.make CMakeFiles/bubble_sort_in_reverse_order.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target bubble_sort_in_reverse_order"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target bubble_sort_in_reverse_order"
 .PHONY : CMakeFiles/bubble_sort_in_reverse_order.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bubble_sort_in_reverse_order.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-debug/CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bubble_sort_in_reverse_order.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble sort in reverse order/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/bubble_sort_in_reverse_order.dir/rule
 
 # Convenience name for target.

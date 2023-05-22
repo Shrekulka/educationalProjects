@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default
 
 # Include any dependencies generated for this target.
 include CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/depend.make
@@ -68,29 +68,29 @@ include CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/flags.
 
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.o: CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/flags.make
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.o -c /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.o -c /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/main.cpp
 
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/main.cpp > CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/main.cpp > CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.i
 
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/main.cpp -o CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/main.cpp -o CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/main.cpp.s
 
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o: CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/flags.make
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o: ../Solution283.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o -c /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/Solution283.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o -c /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/Solution283.cpp
 
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/Solution283.cpp > CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/Solution283.cpp > CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.i
 
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/Solution283.cpp -o CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/Solution283.cpp -o CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.s
 
 # Object files for target odd_numbers_to_beginning_even_numbers_to_end_array
 odd_numbers_to_beginning_even_numbers_to_end_array_OBJECTS = \
@@ -104,7 +104,7 @@ odd_numbers_to_beginning_even_numbers_to_end_array: CMakeFiles/odd_numbers_to_be
 odd_numbers_to_beginning_even_numbers_to_end_array: CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/Solution283.cpp.o
 odd_numbers_to_beginning_even_numbers_to_end_array: CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/build.make
 odd_numbers_to_beginning_even_numbers_to_end_array: CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable odd_numbers_to_beginning_even_numbers_to_end_array"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable odd_numbers_to_beginning_even_numbers_to_end_array"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -116,6 +116,6 @@ CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/clean:
 .PHONY : CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/clean
 
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/depend:
-	cd /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/depend
 

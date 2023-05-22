@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/main.cpp" "/Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-debug/CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o"
+  "/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/main.cpp" "/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-debug/CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/class/class_singly_linked_list/List.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/class_singly_linked_list/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/class_singly_linked_list/main.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/class_singly_linked_list/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/class_singly_linked_list/pch.h
+iostream
+-
+ctime
+-
+List.h
+/Users/shrekulka/educationalProjects/c++/class/class_singly_linked_list/List.h
+

@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-default
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-default
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/clean
 CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/build.make CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/build.make CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-default/CMakeFiles --progress-num=1,2 "Built target insertion_sort_algorithm_and_execution_time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/educationalProjects/c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-default/CMakeFiles --progress-num=1,2 "Built target insertion_sort_algorithm_and_execution_time"
 .PHONY : CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-default/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-default/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-default/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-default/CMakeFiles 0
 .PHONY : CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/rule
 
 # Convenience name for target.

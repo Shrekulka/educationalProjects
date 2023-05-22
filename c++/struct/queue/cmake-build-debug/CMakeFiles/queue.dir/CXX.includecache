@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/struct/queue/main.cpp
+iostream
+-
+queue.h
+/Users/shrekulka/educationalProjects/c++/struct/queue/queue.h
+iomanip
+-
+
+/Users/shrekulka/educationalProjects/c++/struct/queue/queue.h
+

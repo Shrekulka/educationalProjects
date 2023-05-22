@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/find_the_number_of_times_the_light_is_turned_on/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+

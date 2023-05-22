@@ -1,3 +1,3 @@
-/Users/shrekulka/c++Projects/struct/students_name_and_grades/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/shrekulka/c++Projects/struct/students_name_and_grades/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/shrekulka/c++Projects/struct/students_name_and_grades/cmake-build-debug/CMakeFiles/students_name_and_grades.dir
+/Users/shrekulka/educationalProjects/c++/struct/students_name_and_grades/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/educationalProjects/c++/struct/students_name_and_grades/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c++/struct/students_name_and_grades/cmake-build-debug/CMakeFiles/students_name_and_grades.dir

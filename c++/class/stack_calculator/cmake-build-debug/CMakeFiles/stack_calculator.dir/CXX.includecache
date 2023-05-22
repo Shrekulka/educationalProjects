@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/class/stack_calculator/Stack.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/stack_calculator/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/stack_calculator/main.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/stack_calculator/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/stack_calculator/pch.h
+iostream
+-
+exception
+-
+cmath
+-
+Stack.h
+/Users/shrekulka/educationalProjects/c++/class/stack_calculator/Stack.h
+

@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/finding_the_mode_of_a_number/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

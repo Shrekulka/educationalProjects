@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/c++Projects/struct/students_name_and_grades
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/struct/students_name_and_grades
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/c++Projects/struct/students_name_and_grades/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/struct/students_name_and_grades/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/students_name_and_grades.dir/clean
 CMakeFiles/students_name_and_grades.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/students_name_and_grades.dir/build.make CMakeFiles/students_name_and_grades.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/students_name_and_grades.dir/build.make CMakeFiles/students_name_and_grades.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/c++Projects/struct/students_name_and_grades/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target students_name_and_grades"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/educationalProjects/c++/struct/students_name_and_grades/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target students_name_and_grades"
 .PHONY : CMakeFiles/students_name_and_grades.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/students_name_and_grades.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/c++Projects/struct/students_name_and_grades/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/struct/students_name_and_grades/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/students_name_and_grades.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/c++Projects/struct/students_name_and_grades/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/struct/students_name_and_grades/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/students_name_and_grades.dir/rule
 
 # Convenience name for target.

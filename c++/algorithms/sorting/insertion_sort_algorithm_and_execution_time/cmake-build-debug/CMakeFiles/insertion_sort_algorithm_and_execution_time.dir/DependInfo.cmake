@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/main.cpp" "/Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-debug/CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/main.cpp.o"
+  "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/main.cpp" "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-debug/CMakeFiles/insertion_sort_algorithm_and_execution_time.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

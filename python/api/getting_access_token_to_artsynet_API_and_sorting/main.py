@@ -69,8 +69,8 @@ Abbas Hamra
 # 1) Решение:
 
 # Ваши идентификаторы клиента (поесле регистрации на сайте вписываем свои данные)
-client_id = '8693f1d764b2f45c3c54'
-client_secret = '003de9e43ccc2a9a2833b520374a7b12'
+client_id = '...'
+client_secret = '...'
 
 # инициируем запрос на получение токена
 r = requests.post("https://api.artsy.net/api/tokens/xapp_token",
@@ -107,8 +107,8 @@ with open('artists.txt', 'r') as f, open('result.txt', 'w', encoding='utf-8') as
 # 2) Решение:
 
 # Ваши идентификаторы клиента (поесле регистрации на сайте вписываем свои данные)
-client_id = '8693f1d764b2f45c3c54'
-client_secret = '003de9e43ccc2a9a2833b520374a7b12'
+client_id = '...'
+client_secret = '...'
 
 # Инициируем запрос на получение токена
 response = requests.post("https://api.artsy.net/api/tokens/xapp_token",

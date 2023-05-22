@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shrekulka/Desktop/C++/array_Tasks/Fill_0_1_2_3_4...and..._3_2_1_0
+# Install script for directory: /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/fill_0_1_2_3_4...and..._3_2_1_0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/shrekulka/Desktop/C++/array_Tasks/Fill_0_1_2_3_4...and..._3_2_1_0/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/fill_0_1_2_3_4...and..._3_2_1_0/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

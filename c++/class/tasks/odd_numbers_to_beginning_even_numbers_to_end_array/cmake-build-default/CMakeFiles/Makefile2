@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/clean
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/build.make CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/build.make CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles --progress-num=1,2,3 "Built target odd_numbers_to_beginning_even_numbers_to_end_array"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles --progress-num=1,2,3 "Built target odd_numbers_to_beginning_even_numbers_to_end_array"
 .PHONY : CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles 0
 .PHONY : CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir/rule
 
 # Convenience name for target.

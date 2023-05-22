@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/tasks/various_tasks/triangle_check
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check/cmake-build-default
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/tasks/various_tasks/triangle_check/cmake-build-default
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/triangle_check.dir/clean
 CMakeFiles/triangle_check.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangle_check.dir/build.make CMakeFiles/triangle_check.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangle_check.dir/build.make CMakeFiles/triangle_check.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles --progress-num=1,2 "Built target triangle_check"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles --progress-num=1,2 "Built target triangle_check"
 .PHONY : CMakeFiles/triangle_check.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/triangle_check.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/triangle_check.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shrekulka/educationalProjects/c++/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles 0
 .PHONY : CMakeFiles/triangle_check.dir/rule
 
 # Convenience name for target.

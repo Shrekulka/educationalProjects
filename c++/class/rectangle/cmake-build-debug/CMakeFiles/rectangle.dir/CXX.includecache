@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/class/rectangle/Rectangle.cpp
+Rectangle.h
+/Users/shrekulka/educationalProjects/c++/class/rectangle/Rectangle.h
+
+/Users/shrekulka/educationalProjects/c++/class/rectangle/Rectangle.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/rectangle/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/rectangle/main.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/rectangle/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/rectangle/pch.h
+iostream
+-
+Rectangle.h
+/Users/shrekulka/educationalProjects/c++/class/rectangle/Rectangle.h
+

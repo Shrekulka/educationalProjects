@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort_in_forward_order/bubble_sort_from_start_to_end_of_array/main.cpp" "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort_in_forward_order/bubble_sort_from_start_to_end_of_array/cmake-build-debug/CMakeFiles/bubble_sort_from_start_to_end_of_array.dir/main.cpp.o"
+  "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble_sort_from_start_to_end_of_array/main.cpp" "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble_sort_from_start_to_end_of_array/cmake-build-debug/CMakeFiles/bubble_sort_from_start_to_end_of_array.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

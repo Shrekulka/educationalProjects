@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/Opposite.cpp
+Opposite.h
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/Opposite.h
+
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/Opposite.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/Word.cpp
+Word.h
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/Word.h
+
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/Word.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/main.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/pch.h
+iostream
+-
+map
+-
+cstring
+-
+Word.h
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/Word.h
+Opposite.h
+/Users/shrekulka/educationalProjects/c++/class/map_and_ multimap/Opposite.h
+

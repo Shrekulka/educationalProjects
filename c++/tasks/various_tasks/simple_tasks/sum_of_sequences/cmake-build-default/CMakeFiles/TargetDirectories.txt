@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/sum_of_sequences/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/sum_of_sequences/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/sum_of_sequences/cmake-build-default/CMakeFiles/sum_of_sequences.dir

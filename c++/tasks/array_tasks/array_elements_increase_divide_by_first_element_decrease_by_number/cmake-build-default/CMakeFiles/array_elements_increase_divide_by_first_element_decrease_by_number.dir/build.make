@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number
+CMAKE_SOURCE_DIR = /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default
+CMAKE_BINARY_DIR = /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default
 
 # Include any dependencies generated for this target.
 include CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/depend.make
@@ -68,16 +68,16 @@ include CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_n
 
 CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o: CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/flags.make
 CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o -c /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o -c /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/main.cpp
 
 CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/main.cpp > CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/main.cpp > CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.i
 
 CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/main.cpp -o CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/main.cpp -o CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.s
 
 # Object files for target array_elements_increase_divide_by_first_element_decrease_by_number
 array_elements_increase_divide_by_first_element_decrease_by_number_OBJECTS = \
@@ -89,7 +89,7 @@ array_elements_increase_divide_by_first_element_decrease_by_number_EXTERNAL_OBJE
 array_elements_increase_divide_by_first_element_decrease_by_number: CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/main.cpp.o
 array_elements_increase_divide_by_first_element_decrease_by_number: CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/build.make
 array_elements_increase_divide_by_first_element_decrease_by_number: CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable array_elements_increase_divide_by_first_element_decrease_by_number"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable array_elements_increase_divide_by_first_element_decrease_by_number"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +101,6 @@ CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.di
 .PHONY : CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/clean
 
 CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/depend:
-	cd /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default/CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default/CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/array_elements_increase_divide_by_first_element_decrease_by_number.dir/depend
 

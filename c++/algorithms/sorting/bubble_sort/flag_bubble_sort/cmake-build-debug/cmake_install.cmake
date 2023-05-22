@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort
+# Install script for directory: /Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/flag_bubble_sort
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

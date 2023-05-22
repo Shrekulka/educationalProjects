@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/simple_tasks/product_of_a_four-digit_number/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/simple_tasks/product_of_a_four-digit_number/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/simple_tasks/product_of_a_four-digit_number/cmake-build-debug/CMakeFiles/product_of_a_four_digit_number.dir

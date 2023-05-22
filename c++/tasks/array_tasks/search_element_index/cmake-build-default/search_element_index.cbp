@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default"/>
+				<Option working_dir="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default"/>
+				<Option working_dir="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default"/>
+				<Option working_dir="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="search_element_index">
-				<Option output="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/search_element_index" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default"/>
+				<Option output="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/search_element_index" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,15 +51,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 search_element_index"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 search_element_index"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="search_element_index/fast">
-				<Option output="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/search_element_index" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default"/>
+				<Option output="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/search_element_index" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -71,17 +71,17 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 search_element_index/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 search_element_index/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/main.cpp">
+		<Unit filename="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/main.cpp">
 			<Option target="search_element_index"/>
 		</Unit>
-		<Unit filename="/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/CMakeLists.txt">
+		<Unit filename="/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/search_element_index/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

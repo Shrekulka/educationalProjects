@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number
+# Install script for directory: /Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/shrekulka/Desktop/C++/array_Tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/array_elements_increase_divide_by_first_element_decrease_by_number/cmake-build-default/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

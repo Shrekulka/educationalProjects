@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/shrekulka/c++Projects/tasks/various_tasks/output_current_date
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/shrekulka/educationalProjects/c++/tasks/various_tasks/output_current_date
 -- The C compiler identification is AppleClang 14.0.3.14030022
 -- The CXX compiler identification is AppleClang 14.0.3.14030022
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/shrekulka/c++Projects/tasks/various_tasks/output_current_date/cmake-build-default
+-- Build files have been written to: /Users/shrekulka/educationalProjects/c++/tasks/various_tasks/output_current_date/cmake-build-default

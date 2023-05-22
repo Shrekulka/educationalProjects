@@ -192,6 +192,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+*.env
+*.env.example
+*.env.local
+*.env.staging
 
 *.DS_Store
 ._*

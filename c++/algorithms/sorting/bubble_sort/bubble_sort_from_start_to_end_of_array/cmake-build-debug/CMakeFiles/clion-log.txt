@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort_in_forward_order/bubble_sort_from_start_to_end_of_array
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble_sort_from_start_to_end_of_array
 -- The C compiler identification is AppleClang 14.0.3.14030022
 -- The CXX compiler identification is AppleClang 14.0.3.14030022
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort_in_forward_order/bubble_sort_from_start_to_end_of_array/cmake-build-debug
+-- Build files have been written to: /Users/shrekulka/educationalProjects/c++/algorithms/sorting/bubble_sort/bubble_sort_from_start_to_end_of_array/cmake-build-debug

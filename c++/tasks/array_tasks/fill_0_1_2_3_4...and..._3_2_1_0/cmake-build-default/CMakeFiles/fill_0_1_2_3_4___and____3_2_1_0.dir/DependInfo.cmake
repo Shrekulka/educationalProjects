@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/shrekulka/Desktop/C++/array_Tasks/Fill_0_1_2_3_4...and..._3_2_1_0/main.cpp" "/Users/shrekulka/Desktop/C++/array_Tasks/Fill_0_1_2_3_4...and..._3_2_1_0/cmake-build-default/CMakeFiles/fill_0_1_2_3_4___and____3_2_1_0.dir/main.cpp.o"
+  "/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/fill_0_1_2_3_4...and..._3_2_1_0/main.cpp" "/Users/shrekulka/educationalProjects/c++/tasks/array_tasks/fill_0_1_2_3_4...and..._3_2_1_0/cmake-build-default/CMakeFiles/fill_0_1_2_3_4___and____3_2_1_0.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

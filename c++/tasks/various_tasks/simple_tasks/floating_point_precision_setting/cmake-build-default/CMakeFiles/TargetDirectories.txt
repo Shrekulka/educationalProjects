@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/simple_tasks/floating_point_precision_setting/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/simple_tasks/floating_point_precision_setting/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c++/tasks/various_tasks/simple_tasks/floating_point_precision_setting/cmake-build-default/CMakeFiles/floating_point_precision_setting.dir
