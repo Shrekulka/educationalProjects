@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c112e9c6-501a-4038-821c-52bd8c9947d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/class_string.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/String.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/String.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/pch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/decorator_coffee_consol.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Additives.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Additives.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Beverage.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Beverage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/DarkMocha.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/DarkMocha.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/DarkRoast.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/DarkRoast.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Latte.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Latte.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Milk.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Milk.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Mocha.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Mocha.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Whip.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Whip.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/WhiteMocha.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/WhiteMocha.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/pch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/matrix.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/Matrix.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/Matrix.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/Row.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/Row.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/pch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/.idea/add_words_and_music.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/.idea/transcription_of_text_from_an_audio_file.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/summarization_of_texts.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/example.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/add_words_and_music.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/Kinestetika - The Ocean of Love.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/combined_audio.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/transcription_of_text_from_an_audio_file.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/data/Рингтон - Зачем мне солнце Монако.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/result.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2QYm2daovXy9pvudbd9LgS686fq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="summarization_of_texts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c112e9c6-501a-4038-821c-52bd8c9947d3" name="Changes" comment="" />
+      <created>1685538684563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685538684563</updated>
+      <workItem from="1685538697071" duration="4389000" />
+      <workItem from="1685621436401" duration="8234000" />
+      <workItem from="1685629717980" duration="67000" />
+      <workItem from="1685629838952" duration="12780000" />
+      <workItem from="1685965716277" duration="2071000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/summarization_of_texts$main.coverage" NAME="main Coverage Results" MODIFIED="1685966764003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

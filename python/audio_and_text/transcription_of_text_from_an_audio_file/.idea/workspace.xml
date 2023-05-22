@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86732e54-077c-4167-bec5-5dc8ebfcc812" name="Changes" comment="" />
+    <list default="true" id="d643b3d8-cacb-4bc3-b08e-1b5771b4b8e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectId" id="2RFFj2REvplokWcjfpe8YAdk4UJ" />
+  <component name="ProjectId" id="2QVWV1HncMQs7JUvGcR5zMwvqB3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -22,8 +24,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -33,17 +38,17 @@
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings module-name="generating_images_from_text_OpenAI_and_ChatGPT" is-module-sdk="true">
+      <console-settings module-name="transcription_of_text_from_an_audio_file" is-module-sdk="true">
         <envs>
-          <env key="API_KEY" value="**********" />
-          <env key="OPENAI_API_KEY" value="**********" />
+          <env key="CUDA_DEVICE_ORDER" value="PCI_BUS_ID" />
+          <env key="CUDA_VISIBLE_DEVICES" value="" />
         </envs>
         <option name="myUseModuleSdk" value="true" />
-        <option name="myModuleName" value="generating_images_from_text_OpenAI_and_ChatGPT" />
+        <option name="myModuleName" value="transcription_of_text_from_an_audio_file" />
         <option name="myEnvs">
           <map>
-            <entry key="API_KEY" value="**********" />
-            <entry key="OPENAI_API_KEY" value="**********" />
+            <entry key="CUDA_DEVICE_ORDER" value="PCI_BUS_ID" />
+            <entry key="CUDA_VISIBLE_DEVICES" value="" />
           </map>
         </option>
       </console-settings>
@@ -51,7 +56,7 @@
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="generating_images_from_text_OpenAI_and_ChatGPT" />
+      <module name="transcription_of_text_from_an_audio_file" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -76,17 +81,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="86732e54-077c-4167-bec5-5dc8ebfcc812" name="Changes" comment="" />
-      <created>1686838055673</created>
+      <changelist id="d643b3d8-cacb-4bc3-b08e-1b5771b4b8e7" name="Changes" comment="" />
+      <created>1685439251244</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1686838055673</updated>
-      <workItem from="1686838062875" duration="1116000" />
-      <workItem from="1686839212208" duration="5648000" />
-      <workItem from="1686919555730" duration="2079000" />
-      <workItem from="1687003544827" duration="29000" />
-      <workItem from="1687168312015" duration="7032000" />
-      <workItem from="1687186863071" duration="338000" />
+      <updated>1685439251244</updated>
+      <workItem from="1685439266331" duration="13428000" />
+      <workItem from="1685459631772" duration="773000" />
     </task>
     <servers />
   </component>
@@ -105,8 +106,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/generating_images_from_text_OpenAI_and_ChatGPT$main.coverage" NAME="main Coverage Results" MODIFIED="1687170308956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/transcription_of_text_from_an_audio_file$main.coverage" NAME="main Coverage Results" MODIFIED="1685460062851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
-
