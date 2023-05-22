@@ -1,0 +1,3 @@
+/Users/shrekulka/Desktop/C++/algorithms/sorting/quick_sort/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/Desktop/C++/algorithms/sorting/quick_sort/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/Desktop/C++/algorithms/sorting/quick_sort/cmake-build-default/CMakeFiles/quick_sort.dir

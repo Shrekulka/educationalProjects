@@ -1,0 +1,3 @@
+/Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/Desktop/C++/array_Tasks/finding_the_mode_of_a_number/cmake-build-default/CMakeFiles/finding_the_mode_of_a_number.dir

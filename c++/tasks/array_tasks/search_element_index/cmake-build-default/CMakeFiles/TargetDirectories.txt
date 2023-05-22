@@ -1,0 +1,3 @@
+/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/Desktop/C++/array_Tasks/search_element_index/cmake-build-default/CMakeFiles/search_element_index.dir

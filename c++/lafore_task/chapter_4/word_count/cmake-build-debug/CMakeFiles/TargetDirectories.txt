@@ -1,0 +1,3 @@
+/Users/shrekulka/CLionProjects/lafore_task/chapter_4/word_count/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/CLionProjects/lafore_task/chapter_4/word_count/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/CLionProjects/lafore_task/chapter_4/word_count/cmake-build-debug/CMakeFiles/word_count.dir

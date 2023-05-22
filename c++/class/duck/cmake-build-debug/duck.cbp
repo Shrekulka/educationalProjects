@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="duck"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/shrekulka/c++Projects/class/duck/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/shrekulka/c++Projects/class/duck/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/shrekulka/c++Projects/class/duck/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="duck">
+				<Option output="/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/duck" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/shrekulka/c++Projects/class/duck/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 duck"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="duck/fast">
+				<Option output="/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/duck" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/shrekulka/c++Projects/class/duck/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 duck/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/shrekulka/c++Projects/class/duck/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Duck.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Duck.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Flight.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Flight.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Flyable.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Flyable.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Hunter.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Hunter.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Lake.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Lake.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/MallardDuck.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/MallardDuck.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/MedicineDuck.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/MedicineDuck.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/NotFlight.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/NotFlight.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/NotQuack.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/NotQuack.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Quack.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Quack.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Quackable.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/Quackable.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/RedHatDuck.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/RedHatDuck.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/RubberDuck.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/RubberDuck.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/main.cpp">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/stdafx.h">
+			<Option target="duck"/>
+		</Unit>
+		<Unit filename="/Users/shrekulka/c++Projects/class/duck/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

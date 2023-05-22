@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort/flag_bubble_sort/cmake-build-default

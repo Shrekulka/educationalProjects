@@ -1,0 +1,3 @@
+/Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/c++Projects/tasks/various_tasks/triangle_check/cmake-build-default/CMakeFiles/triangle_check.dir

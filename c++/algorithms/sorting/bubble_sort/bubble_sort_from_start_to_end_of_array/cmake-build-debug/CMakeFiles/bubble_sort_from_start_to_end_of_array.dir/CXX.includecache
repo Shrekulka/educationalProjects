@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/Desktop/C++/algorithms/sorting/bubble_sort_in_forward_order/bubble_sort_from_start_to_end_of_array/main.cpp
+iostream
+-
+random
+-
+

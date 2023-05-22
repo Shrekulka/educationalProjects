@@ -1,0 +1,6 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/shrekulka/CLionProjects/lafore_task/chapter_4/4.1
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.21 or higher is required.  You are running version 3.20.2
+
+
+-- Configuring incomplete, errors occurred!

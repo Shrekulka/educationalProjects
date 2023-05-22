@@ -1,0 +1,3 @@
+/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-default/CMakeFiles/odd_numbers_to_beginning_even_numbers_to_end_array.dir

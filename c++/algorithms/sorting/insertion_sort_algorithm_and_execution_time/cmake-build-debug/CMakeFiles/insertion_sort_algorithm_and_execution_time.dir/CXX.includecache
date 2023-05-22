@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/main.cpp
+iostream
+-
+random
+-
+ctime
+-
+

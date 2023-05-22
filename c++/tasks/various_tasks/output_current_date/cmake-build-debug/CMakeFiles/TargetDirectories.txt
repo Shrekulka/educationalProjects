@@ -1,0 +1,3 @@
+/Users/shrekulka/c++Projects/tasks/various_tasks/output_current_date/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/c++Projects/tasks/various_tasks/output_current_date/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/c++Projects/tasks/various_tasks/output_current_date/cmake-build-debug/CMakeFiles/output_current_date.dir

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(array_elements_increase_divide_by_first_element_decrease_by_number)
+
+set(CMAKE_CXX_STANDARD 23)
+
+add_executable(array_elements_increase_divide_by_first_element_decrease_by_number main.cpp)

@@ -1,0 +1,3 @@
+/Users/shrekulka/CLionProjects/lafore_task/chapter_4/english_system_of_measures2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/CLionProjects/lafore_task/chapter_4/english_system_of_measures2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/CLionProjects/lafore_task/chapter_4/english_system_of_measures2/cmake-build-debug/CMakeFiles/english_system_of_measures2.dir

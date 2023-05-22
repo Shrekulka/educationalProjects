@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/shrekulka/c++Projects/class/tasks/odd_numbers_to_beginning_even_numbers_to_end_array/cmake-build-debug

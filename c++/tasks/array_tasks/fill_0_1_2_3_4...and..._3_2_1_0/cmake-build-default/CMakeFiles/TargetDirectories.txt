@@ -1,0 +1,3 @@
+/Users/shrekulka/Desktop/C++/array_Tasks/Fill_0_1_2_3_4...and..._3_2_1_0/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/Desktop/C++/array_Tasks/Fill_0_1_2_3_4...and..._3_2_1_0/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/Desktop/C++/array_Tasks/Fill_0_1_2_3_4...and..._3_2_1_0/cmake-build-default/CMakeFiles/fill_0_1_2_3_4___and____3_2_1_0.dir

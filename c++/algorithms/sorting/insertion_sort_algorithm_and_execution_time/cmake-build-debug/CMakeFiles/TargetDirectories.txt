@@ -1,0 +1,3 @@
+/Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/Desktop/C++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/cmake-build-debug/CMakeFiles/insertion_sort_algorithm_and_execution_time.dir
