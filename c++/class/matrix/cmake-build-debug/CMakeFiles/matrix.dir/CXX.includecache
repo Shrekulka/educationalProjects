@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/class/matrix/Matrix.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/matrix/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/matrix/Row.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/matrix/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/matrix/main.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/matrix/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/matrix/pch.h
+iostream
+-
+cmath
+-
+Row.h
+/Users/shrekulka/educationalProjects/c++/class/matrix/Row.h
+Matrix.h
+/Users/shrekulka/educationalProjects/c++/class/matrix/Matrix.h
+

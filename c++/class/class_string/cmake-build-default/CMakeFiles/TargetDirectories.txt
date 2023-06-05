@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c++/class/class_string/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/shrekulka/educationalProjects/c++/class/class_string/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c++/class/class_string/cmake-build-default/CMakeFiles/class_string.dir
