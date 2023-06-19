@@ -5,42 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26f47d8-aca4-4190-8563-91e31e4e11f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/convert_text_to_speech_in_python.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/data/8e3b5366018e0df16ffe45ef0cc00d18.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/data/IMG_2541.HEIC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/data/Категориальные данные.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/data/Регулярные_выражения_на_русском.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/decryption.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/encryption.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/.idea/adding_text_to_photo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/imported_photos/1649976274_3-kartinkof-club-p-zdraste-kartinki-prikolnie-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/imported_photos/1649982839_5-kartinkof-club-p-yaitsa-prikolnie-kartinki-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/imported_photos/8e3b5366018e0df16ffe45ef0cc00d18.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/imported_photos/photo_2023-04-06 14.55.29.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/text_from_image_using_tesseract.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/data/example.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/data/example.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686485986799</updated>
       <workItem from="1686485990886" duration="2514000" />
+      <workItem from="1687188019303" duration="730000" />
     </task>
     <servers />
   </component>
