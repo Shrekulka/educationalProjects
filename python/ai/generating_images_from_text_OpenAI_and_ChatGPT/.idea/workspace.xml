@@ -118,15 +118,15 @@
     <option name="myPythonConsoleState">
       <console-settings module-name="generating_images_from_text_OpenAI_and_ChatGPT" is-module-sdk="true">
         <envs>
-          <env key="API_KEY" value="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" />
-          <env key="OPENAI_API_KEY" value="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" />
+          <env key="API_KEY" value="**********" />
+          <env key="OPENAI_API_KEY" value="**********" />
         </envs>
         <option name="myUseModuleSdk" value="true" />
         <option name="myModuleName" value="generating_images_from_text_OpenAI_and_ChatGPT" />
         <option name="myEnvs">
           <map>
-            <entry key="API_KEY" value="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" />
-            <entry key="OPENAI_API_KEY" value="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" />
+            <entry key="API_KEY" value="**********" />
+            <entry key="OPENAI_API_KEY" value="**********" />
           </map>
         </option>
       </console-settings>
