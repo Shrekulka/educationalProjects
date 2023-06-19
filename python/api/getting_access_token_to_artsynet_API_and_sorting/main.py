@@ -1,6 +1,10 @@
 import requests
 import json
 import time
+import os
+from dotenv import load_dotenv
+
+
 
 """В этой задаче вам необходимо воспользоваться API сайта artsy.net
 API проекта Artsy предоставляет информацию о некоторых деятелях искусства, их работах, выставках.
@@ -65,14 +69,17 @@ Abbas Hamra
 Вы можете использовать print, или аргумент encoding функции open.
 """
 
+# Загрузка переменных среды из файла .env
+load_dotenv()
 ########################################################################################################################
 # 1) Решение:
 
 # Ваши идентификаторы клиента (поесле регистрации на сайте вписываем свои данные)
-client_id = '...'
-client_secret = '...'
+client_id = os.getenv('client_id')
+client_secret = os.getenv('client_secret')
 
 # инициируем запрос на получение токена
+print("Запрос на получение токена...")
 r = requests.post("https://api.artsy.net/api/tokens/xapp_token",
                   data={
                       "client_id": client_id,
@@ -87,6 +94,7 @@ token = j["token"]
 # создаем заголовок, содержащий наш токен
 headers = {"X-Xapp-Token": token}
 # инициируем запрос с заголовком
+print("Запрос к API Artsy...")
 r = requests.get("https://api.artsy.net/api/artists/4d8b92b34eb68a1b2c0003f4", headers=headers)
 
 # разбираем ответ сервера
@@ -95,22 +103,27 @@ res = []  # Создаем пустой список res, в котором бу
 
 # Открываем файл dataset_24476_4.txt для чтения и файл result.txt для записи с кодировкой UTF-8
 with open('artists.txt', 'r') as f, open('result.txt', 'w', encoding='utf-8') as w:
+    print("Чтение файла artists.txt и отправка запросов к API Artsy...")
     for i in f:  # Читаем файл dataset_24476_4.txt построчно
         req_str = 'https://api.artsy.net/api/artists/' + i.rstrip()  # Формируем URL для запроса к API Artsy
+        print(f"Запрос {i}: {req_str}")
         j = requests.get(req_str, headers=headers).json()  # Отправляем GET-запрос к API и получаем ответ в формате JSON
         res.append(j['birthday'] + j['sortable_name'])  # Добавляем информацию о художнике в список res
 
+    print("Сортировка и запись результатов в файл result.txt...")
     for i in sorted(res):  # Сортируем список res по возрастанию
         w.write(i[4:] + '\n')  # Записываем отсортированные имена художников в файл result.txt (без года рождения)
 
+print("Готово! Результаты записаны в файл result.txt.")
 ########################################################################################################################
 # 2) Решение:
 
-# Ваши идентификаторы клиента (поесле регистрации на сайте вписываем свои данные)
-client_id = '...'
-client_secret = '...'
+# Ваши идентификаторы клиента (после регистрации на сайте вписываем свои данные)
+client_id = os.getenv('client_id')
+client_secret = os.getenv('client_secret')
 
 # Инициируем запрос на получение токена
+print("Запрос на получение токена...")
 response = requests.post("https://api.artsy.net/api/tokens/xapp_token",
                          data={
                              "client_id": client_id,
@@ -132,6 +145,7 @@ if token is None:
 headers = {"X-Xapp-Token": token}
 
 # Читаем идентификаторы художников из файла
+print("Чтение файла artists.txt...")
 with open("artists.txt", "r") as file:
     artist_ids = file.read().splitlines()
 
@@ -139,7 +153,10 @@ with open("artists.txt", "r") as file:
 artist_info = {}
 
 # Получаем информацию о художниках
-for artist_id in artist_ids:
+print("Получение информации о художниках...")
+for i, artist_id in enumerate(artist_ids, start=1):
+    print(f"Запрос {i}: https://api.artsy.net/api/artists/{artist_id}")
+
     # Инициируем запрос с заголовком
     response = requests.get(f"https://api.artsy.net/api/artists/{artist_id}", headers=headers)
 
@@ -157,12 +174,14 @@ for artist_id in artist_ids:
     }
 
     # Делаем паузу перед отправкой следующего запроса (2 секунды)
-    time.sleep(1)
+    time.sleep(2)
 
 # Сортируем художников по возрастанию года рождения
+print("Сортировка художников...")
 sorted_artists = sorted(artist_info.values(), key=lambda x: (x["birthday"], x["name"]))
 
 # Выводим имена художников
+print("Имена художников:")
 for artist in sorted_artists:
     print(artist["name"])
 ########################################################################################################################

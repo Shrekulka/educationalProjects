@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86732e54-077c-4167-bec5-5dc8ebfcc812" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/generating_images_from_text_OpenAI_and_ChatGPT.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/convert_text_to_speech_in_python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/data/09.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/data/1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/data/2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/data/encrypted_example.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/data/example.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/data/8e3b5366018e0df16ffe45ef0cc00d18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/data/IMG_2541.HEIC" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/data/Категориальные данные.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/data/Регулярные_выражения_на_русском.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/decryption.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/encryption.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/getting_information_by_ip.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/185.195.232.170_London.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/.idea/adding_text_to_photo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/imported_photos/1649976274_3-kartinkof-club-p-zdraste-kartinki-prikolnie-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/imported_photos/1649982839_5-kartinkof-club-p-yaitsa-prikolnie-kartinki-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/imported_photos/8e3b5366018e0df16ffe45ef0cc00d18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/imported_photos/photo_2023-04-06 14.55.29.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/text_from_image_using_tesseract.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/data/example.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/data/example.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/mysql_connection.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/human_body_mass_index.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/client.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2RFFj2REvplokWcjfpe8YAdk4UJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="generating_images_from_text_OpenAI_and_ChatGPT" is-module-sdk="true">
+        <envs>
+          <env key="API_KEY" value="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" />
+          <env key="OPENAI_API_KEY" value="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" />
+        </envs>
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="generating_images_from_text_OpenAI_and_ChatGPT" />
+        <option name="myEnvs">
+          <map>
+            <entry key="API_KEY" value="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" />
+            <entry key="OPENAI_API_KEY" value="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" />
+          </map>
+        </option>
+      </console-settings>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="generating_images_from_text_OpenAI_and_ChatGPT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86732e54-077c-4167-bec5-5dc8ebfcc812" name="Changes" comment="" />
+      <created>1686838055673</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686838055673</updated>
+      <workItem from="1686838062875" duration="1116000" />
+      <workItem from="1686839212208" duration="5648000" />
+      <workItem from="1686919555730" duration="2079000" />
+      <workItem from="1687003544827" duration="29000" />
+      <workItem from="1687168312015" duration="4790000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/generating_images_from_text_OpenAI_and_ChatGPT$main.coverage" NAME="main Coverage Results" MODIFIED="1687170308956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

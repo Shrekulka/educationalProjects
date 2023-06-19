@@ -1,0 +1,68 @@
+----------- Каппа Коена ---------------------
+from sklearn.metrics import cohen_kappa_score
+
+# Пример данных для расчета каппа Коэна
+# первый массив - оценки первого наблюдателя
+# второй массив - оценки второго наблюдателя
+observed = [0, 1, 0, 1, 1, 0, 1, 1]
+expected = [1, 1, 0, 1, 1, 0, 1, 0]
+
+# Расчет каппа Коэна
+kappa = cohen_kappa_score(observed, expected)
+print("Каппа Коэна:", kappa)
+--------- Хи-квадрат тест -------------------
+from scipy.stats import chi2_contingency
+
+# Пример данных для таблицы сопряженности
+# rows - метки строк, cols - метки столбцов
+rows = ['A', 'B', 'C']
+cols = ['X', 'Y']
+observed = [[10, 20], [30, 40], [50, 60]]
+
+# Расчет теста Хи-квадрат
+chi2_stat, p_val, dof, expected = chi2_contingency(observed)
+
+print("Статистика Хи-квадрат:", chi2_stat)
+print("p-значение:", p_val)
+print("Число степеней свободы:", dof)
+print("Ожидаемые значения:", expected)
+--------- Хи-квадрат тест с поправкой Йейтса--
+-from scipy.stats import chi2_contingency
+
+# Пример данных для таблицы сопряженности
+# rows - метки строк, cols - метки столбцов
+rows = ['A', 'B']
+cols = ['X', 'Y']
+observed = [[10, 20], [30, 40]]
+
+# Расчет теста Хи-квадрат с поправкой Йейтса
+chi2_stat, p_val, dof, expected = chi2_contingency(observed, correction=True)
+
+print("Статистика Хи-квадрат:", chi2_stat)
+print("p-значение:", p_val)
+print("Число степеней свободы:", dof)
+print("Ожидаемые значения:", expected)
+------------ точный тест Фишера --------------
+from scipy.stats import fisher_exact
+
+# Пример таблицы сопряженности
+a, b, c, d = 4, 3, 2, 1
+
+# Расчет точного теста Фишера
+odds_ratio, p_value = fisher_exact([[a, b], [c, d]])
+
+print("Отношение шансов:", odds_ratio)
+print("p-значение:", p_value)
+-------- Парный тест МакНемара ---------------------------
+import numpy as np
+from statsmodels.stats.contingency_tables import mcnemar
+
+# Пример выборок
+before = np.array([0, 0, 1, 1, 1, 0, 1, 1, 0, 1])
+after = np.array([0, 0, 1, 1, 0, 1, 1, 1, 0, 1])
+
+# Расчет парного теста МакНемара
+result = mcnemar(before, after)
+
+print("Статистика:", result.statistic)
+print("p-значение:", result.pvalue)
