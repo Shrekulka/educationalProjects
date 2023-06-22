@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86732e54-077c-4167-bec5-5dc8ebfcc812" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/speech_to_text_library_speech_recognition .iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +43,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -92,6 +102,8 @@
       <workItem from="1687168312015" duration="7032000" />
       <workItem from="1687186863071" duration="338000" />
       <workItem from="1687188856279" duration="100000" />
+      <workItem from="1687271139403" duration="9000" />
+      <workItem from="1687352575250" duration="238000" />
     </task>
     <servers />
   </component>

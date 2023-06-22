@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26f47d8-aca4-4190-8563-91e31e4e11f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/speech_to_text_library_speech_recognition .iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../add_words_and_music/.idea/add_words_and_music.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../add_words_and_music/.idea/add_words_and_music.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../add_words_and_music/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../add_words_and_music/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../add_words_and_music/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../add_words_and_music/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../add_words_and_music/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../add_words_and_music/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../transcription_of_text_from_an_audio_file/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../transcription_of_text_from_an_audio_file/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../transcription_of_text_from_an_audio_file/.idea/transcription_of_text_from_an_audio_file.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../transcription_of_text_from_an_audio_file/.idea/transcription_of_text_from_an_audio_file.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../transcription_of_text_from_an_audio_file/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../transcription_of_text_from_an_audio_file/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../transcription_of_text_from_an_audio_file/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../transcription_of_text_from_an_audio_file/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +92,7 @@
       <updated>1686485986799</updated>
       <workItem from="1686485990886" duration="2514000" />
       <workItem from="1687188019303" duration="730000" />
+      <workItem from="1687353740623" duration="100000" />
     </task>
     <servers />
   </component>

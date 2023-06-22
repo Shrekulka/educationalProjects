@@ -5,43 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0b73c00-ef1f-4c09-81a2-e972ef96e922" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../c++/algorithms/reverse_algorithm/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/tasks/various_tasks/algorithm_of_lexicographic_sorting/.idea/algorithm_of_lexicographic_sorting.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/tasks/various_tasks/find_the_number_of_times_the_light_is_turned_on/.idea/find_the_number_of_times_the_light_is_turned_on.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/tasks/various_tasks/find_the_number_of_times_the_light_is_turned_on/REDME.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../XML_format/value_of_colors_of_pyramid_of_cubes_in_XML_format/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../XML_format/value_of_colors_of_pyramid_of_cubes_in_XML_format/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../XML_format/value_of_colors_of_pyramid_of_cubes_in_XML_format/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../XML_format/value_of_colors_of_pyramid_of_cubes_in_XML_format/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../XML_format/value_of_colors_of_pyramid_of_cubes_in_XML_format/.idea/value_of_colors_of_pyramid_of_cubes_in_XML_format.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../XML_format/value_of_colors_of_pyramid_of_cubes_in_XML_format/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../XML_format/value_of_colors_of_pyramid_of_cubes_in_XML_format/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../XML_format/value_of_colors_of_pyramid_of_cubes_in_XML_format/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/.idea/sum_of_the_first_five_numbers.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/.idea/еags_in_songs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/еags_in_songs/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/combined_audio.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../c++/algorithms/reverse_algorithm/cmake-build-debug/CMakeFiles/reverse_algorithm.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../c++/algorithms/reverse_algorithm/cmake-build-debug/CMakeFiles/reverse_algorithm.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../c++/algorithms/reverse_algorithm/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../c++/algorithms/reverse_algorithm/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../c++/algorithms/sorting/insertion_sort_algorithm_and_execution_time/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../class/Is_the_class_an_ancestor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/Is_the_class_an_ancestor/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/speech_to_text_library_speech_recognition .iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/add_words_and_music.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/add_words_and_music.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +86,7 @@
       <workItem from="1685186954672" duration="17000" />
       <workItem from="1685187212904" duration="29000" />
       <workItem from="1685187337018" duration="2614000" />
+      <workItem from="1687353470209" duration="76000" />
     </task>
     <servers />
   </component>

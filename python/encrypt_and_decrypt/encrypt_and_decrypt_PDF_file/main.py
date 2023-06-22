@@ -35,7 +35,8 @@ def encrypt_pdf():
         encrypted_file_name = input("Введите имя файла для сохранения (без расширения .pdf): ")
 
         # Запрос пользователя на ввод директории для сохранения файла
-        encrypted_file_directory = input("Введите директорию для сохранения файла (оставьте пустым для использования директории по умолчанию): ")
+        encrypted_file_directory = input(
+            "Введите директорию для сохранения файла (оставьте пустым для использования директории по умолчанию): ")
 
         # Проверка, если директория не указана, использовать директорию по умолчанию
         if not encrypted_file_directory:
@@ -53,7 +54,6 @@ def encrypt_pdf():
         print(Fore.GREEN + f"Создан зашифрованный файл: {encrypted_file_path}" + Style.RESET_ALL)
     except Exception as e:
         print(Fore.RED + "Произошла ошибка при шифровании:", str(e) + Style.RESET_ALL)
-
 
 
 def decrypt_pdf():
@@ -83,7 +83,8 @@ def decrypt_pdf():
             decrypted_file_name = input("Введите имя файла для сохранения (без расширения .pdf): ")
 
             # Запрос пользователя на ввод директории для сохранения файла
-            decrypted_file_directory = input("Введите директорию для сохранения файла (оставьте пустым для использования директории по умолчанию): ")
+            decrypted_file_directory = input(
+                "Введите директорию для сохранения файла (оставьте пустым для использования директории по умолчанию): ")
 
             # Проверка, если директория не указана, использовать директорию по умолчанию
             if not decrypted_file_directory:
@@ -99,7 +100,6 @@ def decrypt_pdf():
         print(Fore.RED + "Неверный пароль. Завершение." + Style.RESET_ALL)
     except Exception as e:
         print(Fore.RED + "Произошла ошибка при расшифровке:", str(e) + Style.RESET_ALL)
-
 
 
 def main():

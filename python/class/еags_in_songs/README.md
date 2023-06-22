@@ -1,3 +1,20 @@
+In programming, tags are metadata that are added to objects to describe their properties or categorisation.
+Tags can help simplify and speed up searching and sorting objects according to certain criteria.
+Let's take an example: let's say we have a website where users can publish their articles. To
+organize these articles and make them more accessible to users, we can add tags describing
+content of each article. For example, for an article about programming, we can add the tags "Python", "JavaScript", and
+"Web development." For an article about cooking, we can add tags for "recipes," "veganism," and "Italian cooking." This
+will allow users to easily find articles that match their interests.
+
+In the above code, the Song class also uses tags to categorize songs. In this case, we are adding tags
+"Americana" and "Country" to the Song object to indicate that the song belongs to the "Americana" and "Country" genres.
+
+Tags can be useful in many other areas of programming, for example to categorise items in
+or describing the content of an email in an email client.
+
+
+
+
 В программировании теги - это метаданные, которые добавляются к объектам для описания их свойств или категоризации.
 Теги могут помочь упростить и ускорить поиск и сортировку объектов по определенным критериям.
 Рассмотрим пример: допустим, у нас есть веб-сайт, на котором пользователи могут публиковать свои статьи. Чтобы

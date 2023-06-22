@@ -5,90 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c112e9c6-501a-4038-821c-52bd8c9947d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/class_string.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/String.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/String.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/class_string/pch.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/decorator_coffee_consol.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Additives.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Additives.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Beverage.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Beverage.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/DarkMocha.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/DarkMocha.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/DarkRoast.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/DarkRoast.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Latte.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Latte.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Milk.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Milk.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Mocha.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Mocha.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Whip.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/Whip.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/WhiteMocha.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/WhiteMocha.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/decorator_coffee_consol/pch.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/matrix.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/Matrix.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/Matrix.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/Row.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/Row.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../c++/class/matrix/pch.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/.idea/add_words_and_music.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/.idea/transcription_of_text_from_an_audio_file.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/summarization_of_texts.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/example.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/add_words_and_music.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/Kinestetika - The Ocean of Love.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/combined_audio.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/add_words_and_music/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/transcription_of_text_from_an_audio_file.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/data/Рингтон - Зачем мне солнце Монако.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tasks/transcription_of_text_from_an_audio_file/result.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/speech_to_text_library_speech_recognition .iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSV_JSON_text_file_formats/find_out_the_type_of_crime_that_was_recorded_the_maximum_number_of_times/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSV_JSON_text_file_formats/find_out_the_type_of_crime_that_was_recorded_the_maximum_number_of_times/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CSV_JSON_text_file_formats/find_out_the_type_of_crime_that_was_recorded_the_maximum_number_of_times/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSV_JSON_text_file_formats/find_out_the_type_of_crime_that_was_recorded_the_maximum_number_of_times/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/.idea/add_words_and_music.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/.idea/add_words_and_music.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/add_words_and_music/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/convert_text_to_speech_in_python/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/.idea/transcription_of_text_from_an_audio_file.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/.idea/transcription_of_text_from_an_audio_file.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../audio_and_text/transcription_of_text_from_an_audio_file/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/Is_the_class_an_ancestor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/Is_the_class_an_ancestor/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/MoneyBox_for_working_with_a_virtual_piggy_bank/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/MoneyBox_for_working_with_a_virtual_piggy_bank/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/analogue_of_a_money_wallet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/analogue_of_a_money_wallet/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/class_Transport/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/class_Transport/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/class_filter/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/class_filter/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/class_that_implements_an_iterator/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/class_that_implements_an_iterator/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/create_class_Newlnt_inherited_from_int/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/create_class_Newlnt_inherited_from_int/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/implementation_of_PositiveList_class/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/implementation_of_PositiveList_class/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/information_logging/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/information_logging/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/people_with_a_sweet_tooth_vegetarians_meat_lovers/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/people_with_a_sweet_tooth_vegetarians_meat_lovers/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/stack_implementation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/stack_implementation/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/sum_of_the_first_five_numbers/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/еags_in_songs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/еags_in_songs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/data/09.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/data/1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/data/2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_PDF_file/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../photo/adding_text_to_photo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../photo/adding_text_to_photo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/adding_text_to_photo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/guess_the_card_game/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../tasks/guess_the_card_game/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tasks/human_body_mass_index/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../tasks/human_body_mass_index/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +130,7 @@
       <workItem from="1685629717980" duration="67000" />
       <workItem from="1685629838952" duration="12780000" />
       <workItem from="1685965716277" duration="2071000" />
+      <workItem from="1687358279060" duration="78000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,58 @@
+Transcribing text from an audio file
+
+Various models are available in the `whisper' library for transcribing speech. Here is a brief description of each model:
+
+1. Tiny: A model with a small size, it provides basic speech recognition functionality. Although it may have 
+   limited capabilities in accuracy and coverage, it is a lightweight option for simple transcribing tasks.
+
+2. Base: A basic model for speech recognition. This model has good accuracy and extensive coverage of language 
+   data. It can be used for a wide range of transcribing tasks and provides good results.
+
+3. Small: A medium-sized model that provides a balance between accuracy and performance. It can be 
+   Small: A mid-sized model that achieves a balance between accuracy and throughput and can be used when sufficient 
+   accuracy is required but resource consumption has to be controlled.
+
+4. Medium: A medium-sized model for speech recognition with improved accuracy and coverage compared to lighter models. 
+   lighter models. This model can be useful in more demanding transcribing scenarios where high
+   accuracy of acceptable performance.
+
+5. Large: A large model with high accuracy and extensive data coverage. It offers the best results for 
+   transcribing tasks, but may require more resources to operate.
+
+When selecting a model, a balance between accuracy and performance should be considered, as well as the requirements of
+the specific transcribing task.
+
+To remove the warning 
+"transcription_of_text_from_an_audio_file/venv/lib/python3.11/site-packages/whisper/timing.py:57: NumbaDeprecationWarning: 
+The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this 
+argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/
+reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  @numba.jit"
+
+You will need to change the timing.py file in the directory .../transcription_of_text_from_an_audio_file/venv/lib/
+python3.11/site-packages/whisper/. Find the line containing the @numba.jit decorator in timing.py, and add the argument 
+nopython=True to the decorator to make it look like this:
+
+```python
+@numba.jit(nopython=True)
+def get_timing_map(...)
+```
+Save the changes to the timing.py file. After this, the warning about NumbaDeprecationWarning should no longer appear 
+when running the code.
+
+To remove the warning 
+".../transcription_of_text_from_an_audio_file/venv/lib/python3.11/site-packages/whisper/transcribe.py:114: UserWarning: 
+FP16 is not supported on CPU; using FP32 instead
+warnings.warn("FP16 is not supported on CPU; using FP32 instead")".
+
+line 
+result = speech_model.transcribe("data/Ringtones - Why Monaco Sun.mp3") 
+replace by 
+result = speech_model.transcribe("data/Rington - Why the Sun is Monaco.mp3", fp16=False)
+
+
+
+
 Транскрибация текста из аудиофайла
 
 В библиотеке `whisper` доступны различные модели для транскрибации речи. Вот краткое описание каждой модели:

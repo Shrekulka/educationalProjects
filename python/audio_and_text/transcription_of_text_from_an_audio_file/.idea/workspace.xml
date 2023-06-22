@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d643b3d8-cacb-4bc3-b08e-1b5771b4b8e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/speech_to_text_library_speech_recognition .iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../speech_to_text_library_speech_recognition /main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ai/generating_images_from_text_OpenAI_and_ChatGPT/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../api/getting_access_token_to_artsynet_API_and_sorting/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../add_words_and_music/.idea/add_words_and_music.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../add_words_and_music/.idea/add_words_and_music.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../add_words_and_music/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../add_words_and_music/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../add_words_and_music/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../add_words_and_music/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../add_words_and_music/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../add_words_and_music/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/transcription_of_text_from_an_audio_file.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/transcription_of_text_from_an_audio_file.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +109,7 @@
       <updated>1685439251244</updated>
       <workItem from="1685439266331" duration="13428000" />
       <workItem from="1685459631772" duration="773000" />
+      <workItem from="1687353556794" duration="173000" />
     </task>
     <servers />
   </component>
