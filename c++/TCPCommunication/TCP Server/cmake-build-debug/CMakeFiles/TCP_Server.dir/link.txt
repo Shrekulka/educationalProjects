@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/TCP_Server.dir/main.cpp.o CMakeFiles/TCP_Server.dir/CommandParser.cpp.o CMakeFiles/TCP_Server.dir/SimpleCommandHandler.cpp.o CMakeFiles/TCP_Server.dir/TCPServer.cpp.o -o TCP_Server 

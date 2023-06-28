@@ -6,7 +6,6 @@
 
 #ifndef DECORATORCOFFEE_CONSOL_PCH_H
 #define DECORATORCOFFEE_CONSOL_PCH_H
-
 // pch.h - это предкомпилированный заголовочный файл. Он содержит включения других заголовочных файлов, общие для всего
 // проекта.
 

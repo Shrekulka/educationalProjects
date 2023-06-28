@@ -1,0 +1,4 @@
+/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server"
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/cmake-build-debug

@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TCP_Server.dir
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCPClient/main.cpp
+iostream
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+cstring
+-
+

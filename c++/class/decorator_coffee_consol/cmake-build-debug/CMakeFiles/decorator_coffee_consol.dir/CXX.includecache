@@ -6,37 +6,91 @@
 
 #IncludeRegexTransform: 
 
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Additives.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+Additives.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Additives.h
+
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Additives.h
 pch.h
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Beverage.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+Beverage.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Beverage.h
 
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Beverage.h
 pch.h
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
 
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/DarkMocha.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+DarkMocha.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/DarkMocha.h
+
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/DarkMocha.h
 pch.h
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/DarkRoast.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+DarkRoast.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/DarkRoast.h
 
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/DarkRoast.h
 pch.h
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
 
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Latte.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+Latte.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Latte.h
+
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Latte.h
 pch.h
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Milk.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+Milk.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Milk.h
 
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Milk.h
 pch.h
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
 
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Mocha.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+Mocha.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Mocha.h
+
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Mocha.h
 pch.h
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
 
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Whip.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+Whip.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Whip.h
+
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/Whip.h
 pch.h
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/WhiteMocha.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/pch.h
+WhiteMocha.h
+/Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/WhiteMocha.h
 
 /Users/shrekulka/educationalProjects/c++/class/decorator_coffee_consol/WhiteMocha.h
 pch.h

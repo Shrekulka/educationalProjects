@@ -1,0 +1,66 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/CommandParser.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/pch.h
+
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/ConnectionHandler.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/pch.h
+
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/NetworkException.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/pch.h
+
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/SimpleCommandHandler.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/pch.h
+
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/TCPServer.h
+pch.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/pch.h
+
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/main.cpp
+pch.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/pch.h
+iostream
+-
+stdexcept
+-
+
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/pch.h
+iostream
+-
+string
+-
+cstring
+-
+stdexcept
+-
+map
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+vector
+-
+CommandParser.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/CommandParser.h
+ConnectionHandler.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/ConnectionHandler.h
+SimpleCommandHandler.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/SimpleCommandHandler.h
+NetworkException.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/NetworkException.h
+TCPServer.h
+/Users/shrekulka/educationalProjects/c++/TCPCommunication/TCP Server/TCPServer.h
+

@@ -16,42 +16,129 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="617f8401-0b52-445e-bfd7-2c34556823f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../class_string/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/.idea/class_string.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/String.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/String.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../class_string/pch.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/decorator_coffee_consol.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additives.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Additives.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Beverage.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Beverage.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DarkMocha.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DarkMocha.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DarkRoast.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DarkRoast.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Latte.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Latte.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Milk.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Milk.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mocha.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mocha.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Whip.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Whip.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhiteMocha.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhiteMocha.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/.idea/TCP Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/CommandParser.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/CommandParser.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/ConnectionHandler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TCP_Server.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TCP_Server.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TCP_Server.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TCP_Server.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TCP_Server.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TCP_Server.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TCP_Server.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/TCP_Server.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCPCommunication/TCP Server/pch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/my_netcat/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/my_netcat/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/my_netcat/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/my_netcat/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/my_netcat/.idea/my_netcat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/my_netcat/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/my_netcat/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/scan/.idea/scan.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_client/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_client/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_client/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_client/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_client/.idea/tcp_client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_client/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/.idea/tcp_proxy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_proxy/proxy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_server/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_server/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_server/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_server/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_server/.idea/tcp_server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_server/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/tcp_server/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/udp_client/.idea/udp_client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../python/black_hat_python/udp_client/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/decorator_coffee_consol" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/decorator_coffee_consol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/decorator_coffee_consol.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/decorator_coffee_consol.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-default/decorator_coffee_consol.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default/decorator_coffee_consol.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pch.h" beforeDir="false" afterPath="$PROJECT_DIR$/pch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/stack_calculator" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/stack_calculator" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/stack_calculator.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-debug/stack_calculator.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/stack_calculator.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../stack_calculator/cmake-build-default/stack_calculator.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../python/sql/mysql/mysql_connection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../python/sql/mysql/mysql_connection/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,11 +180,6 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="decorator_coffee_consol" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="decorator_coffee_consol" TARGET_NAME="decorator_coffee_consol" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="decorator_coffee_consol" RUN_TARGET_NAME="decorator_coffee_consol">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -121,6 +203,11 @@
       <option name="presentableId" value="Default" />
       <updated>1685517553518</updated>
       <workItem from="1685517555433" duration="2142000" />
+      <workItem from="1687515493409" duration="21000" />
+      <workItem from="1687607080683" duration="905000" />
+      <workItem from="1687874359482" duration="599000" />
+      <workItem from="1687875735770" duration="596000" />
+      <workItem from="1687937255339" duration="210000" />
     </task>
     <servers />
   </component>
@@ -137,5 +224,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
