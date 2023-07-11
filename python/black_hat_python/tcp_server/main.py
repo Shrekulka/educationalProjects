@@ -49,11 +49,11 @@ def main():
 
     # Вначале мы передаем IP-адрес и порт, который должен прослушивать наш сервер
     server.bind((IP, PORT))
-
+    
     # или можем заменить эти две строчки:
     # server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # server.bind((IP, PORT))
-    # на
+    #  на
     # server = socket.create_server(IP, PORT)
 
     # Затем просим сервер начать прослушивание, указав, что отложенных соединений должно быть не больше пяти.

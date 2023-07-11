@@ -5,69 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="541e043f-9b22-4f76-ad26-884680353774" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/my_netcat/.idea/my_netcat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/scan/.idea/scan.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_client/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_client/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_client/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_client/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_client/.idea/tcp_client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_client/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_server/.idea/tcp_server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../black_hat_python/udp_client/.idea/udp_client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/CMakeFiles/decorator_coffee_consol.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/decorator_coffee_consol" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/decorator_coffee_consol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/decorator_coffee_consol.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-debug/decorator_coffee_consol.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/CMakeFiles/decorator_coffee_consol.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/decorator_coffee_consol.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/decorator_coffee_consol/cmake-build-default/decorator_coffee_consol.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/CMakeFiles/stack_calculator.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/stack_calculator" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/stack_calculator" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/stack_calculator.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-debug/stack_calculator.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/CMakeFiles/stack_calculator.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/stack_calculator.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../c++/class/stack_calculator/cmake-build-default/stack_calculator.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/.idea/creation_and_storage_of_logins_and_passwords.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/bd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/my_database" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/no_password.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/creation_and_storage_of_logins_and_passwords/with_password.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../scraper/job_scraper/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../scraper/job_scraper/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../scraper/job_scraper/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../scraper/job_scraper/.idea/job_scraper.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../scraper/job_scraper/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../scraper/job_scraper/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../scraper/job_scraper/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../scraper/job_scraper/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../black_hat_python/tcp_server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../black_hat_python/tcp_server/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +106,8 @@
       <workItem from="1686831284242" duration="603000" />
       <workItem from="1686833140732" duration="284000" />
       <workItem from="1687357757115" duration="240000" />
+      <workItem from="1688812543919" duration="782000" />
+      <workItem from="1689082718708" duration="652000" />
     </task>
     <servers />
   </component>
