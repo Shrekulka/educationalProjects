@@ -5,32 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36464b54-67a1-410c-811a-a27b9e7477cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/creation_and_storage_of_logins_and_passwords.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/1.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/2.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/bd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/database.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/tg.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../scraper/job_scraper/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../scraper/job_scraper/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../scraper/job_scraper/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../scraper/job_scraper/.idea/job_scraper.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../scraper/job_scraper/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../scraper/job_scraper/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../scraper/job_scraper/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../scraper/job_scraper/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../black_hat_python/tcp_server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../black_hat_python/tcp_server/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../sql/mysql/mysql_connection/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../scraper/news_monitor/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/chromedriver/chromedriver_mac64/LICENSE.chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/chromedriver/chromedriver_mac64/chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/chromedriver/chromedriver_mac_arm64/LICENSE.chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/chromedriver/chromedriver_mac_arm64/chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/creation_and_storage_of_logins_and_passwords.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/bd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/my_database" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/no_password.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/with_password.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.sourcegraph.config.SettingsConfigurable" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="decryption" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -155,6 +153,9 @@
       <workItem from="1686752280387" duration="619000" />
       <workItem from="1687357004853" duration="169000" />
       <workItem from="1688992973588" duration="4000" />
+      <workItem from="1689174962301" duration="39000" />
+      <workItem from="1689187570475" duration="68000" />
+      <workItem from="1690353172814" duration="9000" />
     </task>
     <servers />
   </component>

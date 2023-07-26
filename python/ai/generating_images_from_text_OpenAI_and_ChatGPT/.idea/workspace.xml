@@ -5,24 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86732e54-077c-4167-bec5-5dc8ebfcc812" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/speech_to_text_library_speech_recognition .iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../audio_and_text/speech_to_text_library_speech_recognition /main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../scraper/news_monitor/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/chromedriver/chromedriver_mac64/LICENSE.chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/chromedriver/chromedriver_mac64/chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/chromedriver/chromedriver_mac_arm64/LICENSE.chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/chromedriver/chromedriver_mac_arm64/chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../web_form_data_automation/job_finder_reg/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Ninth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/generating_images_from_text_OpenAI_and_ChatGPT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generating_images_from_text_OpenAI_and_ChatGPT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ip/getting_information_by_ip/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../photo/text_from_image_using_tesseract/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/creation_and_storage_of_logins_and_passwords.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/bd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/my_database" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/no_password.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../class/creation_and_storage_of_logins_and_passwords/with_password.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../encrypt_and_decrypt/encrypt_and_decrypt_all_files_in_directories_pyAesCrypt/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -43,7 +68,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -104,6 +129,7 @@
       <workItem from="1687188856279" duration="100000" />
       <workItem from="1687271139403" duration="9000" />
       <workItem from="1687352575250" duration="238000" />
+      <workItem from="1690353971079" duration="1064000" />
     </task>
     <servers />
   </component>
