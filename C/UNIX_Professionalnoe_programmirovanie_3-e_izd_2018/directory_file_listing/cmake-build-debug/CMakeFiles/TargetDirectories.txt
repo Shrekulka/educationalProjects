@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c/UNIX_Professionalnoe_programmirovanie_3-e_izd_2018/directory_file_listing/cmake-build-debug/CMakeFiles/directory_file_listing.dir
+/Users/shrekulka/educationalProjects/c/UNIX_Professionalnoe_programmirovanie_3-e_izd_2018/directory_file_listing/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c/UNIX_Professionalnoe_programmirovanie_3-e_izd_2018/directory_file_listing/cmake-build-debug/CMakeFiles/rebuild_cache.dir

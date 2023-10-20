@@ -1,0 +1,10 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/Time_and_Date_TCP_Client_and_Simple_Time_and_Date_Server/tcp_client_for_determining_time_and_date -B /Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/Time_and_Date_TCP_Client_and_Simple_Time_and_Date_Server/tcp_client_for_determining_time_and_date/cmake-build-debug
+-- The C compiler identification is AppleClang 15.0.0.15000040
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/Time_and_Date_TCP_Client_and_Simple_Time_and_Date_Server/tcp_client_for_determining_time_and_date/cmake-build-debug

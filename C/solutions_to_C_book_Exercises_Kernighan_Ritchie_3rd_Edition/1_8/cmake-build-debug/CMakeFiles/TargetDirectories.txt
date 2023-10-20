@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c/solutions_to_C_book_Exercises_Kernighan_Ritchie_3rd_Edition/1_8/cmake-build-debug/CMakeFiles/1_8.dir
+/Users/shrekulka/educationalProjects/c/solutions_to_C_book_Exercises_Kernighan_Ritchie_3rd_Edition/1_8/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c/solutions_to_C_book_Exercises_Kernighan_Ritchie_3rd_Edition/1_8/cmake-build-debug/CMakeFiles/rebuild_cache.dir

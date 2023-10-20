@@ -1,0 +1,5 @@
+# ninja log v5
+0	190	1697708548409682564	CMakeFiles/simple_time_and_date_server.dir/main.c.o	c96ee63d0889a348
+1	190	1697708548409621313	CMakeFiles/simple_time_and_date_server.dir/utils.c.o	f16de53d4160fa5c
+0	190	1697708548409654897	CMakeFiles/simple_time_and_date_server.dir/error.c.o	26c2d347753d42e
+190	359	1697708548577945149	simple_time_and_date_server	85cc2d8c978cc1b5

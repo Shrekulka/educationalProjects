@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/Time_and_Date_TCP_Client_and_Simple_Time_and_Date_Server/simple_time_and_date_server -B /Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/Time_and_Date_TCP_Client_and_Simple_Time_and_Date_Server/simple_time_and_date_server/cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/Time_and_Date_TCP_Client_and_Simple_Time_and_Date_Server/simple_time_and_date_server/cmake-build-debug

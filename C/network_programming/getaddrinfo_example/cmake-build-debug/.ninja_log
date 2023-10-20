@@ -1,0 +1,7 @@
+# ninja log v5
+0	179	1696423837022618476	CMakeFiles/getaddrinfo_example.dir/main.c.o	c480d81848e05bf4
+180	219	1696423837063405917	getaddrinfo_example	c098a5777d8db526
+1	177	1696423860274644107	CMakeFiles/getaddrinfo_example.dir/main.c.o	c480d81848e05bf4
+178	214	1696423860311176182	getaddrinfo_example	c098a5777d8db526
+0	185	1696425864856009836	CMakeFiles/getaddrinfo_example.dir/main.c.o	c480d81848e05bf4
+185	222	1696425864893913153	getaddrinfo_example	c098a5777d8db526

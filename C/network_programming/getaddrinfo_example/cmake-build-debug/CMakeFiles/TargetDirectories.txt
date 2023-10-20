@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c/network_programming/getaddrinfo_example/cmake-build-debug/CMakeFiles/getaddrinfo_example.dir
+/Users/shrekulka/educationalProjects/c/network_programming/getaddrinfo_example/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c/network_programming/getaddrinfo_example/cmake-build-debug/CMakeFiles/rebuild_cache.dir
