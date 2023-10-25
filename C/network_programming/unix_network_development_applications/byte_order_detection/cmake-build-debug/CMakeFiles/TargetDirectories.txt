@@ -1,0 +1,3 @@
+/Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/byte_order_detection/cmake-build-debug/CMakeFiles/byte_order_detection.dir
+/Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/byte_order_detection/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/byte_order_detection/cmake-build-debug/CMakeFiles/rebuild_cache.dir

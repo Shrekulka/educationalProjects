@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "tcp_client_for_determining_time_and_date",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "tcp_client_for_determining_time_and_date::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tcp_client_for_determining_time_and_date-Debug-8df5132fd1346e5d5475.json",
+					"name" : "tcp_client_for_determining_time_and_date",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/Time_and_Date_TCP_Client_and_Simple_Time_and_Date_Server/tcp_client_for_determining_time_and_date_IPv4/cmake-build-debug",
+		"source" : "/Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/Time_and_Date_TCP_Client_and_Simple_Time_and_Date_Server/tcp_client_for_determining_time_and_date_IPv4"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
