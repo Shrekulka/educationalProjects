@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/pieces_of_code_for_network_programming/address_translation_functions_new_version Select CMakeLists.txt

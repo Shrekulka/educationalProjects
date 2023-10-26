@@ -1,6 +1,0 @@
-# ninja log v5
-187	346	1697538436040972979	tcp_client_for_determining_time_and_date	322340dc8c9e06c6
-1	187	1697538435883420777	CMakeFiles/tcp_client_for_determining_time_and_date.dir/main.c.o	2def49e7b1241592
-7	113	1697704681443479690	build.ninja	731f3b2b3a5b2873
-1	187	1697538435883440901	CMakeFiles/tcp_client_for_determining_time_and_date.dir/error.c.o	416c857727b8d0eb
-2	187	1697538435883396860	CMakeFiles/tcp_client_for_determining_time_and_date.dir/timeutil.c.o	f082edf5fcb3c3e5

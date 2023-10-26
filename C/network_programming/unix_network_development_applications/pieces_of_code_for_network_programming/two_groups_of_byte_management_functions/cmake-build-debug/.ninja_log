@@ -1,0 +1,8 @@
+# ninja log v5
+0	56	1698244753635854835	build.ninja	22658bbdb9abf17
+0	168	1698244753811391295	CMakeFiles/two_groups_of_byte_management_functions.dir/main.c.o	dce38cd5584e017f
+168	205	1698244753847347170	two_groups_of_byte_management_functions	fc9f67490721fe7f
+1	184	1698244765462100619	CMakeFiles/two_groups_of_byte_management_functions.dir/main.c.o	dce38cd5584e017f
+184	220	1698244765497343168	two_groups_of_byte_management_functions	fc9f67490721fe7f
+0	34	1698244800413957760	CMakeFiles/two_groups_of_byte_management_functions.dir/main.c.o	dce38cd5584e017f
+34	67	1698244800448429983	two_groups_of_byte_management_functions	fc9f67490721fe7f

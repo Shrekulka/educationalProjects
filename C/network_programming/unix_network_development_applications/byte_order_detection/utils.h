@@ -1,8 +1,0 @@
-//
-// Created by Shrekulka on 25.10.2023.
-//
-
-#ifndef BYTE_ORDER_DETECTION_UTILS_H
-#define BYTE_ORDER_DETECTION_UTILS_H
-
-#endif //BYTE_ORDER_DETECTION_UTILS_H

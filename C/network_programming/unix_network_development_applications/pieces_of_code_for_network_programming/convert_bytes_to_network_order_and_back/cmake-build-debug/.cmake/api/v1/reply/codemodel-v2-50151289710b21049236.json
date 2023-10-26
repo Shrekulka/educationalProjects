@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "convert_bytes_to_network_order_and_back",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "convert_bytes_to_network_order_and_back::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-convert_bytes_to_network_order_and_back-Debug-75d5acc87ffc4b893b19.json",
+					"name" : "convert_bytes_to_network_order_and_back",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/pieces_of_code_for_network_programming/convert_bytes_to_network_order_and_back/cmake-build-debug",
+		"source" : "/Users/shrekulka/educationalProjects/c/network_programming/unix_network_development_applications/pieces_of_code_for_network_programming/convert_bytes_to_network_order_and_back"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
