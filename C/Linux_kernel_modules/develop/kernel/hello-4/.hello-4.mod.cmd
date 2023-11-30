@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/hello-4/hello-4.mod := printf '%s\n'   hello-4.o | awk '!x[$$0]++ { print("/home/shrekulka/develop/kernel/hello-4/"$$0) }' > /home/shrekulka/develop/kernel/hello-4/hello-4.mod

@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/hello-5/hello-5.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/shrekulka/develop/kernel/hello-5/hello-5.ko /home/shrekulka/develop/kernel/hello-5/hello-5.o /home/shrekulka/develop/kernel/hello-5/hello-5.mod.o;  true

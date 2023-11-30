@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/character_driver_for_tracking_reads/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/shrekulka/develop/kernel/character_driver_for_tracking_reads/Module.symvers -T /home/shrekulka/develop/kernel/character_driver_for_tracking_reads/modules.order -i Module.symvers -e 

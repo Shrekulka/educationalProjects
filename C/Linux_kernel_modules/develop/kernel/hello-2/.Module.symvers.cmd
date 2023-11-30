@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/hello-2/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/shrekulka/develop/kernel/hello-2/Module.symvers -T /home/shrekulka/develop/kernel/hello-2/modules.order -i Module.symvers -e 

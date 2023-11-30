@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/hello-2/modules.order := {   echo /home/shrekulka/develop/kernel/hello-2/hello-1.o;   echo /home/shrekulka/develop/kernel/hello-2/hello-2.o; :; } > /home/shrekulka/develop/kernel/hello-2/modules.order
