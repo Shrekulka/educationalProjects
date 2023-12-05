@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/proc/proc-3/procfs-3.mod := printf '%s\n'   procfs-3.o | awk '!x[$$0]++ { print("/home/shrekulka/develop/kernel/proc/proc-3/"$$0) }' > /home/shrekulka/develop/kernel/proc/proc-3/procfs-3.mod

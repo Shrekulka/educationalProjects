@@ -124,7 +124,7 @@ accept arrays of data provided by the user during module loading.
 15. To remove the module, use the command:
 
 	```bash
-    sudo rmmod hello_5
+    sudo rmmod hello-5
     ```
 
 16. This allows viewing kernel-related system logs and filters lines containing "kernel":
@@ -335,7 +335,7 @@ accept arrays of data provided by the user during module loading.
 15. Для удаления модуля используется команда:
 
     ```bash
-    sudo rmmod hello_5
+    sudo rmmod hello-5
     ```
 
 16. Это позволяет просмотреть системные логи, связанные с ядром Linux, и фильтрует строки, содержащие "kernel":

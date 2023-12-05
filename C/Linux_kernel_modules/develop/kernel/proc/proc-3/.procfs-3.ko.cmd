@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/proc/proc-3/procfs-3.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/shrekulka/develop/kernel/proc/proc-3/procfs-3.ko /home/shrekulka/develop/kernel/proc/proc-3/procfs-3.o /home/shrekulka/develop/kernel/proc/proc-3/procfs-3.mod.o;  true

@@ -136,8 +136,8 @@
 14. To remove the modules, use the command:
 
     ```bash
-    sudo rmmod hello_1
-    sudo rmmod hello_2
+    sudo rmmod hello-1
+    sudo rmmod hello-2
     ```
 
 15. This allows you to view system logs related to the Linux kernel and filter lines containing "kernel" -
@@ -279,8 +279,8 @@ COMMAND=/usr/bin/journalctl --since '1 hour ago'
     ```
 14. Для удаления модулей используется команда:
 ```bash
-sudo rmmod hello_1
-sudo rmmod hello_2
+sudo rmmod hello-1
+sudo rmmod hello-2
 ```
 15. Это позволяет просмотреть системные логи, связанные с ядром Linux, и фильтрует строки, содержащие "kernel" - 
     sudo journalctl --since "1 hour ago" | grep kernel:

@@ -85,7 +85,7 @@ module also includes documentation, including license, author, description, and 
     ```
 14. To remove the module, use the command:
     ```bash
-    sudo rmmod hello_3
+    sudo rmmod hello-3
     ```
 15. This allows viewing system logs related to the Linux kernel, filtering lines containing "kernel":
     ```bash
@@ -225,7 +225,7 @@ module also includes documentation, including license, author, description, and 
 14. Для удаления модуля используется команда:
 
     ```bash
-    sudo rmmod hello_3
+    sudo rmmod hello-3
     ```
 
 15. Это позволяет просмотреть системные логи, связанные с ядром Linux, и фильтрует строки, содержащие "kernel":

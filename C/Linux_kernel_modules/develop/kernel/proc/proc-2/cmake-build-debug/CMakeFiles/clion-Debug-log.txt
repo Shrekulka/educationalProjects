@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /Users/shrekulka/educationalProjects/c/Linux_kernel_modules/develop/kernel/proc/proc-2 Select CMakeLists.txt

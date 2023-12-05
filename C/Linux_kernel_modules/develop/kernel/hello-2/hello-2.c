@@ -27,7 +27,7 @@ module_exit(hello_2_exit);
 MODULE_LICENSE("GPL");
 
 // Указание автора модуля.
-MODULE_AUTHOR("Your Name");
+MODULE_AUTHOR("shrekulka");
 
 // Указание описания модуля.
 MODULE_DESCRIPTION("A simple example Linux module.");

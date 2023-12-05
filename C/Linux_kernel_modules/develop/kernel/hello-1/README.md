@@ -111,7 +111,7 @@
 14. To remove the module, use the command:
 
     ```bash
-    sudo rmmod hello_1
+    sudo rmmod hello-1
     ```
 
 15. This allows you to view system logs related to the Linux kernel and filter lines containing "kernel" -
@@ -246,7 +246,7 @@
 14. Для удаления модуля используется команда:
 
     ```bash
-    sudo rmmod hello_1
+    sudo rmmod hello-1
     ```
 
 15. Это позволяет просмотреть системные логи, связанные с ядром Linux, и фильтрует строки, содержащие "kernel" - 

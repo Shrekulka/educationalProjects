@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /Users/shrekulka/educationalProjects/c/Linux_kernel_modules/develop/kernel/chardev/character_driver_for_tracking_reads Select CMakeLists.txt

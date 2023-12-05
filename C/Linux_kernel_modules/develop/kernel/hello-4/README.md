@@ -82,7 +82,7 @@ sudo apt-get install linux-headers-$(uname -r)
     ```
 14. To remove the module, use the command:
     ```bash
-    sudo rmmod hello_4
+    sudo rmmod hello-4
     ```
 15. This allows viewing system logs related to the Linux kernel, filtering lines containing "kernel":
     ```bash
@@ -220,7 +220,7 @@ sudo apt-get install linux-headers-$(uname -r)
 14. Для удаления модуля используется команда:
 
     ```bash
-    sudo rmmod hello_4
+    sudo rmmod hello-4
     ```
 
 15. Это позволяет просмотреть системные логи, связанные с ядром Linux, и фильтрует строки, содержащие "kernel":
