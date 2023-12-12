@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/sysfs/hello-sysfs/modules.order := {   echo /home/shrekulka/develop/kernel/sysfs/hello-sysfs/hello-sysfs.o; :; } > /home/shrekulka/develop/kernel/sysfs/hello-sysfs/modules.order

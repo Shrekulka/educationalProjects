@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/sysfs/hello-sysfs/hello-sysfs.mod := printf '%s\n'   hello-sysfs.o | awk '!x[$$0]++ { print("/home/shrekulka/develop/kernel/sysfs/hello-sysfs/"$$0) }' > /home/shrekulka/develop/kernel/sysfs/hello-sysfs/hello-sysfs.mod

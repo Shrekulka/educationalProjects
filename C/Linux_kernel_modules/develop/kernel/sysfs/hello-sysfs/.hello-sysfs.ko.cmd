@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/sysfs/hello-sysfs/hello-sysfs.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/shrekulka/develop/kernel/sysfs/hello-sysfs/hello-sysfs.ko /home/shrekulka/develop/kernel/sysfs/hello-sysfs/hello-sysfs.o /home/shrekulka/develop/kernel/sysfs/hello-sysfs/hello-sysfs.mod.o;  true

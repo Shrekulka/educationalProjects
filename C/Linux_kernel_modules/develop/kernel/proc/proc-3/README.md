@@ -327,7 +327,7 @@ static const struct file_operations file_ops_4_our_proc_file = {
 12. Проверяем загрузку модуля:
 
     ```bash
-    current_user@current_user:~/develop/kernel/proc/proc-3$ sudo lsmod | grep procfs
+    current_user@current_user:~/develop/kernel/z/proc-3$ sudo lsmod | grep procfs
 	procfs_3               20480  0
     ```
 

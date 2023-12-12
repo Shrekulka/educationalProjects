@@ -1,4 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/shrekulka/educationalProjects/c/UNIX_Professionalnoe_programmirovanie_3-e_izd_2018/directory_file_listing -B /Users/shrekulka/educationalProjects/c/UNIX_Professionalnoe_programmirovanie_3-e_izd_2018/directory_file_listing/cmake-build-debug
--- Configuring done (0.0s)
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/shrekulka/educationalProjects/c/UNIX_Professionalnoe_programmirovanie_3-e_izd_2018/directory_file_listing/cmake-build-debug

@@ -1,0 +1,1 @@
+savedcmd_/home/shrekulka/develop/kernel/sysfs/hello-sysfs/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/shrekulka/develop/kernel/sysfs/hello-sysfs/Module.symvers -T /home/shrekulka/develop/kernel/sysfs/hello-sysfs/modules.order -i Module.symvers -e 
