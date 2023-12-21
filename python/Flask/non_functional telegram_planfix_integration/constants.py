@@ -1,0 +1,1 @@
+# non_functional telegram_planfix_integration/constants.py

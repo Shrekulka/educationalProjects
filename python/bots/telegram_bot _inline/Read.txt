@@ -1,0 +1,5 @@
+cd /Users/user/Desktop/telegram_bot
+python3 -m venv venv 
+cd /Users/user/Desktop/telegram_bot/venv/bin/
+source activate
+pip install aiogram
