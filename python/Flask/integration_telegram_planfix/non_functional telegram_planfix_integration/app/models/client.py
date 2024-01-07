@@ -25,96 +25,23 @@ class Client(db.Model):
     """
     # 1) Основные поля для таблицы Client
 
-    # Уникальный идентификатор записи
+    # уникальный идентификатор клиента в БД
     id: int = db.Column(db.Integer, primary_key=True)
-
-    # Название клиента
-    name: str = db.Column(db.String(255))
 
     # Номер телефона
     channel: str = db.Column(db.String(255), nullable=False, unique=True)
 
-    # Время создания записи
-    created_at: datetime = db.Column(db.DateTime, default=datetime.utcnow)
-
-    # Время последнего обновления записи
-    updated_at: Optional[datetime] = db.Column(db.DateTime, onupdate=datetime.utcnow)
-
-    # Токен клиента
-    token: Optional[str] = db.Column(db.String(255), unique=True)
-
-    # Идентификатор пользователя (внешний ключ)
-    user_id: Optional[int] = db.Column(db.Integer, db.ForeignKey('user.id'))
-
-    # Позволяет установить отношение с моделью User и создать обратную ссылку, чтобы можно было легко получать клиентов,
-    # связанных с конкретным пользователем.
-    user = relationship('User')
-
-    # Имя сессии
-    name_session: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Путь к сессии (локальное сховище)
-    path_session: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # 2) Поля для интеграции Telegram
-
-    # Уникальный id чата
-    chat_id: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Содержимое сообщения
-    message: Optional[str] = db.Column(db.String, nullable=True)
-
-    # Заголовок сообщения
-    title: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Уникальный идентификатор контакта
-    contact_id: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Имя контакта
-    contact_name: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Фамилия контакта
-    contact_last_name: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Фото контакта
-    contact_ico: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Email контакта
-    contact_email: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Дополнительные данные контакта
-    contact_data: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Имя файла вложения
-    attachments_name: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Ссылка на вложение
-    attachments_url: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Email сотрудника-автора исходящего сообщения
-    user_email: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Псевдоним телеграм
-    telegram_user_name: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # ID юзера телеграм
-    telegram_user_id: Optional[str] = db.Column(db.String(255), nullable=True)
-
-    # Текущая сессия клиента (отношение один к одному), каждый клиент может иметь только одну текущую сессию
-    current_session = db.relationship('Session', uselist=False, backref="client")
-
-    # 3) Поля для интеграции ПланФикс
-
     # Токен ПланФикса
-    token_planfix: Optional[str] = db.Column(db.String(255), nullable=True)
+    planfix_token: Optional[str] = db.Column(db.String(255), nullable=True)
 
     # URL ПланФикса
-    url_planfix: Optional[str] = db.Column(db.String(255), nullable=True)
+    planfix_url: Optional[str] = db.Column(db.String(255), nullable=True)
 
-    # 4) Связь с Session
 
     # Связь с сессиями клиента (отношение один ко многим), у клиента может быть несколько сессий
     sessions = db.relationship('Session', back_populates='client')
+    # текущая активная сессия
+    current_session = db.relationship('Session', uselist=False, backref="client")
 
     def __init__(self, name, channel, created_at=None, updated_at=None, token=None, user_id=None,
                  name_session=None, path_session=None, chat_id=None, message=None, title=None,

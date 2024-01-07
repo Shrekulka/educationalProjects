@@ -10,7 +10,7 @@ if __name__ == '__main__':
     with app.test_request_context():
         synchronize_messages_bidirectional()
 
-    # q = threading.Thread(target=sync)
-    # q.start()
+    q = threading.Thread(target=sync)
+    q.start()
 
     app.run(debug=True)

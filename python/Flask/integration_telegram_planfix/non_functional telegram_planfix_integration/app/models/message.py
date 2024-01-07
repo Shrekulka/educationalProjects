@@ -1,6 +1,7 @@
 # non_functional telegram_planfix_integration/app/models/message.py
 
 from datetime import datetime
+from typing import Optional
 
 from app import db
 
@@ -10,15 +11,41 @@ print("message.py")
 # використовується для представлення повідомлень.
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    cmd - Тип операции
+    providerId - Идентификатор сторонней системы
+    chat_id: Optional[str] = db.Column(db.String(255), nullable=True)
     client_id = db.Column(db.Integer, db.ForeignKey('client.id'), nullable=False)
     text = db.Column(db.Text, nullable=False)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
-    # нежеуказанные поля пока не используем
-    content = db.Column(db.String(255), nullable=True)
-    sender_id = db.Column(db.Integer, nullable=True)
-    recipient_id = db.Column(db.Integer, nullable=False)
-    planfix_message_id = db.Column(db.String(50), nullable=True)  # Додайте колонку для ID повідомлення в Планф
+    token - Токен  клиента
+    message - Содержимое  сообщения
+    messageId - ID  сообщения  в  системе  Planfix
 
+
+
+    # Уникальный идентификатор контакта
+    contact_id: Optional[str] = db.Column(db.String(255), nullable=True)
+    # токен авторизации клиента
+    token: Optional[str] = db.Column(db.String(255), unique=True)
+
+    # Имя контакта
+    user_name: Optional[str] = db.Column(db.String(255), nullable=True)
+
+    # Фамилия контакта
+    user_last_name: Optional[str] = db.Column(db.String(255), nullable=True)
+
+    # Фото контакта
+    user_ico: Optional[str] = db.Column(db.String(255), nullable=True)
+
+    # Email контакта
+    user_email: Optional[str] = db.Column(db.String(255), nullable=True)
+
+    # Email сотрудника-автора исходящего сообщения
+    user_channel: Optional[str] = db.Column(db.String(255), nullable=True)
+
+
+
+    # Текущая сессия клиента (отношение один к одному), каждый клиент может иметь только одну текущую сессию
+    current_session = db.relationship('Session', uselist=False, backref="client")
     # Зв'язок з Client
     client = db.relationship('Client', backref='messages')
 
