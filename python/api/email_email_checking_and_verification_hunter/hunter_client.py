@@ -1,7 +1,5 @@
 # email_email_checking_and_verification_hunter/hunter_client.py
 
-# email_email_checking_and_verification_hunter/hunter_client.py
-
 import requests
 
 from config import RED, RESET_ALL

@@ -8,6 +8,7 @@ from config import RED, RESET_ALL, YELLOW, MAGENTA
 from menu import Menu
 
 
+
 def main() -> NoReturn:
     """
        Основная функция программы email_email_checking_and_verification_hunter.
