@@ -1,0 +1,16 @@
+{# website_page_templates/templates/login.html #}
+
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ super() }}
+    <!-- Форма для входа с использованием метода POST -->
+    <form action="/login" method="post" class="form-contact">
+        <!-- Поле ввода для имени пользователя -->
+        <p><label for="username">Имя:</label> <input type="text" id="username" name="username" value="" required/></p>
+        <!-- Поле ввода для пароля -->
+        <p><label for="password">Пароль:</label> <input type="password" id="password" name="password" value="" required/></p>
+        <!-- Кнопка для отправки формы -->
+        <p><input type="submit" value="Войти"/></p>
+    </form>
+{% endblock %}
