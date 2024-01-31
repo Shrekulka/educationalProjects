@@ -1,0 +1,30 @@
+{# website_page_templates/templates/contact.html #}
+
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ super() }}  <!-- Включаем контент из базового шаблона -->
+
+    {% for category, msg in get_flashed_messages(True) %}
+        <!-- Для каждого flash-сообщения отображаем блок с соответствующими стилями -->
+        <div class="flash {{ category }}">{{ msg }}</div>
+    {% endfor %}
+
+    <!-- Форма для отправки сообщения на странице контактов -->
+    <form action="/contact" method="post" class="form-contact">
+        <p><label for="username">Имя:</label> <input type="text" id="username" name="username" value="" required/></p>
+        <!-- Поле ввода имени пользователя -->
+
+        <p><label for="email">Email:</label> <input type="text" id="email" name="email" value="" required/></p>
+        <!-- Поле ввода email -->
+
+        <p><label for="message">Сообщение:</label></p>
+        <!-- Метка для поля ввода сообщения -->
+
+        <p><textarea id="message" name="message" rows="7" cols="40"></textarea></p>
+        <!-- Поле ввода текста сообщения -->
+
+        <p><input type="submit" value="Отправить"/></p>
+        <!-- Кнопка для отправки формы -->
+    </form>
+{% endblock %}

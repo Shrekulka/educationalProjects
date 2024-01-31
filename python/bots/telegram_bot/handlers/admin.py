@@ -1,3 +1,5 @@
+# telegram_bot/handlers/admin.py
+
 # Для анатации типа т.е. указываем в хендлере то, что хендлер используется в Машина состояний
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Text

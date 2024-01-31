@@ -1,3 +1,5 @@
+# website_page_templates/logger.py
+
 # Настройка уровня логирования и форматирование
 import logging
 

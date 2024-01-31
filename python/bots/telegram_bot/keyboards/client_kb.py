@@ -1,3 +1,5 @@
+# telegram_bot/keyboards/client_kb.py
+
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton  # , ReplyKeyboardRemove
 
 # записываем то, что будет отображаться на кнопке, эту же строку эта кнопка отправляет нашему боту

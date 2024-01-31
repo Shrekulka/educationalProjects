@@ -1,0 +1,9 @@
+{# website_page_templates/templates/page404.html #}
+
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ super() }}
+    <!-- Вывод сообщения о том, что страница не найдена -->
+    <p>Страница не найдена, вернуться на <a href="{{ url_for('index') }}">главную</a> страницу.</p>
+{% endblock %}

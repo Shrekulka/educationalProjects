@@ -14,7 +14,6 @@ class Message(db.Model):
     cmd - Тип операции
     providerId - Идентификатор сторонней системы
     chat_id: Optional[str] = db.Column(db.String(255), nullable=True)
-    client_id = db.Column(db.Integer, db.ForeignKey('client.id'), nullable=False)
     text = db.Column(db.Text, nullable=False)
     token - Токен  клиента
     message - Содержимое  сообщения

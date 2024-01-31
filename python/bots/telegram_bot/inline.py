@@ -1,3 +1,5 @@
+# telegram_bot/inline.py
+
 from config import TOKEN
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher

@@ -1,6 +1,5 @@
 # website_page_templates/flsite.py
 
-
 import traceback
 from typing import List, Dict, Union, Tuple
 from flask import Flask, render_template, url_for, request, flash, redirect, session, abort, Response

@@ -1,0 +1,17 @@
+{# flask_database/templates/index.html #}
+
+{% extends 'base.html' %}          {# Указываем, что этот шаблон расширяет (наследует) шаблон 'base.html' #}
+
+{% block content %}       {# Открываем блок для контента, который будет вставлен в блок 'content' из базового шаблона #}
+    {{ super() }}                   {# Вставляем содержимое блока 'content' из базового шаблона с помощью super() #}
+    <hr>
+    <h2>Список статей</h2>
+    <ul class="list-posts">
+        {% for i in posts %}
+            <li>
+                <p class="title"><a href="{{ url_for('showPost', id_post=i.id) }}">{{ i.title }}</a></p>
+                <p class="annonce">{{ i.text[:50] }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}                     {# Завершаем блок для контента текущего шаблона #}

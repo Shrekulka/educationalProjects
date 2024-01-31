@@ -1,3 +1,5 @@
+# telegram_bot/keyboards/admin_kb.py
+
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 # Кнопки клавиатуры админа
