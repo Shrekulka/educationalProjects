@@ -45,15 +45,10 @@ executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
 # import sys
 # import traceback
 #
-# from aiogram import Bot, Dispatcher
-# from aiogram.enums import ParseMode
-#
-# from config import BOT_TOKEN
+# from create_bot import dp, bot
 # from data_base import sqlite_db
 # from handlers import client
 # from logger import logger
-#
-# dp = Dispatcher()
 #
 #
 # # функция старта - это ф-ция, которая исполняется во время старта полинга нашего бота
@@ -70,10 +65,8 @@ executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
 #     # Регистрация хэндлеров клиента
 #     client.register_handlers_client(dp)
 #
-#
+#z
 # async def main() -> None:
-#     # Инициализация Bot с указанием токена и режима парсинга HTML
-#     bot = Bot(BOT_TOKEN, parse_mode=ParseMode.HTML)
 #     # Запуск поллинга с передачей on_startup функции
 #     await dp.start_polling(bot, on_startup=on_startup)
 #

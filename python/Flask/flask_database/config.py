@@ -2,5 +2,5 @@
 
 DATABASE_PATCH = 'tmp/flsite.db'
 DEBUG = True
-SECRET_KEY = 'your_secret_key'
+SECRET_KEY = 'jhafsvjr987asfwrf7ya9wrfarswf'
 
