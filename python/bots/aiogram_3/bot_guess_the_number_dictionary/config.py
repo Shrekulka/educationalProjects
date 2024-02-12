@@ -1,4 +1,4 @@
-# bot_guess_the_number/config.py
+# bot_guess_the_number_dictionary/config.py
 
 # Токен нашего бота
 BOT_TOKEN = 'your_bot_token'

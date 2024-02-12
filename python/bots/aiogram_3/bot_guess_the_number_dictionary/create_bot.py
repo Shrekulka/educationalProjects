@@ -1,4 +1,4 @@
-# bot_guess_the_number/create_bot.py
+# bot_guess_the_number_dictionary/create_bot.py
 
 from aiogram import Bot
 from aiogram import Dispatcher

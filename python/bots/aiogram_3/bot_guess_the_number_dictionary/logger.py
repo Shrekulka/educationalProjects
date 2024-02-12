@@ -1,4 +1,4 @@
-# bot_guess_the_number/logger.py
+# bot_guess_the_number_dictionary/logger.py
 import logging
 import traceback
 

@@ -1,125 +1,113 @@
-# This code represents a module for working with an SQLite database in a Telegram bot for the "Guess the Number" game.
-# It contains functions for database initialization, getting and updating user game data, as well as creating default 
-# data when the game is first launched. The code also includes logging of errors during database operations.
+# This code represents a module for working with a dictionary in a Telegram bot for the "Guess the Number" game. It contains functions
+# for dictionary initialization, getting and updating user game data, as well as creating default data on
+# the first game launch. The code also includes error logging when performing dictionary operations.
 
-## Task Specification
+## Task Description
 
 ## What?
-Telegram bot to play the "Guess the Number" game
+A Telegram bot with which you can play the "Guess the Number" game.
 
-## Why?
-To play a simple game with the bot
+# Why?
+To be able to play a simple game with the bot.
 
 ## What should the bot be able to do?
-1. Generate a random number from 1 to 100
-2. Maintain states ("in-game", "not in-game")
-3. Track the number of attempts remaining for the user
-4. Compare user guesses with the generated number
+1. Generate a random number from 1 to 100.
+2. Maintain the state ("in-game", "not in-game").
+3. Count the number of attempts remaining for the user.
+4. Compare user answers with the guessed number.
 
 ## Additional functionality
-- The bot can display user game statistics upon request
+- The bot can show user game statistics upon request.
 
 ## Interaction Description with the Bot
-1. User sends the /start command to the bot (or starts it by finding it in the search)
+1. The user sends the /start command to the bot (or starts it by finding it in the search).
 2. The bot greets the user and suggests playing the "Guess the Number" game, also suggests the user to read detailed 
-   rules by sending the /help command
+   rules by sending the /help command.
 3. At this stage, the user can take 5 actions:
-   a) Agree to play the game with the bot by sending "Yes", or "Let's", or "Let's play", etc.
-   b) Refuse to play by sending "No", or "I don't want to", or "Another time", etc.
-   c) Send the /help command to the chat
-   d) Send the /stat command to the chat
-   e) Send any other message to the chat
-4. User agrees to play the game:
-   a) The bot informs the user that it's glad to play and saves a random number from 1 to 100
-   b) The bot saves information that the user is in the "Game" state
-   c) The bot sets the user's attempt counter to the default value
-   d) At this stage, the user can take 3 actions:
-     - Send a number from 1 to 100 to the chat
-     - Send the /cancel command to the chat
-     - Send anything other than these 2 points
-   e) User sends a number from 1 to 100 to the chat:
-     - The bot compares the number sent by the user with the generated one
-     - If the numbers match:
-        - The bot congratulates the user on winning
-        - The bot changes the state from "Game" to "Not in-game"
-        - The bot sends a message to the user suggesting to play again
-        - The bot increases the user's game counter by 1
-        - The bot increases the user's win counter by 1
-     - If the user's number is less than the generated one:
-        - The bot decreases the user's attempt counter by one
-        - The bot informs the user that the generated number is greater
-     - If the user's number is greater than the generated one:
-        - The bot decreases the user's attempt counter by one
-        - The bot informs the user that the generated number is smaller
-   f) User sends the /cancel command in the "Game" state:
-     - The bot changes the state from "Game" to "Not in-game"
-     - The bot sends a message to the chat that the game is over
-     - The bot sends a message to the chat that if the user wants to play again, they should send a message "Game" or 
-       "Play", or "Let's play" etc.
-   g) User in the "Game" state sends anything other than a number from 1 to 100 or the /cancel command:
-     - The bot sends a message to the user that according to the rules of the game, the user can only send numbers from 
-       1 to 100 or the /cancel command
+   a) Agree to play the game with the bot by sending "Yes" or "Let's go" or "Play" etc.
+   b) Decline to play by sending "No" or "I don't want to" or "Another time" etc.
+   c) Send the /help command to the chat.
+   d) Send the /stat command to the chat.
+   e) Send any other message to the chat.
+4. The user agrees to play the game:
+   a) The bot informs the user that it is very glad to play and saves a random number from 1 to 100.
+   b) The bot saves information that the user is in the "Game" state.
+   c) The bot sets the user's attempt counter to the default value.
+   d) At this stage, the user can perform 3 actions:
+      - Send a number from 1 to 100 to the chat.
+      - Send the /cancel command to the chat.
+      - Send anything other than these 2 points.
+   e) The user sends a number from 1 to 100 to the chat:
+      - The bot compares the number sent by the user with the guessed one.
+      - If the numbers match:
+        - The bot congratulates the user on winning.
+        - The bot changes the state from "Game" to "Not in-game".
+        - The bot sends the user a message suggesting to play again.
+        - The bot increases the user's game counter by 1.
+        - The bot increases the user's win counter by 1.
+      - If the user's number is less than the guessed one:
+        - The bot decreases the user's attempt counter by one.
+        - The bot informs the user that the guessed number is greater.
+      - If the user's number is greater than the guessed one:
+        - The bot decreases the user's attempt counter by one.
+        - The bot informs the user that the guessed number is smaller.
+   f) The user sends the /cancel command to the chat:
+      - The bot changes the state from "Game" to "Not in-game".
+      - The bot sends a message to the chat that the game is over.
+      - The bot sends a message to the chat that if the user wants to play again, they should send a message 
+        "Game" or "Play", or "Let's play" etc.
+   g) The user in the "Game" state sends anything other than a number from 1 to 100 or the /cancel command:
+      - The bot sends the user a message that according to the game rules, the user can only send numbers 
+        from 1 to 100 or the /cancel command to the chat.
    h) If the user runs out of attempts:
-     - The bot informs the user that they have lost
-     - The bot informs the user what the generated number was
-     - The bot changes the state from "Game" to "Not in-game"
-     - The bot increases the user's game counter by 1
-     - The bot sends a message to the user suggesting to play again
-5. User declines to play the game:
-   a) The bot sends a message to the user, like "Too bad :(" and provides instructions on what the user should do if 
-      they still want to play
-6. User sends the /help command:
-   a) The bot sends the user the game rules and command descriptions
-7. User sends the /stat command:
-   a) The bot sends the user game statistics (total number of games and how many of them the user won)
-   b) The bot sends a message to the user suggesting to play
-8. User sends any other message:
-   a) The bot informs that it doesn't understand the user and suggests playing the game again
-
+      - The bot informs the user that they lost.
+      - The bot informs the user what the guessed number was.
+      - The bot changes the state from "Game" to "Not in-game".
+      - The bot increases the user's game counter by 1.
+      - The bot sends the user a message suggesting to play again.
+5. The user declines to play the game:
+   a) The bot sends the user a message like "Too bad :(" and instructions on what the user needs to do if they still 
+      want to play.
+6. The user sends the /help command to the chat:
+   a) The bot sends the user game rules and command descriptions.
+7. The user sends the /stat command to the chat:
+   a) The bot sends the user game statistics (how many games were played in total and how many of them the user won).
+   b) The bot sends the user a message suggesting to play.
+8. The user sends any other message to the chat:
+   a) The bot informs that it doesn't understand the user and suggests playing the game again.
 
 9. Project Structure:
-    ```bash
-    bot_guess_the_number     # Main project folder.
-    │
-    ├── data_base/            # Folder for working with the database.
-    │   ├── __init__.py       # Initialization of the database module.
-    │   └── sqlite_db.py      # Module for working with SQLite database.
-    │
-    ├── handlers/             # Folder with bot event handlers.
-    │   ├── __init__.py       # Initialization of the handlers module.
-    │   └── client.py         # Module for client handlers.
-    │
-    ├── models/               # Folder with data models.
-    │   ├── __init__.py       # Initialization of the data models module.
-    │   └── user_game_data.py # Module for user game data.
-    │
-    ├── utils/                # Directory for bot's auxiliary functions.
-    │   ├── __init__.py       # Initialization module for auxiliary functions.
-    │   └── client_utils.py   # Module for bot's auxiliary functions.
-    │
-    ├── logger.py             # Module for logging.
-    │
-    ├── bot_telegram.py       # Main Telegram bot module.
-    │
-    ├── config.py             # Configuration file.
-    │
-    ├── create_bot.py         # Module for creating the bot.
-    │
-    ├── game_bd.db            # SQLite database file.
-    │
-    ├── requirements.txt      # Contains a list of packages and their versions required for the project to run correctly.
-    │
-    └── README.md             # Project information.
-    ```
+   ```bash
+   ai_checklist_guardian/   # Main project folder.
+   │
+   ├── handlers/             # Folder with bot event handlers.
+   │   ├── __init__.py       # Initialization of the handlers module.
+   │   └── client.py         # Module for client handlers.
+   │
+   ├── utils/                # Directory for bot's auxiliary functions.
+   │   ├── __init__.py       # Initialization module for auxiliary functions.
+   │   └── client_utils.py   # Module for bot's auxiliary functions.
+   │
+   ├── logger.py             # Module for logging.
+   │
+   ├── bot_telegram.py       # Main Telegram bot module.
+   │
+   ├── config.py             # Configuration file.
+   │
+   ├── create_bot.py         # Module for creating the bot.
+   │
+   ├── requirements.txt      # Contains a list of packages and their versions required for the project to run correctly.
+   │
+   └── README.md             # Project information.
+   ```
 
 
 
 
+# Данный код представляет собой модуль для работы с словарем в Telegram боте для игры "Угадай число". Он содержит функции 
+# для инициализации словаря, получения и обновления данных игры пользователя, а также создания данных по умолчанию при 
+# первом запуске игры. Код также включает логирование ошибок при выполнении операций со словарем.
 
-# Данный код представляет собой модуль для работы с SQLite базой данных в Telegram боте для игры "Угадай число". Он 
-# содержит функции для инициализации базы данных, получения и обновления данных игры пользователя, а также создания 
-# данных по умолчанию при первом запуске игры. Код также включает логирование ошибок при выполнении операций с базой 
-# данных.
 
 ## Постановка задачи
 
@@ -196,21 +184,13 @@ To play a simple game with the bot
    a) Бот сообщает, что не понимает пользователя и снова предлагает сыграть в игру
 
 
-9. Структура проекта:
+4. Структура проекта:
     ```bash
-    bot_guess_the_number     # Основная папка проекта.
-    │
-    ├── data_base/            # Папка для работы с базой данных.
-    │   ├── __init__.py       # Инициализация модуля работы с базой данных.
-    │   └── sqlite_db.py      # Модуль для работы с SQLite базой данных.
+    ai_checklist_guardian/   # Основная папка проекта.
     │
     ├── handlers/             # Папка с обработчиками событий бота.
     │   ├── __init__.py       # Инициализация модуля обработчиков.
     │   └── client.py         # Модуль обработчика клиентов.
-    │
-    ├── models/               # Папка с моделями данных.
-    │   ├── __init__.py       # Инициализация модуля моделей данных.
-    │   └── user_game_data.py # Модуль данных игрока.
     │
     ├── utils/                # Каталог вспомогательных функций для бота
     │   ├── __init__.py       # Инициализация модуля вспомогательных функций
@@ -224,10 +204,7 @@ To play a simple game with the bot
     │
     ├── create_bot.py         # Модуль для создания бота.
     │
-    ├── game_bd.db            # Файл базы данных SQLite.
-    │
-    ├── requirements.txt      # Содержит список пакетов и их версий, необходимых для корректной
-    │                         # работы проекта.
+    ├── requirements.txt      # Содержит список пакетов и их версий, необходимых для корректной работы проекта.
     │
     └── README.md             # Информация о проекте.
     ```

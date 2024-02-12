@@ -1,3 +1,3 @@
-# simple_echo_bot/handlers/__init__.py
+# bot_guess_the_number/handlers/__init__.py
 
 from . import client
