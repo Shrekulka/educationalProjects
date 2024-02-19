@@ -434,7 +434,6 @@ async def process_user_unblocked_bot(event: ChatMemberUpdated) -> None:
 
 ########################################################################################################################
 # Регистрация всех хэндлеров и передача их в файл bot_telegram
-# @dp.message()
 def register_handlers_client(dp: Dispatcher) -> None:
     """
         Register all handlers for the client part of the bot.

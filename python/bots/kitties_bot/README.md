@@ -19,6 +19,7 @@
 Please note that the bot is limited by the maximum number of attempts (MAX_ATTEMPTS), which is useful for testing and
 prevents an infinite loop.
 
+Educational material on Stepik - https://stepik.org/course/120924/syllabus
 
 
 
@@ -44,3 +45,5 @@ prevents an infinite loop.
 
 Обратите внимание, что бот ограничен максимальным количеством попыток (MAX_ATTEMPTS), что полезно при тестировании и 
 предотвращает бесконечный цикл.
+
+Учебный материал на Stepik - https://stepik.org/course/120924/syllabus

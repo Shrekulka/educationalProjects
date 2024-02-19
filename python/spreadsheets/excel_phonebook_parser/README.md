@@ -136,9 +136,6 @@
     │
     └── README.md             # Project information.
     ```
-Educational material on Stepik - https://stepik.org/course/120924/syllabus
-
-
 
 
 
@@ -334,4 +331,3 @@ Educational material on Stepik - https://stepik.org/course/120924/syllabus
     │
     └── README.md             # Информация о проекте.
     ```
-Учебный материал на Stepik - https://stepik.org/course/120924/syllabus

@@ -43,7 +43,7 @@ The project also includes error handling, including error message output and log
   │
   ├── README.md              # File with project description and instructions for usage.
   ```
-
+Educational material on Stepik - https://stepik.org/course/120924/syllabus
 
 
 
@@ -91,3 +91,4 @@ The project also includes error handling, including error message output and log
   │
   ├── README.md              # Файл с описанием проекта и инструкциями по его использованию.
   ```
+Учебный материал на Stepik - https://stepik.org/course/120924/syllabus

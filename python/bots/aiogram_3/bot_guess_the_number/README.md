@@ -111,7 +111,7 @@ To play a simple game with the bot
     │
     └── README.md             # Project information.
     ```
-
+Educational material on Stepik - https://stepik.org/course/120924/syllabus
 
 
 
@@ -231,3 +231,4 @@ To play a simple game with the bot
     │
     └── README.md             # Информация о проекте.
     ```
+Учебный материал на Stepik - https://stepik.org/course/120924/syllabus
