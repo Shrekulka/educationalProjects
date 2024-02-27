@@ -1,4 +1,4 @@
-# bot_rock_paper_scissors/services/file_handling.py
+# telegram_bot_book/services/file_handling.py
 
 import os
 import sys

@@ -8,8 +8,7 @@ from aiogram.types import CallbackQuery, Message
 
 from database.database import user_dict_template, users_db
 from filters.filters import IsDelBookmarkCallbackData, IsDigitCallbackData
-from keyboards.bookmarks_kb import (create_bookmarks_keyboard,
-                                    create_edit_keyboard)
+from keyboards.bookmarks_kb import (create_bookmarks_keyboard, create_edit_keyboard)
 from keyboards.pagination_kb import create_pagination_keyboard
 from lexicon.lexicon_ru import LEXICON
 from logger_config import logger
@@ -171,48 +170,6 @@ async def process_bookmarks_command(message: Message) -> None:
         await message.answer(text=LEXICON['no_bookmarks'])
 
 
-# # Обработчик callback-запроса нажатия на кнопку "Вперед" или "Назад"
-# @router.callback_query(F.data.one_of(['forward', 'backward']))
-# async def process_pagination_press(callback: CallbackQuery) -> None:
-#     """
-#         Handler for the pagination buttons forward and backward.
-#
-#         This handler triggers when the user presses the "Forward" or "Backward" button in the pagination.
-#         It retrieves the current page number of the user and adjusts it based on the button pressed.
-#         Then it retrieves the text of the new page of the book, updates the user's current page in the database,
-#         and sends an edited message with the new page and updated pagination keyboard.
-#
-#         Args:
-#             callback (types.CallbackQuery): The callback query object.
-#
-#         Returns:
-#             None
-#     """
-#     # Выводим апдейт в терминал
-#     logger.info(callback.model_dump_json(indent=4, exclude_none=True))
-#
-#     # Получаем текущую страницу пользователя
-#     page_num = users_db[callback.from_user.id]['page']
-#
-#     # Увеличиваем или уменьшаем номер страницы в зависимости от нажатой кнопки
-#     if callback.data == 'forward':
-#         page_num += 1
-#     else:
-#         page_num -= 1
-#
-#     # Получаем текст новой страницы книги
-#     text = book[page_num]
-#
-#     # Обновляем текущую страницу пользователя в базе данных
-#     users_db[callback.from_user.id]['page'] = page_num
-#
-#     # Отправляем отредактированное сообщение с новой страницей и обновленной клавиатурой пагинации
-#     await callback.message.edit_text(
-#         text=text,
-#         reply_markup=pagination_keyboard_wrapper(page_num))
-#
-#     # Отвечаем на callback-запрос, чтобы скрыть часики на кнопке
-#     await callback.answer()
 # Обработчик callback-запроса 'backward'.
 # Этот обработчик срабатывает при нажатии пользователем кнопки "Назад".
 @router.callback_query(F.data == 'backward')
@@ -251,6 +208,7 @@ async def process_backward_press(callback: CallbackQuery) -> None:
     await callback.answer()
 
 
+@router.callback_query(F.data == 'forward')
 async def process_forward_press(callback: CallbackQuery) -> None:
     """
         Обработчик callback-запроса 'forward'.
