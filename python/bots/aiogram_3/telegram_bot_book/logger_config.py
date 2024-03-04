@@ -220,54 +220,59 @@ class CustomLogger:
         logging.log(level, message)
 
     @staticmethod
-    def debug(message: str) -> None:
+    def debug(*args) -> None:
         """
             Logs a debug message.
 
             Args:
-                message (str): The message to log.
+                *args: The messages to log as format string and values.
         """
-        logging.debug(message)
+        message = " ".join(str(x) for x in args)
+        logging.debug(f"{message}")
 
     @staticmethod
-    def info(message: str) -> None:
+    def info(*args) -> None:
         """
             Logs an informational message.
 
             Args:
-                message (str): The message to log.
+                *args: The messages to log as format string and values.
         """
-        logging.info(message)
+        message = " ".join(str(x) for x in args)
+        logging.info(f"{message}")
 
     @staticmethod
-    def warning(message: str) -> None:
+    def warning(*args) -> None:
         """
             Logs a warning message.
 
             Args:
-                message (str): The message to log.
+                *args: The messages to log as format string and values.
         """
-        logging.warning(message)
+        message = " ".join(str(x) for x in args)
+        logging.warning(f"{message}")
 
     @staticmethod
-    def error(message: str) -> None:
+    def error(*args) -> None:
         """
             Logs an error message.
 
             Args:
-                message (str): The message to log.
+                *args: The messages to log as format string and values.
         """
-        logging.error(message)
+        message = " ".join(str(x) for x in args)
+        logging.error(f"{message}")
 
     @staticmethod
-    def critical(message: str) -> None:
+    def critical(*args) -> None:
         """
             Logs a critical message.
 
             Args:
-                message (str): The message to log.
+                *args: The messages to log as format string and values.
         """
-        logging.critical(message)
+        message = " ".join(str(x) for x in args)
+        logging.critical(f"{message}")
 
 
 # Создание экземпляра CustomLogger с включенным логированием в файл

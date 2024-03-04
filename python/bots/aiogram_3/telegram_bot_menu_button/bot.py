@@ -1,7 +1,5 @@
 # telegram_bot_menu_button/bot.py
 
-# bot_rock_paper_scissors/bot.py
-
 import asyncio
 import traceback
 
