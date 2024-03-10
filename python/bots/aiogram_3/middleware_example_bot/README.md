@@ -514,6 +514,7 @@ return result
      ├── __init__.py                        # Package initializer file.                      
      └── lexicon.py                         # File with a dictionary mapping commands and queries to displayed texts.
 ```
+Educational material on Stepik - https://stepik.org/course/120924/syllabus
 
 
 

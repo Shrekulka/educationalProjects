@@ -56,7 +56,7 @@ async def process_help_command(message: Message) -> None:
 
 
 ########################################################################################################################
-# 2) Мультимедийные хендлеры (стикеры, фотографии, видео, аудио, голосовые сообщения и документы и т.д.)
+# 2) Мультимедийные хендлеры (стикеры, анимация, фотографии, видео, аудио, голосовые сообщения и документы и т.д.)
 ########################################################################################################################
 # Хендлер для стикеров
 # @dp.message(F.sticker) или (F.content_type == 'sticker') или (F.content_type == ContentType.STICKER)
@@ -75,6 +75,26 @@ async def handle_sticker(message: Message) -> None:
     await message.reply("Here's your sticker")
     # Отправляет в чат сообщение
     await message.answer_sticker(sticker=message.sticker.file_id)
+
+
+# Хендлер для анимации (стикеров)
+# @dp.message(F.animation) или (F.content_type == 'animation') или (F.content_type == ContentType.ANIMATION)
+async def handler_animation(message: Message) -> None:
+    """
+        Handler for animations.
+
+        Args:
+            message (Message): The incoming message object.
+
+        Returns:
+            None
+    """
+    # Выводим апдейт в терминал
+    print(message.model_dump_json(indent=4, exclude_none=True))
+    # Отвечаем на сообщение
+    await message.reply("Here's your animation")
+    # Отправляем анимацию в чат
+    await message.answer_animation(animation=message.animation.file_id)
 
 
 # Хендлер для фото
@@ -448,6 +468,8 @@ def register_handlers_client(dp: Dispatcher) -> None:
     # 2) Мультимедийные хендлеры (стикеры, фотографии, видео, аудио, голосовые сообщения и документы и т.д.)
     dp.message.register(handle_sticker, F.sticker)  # Обработка стикеров
     # (F.sticker) или (F.content_type == 'sticker') или (F.content_type == ContentType.STICKER)
+    dp.message.register(handler_animation, F.animation)  # Обработка анимации
+    # (F.animation) или (F.content_type == 'animation') или (F.content_type == ContentType.ANIMATION)
     dp.message.register(handle_photo, F.photo)  # Обработка фотографий
     # (F.photo) или (F.content_type == 'photo') или (F.content_type == ContentType.PHOTO)
     dp.message.register(handle_video, F.video)  # Обработка видео
