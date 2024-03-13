@@ -24,18 +24,35 @@
       ```
 
    d) Choose a storage for state persistence (e.g., MemoryStorage from aiogram.fsm.storage.memory).
-      If MemoryStorage is chosen, import it like this:
-      ```bash
-      from aiogram.fsm.storage.memory import MemoryStorage
-      ```
-      If Redis is intended as storage, import it like this:
-      ```bash
-      from aiogram.fsm.storage.redis import RedisStorage
-      ```
+   - If using *MemoryStorage*, the import statement is as follows:
+     ```bash
+     from aiogram.fsm.storage.memory import MemoryStorage
+     ```
+     The main reason not to use MemoryStorage in real bots is that all state information is stored in the computer's RAM
+     and is erased when the bot is restarted. This means that if the bot is stopped while a user is, for example,
+     filling out a survey, progressing through states sequentially, all state data will be lost, and the user will think
+     the bot is glitchy and not behaving as expected.
+
+   - If intending to use *Redis* as the storage:
+     ```bash
+     from aiogram.fsm.storage.redis import RedisStorage
+     ```
+     In the project, you need to install the redis and aioredis libraries (remember to do this in the activated virtual
+     environment):
+     ```bash
+     pip install redis
+     pip install aioredis
+     ```
+     Redis stands for Remote Dictionary Server, something like a "dictionary on a remote server." It's a separate service
+     that can be run on a remote server, and data can be stored in it just like in a regular Python dictionary, i.e.,
+     key-value pairs. Moreover, Redis holds data in RAM, providing very fast access to it. Also, data is periodically
+     saved to disk - a snapshot of the current data state is taken, increasing the reliability of the service.
+      
+     Installation of Redis is described at the end of the project description, before the project structure.
 
 2. Create a storage for states:
-   a) Instantiate the chosen storage (e.g., storage = MemoryStorage()).
-   b) Pass the storage to the Dispatcher during its initialization (dp = Dispatcher(storage=storage)).
+    a) Instantiate the chosen storage (e.g., storage = MemoryStorage() or storage = RedisStorage(redis=redis)).
+    b) Pass the storage to the Dispatcher during its initialization (dp = Dispatcher(storage=storage)).
 
 3. Define a group of states:
    a) Create a class, inherited from StatesGroup, to group related states (e.g., class FSMFillForm(StatesGroup)).
@@ -116,6 +133,87 @@ Based on this, it's important to remember that if you use a state machine in you
 available only in the default state (e.g., the /start command), you need to explicitly specify an additional filter
 StateFilter(default_state), otherwise the command will be available in any state.
 
+# Installing Redis
+
+1. Installing Redis on MacOS:
+    a) In the terminal, install Homebrew by entering the following line:
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+       To update Homebrew, enter:
+    ```bash
+    brew update
+    ```
+    b) Install Redis by entering the following line in the terminal:
+    ```bash
+    brew install redis
+    ```
+    c) To start Redis and automatically launch it on system startup, you can execute the following command:
+    ```bash
+    brew services start redis
+    ```
+    If you prefer not to run Redis as a background service, you can start it manually by executing the following command:
+    ```bash
+    /opt/homebrew/opt/redis/bin/redis-server /opt/homebrew/etc/redis.conf
+    ```
+       Now Redis should be up and running on your system. You can check its status and manage it using the command:
+    ```bash
+    brew services
+    ```
+    d) Now, connect to Redis and verify that it stores and retrieves data. To do this, open another terminal or a new 
+       tab in the same terminal where you installed Redis and execute the command:
+    ```bash
+    redis-cli
+    ```
+       You should see a prompt for interaction (cli stands for Command Line Interface):
+    ```bash
+    127.0.0.1:6379> 
+    ```
+       Through this prompt, you can send commands to Redis. For example, you can add a key-value pair using the command:
+    ```bash
+    SET my_key my_value
+    ```
+       And then retrieve the value by key:
+    ```bash
+    GET my_key
+    ```
+    e) To shut down Redis, you can either press Ctrl+C in the terminal where Redis is running or simply exit the command
+       -line interface by entering the command quit or exit in the terminal where you executed the redis-cli command.
+
+   Despite Redis not caring which machine it's running on, it's assumed to be running somewhere on a server, and we 
+   access it through the command line from another location. Moreover, in the era of widespread containerization, both 
+   Redis and the bot, along with other microservices, typically run in containers and communicate over the network.
+
+2. Installing Redis on Linux:
+    a) Enter the following line in the terminal: 
+    ```bash
+    sudo apt install redis
+    ```
+    b) Install it. Then restart the server:
+    ```bash
+    sudo service redis-server restart
+    ```
+    c) Check that the server is running:
+    ```bash
+    sudo service redis-server status
+    ```
+       If everything is fine, among other information, you should see the line:
+    ```bash
+    Status: "Ready to accept connections"
+    ```
+    d) Try to start the command line:
+    ```bash
+    redis-cli
+    ```
+    You can also try to write and read key-value pairs, as described above for MacOS, using the SET and GET commands,
+    to ensure everything is working perfectly.
+
+3. Installing Redis on Windows:
+   a) [Tutorial 1](https://skillbox.ru/media/base/kak_ustanovit_redis_v_os_windows_bez_ispolzovaniya_docker/)
+   b) [Tutorial 2](https://redis.io/docs/getting-started/installation/install-redis-on-windows/)
+   c) [Tutorial 3](https://www.w3schools.io/nosql/redis-install-windows/)
+
+
 ## Project Structure:
 ```bash
 📁 form_filling_bot_fsm                     # Root directory of the entire project.
@@ -190,16 +288,35 @@ Educational material on Stepik - https://stepik.org/course/120924/syllabus
   from aiogram.fsm.state import default_state, State, StatesGroup
   ```
   d) Выбираем хранилище для сохранения состояний (например, MemoryStorage из aiogram.fsm.storage.memory).
-     Если это MemoryStorage, то импорт такой:
+  - Если это *MemoryStorage*, то импорт такой:
   ```bash
   from aiogram.fsm.storage.memory import MemoryStorage
   ```
-  Если в качестве хранилища предполагается использовать, например, Redis, тогда импорт такой:
+   Самая главная причина, по которой не стоит использовать MemoryStorage в реальных ботах, это то, что вся информация о
+   состояниях хранится в оперативной памяти компьютера и стирается при перезапуске бота. То есть, если бот будет 
+   остановлен во время того, как кто-то из пользователей будет, например, заполнять данные анкеты, последовательно 
+   проходя через состояния, все данные о состояниях будут потеряны и пользователь будет думать, что бот глючный и 
+   работает не так, как ожидается.
+
+  - Если в качестве хранилища предполагается использовать *Redis*, тогда импорт такой:
   ```bash
   from aiogram.fsm.storage.redis import RedisStorage
   ```
+   В проекте нужно установить библиотеки redis и aioredis (не забывайте, что делается это при запущеном виртуальном 
+   окружении):
+   ```bash
+   pip install redis
+   pip install aioredis
+   ```
+  Redis - это от Remote Dictionary Server - что-то типа "словарь на удаленном сервере". То есть это отдельный сервис, 
+  который можно запустить на удаленном сервере, и сохранять в нем данные как в обычный питоновский словарь, то есть пары
+  "ключ-значение". Причем, данные Redis держит в оперативной памяти, обеспечивая к ним очень быстрый доступ. Также 
+  данные периодически сохраняются на диск - делается снимок текущего состояния данных, повышая надежность сервиса.
+   
+  Установка Redis описана в конце описания, перед структурой проекта.
+
 2. Создаем хранилище состояний:
-    a) Создайте экземпляр выбранного хранилища (например, storage = MemoryStorage()).
+    a) Создайте экземпляр выбранного хранилища (storage = MemoryStorage() или storage = RedisStorage(redis=redis)).
     b) Передайте хранилище в Dispatcher при его инициализации (dp = Dispatcher(storage=storage)).
 3. Определяем группу состояний:
     a) Создаем класс, наследуемый от StatesGroup, для группировки связанных состояний (например, 
@@ -273,6 +390,90 @@ Educational material on Stepik - https://stepik.org/course/120924/syllabus
 Исходя из этого, нужно помнить, что если мы используем в нашем боте машину состояний и хотите, чтобы некоторые команды 
 были доступны только в состоянии по умолчанию (например, команда /start) - нужно явно указывать дополнительный фильтр 
 StateFilter(default_state), иначе команда будет доступна вообще в любом состоянии.
+
+# Установка Redis
+
+1. Установка Redis на MacOS.
+    a) В терминале устанавливаем Homebrew, введя в терминал следующую строку: 
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+    для обновления Homebrew вводим:
+    ```bash
+    brew update
+    ```
+   b) Устанавливаем redis, введя в терминал следующую строку: 
+    ```bash
+    brew install redis
+    ```
+   с) Чтобы запустить Redis и автоматически запускать его при входе в систему, вы можете выполнить следующую команду:
+    ```bash
+    brew services start redis
+    ```
+    Если вы предпочитаете не запускать Redis как фоновый сервис, вы можете запустить его вручную, выполнив следующую 
+    команду:
+    ```bash
+    /opt/homebrew/opt/redis/bin/redis-server /opt/homebrew/etc/redis.conf
+    ```
+    Теперь Redis должен быть запущен и работать на вашей системе. Вы можете проверить его состояние и управлять им с 
+    помощью команды:
+    ```bash
+    brew services
+    ```
+    d) Теперь нужно подключиться к Redis и проверить, что он сохраняет и отдает данные. Для этого запускаем еще один 
+       терминал или новую вкладку в том, где вы устанавливали redis и выполняем команду:
+    ```bash
+    redis-cli
+    ```
+    Должна появиться строка приглашения к взаимодействию (cli - это от Command Line Interface, то есть интерфейс 
+    командной строки):
+    ```bash
+    127.0.0.1:6379> 
+    ```
+    Через нее можно отправлять команды в Redis. Например, можно добавить пару "ключ-значение" с помощью команды:
+    ```bash
+    SET my_key my_value
+    ```
+    А затем получить значение по ключу:
+    ```bash
+    GET my_key
+    ```
+    e) Чтобы завершить работу Redis - можно в первом терминале, в котором у нас запущен Redis, нажать Ctrl+С. Или можно 
+       не останавливать Redis, а просто выйти из режима командной строки - тогда нужно в терминале, где мы выполняли 
+       команду redis-cli выполнить команду quit или exit.
+
+Не смотря на то, что Редису все равно на какой машине он запущен, подразумевается, что он крутится где-то на сервере, а
+доступ к нему мы имеем через командную строку где-то в другом месте. Да и вообще, в эпоху повсеместной контейнеризации и
+редис, и бот, и другие микросервисы все живут по контейнерам и общаются по сети.
+
+2. Установка Redis на Linux.
+    a) В терминал вводим следующую строку: 
+    ```bash
+    sudo apt install redis
+    ```
+    b) Устанавливаем. А затем перезапускаем сервер:
+    ```bash
+    sudo service redis-server restart
+    ```
+    с) Проверяем, что сервер запущен:
+    ```bash
+    sudo service redis-server status
+    ```
+    Если все ок - среди прочей информации видим строчку:
+    ```bash
+    Status: "Ready to accept connections"
+    ```
+    d) Пробуем запустить командную строку:
+    ```bash
+    redis-cli
+    ```
+    Также можно попробовать записать и почитать пары "ключ-значение", как это описано выше для MacOS, через команды 
+    SET и GET, чтобы совсем-совсем убедиться, что все работает.
+
+3. Установка Redis на Windows:
+   a) https://skillbox.ru/media/base/kak_ustanovit_redis_v_os_windows_bez_ispolzovaniya_docker/
+   b) https://redis.io/docs/getting-started/installation/install-redis-on-windows/
+   c) https://www.w3schools.io/nosql/redis-install-windows/
 
 
 ## Структура проекта:
