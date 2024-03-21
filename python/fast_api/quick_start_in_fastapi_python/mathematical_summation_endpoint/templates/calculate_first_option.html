@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate</title>
+    <style>
+        /* Стили для стилизации формы */
+        body {
+            font-family: Arial, sans-serif; /* Установка шрифта */
+            margin: 0; /* Убираем отступы по умолчанию */
+            padding: 0; /* Убираем отступы по умолчанию */
+            background-color: #f0f0f0; /* Цвет фона */
+            text-align: center; /* Выравнивание по центру */
+        }
+
+        h1 {
+            margin-top: 50px; /* Отступ сверху для заголовка */
+        }
+
+        form {
+            margin-top: 20px; /* Отступ сверху для формы */
+        }
+
+        label {
+            font-size: 18px; /* Размер шрифта для меток */
+        }
+
+        input[type="number"] {
+            width: 100px; /* Ширина поля ввода числа */
+            height: 30px; /* Высота поля ввода числа */
+            font-size: 16px; /* Размер шрифта поля ввода */
+            padding: 5px; /* Внутренний отступ для поля ввода */
+            margin: 5px; /* Внешний отступ для поля ввода */
+        }
+
+        button {
+            background-color: #4CAF50; /* Цвет фона кнопки */
+            color: white; /* Цвет текста кнопки */
+            padding: 10px 20px; /* Отступы внутри кнопки */
+            text-align: center; /* Выравнивание текста по центру */
+            font-size: 16px; /* Размер шрифта кнопки */
+            cursor: pointer; /* Изменение курсора при наведении */
+            border: none; /* Убираем границу кнопки */
+            border-radius: 4px; /* Закругляем углы кнопки */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Цвет фона кнопки при наведении */
+        }
+    </style>
+</head>
+<body>
+<!-- Заголовок формы -->
+<h1>Давай вычислим сумму из двух чисел</h1>
+<!-- Форма для отправки чисел -->
+<form id="calculate-form">
+    <!-- Метка для первого числа -->
+    <label for="num1">a : </label>
+    <!-- Поле ввода первого числа -->
+    <input type="number" name="num1" id="num1"/>
+    <!-- Метка для второго числа -->
+    <label for="num2">b : </label>
+    <!-- Поле ввода второго числа -->
+    <input type="number" name="num2" id="num2"/>
+    <!-- Кнопка для отправки формы -->
+    <button type="button" onclick="sendData()">вычислить</button>
+</form>
+
+<script>
+    function sendData() {
+        const num1 = document.getElementById('num1').value;
+        const num2 = document.getElementById('num2').value;
+        const data = {
+            num1: parseFloat(num1),
+            num2: parseFloat(num2)
+        };
+
+        fetch('/calculate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert(`Результат: ${data.result}`);
+            })
+            .catch((error) => {
+                console.error('Ошибка:', error);
+            });
+    }
+</script>
+</body>
+</html>
