@@ -1,22 +1,18 @@
-# telegram_bot_book/config_data/config_data.py
+# solana_wallet_telegram_bot/config_data/config.py
+
 from typing import Union
 
 from pydantic.v1 import BaseSettings, SecretStr
 
 
-# Определение класса Settings, наследующегося от BaseModel, для хранения конфигурационных данных
 class Settings(BaseSettings):
-    """
-        Class representing the configuration of the Telegram bot.
-
-        Attributes:
-            bot_token (SecretStr): A secret string containing the token for accessing the Telegram Bot API.
-            admin_ids (Union[list[int], int]): The list of bot administrator IDs or a single administrator ID.
-    """
-    bot_token: SecretStr              # Определение переменной BOT_TOKEN типа SecretStr для хранения токена бота
+    db_name: str                      # Название базы данных
+    db_host: str                      # URL-адрес базы данных
+    db_user: str                      # Имя пользователя базы данных
+    db_password: SecretStr            # Пароль к базе данных
+    bot_token: SecretStr              # Токена бота
     admin_ids: Union[list[int], int]  # Список id администраторов бота
 
-    # Вложенный класс Config для определения настроек Pydantic
     class Config:
         """
             Settings for working with Pydantic.

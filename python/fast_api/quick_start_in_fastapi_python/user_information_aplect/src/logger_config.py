@@ -1,4 +1,4 @@
-# mathematical_summation_endpoint/logger_config.py
+# user_information_aplect/src/logger_config.py
 
 import logging
 import traceback

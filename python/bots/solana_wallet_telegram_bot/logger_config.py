@@ -1,4 +1,4 @@
-# mathematical_summation_endpoint/logger_config.py
+# solana_wallet_telegram_bot/logger_config.py
 
 import logging
 import traceback

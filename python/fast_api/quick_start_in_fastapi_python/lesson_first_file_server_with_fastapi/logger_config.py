@@ -1,4 +1,4 @@
-# telegram_bot_book/logger_config.py
+# lesson_first_file_server_with_fastapi/logger_config.py
 
 import logging
 import traceback

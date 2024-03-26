@@ -1,4 +1,4 @@
-# telegram_bot_book/logger_config.py
+# fastapi_project_skeleton/src/logger_config.py
 
 import logging
 import traceback

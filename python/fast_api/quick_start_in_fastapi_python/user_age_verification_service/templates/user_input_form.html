@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>User Information</title>
+    <style>
+        /* Стили для стилизации формы */
+        body {
+            font-family: Arial, sans-serif; /* Установка шрифта */
+            margin: 0; /* Убираем отступы по умолчанию */
+            padding: 0; /* Убираем отступы по умолчанию */
+            background-color: #f0f0f0; /* Цвет фона */
+            text-align: center; /* Выравнивание по центру */
+        }
+
+        h1 {
+            margin-top: 50px; /* Отступ сверху для заголовка */
+        }
+
+        form {
+            margin-top: 20px; /* Отступ сверху для формы */
+        }
+
+        label {
+            font-size: 18px; /* Размер шрифта для меток */
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 200px; /* Ширина поля ввода */
+            height: 30px; /* Высота поля ввода */
+            font-size: 16px; /* Размер шрифта поля ввода */
+            padding: 5px; /* Внутренний отступ для поля ввода */
+            margin: 5px; /* Внешний отступ для поля ввода */
+        }
+
+        button {
+            background-color: #4CAF50; /* Цвет фона кнопки */
+            color: white; /* Цвет текста кнопки */
+            padding: 10px 20px; /* Отступы внутри кнопки */
+            text-align: center; /* Выравнивание текста по центру */
+            font-size: 16px; /* Размер шрифта кнопки */
+            cursor: pointer; /* Изменение курсора при наведении */
+            border: none; /* Убираем границу кнопки */
+            border-radius: 4px; /* Закругляем углы кнопки */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Цвет фона кнопки при наведении */
+        }
+
+        /* Стили для результата */
+        .result-container {
+            margin-top: 20px; /* Отступ сверху для контейнера результата */
+            font-size: 18px; /* Размер шрифта результата */
+        }
+
+        .result {
+            background-color: #dff0d8; /* Цвет фона результата */
+            padding: 10px; /* Отступы внутри результата */
+            border-radius: 4px; /* Закругляем углы результата */
+            display: inline-block; /* Отображаем как блочный элемент */
+        }
+    </style>
+</head>
+<body>
+<!-- Заголовок формы -->
+<h1>Введите данные пользователя</h1>
+<!-- Форма для отправки данных пользователя -->
+<form id="user-form" action="/user" method="post">
+
+    <!-- Метка для имени пользователя -->
+    <label for="name">Имя: </label>
+    <!-- Поле ввода имени пользователя -->
+    <input type="text" name="name" id="name" required/>
+    <!-- Метка для возраста пользователя -->
+    <label for="age">Возраст: </label>
+    <!-- Поле ввода возраста пользователя -->
+    <input type="number" name="age" id="age" required/>
+    <!-- Кнопка для отправки формы -->
+    <button type="submit">Отправить</button>
+</form>
+<!-- Контейнер для отображения результата -->
+<div class="result-container">
+    <span class="result" id="result"></span>
+</div>
+
+<script>
+    // Функция для обработки отправки формы
+    document.getElementById('user-form').addEventListener('submit', function (event) {
+        // Отменяем стандартное поведение формы (перезагрузку страницы)
+        event.preventDefault();
+
+        // Получаем данные из полей формы
+        const name = document.getElementById('name').value;
+        const age = parseInt(document.getElementById('age').value);
+
+        // Отправляем запрос на сервер
+        fetch('/user', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                age: age
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Проверяем наличие свойства is_adult в объекте data
+                const isAdult = data.hasOwnProperty('is_adult') ? (data.is_adult ? 'Взрослый' : 'Еще малек') : 'Статус неизвестен';
+
+                // Обновляем содержимое контейнера с результатом
+                document.getElementById('result').innerHTML = `Данные пользователя: <br> Имя: ${data.name}, Возраст: ${data.age}, ${isAdult}`;
+            })
+
+            .catch(error => {
+                console.error('Ошибка:', error);
+            });
+    });
+</script>
+
+</body>
+</html>
