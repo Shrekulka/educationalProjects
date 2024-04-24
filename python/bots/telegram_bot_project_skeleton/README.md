@@ -77,5 +77,5 @@
     ├── __init__.py                               # Файл, обозначающий, что директория является пакетом Python.
     └── utils.py                                  # Модуль с вспомогательными утилитами.
 ```
-Учебный материал на Stepik - https://stepik.org/course/120924/syllabus
+Использовался учебный материал на Stepik - https://stepik.org/course/120924/syllabus
 Educational material on Stepik - https://stepik.org/course/120924/syllabus

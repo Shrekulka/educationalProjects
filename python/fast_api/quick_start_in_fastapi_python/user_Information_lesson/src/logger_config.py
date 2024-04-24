@@ -1,4 +1,4 @@
-# fastapi_project_skeleton/src/logger_config.py
+# user_Information_lesson/src/logger_config.py
 
 import logging
 import traceback

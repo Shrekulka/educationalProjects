@@ -1,20 +1,28 @@
-# solana_wallet_telegram_bot/external_services/solana/solana.py
-import traceback
-from typing import Tuple
+# solana-webwallet/external_services/solana/solana.py
 
-import requests
-from solana.rpc.api import Client, Keypair
+import time
+import traceback
+from typing import Tuple, Dict, List, Optional, Any
+
+import base58
+import httpx
+from solana.rpc.api import Keypair
+from solana.rpc.async_api import AsyncClient
 from solana.transaction import Transaction
 from solders.pubkey import Pubkey
-from solders.system_program import TransferParams, transfer
-from spl.token.constants import TOKEN_PROGRAM_ID
-from spl.token.instructions import get_associated_token_address, create_associated_token_account, transfer_checked, \
-    TransferCheckedParams
+from solders.system_program import transfer, TransferParams
+from solders.transaction_status import TransactionConfirmationStatus
 
+from config_data.config import (SOLANA_NODE_URL, LAMPORT_TO_SOL_RATIO, PRIVATE_KEY_HEX_LENGTH,
+                                PRIVATE_KEY_BINARY_LENGTH, TRANSACTION_HISTORY_CACHE_DURATION,
+                                TRANSACTION_LIMIT, timeout_settings)
 from logger_config import logger
 
-# Создание клиента для подключения к тестовой сети Devnet
-http_client = Client("https://api.devnet.solana.com")
+# Создание клиента для подключения к тестовой сети с настроенными таймаутами
+http_client = AsyncClient(SOLANA_NODE_URL, timeout=timeout_settings)
+
+# Создаем словарь для кэширования результатов запросов истории транзакций
+transaction_history_cache: Dict[str, Tuple[List, float]] = {}
 
 
 async def create_solana_wallet() -> Tuple[str, str]:
@@ -38,286 +46,293 @@ async def create_solana_wallet() -> Tuple[str, str]:
         # Возвращаем публичный адрес кошелька и приватный ключ кошелька как кортеж
         return wallet_address, private_key
 
-    # Если происходит ошибка с ключом (KeyError) или значением (ValueError)
-    except (KeyError, ValueError) as e:
+    except Exception as e:
         detailed_error_traceback = traceback.format_exc()
-        # Логирование ошибки
         logger.error(f"Failed to create Solana wallet: {e}\n{detailed_error_traceback}")
         # Поднятие нового исключения с подробной информацией
-        raise Exception(f"Failed to create Solana wallet: {e}\n{detailed_error_traceback}")
+        raise Exception(f"Failed to create Solana wallet: {e}")
 
 
-async def get_sol_balance(wallet_address, client):
+def get_wallet_address_from_private_key(private_key: str) -> str:
+    """
+        Gets the wallet address from the private key.
+
+        Args:
+            private_key (str): A string containing the presumed private key.
+
+        Returns:
+            str: The wallet address as a string.
+    """
+    # Создание объекта Keypair из закрытого ключа, преобразованного из шестнадцатеричной строки в байтовый формат.
+    # Метод from_seed используется для создания ключевой пары на основе семени (seed), которое представляет собой
+    # закрытый ключ в байтовом формате.
+    # Мы используем метод bytes.fromhex для преобразования шестнадцатеричной строки в байтовый формат.
+    keypair = Keypair.from_seed(bytes.fromhex(private_key))
+
+    # Получение публичного адреса кошелька из объекта Keypair
+    wallet_address = str(keypair.pubkey())
+
+    # Возвращение адреса кошелька в виде строки
+    return wallet_address
+
+
+def is_valid_wallet_address(address: str) -> bool:
+    """
+        Checks whether the input string is a valid Solana wallet address.
+
+        Args:
+            address (str): A string containing the presumed wallet address.
+
+        Returns:
+            bool: True if the address is valid, False otherwise.
+    """
     try:
-        # Получение баланса кошелька
-        balance = await client.get_balance(Pubkey(wallet_address))
+        # Создание объекта PublicKey из строки адреса.
+        # Метод from_string используется для создания объекта PublicKey из строки, содержащей адрес кошелька.
+        # Этот метод позволяет создать объект PublicKey, который может быть использован для проверки подписей
+        # или других операций, связанных с публичным ключом кошелька.
+        Pubkey.from_string(address)
 
-        # Преобразование лампортов в SOL
-        sol_balance = balance / 10 ** 9
-
-        # Возвращаем баланс кошелька в SOL после преобразования лампортов
-        return sol_balance
-
-    except Exception as e:
-        detailed_error_traceback = traceback.format_exc()
-        # Логирование ошибки
-        logger.error(f"Failed to get Solana balance: {e}\n{detailed_error_traceback}")
-        # Дополнительная обработка ошибки, если необходимо
-        raise Exception(f"Failed to get Solana balance: {e}\n{detailed_error_traceback}")
+        # Если создание объекта PublicKey прошло успешно, значит адрес валиден
+        return True
+    except ValueError:
+        # Если возникает ошибка, значит адрес невалиден, возвращаем False
+        return False
 
 
-async def get_token_price(token_mint_address):
-    # Формирование URL для запроса цены токена к внешнему API - надо доработать
-    api_url = f"https://api.example.com/token-prices/{token_mint_address}"
+def is_valid_private_key(private_key: str) -> bool:
+    """
+        Checks whether the input string is a valid Solana private key.
+
+        Args:
+            private_key (str): A string containing the presumed private key.
+
+        Returns:
+            bool: True if the private key is valid, False otherwise.
+    """
     try:
-        # Отправка GET запроса к API для получения информации о цене токена
-        response = requests.get(api_url)
-        # Проверка на наличие ошибок HTTP
-        response.raise_for_status()
-        # Преобразование ответа в формат JSON
-        token_data = response.json()
-        # Извлечение цены токена из полученных данных
-        token_price = token_data["price"]
+        # Проверяем длину приватного ключа Solana
+        # Если длина ключа 64 символа, это hex-представление
+        if len(private_key) == PRIVATE_KEY_HEX_LENGTH:
+            # Преобразование строки, содержащей приватный ключ, в байтовый формат с помощью метода fromhex,
+            # а затем создание объекта Keypair из этих байтов.
+            # Этот метод используется для создания объекта Keypair, который может быть использован для
+            # подписывания транзакций или выполнения других операций, связанных с приватным ключом.
+            Keypair.from_seed(bytes.fromhex(private_key))
 
-        # Возвращение цены токена
-        return token_price
+        # Если длина ключа 32 символа, это представление в бинарном формате
+        elif len(private_key) == PRIVATE_KEY_BINARY_LENGTH:
+            # Преобразование строки, содержащей приватный ключ, в байтовый формат с помощью метода fromhex,
+            # а затем создание объекта Keypair из этих байтов.
+            # Этот метод используется для создания объекта Keypair из приватного ключа с использованием его seed.
+            Keypair.from_seed(bytes.fromhex(private_key))
+        else:
+            # Если длина ключа не соответствует ожидаемой длине, возвращаем False
+            return False
+        # Если создание объекта Keypair прошло успешно, значит приватный ключ валиден
+        return True
+    except ValueError:
+        # Если возникает ошибка, значит приватный ключ невалиден, возвращаем False
+        return False
 
-    # Обработка ошибок запроса (например, проблемы с сетью)
-    except requests.RequestException as e:
-        logger.error(f"Failed to fetch token price: {e}")
-        detailed_error_traceback = traceback.format_exc()
-        raise Exception(f"Failed to fetch token price: {e}\n{detailed_error_traceback}")
-    # Обработка неправильного формата ответа от API (отсутствует ключ 'price')
-    except KeyError:
-        logger.error("Invalid response format: missing 'price' key")
-        detailed_error_traceback = traceback.format_exc()
-        raise Exception(f"Invalid response format: missing 'price' key\n{detailed_error_traceback}")
 
+def is_valid_amount(amount: str | int | float) -> bool:
+    """
+        Checks if the value is a valid amount.
 
-async def buy_token(wallet, token_mint_address, amount, client):
+        Arguments:
+        amount (str | int | float): The value of the amount to be checked.
+
+        Returns:
+        bool: True if the amount value is valid, False otherwise.
+    """
+    # Проверяем, является ли аргумент amount экземпляром int или float.
+    if isinstance(amount, (int, float)):
+        return True
+        # Если amount не является int или float, пытаемся преобразовать его в float.
     try:
-        # Получение ассоциированного токенового аккаунта для указанного кошелька
-        associated_token_account = get_associated_token_address(wallet.public_key(), token_mint_address)
-
-        # Получение информации о токеновом аккаунте
-        account_info = await client.get_account_info(associated_token_account)
-        # Если ассоциированный токеновый аккаунт не существует
-        if account_info is None:
-            # Создание объекта транзакции для выполнения операции покупки токенов
-            transaction = Transaction()
-            # Создание инструкции для создания ассоциированного токенового аккаунта
-            create_account_instruction = create_associated_token_account(
-                # Оплата комиссии за создание аккаунта происходит с кошелька отправителя
-                payer=wallet.public_key(),
-                # Владелец создаваемого аккаунта - также кошелек отправителя
-                owner=wallet.public_key(),
-                # Адрес монетного токена, для которого создается ассоциированный аккаунт
-                mint=token_mint_address, )
-
-            # Добавление инструкции создания ассоциированного токенового аккаунта к транзакции.
-            transaction.add(create_account_instruction)
-            # Подписание транзакции с использованием приватного ключа кошелька.
-            transaction.sign(wallet)
-            # Отправка подписанной транзакции в блокчейн.
-            await client.send_transaction(transaction)
-
-        # Получение информации о цене токена с внешнего API
-        token_price = await get_token_price(token_mint_address)
-
-        # Вычисление количества токенов, которое можно купить на указанную сумму SOL
-        sol_amount = amount / token_price
-        # Преобразование в мелкие единицы
-        token_amount = int(sol_amount * 10 ** 9)
-
-        # Параметры для выполнения транзакции покупки токенов.
-        transfer_params = TransferCheckedParams(
-            # Количество токенов для покупки, выраженное в мелких единицах.
-            amount=token_amount,
-            # Количество десятичных знаков токена.
-            decimals=6,
-            # Адрес целевого токенового аккаунта, куда будут отправлены купленные токены.
-            dest=associated_token_account,
-            # Адрес монетного токена.
-            mint=token_mint_address,
-            # Публичный ключ владельца кошелька, который покупает токены.
-            owner=wallet.public_key(),
-            # Идентификатор программы для работы с токенами.
-            program_id=TOKEN_PROGRAM_ID,
-            # Источник токенов, который указывается как публичный ключ кошелька.
-            source=wallet.public_key(), )
-        # Создание инструкции для выполнения проверенной транзакции покупки токенов.
-        transfer_instruction = transfer_checked(transfer_params)
-
-        # Создание новой транзакции.
-        transaction = Transaction()
-        # Добавление инструкции перевода токенов в созданную транзакцию.
-        transaction.add(transfer_instruction)
-        # Подписание транзакции с использованием приватного ключа кошелька отправителя.
-        transaction.sign(wallet)
-        # Отправка подписанной транзакции в сеть блокчейна.
-        await client.send_transaction(transaction)
-
-    except Exception as e:
-        detailed_error_traceback = traceback.format_exc()
-        # Логирование ошибки
-        logger.error(f"Failed to buy token: {e}\n{detailed_error_traceback}")
-        # Дополнительная обработка ошибки, если необходимо
-        raise Exception(f"Failed to buy token: {e}\n{detailed_error_traceback}")
+        float(amount)
+        return True
+    except ValueError:
+        return False
 
 
-async def sell_token(wallet, token_mint_address, amount, client):
+async def get_sol_balance(wallet_addresses, client):
+    """
+        Asynchronously retrieves the SOL balance for the specified wallet addresses.
+
+        Args:
+            wallet_addresses (Union[str, List[str]]): The wallet address or a list of wallet addresses.
+            client: The Solana client.
+
+        Returns:
+            Union[float, List[float]]: The SOL balance or a list of SOL balances corresponding to the wallet addresses.
+    """
     try:
-        # Получение ассоциированного токенового аккаунта для указанного кошелька и мята
-        associated_token_account = get_associated_token_address(wallet.public_key(), token_mint_address)
+        # Если передан одиночный адрес кошелька
+        if isinstance(wallet_addresses, str):
+            balance = (await client.get_balance(Pubkey.from_string(wallet_addresses))).value
+            # Преобразование лампортов в SOL
+            sol_balance = balance / LAMPORT_TO_SOL_RATIO
+            logger.debug(f"wallet_address: {wallet_addresses}, balance: {balance}, sol_balance: {sol_balance}")
+            return sol_balance
+        # Если передан список адресов кошельков
+        elif isinstance(wallet_addresses, list):
+            sol_balances = []
+            for address in wallet_addresses:
+                balance = (await client.get_balance(Pubkey.from_string(address))).value
+                # Преобразование лампортов в SOL
+                sol_balance = balance / LAMPORT_TO_SOL_RATIO
+                sol_balances.append(sol_balance)
+            return sol_balances
+        else:
+            raise ValueError("Invalid type for wallet_addresses. Expected str or list[str].")
+    except Exception as error:
+        detailed_error_traceback = traceback.format_exc()
+        logger.error(f"Failed to get Solana balance: {error}\n{detailed_error_traceback}")
+        raise Exception(f"Failed to get Solana balance: {error}\n{detailed_error_traceback}")
 
-        # Получение информации о цене токена с внешнего API
-        token_price = await get_token_price(token_mint_address)
 
-        # Вычисление суммы SOL, которую можно получить за указанное количество токенов
-        sol_amount = amount * token_price
+async def transfer_token(sender_address: str, sender_private_key: str, recipient_address: str, amount: float,
+                         client: AsyncClient) -> bool:
+    """
+        Asynchronous function to transfer tokens between wallets.
 
-        # Параметры для выполнения проверенной транзакции продажи токенов.
-        transfer_params = TransferCheckedParams(
-            # Количество токенов для продажи, выраженное в мелких единицах.
-            amount=int(amount * 10 ** 9),
-            # Количество десятичных знаков токена.
-            decimals=6,
-            # Публичный ключ кошелька, на который будут отправлены вырученные средства от продажи токенов.
-            dest=wallet.public_key(),
-            # Адрес монетного токена.
-            mint=token_mint_address,
-            # Публичный ключ владельца токенов, который продает токены.
-            owner=associated_token_account,
-            # Идентификатор программы для работы с токенами.
-            program_id=TOKEN_PROGRAM_ID,
-            # Источник токенов, который указывается как публичный ключ ассоциированного токенового аккаунта.
-            source=associated_token_account,
+        Args:
+            sender_address (str): Sender's address.
+            sender_private_key (str): Sender's private key.
+            recipient_address (str): Recipient's address.
+            amount (float): Amount of tokens to transfer.
+            client (AsyncClient): Asynchronous client for sending the transaction.
+
+        Raises:
+            ValueError: If any of the provided addresses is invalid or the private key is invalid.
+
+        Returns:
+            bool: True if the transfer is successful, False otherwise.
+    """
+    # Проверяем, является ли адрес отправителя действительным
+    if not is_valid_wallet_address(sender_address):
+        raise ValueError("Invalid sender address")
+
+    # Проверяем, является ли адрес получателя действительным
+    if not is_valid_wallet_address(recipient_address):
+        raise ValueError("Invalid recipient address")
+
+    # Проверяем, является ли приватный ключ отправителя действительным
+    if not is_valid_private_key(sender_private_key):
+        raise ValueError("Invalid sender private key")
+
+    if not is_valid_amount(amount):
+        raise ValueError("Invalid amount")
+
+    # Создаем пару ключей отправителя из приватного ключа
+    sender_keypair = Keypair.from_seed(bytes.fromhex(sender_private_key))
+
+    # Создаем транзакцию для перевода токенов
+    txn = Transaction().add(
+        transfer(
+            TransferParams(
+                from_pubkey=sender_keypair.pubkey(),
+                to_pubkey=Pubkey.from_string(recipient_address),
+                # Количество лампортов для перевода, преобразованное из суммы SOL.
+                lamports=int(amount * LAMPORT_TO_SOL_RATIO),
+            )
         )
+    )
+    # Отправляем транзакцию клиенту
+    send_transaction_response = await client.send_transaction(txn, sender_keypair)
+    # Подтверждаем транзакцию
+    confirm_transaction_response = await client.confirm_transaction(send_transaction_response.value)
 
-        # Создание инструкции для выполнения проверенной транзакции продажи токенов.
-        transfer_instruction = transfer_checked(transfer_params)
-
-        # Создание новой транзакции.
-        transaction = Transaction()
-        # Добавление инструкции перевода токенов в созданную транзакцию.
-        transaction.add(transfer_instruction)
-        # Подписание транзакции с использованием приватного ключа кошелька отправителя.
-        transaction.sign(wallet)
-        # Отправка подписанной транзакции в сеть блокчейна.
-        await client.send_transaction(transaction)
-
-        # Создание параметров для перевода SOL.
-        transfer_params = TransferParams(
-            # Публичный ключ отправителя SOL.
-            from_pubkey=wallet.public_key(),
-            # Публичный ключ получателя SOL, который является таким же, как и отправитель, так как SOL переводится на
-            # тот же кошелек.
-            to_pubkey=wallet.public_key(),
-            # Количество лампортов для перевода, преобразованное из суммы SOL.
-            lamports=int(sol_amount * 10 ** 9),
-        )
-        # Создание инструкции перевода SOL с использованием параметров перевода.
-        transfer_instruction = transfer(transfer_params)
-
-        # Создание новой транзакции.
-        transaction = Transaction()
-        # Добавление инструкции перевода SOL в созданную транзакцию.
-        transaction.add(transfer_instruction)
-        # Отправка транзакции в блокчейн через клиент.
-        await client.send_transaction(transaction)
-
-    except Exception as e:
-        detailed_error_traceback = traceback.format_exc()
-        # Логирование ошибки
-        logger.error(f"Failed to sell token: {e}\n{detailed_error_traceback}")
-        # Дополнительная обработка ошибки, если необходимо
-        raise Exception(f"Failed to sell token: {e}\n{detailed_error_traceback}")
+    if hasattr(confirm_transaction_response, 'value') and confirm_transaction_response.value[0]:
+        if hasattr(confirm_transaction_response.value[0], 'confirmation_status'):
+            confirmation_status = confirm_transaction_response.value[0].confirmation_status
+            if confirmation_status:
+                logger.debug(f"Transaction confirmation_status: {confirmation_status}")
+                if confirmation_status in [TransactionConfirmationStatus.Confirmed,
+                                           TransactionConfirmationStatus.Finalized]:
+                    return True
+    return False
 
 
-async def transfer_token(sender_wallet, recipient_address, token_mint_address, amount, client):
+def decode_solana_address(encoded_address: str) -> Optional[Any]:
+    """
+        Decodes a Solana address from Base58 format.
+
+        Arguments:
+        encoded_address (str): The encoded Solana address in Base58 format.
+
+        Returns:
+        str or None: The decoded Solana address as a string or None in case of error.
+    """
     try:
-        # Получение ассоциированного токенового аккаунта отправителя
-        sender_associated_token_account = get_associated_token_address(sender_wallet.public_key(), token_mint_address)
-
-        # Получение ассоциированного токенового аккаунта получателя
-        recipient_associated_token_account = get_associated_token_address(recipient_address, token_mint_address)
-
-        # Получение информации о токеновом аккаунте получателя
-        account_info = await client.get_account_info(recipient_associated_token_account)
-
-        # Если токеновый аккаунт получателя не существует
-        if account_info is None:
-            # Создание объекта транзакции
-            transaction = Transaction()
-            # Создание инструкции для создания ассоциированного токенового аккаунта получателя
-            create_account_instruction = create_associated_token_account(
-                payer=sender_wallet.public_key(),  # Оплата комиссии за создание аккаунта с кошелька отправителя
-                owner=Pubkey(recipient_address),  # Владелец нового токенового аккаунта
-                mint=token_mint_address, )  # Монетный мят токена
-
-            # Добавление инструкции создания токенового аккаунта в транзакцию
-            transaction.add(create_account_instruction)
-            # Подписание транзакции с помощью приватного ключа отправителя
-            transaction.sign(sender_wallet)
-            # Отправка транзакции в блокчейн
-            await client.send_transaction(transaction)
-
-        # Определение параметров для проверенного перевода токенов
-        transfer_params = TransferCheckedParams(
-            # Количество переводимых токенов в мелких единицах
-            amount=int(amount * 10 ** 9),
-            # Количество десятичных знаков токена
-            decimals=6,
-            # Адрес назначения - ассоциированный токеновый аккаунт получателя
-            dest=recipient_associated_token_account,
-            # Адрес монетного токена
-            mint=token_mint_address,
-            # Публичный ключ отправителя - владельца токенов
-            owner=sender_associated_token_account,
-            # Идентификатор программы для работы с токенами
-            program_id=TOKEN_PROGRAM_ID,
-            # Источник токенов - ассоциированный токеновый аккаунт отправителя
-            source=sender_associated_token_account, )
-
-        # Создание инструкции проверенного перевода токенов
-        transfer_instruction = transfer_checked(transfer_params)
-
-        # Создание новой транзакции
-        transaction = Transaction()
-        # Добавление инструкции перевода токенов к транзакции
-        transaction.add(transfer_instruction)
-        # Подписание транзакции с использованием приватного ключа отправителя
-        transaction.sign(sender_wallet)
-        # Отправка транзакции в блокчейн
-        await client.send_transaction(transaction)
-
+        # Декодируем адрес из формата Base58
+        decoded_bytes = base58.b58decode(encoded_address)
+        # Преобразуем байтовые данные в строку
+        decoded_address = decoded_bytes.decode('utf-8')
+        return decoded_address
     except Exception as e:
-        detailed_error_traceback = traceback.format_exc()
-        # Логирование ошибки
-        logger.error(f"Failed to transfer token: {e}\n{detailed_error_traceback}")
-        # Дополнительная обработка ошибки, если необходимо
-        raise Exception(f"Failed to transfer token: {e}\n{detailed_error_traceback}")
+        print(f"Failed to decode Solana address: {e}")
+        return None
 
 
-async def get_transaction_history(wallet_address, client):
+async def get_transaction_history(wallet_address: str) -> list[dict]:
+    """
+        Retrieves transaction history for a given Solana wallet address.
+
+        Arguments:
+        wallet_address (str): The Solana wallet address.
+
+        Returns:
+        list[dict]: A list of dictionaries representing transactions in JSON format.
+    """
     try:
+        # Проверяем, были ли уже получены данные для этого адреса кошелька и время их сохранения
+        cached_data = transaction_history_cache.get(wallet_address)
+        if cached_data is not None:
+            transaction_history, cache_time = cached_data
+            # Проверяем, не истекло ли время действия кеша
+            if time.time() - cache_time <= TRANSACTION_HISTORY_CACHE_DURATION:
+                # Возвращаем кэшированные данные
+                return transaction_history
+
         # Получение истории транзакций кошелька
-        signature_statuses = await client.get_signatures_for_address(Pubkey(wallet_address))
-        # Инициализируем пустой список для хранения истории транзакций
         transaction_history = []
-        # Проходим по всем статусам подписей в результате
-        for signature_status in signature_statuses['result']:
-            # Получаем транзакцию по подписи
-            transaction = await client.get_transaction(signature_status['signature'])
-            # Добавляем полученную транзакцию в историю транзакций
-            transaction_history.append(transaction)
 
-        # Возвращаем список истории транзакций
-        return transaction_history
+        # Декодируем строку Base58 в байтовый формат
+        pubkey_bytes = base58.b58decode(wallet_address)
+        # Создаем объект Pubkey из байтового представления
+        pubkey = Pubkey(pubkey_bytes)
+
+        try:
+            # Получение истории транзакций для текущего адреса
+            signature_statuses = (
+                await http_client.get_signatures_for_address(pubkey, limit=TRANSACTION_LIMIT)
+            ).value
+
+            # Проходим по всем статусам подписей в результате
+            for signature_status in signature_statuses:
+                # Получаем транзакцию по подписи
+                transaction = (await http_client.get_transaction(signature_status.signature)).value
+                # Добавляем полученную транзакцию в историю транзакций
+                transaction_history.append(transaction)
+
+            # Кэшируем полученные данные для последующих запросов
+            transaction_history_cache[wallet_address] = (transaction_history, time.time())
+
+            # Возвращаем список истории транзакций
+            return transaction_history
+
+        except httpx.HTTPStatusError as e:
+            if e.response.status_code == 429:
+                # Если получена ошибка "429 Too Many Requests", вернем None
+                return []
+            else:
+                raise e
 
     except Exception as e:
         detailed_error_traceback = traceback.format_exc()
-        # Логирование ошибки
-        logger.error(f"Failed to get transaction history for Solana wallet: {e}\n{detailed_error_traceback}")
-        # Дополнительная обработка ошибки, если необходимо
-        raise Exception(f"Failed to get transaction history for Solana wallet: {e}\n{detailed_error_traceback}")
+        logger.error(
+            f"Failed to get transaction history for Solana wallet {wallet_address}: {e}\n{detailed_error_traceback}")
+        return []

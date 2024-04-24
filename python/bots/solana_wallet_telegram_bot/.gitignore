@@ -194,3 +194,8 @@ dist/
 
 # Windows binaries
 *.pyd
+
+.idea
+.venv/
+tmp/
+*.db

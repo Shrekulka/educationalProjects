@@ -175,18 +175,18 @@ async def process_bookmarks_command(message: Message) -> None:
 @router.callback_query(F.data == 'backward')
 async def process_backward_press(callback: CallbackQuery) -> None:
     """
-    Обработчик callback-запроса 'backward'.
+       Handler for the 'backward' callback query.
 
-    Args:
-        callback (types.CallbackQuery): Объект callback-запроса.
+       Args:
+           callback (types.CallbackQuery): The callback query object.
 
-    Returns:
-        None
+       Returns:
+           None
 
-    Этот обработчик срабатывает при нажатии пользователем кнопки "Назад".
-    Если текущая страница пользователя больше 1, уменьшает номер текущей страницы
-    пользователя на 1 и отправляет сообщение с новой страницей книги и обновленной
-    клавиатурой пагинации. В противном случае ничего не делает.
+       This handler triggers when the user presses the 'backward' button.
+       If the current page of the user is greater than 1, it decrements the
+       current page number by 1 and sends a message with the new page of the
+       book and updated pagination keyboard. Otherwise, it does nothing.
     """
     # Выводим апдейт в терминал
     logger.info(callback.model_dump_json(indent=4, exclude_none=True))
@@ -211,19 +211,19 @@ async def process_backward_press(callback: CallbackQuery) -> None:
 @router.callback_query(F.data == 'forward')
 async def process_forward_press(callback: CallbackQuery) -> None:
     """
-        Обработчик callback-запроса 'forward'.
+        Handler for the 'forward' callback query.
 
         Args:
-            callback (types.CallbackQuery): Объект callback-запроса.
+            callback (types.CallbackQuery): The callback query object.
 
         Returns:
             None
 
-        Этот обработчик срабатывает при нажатии пользователем кнопки "Вперед".
-        Если текущая страница пользователя меньше общего количества страниц книги,
-        увеличивает номер текущей страницы пользователя на 1 и отправляет сообщение
-        с новой страницей книги и обновленной клавиатурой пагинации.
-        В противном случае ничего не делает.
+        This handler triggers when the user presses the 'forward' button.
+        If the current page of the user is less than the total number of pages in the book,
+        it increments the current page number by 1 and sends a message with the new page of the
+        book and updated pagination keyboard.
+        Otherwise, it does nothing.
     """
     # Проверяем, что текущая страница пользователя меньше общего количества страниц книги.
     if users_db[callback.from_user.id]['page'] < len(book):

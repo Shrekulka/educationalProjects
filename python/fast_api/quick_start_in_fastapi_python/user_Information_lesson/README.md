@@ -176,6 +176,8 @@ We can view the documentation at the following links: http://127.0.0.1:8000/docs
 │
 ├── logging.ini                # File with logging configuration
 │
+├── requirements.txt           # File listing project dependencies
+│
 └── alembic.ini                # File with Alembic configuration 
 ```
 Educational material on Stepik - https://stepik.org/course/179694/syllabus
@@ -364,6 +366,8 @@ uvicorn src.main:app --reload
 ├── .gitignore                 # Файл с исключениями для Git
 │
 ├── logging.ini                # Файл с конфигурацией логирования
+│
+├── requirements.txt           # Файл с перечнем зависимостей проекта
 │
 └── alembic.ini                # Файл с конфигурацией Alembic 
  ```

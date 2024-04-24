@@ -1,0 +1,32 @@
+<!-- Текущий шаблон будет наследовать (расширять) базовый шаблон base.html, расположенный в приложении main. 
+ Наследование шаблонов в Django позволяет определить общий макет и структуру для нескольких страниц, а затем вставлять
+ специфичный контент в определенные места базового шаблона. -->
+{% extends "main/base.html" %}
+
+<!-- Эта строка в Django-шаблоне загружает тег-библиотеку static, которая предоставляет тег для ссылок на статические
+ файлы. Использование этого тега предпочтительнее, чем жестко закодированные URL-адреса, так как он позволяет Django
+ правильно формировать ссылки на статические файлы в зависимости от настроек проекта и режима работы (разработка 
+ или production). -->
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock css %}
+
+{% block content %}
+    <div class="mt-5 pt-5 bg-white custom-shadow rounded">
+        <h2 class="m-2"><strong>{{ content }}</strong></h2>
+        <p class="m-2">{{ text_on_page }}</p>
+    </div>
+
+{% endblock content %}
+
+{% block footer %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
+        </div>
+    </footer>
+{% endblock footer %}
+
+
