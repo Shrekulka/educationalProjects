@@ -1,0 +1,47 @@
+<!-- Файл шаблона расположен в папке backend/modules/system/templates/system/profile_detail.html -->
+
+<!-- Наследуем основной шаблон 'main.html' для использования общего стиля и компонентов сайта -->
+{% extends 'main.html' %}
+
+{% block content %}
+    <!-- Карточка профиля пользователя -->
+    <div class="card border-0">
+        <div class="card-body">
+            <!-- Разметка для размещения информации о профиле -->
+            <div class="row">
+                <!-- Блок с изображением профиля -->
+                <div class="col-md-3">
+                    <figure>
+                        <!-- Вставляем изображение аватара профиля с помощью URL, полученного из поля 'avatar' -->
+                        <img src="{{ profile.avatar.url }}" class="img-fluid rounded-0" alt="{{ profile }}">
+                    </figure>
+                </div>
+                <!-- Блок с основной информацией о профиле -->
+                <div class="col-md-9">
+                    <!-- Заголовок с именем пользователя -->
+                    <h5 class="card-title">
+                        {{ profile }}
+                    </h5>
+                    <!-- Блок с дополнительной информацией о профиле -->
+                    <div class="card-text">
+                        <ul>
+                            <!-- Выводим никнейм пользователя -->
+                            <li>Никнейм: {{ profile.user.username }}</li>
+                            <!-- Выводим имя и фамилию пользователя, если они указаны -->
+                            {% if profile.user.get_full_name %}
+                                <li>Имя и фамилия: {{ profile.user.get_full_name }}</li> {% endif %}
+                            <!-- Выводим дату последнего входа пользователя -->
+                            <li>Заходил: {{ profile.user.last_login }}</li>
+                            <!-- Выводим дату рождения пользователя -->
+                            <li>Дата рождения: {{ profile.birth_date }}</li>
+                            <!-- Выводим информацию о себе, указанную пользователем -->
+                            <li>О себе: {{ profile.bio }}</li>
+                        </ul>
+                        <!-- Кнопка для перехода к редактированию профиля -->
+                        <a href="{% url 'profile_edit' %}" class="btn btn-sm btn-primary">Редактировать профиль</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

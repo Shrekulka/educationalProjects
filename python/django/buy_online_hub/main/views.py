@@ -3,6 +3,8 @@ from urllib.request import Request
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from goods.models import Categories
+
 
 def index(request: Request) -> HttpResponse:
     context: dict[str, str] = {

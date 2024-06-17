@@ -1,0 +1,81 @@
+<!-- Файл шаблона расположен в папке backend/modules/blog/templates/blog/comments/comments_list.html -->
+
+<!-- Загружаем теги для работы с древовидными структурами и статическими файлами -->
+{% load mptt_tags static %}
+
+<!-- Контейнер для вложенных комментариев -->
+<div class="nested-comments">
+    <!-- Рекурсивное отображение дерева комментариев -->
+    {% recursetree article.comments.all %}
+        <!-- Создание уникального идентификатора для ветви комментариев -->
+        <ul id="comment-thread-{{ node.pk }}">
+            <!-- Элемент списка для каждого комментария -->
+            <li class="card border-0">
+                <!-- Создание строки для отображения содержимого комментария -->
+                <div class="row">
+                    <!-- Отображение аватара автора комментария -->
+                    <div class="col-md-2">  <!-- Создание колонки для размещения аватара -->
+                        <!-- Вставка URL аватара, установка стилей для изображения, альтернативный текст для аватара -->
+                        <img src="{{ node.author.profile.avatar.url }}"
+                             style="width: 120px;height: 120px;object-fit: cover;"
+                             alt="{{ node.author }}"/>
+                    </div>
+                    <div class="col-md-10">  <!-- Создание колонки для содержимого комментария -->
+                        <div class="card-body">  <!-- Создание области для содержимого карточки -->
+
+                            <!-- Отображение имени автора комментария с ссылкой на его профиль -->
+                            <h6 class="card-title">
+                                <a href="{{ node.author.profile.get_absolute_url }}">{{ node.author }}</a>
+                            </h6>
+                            <!-- Отображение содержания комментария -->
+                            <p class="card-text">
+                                {{ node.content }}
+                            </p>
+                            <!-- Кнопка для ответа на комментарий -->
+                            <a class="btn btn-sm btn-dark btn-reply" href="#commentForm" data-comment-id="{{ node.pk }}"
+                               data-comment-username="{{ node.author }}">Ответить</a>
+                            <hr/>
+                            <!-- Отображение времени создания комментария -->
+                            <time>{{ node.time_create }}</time>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Рекурсивный вызов для отображения ответов на текущий комментарий -->
+            {% if not node.is_leaf_node %}
+                {{ children }}
+            {% endif %}
+        </ul>
+    {% endrecursetree %}
+</div>
+
+<!-- Форма добавления комментария (отображается только для аутентифицированных пользователей) -->
+{% if request.user.is_authenticated %}
+{#    <p>Пользователь авторизован</p>#}
+    <div class="card border-0">  <!-- Создание карточки для формы комментария -->
+        <div class="card-body">  <!-- Создание области для содержимого карточки -->
+            <h6 class="card-title">  <!-- Заголовок карточки -->
+                Форма добавления комментария
+            </h6>
+
+            <!-- HTML-форма для отправки нового комментария -->
+            <form method="post" action="{% url 'comment_create_view' article.pk %}" id="commentForm" name="commentForm"
+                  data-article-id="{{ article.pk }}">
+                {% csrf_token %}
+                <!-- Вставка формы из Django-шаблона CommentCreateForm -->
+                {{ form.as_p }}
+                <!-- Кнопка для отправки формы с комментарием -->
+                <div class="d-grid gap-2 d-md-block mt-2">
+                    <button type="submit" class="btn btn-dark" id="commentSubmit">Добавить комментарий</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% else %}
+    <p>Пользователь не авторизован</p>
+{% endif %}
+
+<!-- Подключение скрипта для обработки функционала добавления комментариев -->
+{% block script %}
+    <script src="{% static 'js/custom/comments.js' %}"></script>
+{% endblock %}

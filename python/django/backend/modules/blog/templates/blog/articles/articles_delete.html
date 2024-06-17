@@ -1,0 +1,36 @@
+<!-- Файл шаблона расположен в папке backend/modules/blog/templates/blog/articles_delete.html -->
+
+<!-- Наследуемся от главной страницы (main.html), чтобы мы могли вставить контент в определенное место в шаблоне нашего сайта. -->
+{% extends 'main.html' %}
+
+<!-- Начало блока контента -->
+{% block content %}
+    <!-- Создаем карточку (card) с тенью и отступами -->
+    <div class="card mb-3 border-0 nth-shadow">
+        <div class="card-body">
+            <!-- Заголовок карточки -->
+            <div class="card-title nth-card-title">
+                <h4>Удаление статьи</h4>
+            </div>
+            <!-- Форма для отправки запроса на удаление статьи -->
+            <form method="post">
+                <!-- Токен CSRF для защиты от межсайтовой подделки запросов -->
+                {% csrf_token %}
+                <!-- Блок предупреждения с иконкой и сообщением о том, что статья будет удалена -->
+                <div class="alert alert-warning" role="alert">
+                    <i class="fas fa-info-circle"></i> Вы собираетесь удалить статью:
+                    <!-- Выводим заголовок статьи, которую пользователь собирается удалить -->
+                    <strong>{{ article.title }}</strong>, вы подтверждаете свое действие?
+                </div>
+                <!-- Контейнер для кнопок -->
+                <div class="d-grid gap-2 d-md-block mt-2">
+                    <!-- Кнопка для подтверждения удаления статьи -->
+                    <button type="submit" class="btn btn-dark">Удалить статью</button>
+                    <!-- Ссылка для отмены удаления и перехода на страницу статьи -->
+                    <a href="{{ article.get_absolute_url }}" class="btn btn-primary">Отменить удаление</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Конец блока контента -->
+{% endblock %}

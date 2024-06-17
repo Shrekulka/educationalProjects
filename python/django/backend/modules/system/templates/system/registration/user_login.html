@@ -1,0 +1,27 @@
+<!-- Файл шаблона расположен в папке backend/modules/system/templates/system/registration/user_login.html -->
+
+<!-- Наследуем основной шаблон 'main.html' для использования общего стиля и компонентов сайта -->
+{% extends 'main.html' %}
+
+{% block content %}
+    <!-- Создаем блок (карточку) для отображения формы авторизации -->
+    <div class="card mb-3 border-0 nth-shadow">
+        <div class="card-body">
+            <!-- Заголовок формы авторизации -->
+            <div class="card-title nth-card-title">
+                <h4>Авторизация на сайте</h4>
+            </div>
+            <!-- Форма авторизации -->
+            <form method="post" action="{% url 'login' %}">
+                <!-- Защита от CSRF-атак -->
+                {% csrf_token %}
+                <!-- Отображение полей формы авторизации -->
+                {{ form.as_p }}
+                <!-- Кнопка отправки формы -->
+                <div class="d-grid gap-2 d-md-block mt-2">
+                    <button type="submit" class="btn btn-dark">Авторизоваться</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

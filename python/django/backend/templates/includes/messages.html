@@ -1,0 +1,17 @@
+<!-- Файл шаблона расположен в папке backend/templates/includes/messages.html -->
+
+<!-- Проверяем наличие сообщений -->
+{% if messages %}
+    <!-- Перебираем все сообщения -->
+    {% for message in messages %}
+        <!-- Создаем блок предупреждения (alert) с классами Bootstrap -->
+        <div class="alert alert-{% if message.tags %}{{ message.tags }}{% endif %} alert-dismissible fade show"
+             role="alert">
+            <!-- Выводим иконку и текст сообщения -->
+            <i class="fas fa-info-circle"></i> {{ message }}
+            <!-- Создаем кнопку для закрытия блока предупреждения -->
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    <!-- Если сообщений нет, ничего не выводим -->
+{% endif %}

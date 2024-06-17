@@ -1,0 +1,38 @@
+<!-- Файл шаблона расположен в папке backend/modules/system/templates/system/registration/user_register.html -->
+
+<!-- Наследуем основной шаблон 'main.html' для использования общего стиля и компонентов сайта -->
+{% extends 'main.html' %}
+
+{% block content %}
+    <!-- Создаем блок (карточку) для отображения формы регистрации -->
+    <div class="card mb-3 border-0 nth-shadow">
+        <div class="card-body">
+            <!-- Заголовок формы регистрации -->
+            <div class="card-title nth-card-title">
+                <h4>Регистрация на сайте</h4>
+            </div>
+
+            <!-- Выводим ошибки валидации формы -->
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    <strong>Ошибка!</strong> Пожалуйста, исправьте следующие ошибки:<br>
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            {{ field }}: {{ error }}<br>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <!-- Форма регистрации -->
+            <form method="post" action="{% url 'register' %}" enctype="multipart/form-data">
+                <!-- Защита от CSRF-атак -->
+                {% csrf_token %}
+                <!-- Отображение полей формы регистрации -->
+                {{ form.as_p }}
+                <!-- Кнопка отправки формы -->
+                <button type="submit" class="btn btn-dark mt-2">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

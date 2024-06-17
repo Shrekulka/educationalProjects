@@ -1,0 +1,83 @@
+<!-- Файл шаблона расположен в папке backend/templates/header.html -->
+
+{% load static %} <!-- Загружаем тег static для доступа к статическим файлам -->
+
+<!-- Открывающий тег для секции шапки -->
+<header class="mt-3">
+
+    <!-- Верхняя часть шапки с темным фоном и скругленными углами -->
+    <div class="px-3 py-2 text-bg-dark" style="border-radius: 10px 10px 0 0;">
+        <div class="container">
+
+            <!-- Гибкий контейнер для логотипа и навигационного меню -->
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+                <!-- Ссылка на главную страницу с логотипом -->
+                <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <!-- Изображение логотипа -->
+                    <img width="64" src="{% static 'favicon/android-chrome-192x192.png' %}"/>
+
+                </a>
+
+                <!-- Навигационное меню -->
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <!-- Пункт меню "Главная" -->
+                    <li>
+                        <a href="{% url "home" %}" class="nav-link text-secondary">
+                            <!-- SVG-иконка для "Главная" -->
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <use xlink:href="#home"></use>
+                            </svg>
+                            Главная
+                        </a>
+                    </li>
+                    <!-- Пункт меню "Добавить статью" -->
+                    <li>
+                        <a href="{% url "articles_create" %}" class="nav-link text-white">
+                            <!-- SVG-иконка для "Добавить статью" -->
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <use xlink:href="#speedometer2"></use>
+                            </svg>
+                            Добавить статью
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижняя часть шапки с светлым фоном и скругленными углами -->
+    <div class="px-3 py-2 bg-light mb-3" style="border-radius: 0 0 10px 10px;">
+        <div class="container d-flex flex-wrap justify-content-center">
+
+            <!-- Форма поиска -->
+            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+
+            <!-- Условие: если пользователь аутентифицирован -->
+            {% if request.user.is_authenticated %}
+                <!-- Ссылка на профиль пользователя -->
+                <a href="{% url "profile_detail" request.user.profile.slug %}" type="button"
+                   class="btn btn-secondary me-2">{{ request.user.username }}</a>
+                <!-- Форма для выхода из системы -->
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary">Деавторизация</button>
+                </form>
+                <!-- В противном случае (если пользователь не аутентифицирован) -->
+            {% else %}
+                <!-- Кнопка для перехода на страницу авторизации -->
+                <div class="text-end">
+                    <a href="{% url "login" %}" type="button" class="btn btn-light text-dark me-2">Авторизация</a>
+                    <!-- Кнопка для перехода на страницу регистрации -->
+                    <a href="{% url "register" %}" type="button" class="btn btn-primary">Регистрация</a>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+    <!-- Закрывающий тег для секции шапки -->
+</header>
+

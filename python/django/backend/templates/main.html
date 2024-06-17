@@ -1,0 +1,39 @@
+<!-- Файл шаблона расположен в папке backend/templates/main.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %} <!-- Загружаем тег static для доступа к статическим файлам -->
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <!-- Эта мета-тег необходим для адаптивного дизайна на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Подключаем CSS-файл Bootstrap -->
+    <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="container">         <!-- Создаем контейнер для контента, как рекомендуется в Bootstrap -->
+    {% include 'header.html' %} <!-- Включаем шапку сайта из отдельного файла 'header.html' -->
+    <div class="row">           <!-- Создаем строку для основного контента и боковой панели -->
+        <div class="col-8">     <!-- Основной контент занимает 8 колонок из 12 -->
+
+            <!-- Включаем блок для вывода сообщений из отдельного файла 'includes/messages.html' -->
+            {% include 'includes/messages.html' %}
+            {% block content %} <!-- Блок для основного контента страницы -->
+            {% endblock %}
+            {% include 'pagination.html' %} <!-- Включаем пагинацию из отдельного файла 'pagination.html' -->
+        </div>
+        <div class="col-4">              <!-- Боковая панель занимает 4 колонки из 12 -->
+            {% block sidebar %}{% endblock %} <!-- Блок для боковой панели. Переопределен в дочерних шаблонах -->
+            {% include 'sidebar.html' %} <!-- Включаем боковую панель из отдельного файла 'sidebar.html' -->
+        </div>
+    </div>
+</div>
+<!-- Подключаем JavaScript-файл Bootstrap -->
+<script src="{% static 'js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+<!-- Подключаем пользовательский JavaScript-файл для backend функциональности -->
+<script src="{% static 'js/custom/backend.js' %}"></script>
+<!-- Блок для добавления дополнительных скриптов на отдельных страницах -->
+{% block script %}{% endblock %}
+</body>
+</html>

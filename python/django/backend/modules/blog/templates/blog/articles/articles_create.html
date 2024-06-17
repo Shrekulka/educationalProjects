@@ -1,0 +1,28 @@
+<!-- Файл шаблона расположен в папке backend/modules/blog/templates/blog/articles_create.html -->
+
+<!-- Наследуемся от главной страницы, чтоб мы могли вставить контент в определенное место в шаблоне нашего сайта. -->
+{% extends 'main.html' %}
+
+{% block content %}
+    <!-- Создаем карточку для формы создания статьи -->
+    <div class="card mb-3 border-0 nth-shadow">
+        <div class="card-body">
+            <!-- Заголовок карточки -->
+            <div class="card-title nth-card-title">
+                <h4>Добавление статьи</h4>
+            </div>
+            <!-- Начало формы для добавления статьи -->
+            <form method="post" action="{% url 'articles_create' %}" enctype="multipart/form-data">
+                <!-- Токен защиты от CSRF-атак -->
+                {% csrf_token %}
+                <!-- Отображаем поля формы с использованием метода as_p, который оборачивает поля в теги <p> -->
+                {{ form.as_p }}
+                <!-- Кнопка для отправки формы -->
+                <div class="d-grid gap-2 d-md-block mt-2">
+                    <button type="submit" class="btn btn-dark">Добавить статью</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+

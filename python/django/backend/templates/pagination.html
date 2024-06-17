@@ -1,0 +1,22 @@
+<!-- Файл шаблона расположен в папке backend/templates/pagination.html -->
+
+<!-- Проверяем, если есть разбивка на страницы (pagination) -->
+{% if is_paginated %}
+    <!-- Цикл для генерации номеров страниц с учетом пропусков -->
+    {% for page_number in page_obj.paginator.get_elided_page_range %}
+
+        <!-- Если текущий элемент - это многоточие '...', отображаем его -->
+        {% if page_number == page_obj.paginator.ELLIPSIS %}
+            
+            <!-- Многоточие для обозначения пропущенных страниц -->
+            {{ page_number }}
+            
+        {% else %}
+            <!-- Ссылка для перехода на указанную страницу -->
+            <a href="?page={{ page_number }}" class="{% if page_number == page_obj.number %}current{% endif %}">
+                <!-- Отображаем номер страницы -->
+                {{ page_number }}
+            </a>
+        {% endif %}
+    {% endfor %}
+{% endif %}

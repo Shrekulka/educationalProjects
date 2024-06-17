@@ -1,0 +1,25 @@
+<!-- Файл шаблона расположен в папке backend/modules/system/templates/system/feedback.html -->
+
+<!-- Наследуем основной шаблон 'main.html' для использования общего стиля и компонентов сайта -->
+{% extends 'main.html' %}
+
+<!-- Загружаем теги для работы с файлами статики (CSS, JavaScript) -->
+{% load static %}
+
+<!-- Определяем содержимое блока 'content', который будет вставлен в основной шаблон -->
+{% block content %}
+    <div class="card mb-3 border-0 nth-shadow"> <!-- Карточка с отступом и тенью -->
+        <div class="card-body"> <!-- Основное тело карточки -->
+            <div class="card-title nth-card-title"> <!-- Заголовок карточки с кастомным стилем -->
+                <h4>Контактная форма</h4> <!-- Заголовок формы -->
+            </div>
+            <form method="post" action="{% url 'feedback' %}"> <!-- Форма для отправки обратной связи -->
+                {% csrf_token %} <!-- CSRF-токен для защиты от межсайтовой подделки запроса -->
+                {{ form.as_p }} <!-- Отображение формы с полями в виде параграфов -->
+                <div class="d-grid gap-2 d-md-block mt-2">
+                    <button type="submit" class="btn btn-dark">Отправить письмо</button> <!-- Кнопка отправки формы -->
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %} <!-- Завершение блока 'content' -->

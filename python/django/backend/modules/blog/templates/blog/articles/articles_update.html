@@ -1,0 +1,27 @@
+<!-- Файл шаблона расположен в папке backend/modules/blog/templates/blog/articles_update.html -->
+
+<!-- Наследуемся от главной страницы, чтоб мы могли вставить контент в определенное место в шаблоне нашего сайта. -->
+{% extends 'main.html' %}
+
+{% block content %}
+    <!-- Создаем карточку для обновления статьи -->
+    <div class="card mb-3 border-0 nth-shadow">
+        <div class="card-body">
+            <!-- Выводим заголовок карточки -->
+            <div class="card-title nth-card-title">
+                <h4>Обновление статьи: {{ article.title }}</h4>
+            </div>
+            <!-- Создаем форму для обновления статьи -->
+            <form method="post" enctype="multipart/form-data">
+                <!-- Добавляем CSRF-токен для безопасной передачи данных -->
+                {% csrf_token %}
+                <!-- Выводим поля формы для обновления статьи -->
+                {{ form.as_p }}
+                <!-- Добавляем кнопку для отправки формы -->
+                <div class="d-grid gap-2 d-md-block mt-2">
+                    <button type="submit" class="btn btn-dark">Обновить статью</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
