@@ -139,8 +139,8 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {  # Настройки для базы данных по умолчанию
         'ENGINE': 'django.db.backends.postgresql',  # Используем движок PostgreSQL
-        'NAME': 'backend_bd',  # Имя базы данных PostgreSQL (необходимо заменить на реальное имя)
-        'USER': 'postgres',  # Имя пользователя для подключения к PostgreSQL
+        'NAME': 'backend_bd',  # Имя базы данных PostgreSQL
+        'USER': 'backend',  # Имя пользователя для подключения к PostgreSQL
         'PASSWORD': '1111',  # Пароль для подключения к PostgreSQL (необходимо заменить на реальный пароль)
         'HOST': 'localhost',  # Хост, на котором размещена база данных PostgreSQL (в данном случае локальный компьютер)
         'PORT': 5432,  # Порт, на котором работает PostgreSQL (по умолчанию 5432)
