@@ -50,3 +50,4 @@ def clear_checkpoint() -> None:
     if os.path.exists(CHECKPOINT_FILE_PATH):
         # Удаляем файл, если он существует
         os.remove(CHECKPOINT_FILE_PATH)
+
