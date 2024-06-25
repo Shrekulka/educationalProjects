@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.urls import reverse
+from django_ckeditor_5.fields import CKEditor5Field
 from mptt.fields import TreeForeignKey
 from mptt.models import MPTTModel
 from taggit.managers import TaggableManager
@@ -163,11 +164,11 @@ class Article(models.Model):
     # 255, blank (необязательно к заполнению)
     slug = models.SlugField(verbose_name='URL', max_length=255, blank=True, unique=True)
 
-    # Текстовое поле, ограниченное 300 символами.
-    short_description = models.TextField(verbose_name='Краткое описание', max_length=500)
+    # Краткое описание статьи с использованием CKEditor5, ограниченное 500 символами
+    short_description = CKEditor5Field(max_length=500, verbose_name='Краткое описание', config_name='extends')
 
-    # Аналогично, без ограничений.
-    full_description = models.TextField(verbose_name='Полное описание')
+    # Полное описание статьи с использованием CKEditor5, без ограничений по длине
+    full_description = CKEditor5Field(verbose_name='Полное описание', config_name='extends')
 
     # Определяем поле модели для хранения изображения превью поста.
     thumbnail = models.ImageField(

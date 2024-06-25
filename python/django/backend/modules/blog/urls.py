@@ -3,7 +3,7 @@
 from django.urls import path
 from django.urls import reverse
 from .views import ArticleListView, ArticleDetailView, ArticleByCategoryListView, articles_list, ArticleCreateView, \
-    ArticleUpdateView, ArticleDeleteView, CommentCreateView, ArticleByTagListView
+    ArticleUpdateView, ArticleDeleteView, CommentCreateView, ArticleByTagListView, ArticleSearchResultView
 
 # Указываем список URL-шаблонов, которые могут обрабатываться веб-приложением.
 urlpatterns = [
@@ -61,5 +61,10 @@ urlpatterns = [
     # вызывается ArticleByCategoryListView для отображения списка статей из указанной категории.
     # Имя маршрута 'articles_by_category' позволяет ссылаться на этот URL в шаблонах и других частях кода.
     path('category/<str:slug>/', ArticleByCategoryListView.as_view(), name="articles_by_category"),
+
+    # Определяем маршрут URL 'search/', который вызывает ArticleSearchResultView
+    # для отображения результатов поиска статей по заданному запросу.
+    # Имя маршрута 'search' используется для ссылки на этот URL в шаблонах и других частях кода.
+    path('search/', ArticleSearchResultView.as_view(), name='search'),
 
 ]

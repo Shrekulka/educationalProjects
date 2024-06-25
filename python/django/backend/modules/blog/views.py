@@ -4,6 +4,7 @@ from typing import Dict, Any, Union, List
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.core.paginator import Paginator
 from django.db.models import QuerySet, Count
 from django.http import HttpRequest, HttpResponse, JsonResponse, HttpResponseRedirect
@@ -141,7 +142,6 @@ class ArticleDetailView(DetailView):
 
         # Добавляем в контекст список похожих статей, полученный с помощью метода get_similar_articles.
         context['similar_articles'] = self.get_similar_articles(self.object)
-
 
         # Возвращаем обновленный контекст.
         return context
@@ -428,17 +428,78 @@ class ArticleDeleteView(AuthorRequiredMixin, DeleteView):
 
     def get_context_data(self, *, object_list=None, **kwargs) -> dict:
         """
-        Добавляет заголовок страницы в контекст.
+            Добавляет заголовок страницы в контекст.
 
-        Args:
-            object_list: Список объектов.
-            **kwargs: Дополнительные аргументы.
+            Args:
+                object_list: Список объектов.
+                **kwargs: Дополнительные аргументы.
 
-        Returns:
-            dict: Контекст данных для шаблона.
+            Returns:
+                dict: Контекст данных для шаблона.
         """
         context = super().get_context_data(**kwargs)  # Получаем существующий контекст данных
         context['title'] = f'Удаление статьи: {self.object.title}'  # Добавляем заголовок страницы в контекст
+        return context  # Возвращаем обновленный контекст
+
+
+########################################################################################################################
+class ArticleSearchResultView(ListView):
+    """
+        Представление для отображения результатов поиска статей.
+
+        Расширяет базовый класс ListView и добавляет функциональность поиска по статьям.
+
+        Атрибуты:
+            model (Article): Модель статьи, с которой работает представление.
+            context_object_name (str): Имя переменной контекста для передачи списка статей в шаблон.
+            paginate_by (int): Количество статей на одной странице.
+            allow_empty (bool): Разрешить пустые результаты поиска.
+            template_name (str): Имя шаблона для отображения результатов поиска.
+
+        Методы:
+            get_queryset(self) -> QuerySet:
+                Возвращает набор данных (QuerySet) для отображения в представлении.
+            get_context_data(self, **kwargs) -> dict:
+                Добавляет заголовок страницы в контекст.
+    """
+    model = Article  # Указываем модель, с которой работает представление
+    context_object_name = 'articles'  # Имя переменной контекста для передачи списка статей в шаблон
+    paginate_by = 10  # Количество статей на одной странице
+    allow_empty = True  # Разрешаем пустые результаты поиска
+    template_name = 'blog/articles/articles_list.html'  # Имя шаблона для отображения результатов поиска
+
+    def get_queryset(self) -> QuerySet:
+        """
+            Возвращает набор данных (QuerySet) для отображения в представлении.
+
+            Использует полнотекстовый поиск по полям 'full_description' и 'title'.
+
+            Returns:
+                QuerySet: Набор данных, отфильтрованный по критериям поиска.
+        """
+        query = self.request.GET.get('do')  # Получаем поисковый запрос из GET-параметров
+        # Определяем поисковые векторы для полнотекстового поиска
+        search_vector = SearchVector('full_description', weight='B') + SearchVector('title', weight='A')
+        search_query = SearchQuery(query)  # Создаем объект поискового запроса
+        # Возвращаем набор данных, аннотированный ранком поиска, фильтруем по ранку и сортируем по убыванию ранка
+        return (
+            self.model.objects.annotate(rank=SearchRank(search_vector, search_query))
+            .filter(rank__gte=0.3)
+            .order_by('-rank')
+        )
+
+    def get_context_data(self, **kwargs: Any) -> dict:
+        """
+            Добавляет заголовок страницы в контекст.
+
+            Args:
+                **kwargs: Дополнительные аргументы.
+
+            Returns:
+                dict: Контекст данных для шаблона.
+        """
+        context = super().get_context_data(**kwargs)  # Получаем существующий контекст данных
+        context['title'] = f'Результаты поиска: {self.request.GET.get("do")}'  # Добавляем заголовок страницы в контекст
         return context  # Возвращаем обновленный контекст
 
 

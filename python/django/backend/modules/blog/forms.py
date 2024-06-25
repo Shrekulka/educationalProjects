@@ -13,6 +13,7 @@ class ArticleCreateForm(forms.ModelForm):
             model (Article): Модель статьи.
             fields (tuple): Поля модели, которые будут включены в форму.
     """
+
     class Meta:
         # Указываем, что данная форма будет работать с моделью Article
         model = Article
@@ -37,6 +38,13 @@ class ArticleCreateForm(forms.ModelForm):
                 'class': 'form-control',
                 'autocomplete': 'off'
             })
+            # Дополнительные стили для полей с использованием CKEditor5
+            self.fields['short_description'].widget.attrs.update({'class': 'form-control django_ckeditor_5'})
+            self.fields['full_description'].widget.attrs.update({'class': 'form-control django_ckeditor_5'})
+
+            # Устанавливаем, что поля краткого и полного описания не обязательны
+            self.fields['short_description'].required = False
+            self.fields['full_description'].required = False
 
 
 class ArticleUpdateForm(ArticleCreateForm):
@@ -65,10 +73,16 @@ class ArticleUpdateForm(ArticleCreateForm):
         """
         super().__init__(*args, **kwargs)  # Вызываем метод __init__ родительского класса для инициализации формы
 
-        # Обновляем атрибуты виджета поля 'fixed' для применения стилей Bootstrap
-        self.fields['fixed'].widget.attrs.update({
-            'class': 'form-check-input'  # Применяем класс Bootstrap для чекбоксов
-        })
+        # Обновляем стили поля 'fixed' для отображения как чекбокса
+        self.fields['fixed'].widget.attrs.update({'class': 'form-check-input'})
+
+        # Дополнительные стили для полей с использованием CKEditor5
+        self.fields['short_description'].widget.attrs.update({'class': 'form-control django_ckeditor_5'})
+        self.fields['full_description'].widget.attrs.update({'class': 'form-control django_ckeditor_5'})
+
+        # Устанавливаем, что поля краткого и полного описания не обязательны
+        self.fields['short_description'].required = False
+        self.fields['full_description'].required = False
 
 
 class CommentCreateForm(forms.ModelForm):

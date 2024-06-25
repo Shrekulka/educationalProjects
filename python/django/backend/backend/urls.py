@@ -20,6 +20,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # Подключаем URL-пути из приложения "django_ckeditor_5" для обработки запросов редактора CKEditor 5
+    path('ckeditor5/', include('django_ckeditor_5.urls')),
+    # Подключаем URL-пути административной панели Django
     path('admin/', admin.site.urls),
     # Добавили импорт include, для включения urls.py из приложения блог, а также указали обработку юрлов, указав
     # главную страницу

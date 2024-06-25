@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ article.title }}</h5>                <!-- Заголовок статьи -->
                         <div class="card-subtitle">{{ article.author.username }}</div> <!-- Имя автора статьи -->
-                        <p class="card-text">{{ article.short_description }}</p>       <!-- Краткое описание статьи -->
+                        <p class="card-text">{{ article.short_description|safe }}</p> <!-- Краткое описание статьи -->
                         <a href="{% url 'articles_detail' article.slug %}"
                            class="btn btn-primary">{{ article.category.title }}</a>
                         <!-- Кнопка для перехода к списку статей этой категории -->

@@ -52,8 +52,10 @@
         <div class="container d-flex flex-wrap justify-content-center">
 
             <!-- Форма поиска -->
-            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search" method="get"
+                  action="{% url 'search' %}">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search" name='do'
+                       autocomplete="off" id="search">
             </form>
 
             <!-- Условие: если пользователь аутентифицирован -->
