@@ -3,7 +3,8 @@
 from django.urls import path
 from django.urls import reverse
 from .views import ArticleListView, ArticleDetailView, ArticleByCategoryListView, articles_list, ArticleCreateView, \
-    ArticleUpdateView, ArticleDeleteView, CommentCreateView, ArticleByTagListView, ArticleSearchResultView
+    ArticleUpdateView, ArticleDeleteView, CommentCreateView, ArticleByTagListView, ArticleSearchResultView, \
+    RatingCreateView, ArticleBySignedUser
 
 # Указываем список URL-шаблонов, которые могут обрабатываться веб-приложением.
 urlpatterns = [
@@ -23,6 +24,11 @@ urlpatterns = [
     # создания новой статьи.
     # Имя маршрута 'articles_create' позволяет ссылаться на этот URL в шаблонах и других частях кода.
     path('articles/create/', ArticleCreateView.as_view(), name='articles_create'),
+
+    # Определяем маршрут URL 'articles/signed/', который вызывает ArticleBySignedUser для отображения списка
+    # статей авторов, на которых подписан текущий пользователь.
+    # Имя маршрута 'articles_by_signed_user' позволяет ссылаться на этот URL в шаблонах и других частях кода.
+    path('articles/signed/', ArticleBySignedUser.as_view(), name='articles_by_signed_user'),
 
     # Создаем URL-шаблон для обновления существующей статьи.
     # Когда пользователь переходит по этому URL, вызывается ArticleUpdateView для отображения формы обновления статьи.
@@ -66,5 +72,11 @@ urlpatterns = [
     # для отображения результатов поиска статей по заданному запросу.
     # Имя маршрута 'search' используется для ссылки на этот URL в шаблонах и других частях кода.
     path('search/', ArticleSearchResultView.as_view(), name='search'),
+
+    # Определяем маршрут URL 'rating/', который вызывает RatingCreateView для обработки создания рейтинга.
+    # Когда пользователь отправляет POST-запрос на этот URL, вызывается метод as_view() для класса RatingCreateView,
+    # который обрабатывает создание нового рейтинга для статьи.
+    # Имя маршрута 'rating' используется для ссылки на этот URL в шаблонах и других частях кода.
+    path('rating/', RatingCreateView.as_view(), name='rating'),
 
 ]

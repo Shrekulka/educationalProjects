@@ -1,0 +1,103 @@
+# Деплой Django на VPS в Docker контейнере с SSL
+
+version: '3.8'
+
+volumes:
+  pgdata:
+  static:
+  media:
+
+services:
+
+  django:
+    build:
+      context: .
+    ports:
+      - '8000:8000'
+    container_name: django
+    env_file:
+      - docker/env/.env.prod
+    volumes:
+      - ./:/app
+      - static:/app/static
+      - media:/app/media
+    depends_on:
+      - postgres
+      - redis
+    command: sh -c "python manage.py collectstatic --no-input &&
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      gunicorn --workers=4 --reload --max-requests=1000 backend.wsgi -b 0.0.0.0:8000""
+
+  nginx:
+    container_name: nginx
+    working_dir: /app
+    image: nginx:stable-alpine
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - static:/app/static
+      - media:/app/media
+      - ./docker/nginx/prod/:/etc/nginx/conf.d:ro
+      - ./docker/certbot/conf:/etc/letsencrypt:ro
+      - ./docker/certbot/www:/var/www/certbot:ro
+    links:
+      - django
+    depends_on:
+      - django
+
+  postgres:
+    image: postgres:alpine
+    container_name: postgres
+    restart: always
+    env_file:
+      - docker/env/.env.prod
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    env_file:
+      - docker/env/.env.prod
+    expose:
+      - 6379
+    volumes:
+      - ./docker/redis/data:/data
+
+  celery-worker:
+    build: .
+    container_name: celery-worker
+    restart: always
+    env_file:
+      - docker/env/.env.prod
+    volumes:
+      - ./:/app
+      - media:/app/media
+    command: celery -A backend worker --loglevel=info --logfile=./docker/logs/celery-worker.log
+    depends_on:
+      - redis
+
+  celery-beat:
+    build: .
+    container_name: celery-beat
+    env_file:
+      - docker/env/.env.prod
+    depends_on:
+      - redis
+    command: celery -A backend beat --loglevel=info --logfile=./docker/logs/celery-beat.log
+    volumes:
+      - media:/app/media
+      - ./:/app
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./docker/certbot/conf:/etc/letsencrypt:rw
+      - ./docker/certbot/www:/var/www/certbot:rw
+    command: certonly --webroot --webroot-path=/var/www/certbot/ --email email@mail.com --agree-tos --no-eff-email -d example.com -d www.example.com
+    depends_on:
+      - nginx

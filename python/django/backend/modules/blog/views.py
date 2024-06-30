@@ -1,4 +1,5 @@
 # backend/modules/blog/views.py
+
 import random
 from typing import Dict, Any, Union, List
 
@@ -10,12 +11,14 @@ from django.db.models import QuerySet, Count
 from django.http import HttpRequest, HttpResponse, JsonResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from taggit.models import Tag
 
 from .forms import ArticleCreateForm, ArticleUpdateForm, CommentCreateForm
-from .models import Article, Category, Comment
-from ..services.mixins import AuthorRequiredMixin
+from .models import Article, Category, Comment, Rating
+from ..services.mixins import AuthorRequiredMixin, ViewCountMixin
+from ..services.utils import get_client_ip
 
 
 ########################################################################################################################
@@ -65,11 +68,12 @@ class ArticleListView(ListView):
 
 ########################################################################################################################
 # Используется для отображения деталей конкретного объекта (например, отдельной статьи, комментария, товара и т. д.).
-class ArticleDetailView(DetailView):
+class ArticleDetailView(ViewCountMixin, DetailView):
     """
        Представление для отображения деталей конкретной статьи.
 
-       Наследуется от `DetailView` и использует шаблон `blog/articles_detail.html` для отображения деталей статьи.
+       Наследуется от `DetailView` и `ViewCountMixin` для подсчета просмотров статьи.
+       Использует шаблон `blog/articles_detail.html` для отображения деталей статьи.
        В качестве контекстной переменной для объекта статьи используется `'article'`.
 
        Attributes:
@@ -78,14 +82,14 @@ class ArticleDetailView(DetailView):
            context_object_name (str): Имя контекстной переменной, в которой будет храниться объект статьи.
            queryset (QuerySet): Queryset для получения объектов статьи с необходимыми связями.
 
-
        Methods:
-            get_similar_articles(self, obj: Article) -> List[Article]:
-                Возвращает список похожих статей на основе тегов.
+           get_similar_articles(self, obj: Article) -> List[Article]:
+               Возвращает список похожих статей на основе тегов.
 
            get_context_data(**kwargs) -> Dict[str, Any]:
-               Добавляет в контекст заголовок статьи и возвращает обновленный контекст.
-    """
+               Добавляет в контекст заголовок статьи и форму для создания комментария,
+               затем возвращает обновленный контекст.
+   """
     # Указываем модель, с которой будет работать представление - это модель Article.
     model = Article
     # Указываем имя шаблона, который будет использоваться для отображения деталей статьи.
@@ -290,6 +294,72 @@ class ArticleByTagListView(ListView):
 
 
 ########################################################################################################################
+class ArticleBySignedUser(LoginRequiredMixin, ListView):
+    """
+        Представление, выводящее список статей авторов, на которых подписан текущий пользователь.
+
+        Attributes:
+            model (Article): Модель, которая используется для получения данных о статьях.
+            template_name (str): Имя шаблона, используемого для рендеринга страницы.
+            context_object_name (str): Имя переменной контекста для передачи списка статей в шаблон.
+            login_url (str): URL для перенаправления пользователя на страницу входа, если необходимо.
+            paginate_by (int): Количество статей на одной странице пагинации.
+
+        Methods:
+            get_queryset(): Возвращает queryset статей авторов, на которых подписан текущий пользователь.
+            get_context_data(**kwargs): Добавляет дополнительные данные в контекст шаблона,
+                                        включая заголовок страницы.
+    """
+    # Используем модель Article для работы с данными о статьях
+    model = Article
+
+    # Имя шаблона для отображения списка статей
+    template_name = 'blog/articles/articles_list.html'
+
+    # Имя переменной контекста для передачи списка статей в шаблон
+    context_object_name = 'articles'
+
+    # URL страницы входа для перенаправления пользователя
+    login_url = 'login'
+
+    # Количество статей на одной странице пагинации
+    paginate_by = 10
+
+    def get_queryset(self) -> QuerySet[Article]:
+        """
+            Возвращает queryset статей авторов, на которых подписан текущий пользователь.
+
+            Returns:
+                QuerySet[Article]: Queryset статей авторов, на которых подписан текущий пользователь.
+        """
+        # Получаем список авторов, на которых подписан текущий пользователь
+        authors = self.request.user.profile.following.values_list('id', flat=True)
+
+        # Фильтруем статьи по авторам, на которых подписан текущий пользователь
+        queryset = self.model.objects.all().filter(author__id__in=authors)
+
+        # Возвращаем queryset статей авторов, на которых подписан текущий пользователь
+        return queryset
+
+    def get_context_data(self, **kwargs: Any) -> dict:
+        """
+            Добавляет дополнительные данные в контекст шаблона.
+
+            Args:
+                **kwargs: Дополнительные аргументы для передачи в родительский метод.
+
+            Returns:
+                dict: Контекст шаблона с дополнительными данными.
+        """
+        context = super().get_context_data(**kwargs)  # Получаем базовый контекст от родительского метода
+
+        # Устанавливаем заголовок страницы
+        context['title'] = 'Статьи авторов'
+
+        return context  # Возвращаем обновленный контекст шаблона
+
+
+########################################################################################################################
 class ArticleCreateView(CreateView):
     """
     Представление для создания материалов на сайте.
@@ -318,7 +388,7 @@ class ArticleCreateView(CreateView):
         context['title'] = 'Добавление статьи на сайт'  # Добавляем заголовок страницы в контекст
         return context  # Возвращаем обновленный контекст
 
-    def form_valid(self, form) -> HttpResponse:
+    def form_valid(self, form: ArticleCreateForm) -> HttpResponse:
         """
             Обрабатывает валидную форму.
 
@@ -373,7 +443,7 @@ class ArticleUpdateView(AuthorRequiredMixin, SuccessMessageMixin, UpdateView):
     login_url = 'home'  # URL для перенаправления неавторизованных пользователей
     success_message = 'Материал был успешно обновлен'  # Сообщение об успешном обновлении статьи
 
-    def get_context_data(self, *, object_list=None, **kwargs) -> dict:
+    def get_context_data(self, *, object_list=None, **kwargs: Any) -> dict:
         """
         Добавляет заголовок страницы в контекст.
 
@@ -388,7 +458,7 @@ class ArticleUpdateView(AuthorRequiredMixin, SuccessMessageMixin, UpdateView):
         context['title'] = f'Обновление статьи: {self.object.title}'  # Добавляем заголовок страницы в контекст
         return context  # Возвращаем обновленный контекст
 
-    def form_valid(self, form) -> HttpResponse:
+    def form_valid(self, form: ArticleUpdateForm) -> HttpResponse:
         """
         Обрабатывает валидную форму.
 
@@ -426,7 +496,7 @@ class ArticleDeleteView(AuthorRequiredMixin, DeleteView):
     context_object_name = 'article'  # Имя переменной контекста для передачи объекта статьи в шаблон
     template_name = 'blog/articles/articles_delete.html'  # Имя шаблона для отображения формы удаления статьи
 
-    def get_context_data(self, *, object_list=None, **kwargs) -> dict:
+    def get_context_data(self, *, object_list=None, **kwargs: Any) -> dict:
         """
             Добавляет заголовок страницы в контекст.
 
@@ -628,7 +698,7 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
         # авторизоваться.
         return JsonResponse({'error': 'Необходимо авторизоваться для добавления комментариев'}, status=400)
 
-    def get_context_data(self, **kwargs) -> dict:
+    def get_context_data(self, **kwargs: Any) -> dict:
         """
             Добавляет форму в контекст данных.
 
@@ -641,4 +711,65 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
         context = super().get_context_data(**kwargs)  # Получаем базовый контекст данных из родительского класса
         context['form'] = CommentCreateForm  # Добавляем форму в контекст данных
         return context  # Возвращаем обновленный контекст данных
+
+
+########################################################################################################################
+class RatingCreateView(View):
+    """
+        Представление для создания/обновления рейтингов (лайков/дизлайков) статей.
+
+        Атрибуты:
+            model (Rating): Модель рейтинга, связанная с представлением.
+    """
+    # Указываем модель рейтинга, с которой будет работать данное представление
+    model = Rating
+
+    def post(self, request: HttpRequest, *args: Any, **kwargs: Any) -> JsonResponse:
+        """
+            Обрабатывает POST-запрос для создания или обновления рейтинга статьи.
+
+            Параметры:
+                request (HttpRequest): Объект запроса.
+                *args (Any): Дополнительные позиционные аргументы.
+                **kwargs (Any): Дополнительные именованные аргументы.
+
+            Возвращает:
+                JsonResponse: Ответ с результатом операции и обновленной суммой рейтинга статьи.
+        """
+        # Получаем ID статьи из POST-запроса
+        article_id = request.POST.get('article_id')
+
+        # Получаем значение рейтинга из POST-запроса и преобразуем его в int
+        value = int(request.POST.get('value'))
+
+        # Получаем IP-адрес клиента
+        ip_address = get_client_ip(request)
+
+        # Получаем пользователя, если он аутентифицирован, иначе None
+        user = request.user if request.user.is_authenticated else None
+
+        # Получаем или создаем запись рейтинга
+        rating, created = self.model.objects.get_or_create(
+            article_id=article_id,
+            ip_address=ip_address,
+            defaults={'value': value, 'user': user},
+        )
+        # Если значение рейтинга не изменилось, удаляем рейтинг
+        if not created:
+            if rating.value == value:
+                rating.delete()
+                # Возвращаем статус 'deleted' и обновленную сумму рейтинга статьи
+                return JsonResponse({'status': 'deleted', 'rating_sum': rating.article.get_sum_rating()})
+
+            # Если значение рейтинга изменилось, обновляем его
+            else:
+                rating.value = value
+                rating.user = user
+                rating.save()
+                # Возвращаем статус 'updated' и обновленную сумму рейтинга статьи
+                return JsonResponse({'status': 'updated', 'rating_sum': rating.article.get_sum_rating()})
+
+        # Если рейтинг был создан, возвращаем статус 'created' и обновленную сумму рейтинга
+        return JsonResponse({'status': 'created', 'rating_sum': rating.article.get_sum_rating()})
+
 ########################################################################################################################

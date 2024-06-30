@@ -1,28 +1,65 @@
 <!-- Файл шаблона расположен в папке backend/modules/blog/templates/blog/articles_list.html -->
 
-{% extends 'main.html' %} <!-- Наследуемся от главной страницы -->
+{% extends 'main.html' %}  <!-- Наследуемся от основного шаблона 'main.html' -->
 
-{% block content %}
-    {% for article in articles %}   <!-- Цикл для перебора статей -->
-        <div class="card mb-3">     <!-- Создаем карточку для каждой статьи с отступом снизу -->
-            <div class="row">       <!-- Создаем строку для размещения изображения и информации о статье -->
-                <div class="col-4"> <!-- Колонка для изображения -->
+{% load static %}  <!-- Загружаем тег для работы со статическими файлами -->
 
-                    <!-- Изображение статьи -->
+{% block content %}  <!-- Открываем блок content -->
+
+    {% for article in articles %}  <!-- Начинаем цикл для перебора статей -->
+
+        <div class="card mb-3">  <!-- Создаем карточку для каждой статьи с отступом снизу -->
+
+            <div class="row">  <!-- Открываем строку для размещения изображения и информации о статье -->
+
+                <div class="col-4">  <!-- Создаем колонку для изображения -->
+
+                    <!-- Вставляем изображение статьи -->
                     <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.title }}">
                 </div>
-                <div class="col-8">
-                    <!-- Колонка для информации о статье -->
-                    <div class="card-body">
-                        <h5 class="card-title">{{ article.title }}</h5>                <!-- Заголовок статьи -->
-                        <div class="card-subtitle">{{ article.author.username }}</div> <!-- Имя автора статьи -->
-                        <p class="card-text">{{ article.short_description|safe }}</p> <!-- Краткое описание статьи -->
-                        <a href="{% url 'articles_detail' article.slug %}"
-                           class="btn btn-primary">{{ article.category.title }}</a>
-                        <!-- Кнопка для перехода к списку статей этой категории -->
+
+                <div class="col-8">  <!-- Создаем колонку для информации о статье -->
+
+                    <div class="card-body">  <!-- Открываем тело карточки -->
+
+                        <h5 class="card-title">
+                            <!-- Заголовок статьи с ссылкой на детальную страницу статьи -->
+                            <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                        </h5>
+
+                        <p class="card-text">{{ article.short_description|safe }}</p>
+                        <!-- Краткое описание статьи, без экранирования HTML-тегов -->
+
+                        </hr>  <!-- Горизонтальная линия -->
+
+                        <!-- Выводим категорию статьи с ссылкой на список статей этой категории и количество просмотров статьи -->
+                        Категория: <a href="{% url 'articles_by_category' article.category.slug %}">
+                            {{ article.category.title }}</a> / Добавил: {{ article.author.username }} /
+                        Просмотры: {{ article.get_view_count }}
                     </div>
                 </div>
+
+                <div class="rating-buttons">  <!-- Блок кнопок для рейтинга -->
+
+                    <!-- Кнопка "Лайк" с атрибутами data для передачи id статьи и значения рейтинга -->
+                    <button class="btn btn-sm btn-primary" data-article="{{ article.id }}" data-value="1">Лайк</button>
+
+                    <!-- Кнопка "Дизлайк" с атрибутами data для передачи id статьи и значения рейтинга -->
+                    <button class="btn btn-sm btn-secondary" data-article="{{ article.id }}" data-value="-1">Дизлайк
+                    </button>
+
+                    <!-- Элемент для отображения суммы рейтинга статьи -->
+                    <button class="btn btn-sm btn-secondary rating-sum">{{ article.get_sum_rating }}</button>
+                </div>
+
             </div>
         </div>
-    {% endfor %}
-{% endblock %}
+    {% endfor %}  <!-- Закрываем цикл для перебора статей -->
+
+{% endblock %}  <!-- Закрываем блок content -->
+
+{% block script %}  <!-- Открываем блок script для вставки скрипта -->
+
+    <script src="{% static 'js/custom/ratings.js' %}"></script>  <!-- Подключаем скрипт для работы с рейтингами -->
+
+{% endblock %}  <!-- Закрываем блок script -->

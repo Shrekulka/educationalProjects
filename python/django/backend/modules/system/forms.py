@@ -1,4 +1,5 @@
 # backend/modules/system/forms.py
+
 from typing import Any
 
 from captcha.fields import CaptchaField
@@ -8,9 +9,6 @@ from django.contrib.auth.models import User
 
 from backend.settings import CAPTCHA_CHALLENGE_FUNCT
 from .models import Profile, Feedback
-
-
-########################################################################################################################
 
 
 ########################################################################################################################

@@ -1,0 +1,17 @@
+<!-- Файл шаблона расположен в папке backend/modules/system/templates/system/errors/error_page.html -->
+
+<!-- Наследуем основной шаблон 'main.html' для использования общего стиля и компонентов сайта -->
+{% extends 'main.html' %}
+
+<!-- Определяем блок контента, который будет заменен на данный контент в основном шаблоне -->
+{% block content %}
+    <!-- Определяем див-контейнер для отображения сообщения об ошибке -->
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <!-- Выводим сообщение об ошибке, переданное из представления -->
+        {{ error_message }} | 
+        <!-- Ссылка для возвращения на главную страницу -->
+        <a href="{% url 'home' %}"><strong>Вернуться на главную</strong></a>
+        <!-- Кнопка для закрытия сообщения об ошибке -->
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endblock content %}

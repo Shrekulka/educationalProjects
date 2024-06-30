@@ -4,12 +4,10 @@
 from django.contrib import admin
 from mptt.admin import DraggableMPTTAdmin
 
-from .models import Article, Category, Comment
+from .models import Article, Category, Comment, ViewCount
 
 
 ########################################################################################################################
-# Регистрируем модель категорий в админке, и добавляем возможность скрывать категории по вложенностям с
-# помощью DraggableMPTTAdmin
 # Используем декоратор для регистрации модели Category в админке
 @admin.register(Category)
 class CategoryAdmin(DraggableMPTTAdmin):
@@ -51,7 +49,6 @@ class CategoryAdmin(DraggableMPTTAdmin):
 
 
 ########################################################################################################################
-# Регистрируем модель Article в административном интерфейсе.
 @admin.register(Article)
 # Административный интерфейс для модели Article.
 class ArticleAdmin(admin.ModelAdmin):
@@ -94,4 +91,33 @@ class CommentAdminPage(DraggableMPTTAdmin):
     # Поля, которые можно редактировать прямо из списка комментариев.
     list_editable = ('status',)
 
+
+########################################################################################################################
+@admin.register(ViewCount)
+class ViewCountAdmin(admin.ModelAdmin):
+    """
+        Админ-панель модели просмотров статей.
+
+        Attributes:
+            list_display (tuple): Список полей, отображаемых в списке просмотров в админ-панели.
+            list_filter (tuple): Поля, по которым можно фильтровать просмотры в админ-панели.
+            search_fields (tuple): Поля, по которым можно искать просмотры в админ-панели.
+            date_hierarchy (str): Поле для иерархической навигации по датам.
+            ordering (tuple): Порядок сортировки в списке объектов.
+    """
+    list_display = ('article', 'ip_address', 'viewed_on')
+    list_filter = ('viewed_on', 'article')
+    search_fields = ('ip_address', 'article__title')
+    date_hierarchy = 'viewed_on'
+    ordering = ('-viewed_on',)
+
+    def __init__(self, *args, **kwargs):
+        """
+            Конструктор для инициализации ViewCountAdmin.
+
+            Parameters:
+                *args: Неименованные аргументы.
+                **kwargs: Именованные аргументы.
+        """
+        super().__init__(*args, **kwargs)
 ########################################################################################################################

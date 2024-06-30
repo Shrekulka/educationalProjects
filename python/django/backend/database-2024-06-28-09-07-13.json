@@ -1,0 +1,2019 @@
+[
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add captcha store",
+        "content_type": [
+            "captcha",
+            "captchastore"
+        ],
+        "codename": "add_captchastore"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change captcha store",
+        "content_type": [
+            "captcha",
+            "captchastore"
+        ],
+        "codename": "change_captchastore"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete captcha store",
+        "content_type": [
+            "captcha",
+            "captchastore"
+        ],
+        "codename": "delete_captchastore"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view captcha store",
+        "content_type": [
+            "captcha",
+            "captchastore"
+        ],
+        "codename": "view_captchastore"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add tag",
+        "content_type": [
+            "taggit",
+            "tag"
+        ],
+        "codename": "add_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change tag",
+        "content_type": [
+            "taggit",
+            "tag"
+        ],
+        "codename": "change_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete tag",
+        "content_type": [
+            "taggit",
+            "tag"
+        ],
+        "codename": "delete_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view tag",
+        "content_type": [
+            "taggit",
+            "tag"
+        ],
+        "codename": "view_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add tagged item",
+        "content_type": [
+            "taggit",
+            "taggeditem"
+        ],
+        "codename": "add_taggeditem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change tagged item",
+        "content_type": [
+            "taggit",
+            "taggeditem"
+        ],
+        "codename": "change_taggeditem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete tagged item",
+        "content_type": [
+            "taggit",
+            "taggeditem"
+        ],
+        "codename": "delete_taggeditem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view tagged item",
+        "content_type": [
+            "taggit",
+            "taggeditem"
+        ],
+        "codename": "view_taggeditem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Категория",
+        "content_type": [
+            "blog",
+            "category"
+        ],
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Категория",
+        "content_type": [
+            "blog",
+            "category"
+        ],
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Категория",
+        "content_type": [
+            "blog",
+            "category"
+        ],
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Категория",
+        "content_type": [
+            "blog",
+            "category"
+        ],
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Статья",
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "codename": "add_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Статья",
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "codename": "change_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Статья",
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "codename": "delete_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Статья",
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "codename": "view_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Комментарий",
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "codename": "add_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Комментарий",
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "codename": "change_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Комментарий",
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "codename": "delete_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Комментарий",
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "codename": "view_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Профиль",
+        "content_type": [
+            "system",
+            "profile"
+        ],
+        "codename": "add_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Профиль",
+        "content_type": [
+            "system",
+            "profile"
+        ],
+        "codename": "change_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Профиль",
+        "content_type": [
+            "system",
+            "profile"
+        ],
+        "codename": "delete_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Профиль",
+        "content_type": [
+            "system",
+            "profile"
+        ],
+        "codename": "view_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Обратная связь",
+        "content_type": [
+            "system",
+            "feedback"
+        ],
+        "codename": "add_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Обратная связь",
+        "content_type": [
+            "system",
+            "feedback"
+        ],
+        "codename": "change_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Обратная связь",
+        "content_type": [
+            "system",
+            "feedback"
+        ],
+        "codename": "delete_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Обратная связь",
+        "content_type": [
+            "system",
+            "feedback"
+        ],
+        "codename": "view_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Рейтинг",
+        "content_type": [
+            "blog",
+            "rating"
+        ],
+        "codename": "add_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Рейтинг",
+        "content_type": [
+            "blog",
+            "rating"
+        ],
+        "codename": "change_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Рейтинг",
+        "content_type": [
+            "blog",
+            "rating"
+        ],
+        "codename": "delete_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Рейтинг",
+        "content_type": [
+            "blog",
+            "rating"
+        ],
+        "codename": "view_rating"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$Ray4bq3XX3F8MGeYTdADl5$0UBL0VzrdKCOXKJL1lrJHJIDlkVNa8SPuAy+pD0qxWE=",
+        "last_login": "2024-06-23T21:00:00Z",
+        "is_superuser": true,
+        "username": "root",
+        "first_name": "Rootilow",
+        "last_name": "Root",
+        "email": "root@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-05T16:57:13Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$iUeTjP9tgNghg0KXxjGDmX$sp5eKGVuKercHB+Nmj8TGIvSEAKqc7y5xWQ09ybkjY8=",
+        "last_login": "2024-06-24T06:40:57Z",
+        "is_superuser": false,
+        "username": "ruser",
+        "first_name": "Руслан",
+        "last_name": "Рабинович",
+        "email": "ruser@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-06-21T16:57:20Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$hyW9k0W7EVxkMLgzP35Qtn$1HFvdGouBBTeS45WCsuIogMzk4WBlZga+491dH2/+Is=",
+        "last_login": "2024-06-20T21:00:00Z",
+        "is_superuser": false,
+        "username": "visitor",
+        "first_name": "Олег",
+        "last_name": "Визитер",
+        "email": "visitor@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-06-17T03:00:00Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$zcPDOgtQ6vPqLwR65rVBG8$H+KMYslQlbLdGvYKDhADmnEkI77m81tRexm1lOoxtzA=",
+        "last_login": "2024-06-20T06:37:18Z",
+        "is_superuser": false,
+        "username": "pupok",
+        "first_name": "Пупок",
+        "last_name": "Пупкин",
+        "email": "pupok@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-06-18T16:57:26Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$VDqn1tOpuQYuPRBgV6wUVf$H2uvmXGCvdzH4aZJ/TmcRAxvu5jfgGgwXOK2ZFePmH0=",
+        "last_login": "2024-06-27T14:19:08.459Z",
+        "is_superuser": true,
+        "username": "root_1",
+        "first_name": "Rootill",
+        "last_name": "Root_1",
+        "email": "root_2@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-22T06:33:32Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "am87og2glc9gtn1owxzx2fqxola776ge",
+    "fields": {
+        "session_data": ".eJxVi70KwjAQgN8ls4T83ZE4ujs6h2vuQsTWgmkHEd_dCh10_X5eKtO6tLx2eeQrq6MCdfhlA5Wb3L9imnkdpev-7ItMehddX7bsPLOMpz39-xv1ts0OkSBFBBBGkUDexgQ-WbI-cAEpEoNBV4uBysX7yuSgDGgrVhO8en8Avpw30g:1sMpQP:3arM9WS3DAAPE-uVT9-UW5xblLyIkg7wOvcv3yvyBMI",
+        "expire_date": "2024-07-11T13:44:33.734Z"
+    }
+},
+{
+    "model": "sites.site",
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": {
+        "name": "суд",
+        "slug": "суд"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": {
+        "name": "юриспруденция",
+        "slug": "юриспруденция"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 3,
+    "fields": {
+        "name": "справедливость",
+        "slug": "справедливость"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 4,
+    "fields": {
+        "name": "законы",
+        "slug": "законы"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 5,
+    "fields": {
+        "name": "правила",
+        "slug": "правила"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 6,
+    "fields": {
+        "name": "документы",
+        "slug": "документы"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 7,
+    "fields": {
+        "name": "паттерны проектирования",
+        "slug": "паттерны-проектирования"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 8,
+    "fields": {
+        "name": "паттерн",
+        "slug": "паттерн"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 9,
+    "fields": {
+        "name": "паттерны",
+        "slug": "паттерны"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 10,
+    "fields": {
+        "name": "кофе",
+        "slug": "кофе"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 11,
+    "fields": {
+        "name": "программист",
+        "slug": "программист"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 12,
+    "fields": {
+        "name": "энергия",
+        "slug": "энергия"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 13,
+    "fields": {
+        "name": "дедлайн",
+        "slug": "дедлайн"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 14,
+    "fields": {
+        "name": "трудности",
+        "slug": "трудности"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 15,
+    "fields": {
+        "name": "заработок",
+        "slug": "заработок"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 16,
+    "fields": {
+        "name": "криптозвери",
+        "slug": "криптозвери"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 17,
+    "fields": {
+        "name": "картины",
+        "slug": "картины"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 18,
+    "fields": {
+        "name": "криптомир",
+        "slug": "криптомир"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 19,
+    "fields": {
+        "name": "NFT",
+        "slug": "nft"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 20,
+    "fields": {
+        "name": "миллионер",
+        "slug": "миллионер"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 21,
+    "fields": {
+        "name": "биткоин",
+        "slug": "биткоин"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 22,
+    "fields": {
+        "name": "крипта",
+        "slug": "крипта"
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 1,
+    "fields": {
+        "tag": 1,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 9
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 2,
+    "fields": {
+        "tag": 2,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 9
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 3,
+    "fields": {
+        "tag": 3,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 9
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 4,
+    "fields": {
+        "tag": 2,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 8
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 5,
+    "fields": {
+        "tag": 4,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 8
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 6,
+    "fields": {
+        "tag": 5,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 8
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 7,
+    "fields": {
+        "tag": 2,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 7
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 8,
+    "fields": {
+        "tag": 4,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 7
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 9,
+    "fields": {
+        "tag": 6,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 7
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 10,
+    "fields": {
+        "tag": 8,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 6
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 11,
+    "fields": {
+        "tag": 9,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 6
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 12,
+    "fields": {
+        "tag": 7,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 6
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 13,
+    "fields": {
+        "tag": 10,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 5
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 14,
+    "fields": {
+        "tag": 11,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 5
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 15,
+    "fields": {
+        "tag": 12,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 5
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 16,
+    "fields": {
+        "tag": 11,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 4
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 17,
+    "fields": {
+        "tag": 13,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 4
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 18,
+    "fields": {
+        "tag": 14,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 4
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 19,
+    "fields": {
+        "tag": 15,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 20,
+    "fields": {
+        "tag": 16,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 21,
+    "fields": {
+        "tag": 17,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 22,
+    "fields": {
+        "tag": 18,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 23,
+    "fields": {
+        "tag": 19,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 24,
+    "fields": {
+        "tag": 18,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 25,
+    "fields": {
+        "tag": 20,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 26,
+    "fields": {
+        "tag": 21,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 27,
+    "fields": {
+        "tag": 22,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 28,
+    "fields": {
+        "tag": 16,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 29,
+    "fields": {
+        "tag": 18,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 30,
+    "fields": {
+        "tag": 19,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+        "title": "Программирование",
+        "slug": "programmirovanie",
+        "description": "Мир, где кофе ☕ и код 💻 правят балом.",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+        "title": "Юридические штуки",
+        "slug": "legal-stuff",
+        "description": "Здесь всё строго, запутанно и всегда с печатью. 📜🔍",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 3,
+        "level": 0
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 3,
+    "fields": {
+        "title": "Криптомир",
+        "slug": "crypto-world",
+        "description": "Место, где биткойны летают, а NFT восхищают. 🌐💸",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 1,
+    "fields": {
+        "title": "10 странных фактов о криптозверях 🦄👾",
+        "slug": "10-strannykh-faktov-o-kriptozveryakh",
+        "short_description": "Откройте для себя тайны криптозверей и их удивительные особенности! 🕵️‍♀️",
+        "full_description": "Здесь вы узнаете о том, как криптозвери обитают в мире блокчейн, питаются мемами и размножаются с помощью NFT. Удивительно, но факт: криптозвери могут менять свои цвета в зависимости от текущей цены биткойна! И это еще не все удивительные черты этих загадочных существ. Давайте погрузимся в мир криптозверей вместе! 🌈🚀",
+        "thumbnail": "images/thumbnails/2024/06/06/cryptobeasts.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:31:21.554Z",
+        "time_update": "2024-06-25T06:51:19.228Z",
+        "author": [
+            "visitor"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 3
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 2,
+    "fields": {
+        "title": "Пик или пропасть? Ваш гид в мире биткойнов 📈📉",
+        "slug": "pik-ili-propast-vash-gid-v-mire-bitkoinov",
+        "short_description": "Готовы ли вы стать следующим миллионером или потерять все свои сбережения? Узнайте правду о мире биткойнов! 💰💥",
+        "full_description": "Добро пожаловать в мир биткойнов! Здесь вы найдете все, что нужно знать о динамичном мире криптовалют. От новых технологий до волнующих новостей - мы расскажем вам о всем, что происходит в этом захватывающем мире. Готовы ли вы стать следующим миллионером или потерять все свои сбережения? Узнайте правду о мире биткойнов с нами! 💰💥",
+        "thumbnail": "images/thumbnails/2024/06/06/bitcoin.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:36:03.672Z",
+        "time_update": "2024-06-25T06:50:30.493Z",
+        "author": [
+            "visitor"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 3
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 3,
+    "fields": {
+        "title": "Картинки за миллионы: искусство или чудо? 🖼️💰",
+        "slug": "million-dollar-pics-art-or-miracle",
+        "short_description": "Узнайте, как пиксели становятся ценными шедеврами и зарабатывают миллионы долларов в мире NFT! 💎✨",
+        "full_description": "Давно прошли те времена, когда искусство ограничивалось холстами и кистями. Сегодня мир переживает настоящую революцию в искусстве благодаря технологии NFT. Картины, состоящие из пикселей, становятся объектами желания коллекционеров и достигают невероятных цен на аукционах. Узнайте, как пиксели становятся ценными шедеврами и зарабатывают миллионы долларов в мире NFT! 💎✨",
+        "thumbnail": "images/thumbnails/2024/06/06/nft.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:38:31.936Z",
+        "time_update": "2024-06-25T06:49:36.090Z",
+        "author": [
+            "visitor"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 3
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 4,
+    "fields": {
+        "title": "Иногда слёзы: как справиться с кодом и дедлайном? 😭",
+        "slug": "sometimes-tears-coping-with-code-and-deadlines",
+        "short_description": "Узнайте, как справиться с трудностями программирования и сжатыми сроками без потери мотивации и настроения! 💻⏰",
+        "full_description": "Бывают моменты, когда код отказывается работать, а дедлайн стоит на пороге. В такие моменты нам хочется просто заплакать! Но не отчаивайтесь, в этой статье мы расскажем вам, как справиться с трудностями программирования и сжатыми сроками без потери мотивации и настроения. Узнайте, как сохранить спокойствие и сделать ваш код лучше вместе с нами! 💻⏰",
+        "thumbnail": "images/thumbnails/2024/06/06/the_code_doesnt_work.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:44:35.812Z",
+        "time_update": "2024-06-25T06:49:19.536Z",
+        "author": [
+            "root"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 5,
+    "fields": {
+        "title": "Кофе решает всё: секрет успеха программиста! ☕💪",
+        "slug": "coffee-solves-all-the-secret-to-programming-success",
+        "short_description": "Откройте для себя магию кофе и его влияние на процесс программирования. Потому что без кофе кодить вообще невозможно! ☕💪",
+        "full_description": "Каждый программист знает, что кофе - это не просто напиток, а настоящий мотиватор и источник энергии. В этой статье мы расскажем вам о магии кофе и его влиянии на процесс программирования. Потому что без кофе кодить вообще невозможно! ☕💪",
+        "thumbnail": "images/thumbnails/2024/06/06/coffee_for_a_programmer.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:45:39.242Z",
+        "time_update": "2024-06-25T06:48:59.537Z",
+        "author": [
+            "root"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 6,
+    "fields": {
+        "title": "Хорошо, но не очень: как не запутаться в паттернах проектирования? 🤔",
+        "slug": "good-but-not-great-how-to-not-get-lost-in-design-patterns",
+        "short_description": "Узнайте, как не потеряться в мире паттернов проектирования и использовать их на благо вашего проекта! 💡🔗",
+        "full_description": "Паттерны проектирования могут быть как нашими лучшими друзьями, так и заклятыми врагами. В этой статье мы расскажем вам, как не потеряться в мире паттернов проектирования и использовать их на благо вашего проекта. Узнайте, как выбрать правильный паттерн и сделать ваш код еще лучше! 💡🔗",
+        "thumbnail": "images/thumbnails/2024/06/06/design_patterns.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:46:50.458Z",
+        "time_update": "2024-06-25T06:48:36.051Z",
+        "author": [
+            "root"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 7,
+    "fields": {
+        "title": "Бесконечные отчёты: как выжить в мире юриспруденции? 📚📝",
+        "slug": "endless-reports-how-to-survive-in-the-legal-world",
+        "short_description": "Узнайте, как сохранить здравый смысл и выжить в мире, где бумаги больше, чем идей! 💼🤯",
+        "full_description": "Юридические документы могут быть настоящим лабиринтом, но не отчаивайтесь! В этой статье мы расскажем вам, как сохранить здравый смысл и выжить в мире, где бумаги больше, чем идей. Узнайте, как организовать свою работу и избежать бесконечных отчётов! 💼🤯",
+        "thumbnail": "images/thumbnails/2024/06/06/labyrinth_of_laws.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:49:53.293Z",
+        "time_update": "2024-06-25T06:48:12.932Z",
+        "author": [
+            "ruser"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 2
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 8,
+    "fields": {
+        "title": "Вечный лабиринт: как разобраться в мире законов и правил? 🌀🗺️",
+        "slug": "eternal-maze-how-to-navigate-the-world-of-laws-and-regulations",
+        "short_description": "Погрузитесь в мир, где законы такие законы, и не поймёшь, пока не заплутаешь! 🤔📜",
+        "full_description": "Законы и правила - это настоящий лабиринт, но не отчаивайтесь! В этой статье мы расскажем вам, как разобраться в мире законов и правил. Узнайте, как избежать запутывания и успешно навигировать в этом вечном лабиринте! 🌀🗺️",
+        "thumbnail": "images/thumbnails/2024/06/06/confusing_laws.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:50:43.122Z",
+        "time_update": "2024-06-25T06:47:39.263Z",
+        "author": [
+            "ruser"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 2
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 9,
+    "fields": {
+        "title": "Объект против возражения: как выиграть судебную битву? ⚖️📢",
+        "slug": "objection-overruled-how-to-win-the-legal-battle",
+        "short_description": "Узнайте, как выступить в суде и добиться своей победы в битве за справедливость! 👨‍⚖️💥",
+        "full_description": "Судебные прения могут быть настоящей битвой, но не отчаивайтесь! В этой статье мы расскажем вам, как выступить в суде и добиться своей победы в битве за справедливость. Узнайте, как правильно формулировать аргументы и убедить судью в своей правоте! ⚖️📢",
+        "thumbnail": "images/thumbnails/2024/06/06/justice_in_court.jpeg",
+        "status": "published",
+        "time_create": "2024-06-03T18:51:38.975Z",
+        "time_update": "2024-06-25T06:36:13.918Z",
+        "author": [
+            "ruser"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 2
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 1,
+    "fields": {
+        "article": 9,
+        "author": [
+            "pupok"
+        ],
+        "content": "В Украине самая коррумпированная власть - это судебная ветка власти!",
+        "time_create": "2024-06-25T06:54:50.212Z",
+        "time_update": "2024-06-25T06:54:50.212Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 2,
+    "fields": {
+        "article": 9,
+        "author": [
+            "root"
+        ],
+        "content": "Да, я с тобой согласен на все 100%",
+        "time_create": "2024-06-25T06:55:38.291Z",
+        "time_update": "2024-06-25T06:55:38.291Z",
+        "status": "published",
+        "parent": 1,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 3,
+    "fields": {
+        "article": 5,
+        "author": [
+            "visitor"
+        ],
+        "content": "Кофе - это круто!",
+        "time_create": "2024-06-25T06:56:22.097Z",
+        "time_update": "2024-06-25T06:56:22.097Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 4,
+    "fields": {
+        "article": 5,
+        "author": [
+            "ruser"
+        ],
+        "content": "А я не люблю кофе, пью зеленый чай :)))",
+        "time_create": "2024-06-25T06:57:25.158Z",
+        "time_update": "2024-06-25T06:57:25.158Z",
+        "status": "published",
+        "parent": 3,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 2,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 5,
+    "fields": {
+        "article": 1,
+        "author": [
+            "root_1"
+        ],
+        "content": "Очень интересная статья!!!!",
+        "time_create": "2024-06-25T06:58:04.479Z",
+        "time_update": "2024-06-25T06:58:04.479Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 3,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 6,
+    "fields": {
+        "article": 1,
+        "author": [
+            "pupok"
+        ],
+        "content": "Да, согласен, статья классная....",
+        "time_create": "2024-06-25T06:58:44.164Z",
+        "time_update": "2024-06-25T06:58:44.164Z",
+        "status": "published",
+        "parent": 5,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 3,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 7,
+    "fields": {
+        "article": 2,
+        "author": [
+            "root"
+        ],
+        "content": "Биток - это прям дед в мире крипты!!!!",
+        "time_create": "2024-06-25T06:59:44.760Z",
+        "time_update": "2024-06-25T06:59:44.760Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 4,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 8,
+    "fields": {
+        "article": 2,
+        "author": [
+            "visitor"
+        ],
+        "content": "Биток падает и все альткоины тоже... Это показатель....",
+        "time_create": "2024-06-25T07:00:44.608Z",
+        "time_update": "2024-06-25T07:00:44.608Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 5,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 9,
+    "fields": {
+        "article": 2,
+        "author": [
+            "ruser"
+        ],
+        "content": "Биток - это мыльный пузырь!!!!",
+        "time_create": "2024-06-25T07:01:21.648Z",
+        "time_update": "2024-06-25T07:01:21.648Z",
+        "status": "published",
+        "parent": 8,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 5,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 10,
+    "fields": {
+        "article": 8,
+        "author": [
+            "visitor"
+        ],
+        "content": "Конституция самый главный закон в Украине!!!",
+        "time_create": "2024-06-25T07:02:20.015Z",
+        "time_update": "2024-06-25T07:02:20.015Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 6,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 11,
+    "fields": {
+        "article": 8,
+        "author": [
+            "root"
+        ],
+        "content": "Все законы и нпа должны не противоречить Конституции Украины!!!!",
+        "time_create": "2024-06-25T07:04:10.309Z",
+        "time_update": "2024-06-25T07:04:10.309Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 7,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 12,
+    "fields": {
+        "article": 8,
+        "author": [
+            "pupok"
+        ],
+        "content": "Но, на практике, это не всегда соблюдено....",
+        "time_create": "2024-06-25T07:05:31.458Z",
+        "time_update": "2024-06-25T07:05:31.458Z",
+        "status": "published",
+        "parent": 11,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 7,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 13,
+    "fields": {
+        "article": 6,
+        "author": [
+            "root_1"
+        ],
+        "content": "Паттерны это сила!!!!",
+        "time_create": "2024-06-25T07:06:21.054Z",
+        "time_update": "2024-06-25T07:06:21.054Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 8,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 14,
+    "fields": {
+        "article": 4,
+        "author": [
+            "ruser"
+        ],
+        "content": "Можно и всю ночь просидеть....",
+        "time_create": "2024-06-25T07:06:51.799Z",
+        "time_update": "2024-06-25T07:06:51.799Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 9,
+        "level": 0
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 2,
+    "fields": {
+        "article": 8,
+        "user": [
+            "root_1"
+        ],
+        "value": -1,
+        "time_create": "2024-06-26T12:32:02.437Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 3,
+    "fields": {
+        "article": 7,
+        "user": [
+            "root_1"
+        ],
+        "value": -1,
+        "time_create": "2024-06-26T12:32:15.036Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 4,
+    "fields": {
+        "article": 6,
+        "user": [
+            "root_1"
+        ],
+        "value": 1,
+        "time_create": "2024-06-26T12:32:19.589Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 5,
+    "fields": {
+        "article": 5,
+        "user": [
+            "root_1"
+        ],
+        "value": -1,
+        "time_create": "2024-06-26T12:32:26.287Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 6,
+    "fields": {
+        "article": 4,
+        "user": [
+            "root_1"
+        ],
+        "value": 1,
+        "time_create": "2024-06-26T12:32:28.618Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 7,
+    "fields": {
+        "article": 3,
+        "user": [
+            "root_1"
+        ],
+        "value": 1,
+        "time_create": "2024-06-26T12:32:32.456Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 8,
+    "fields": {
+        "article": 2,
+        "user": [
+            "root_1"
+        ],
+        "value": 1,
+        "time_create": "2024-06-26T12:32:34.686Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 9,
+    "fields": {
+        "article": 1,
+        "user": [
+            "root_1"
+        ],
+        "value": 1,
+        "time_create": "2024-06-26T12:32:37.290Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 10,
+    "fields": {
+        "article": 9,
+        "user": [
+            "root_1"
+        ],
+        "value": 1,
+        "time_create": "2024-06-27T14:19:28.127Z",
+        "ip_address": "127.0.0.1"
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "visitor"
+        ],
+        "slug": "visitor",
+        "avatar": "images/avatars/2024/06/25/6.png",
+        "bio": "Пользователь с именем Олег.",
+        "birth_date": "1972-06-25",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "root"
+        ],
+        "slug": "root",
+        "avatar": "images/avatars/2024/06/25/9.png",
+        "bio": "Самый главный!",
+        "birth_date": "2001-04-03",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "ruser"
+        ],
+        "slug": "ruser",
+        "avatar": "images/avatars/2024/06/25/8.png",
+        "bio": "Обычный пользователь.",
+        "birth_date": "1996-12-08",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "pupok"
+        ],
+        "slug": "pupok",
+        "avatar": "images/avatars/2024/06/25/10.png",
+        "bio": "Классный и смешной.",
+        "birth_date": "1989-09-06",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "root_1"
+        ],
+        "slug": "root1",
+        "avatar": "images/avatars/2024/06/25/2.png",
+        "bio": "Главный, но не очень.",
+        "birth_date": "1997-12-30",
+        "following": [
+            8
+        ]
+    }
+}
+]

@@ -5,7 +5,8 @@ from django.urls import path, include
 from .views import (
     ProfileUpdateView, ProfileDetailView, UserRegisterView, UserLoginView,
     UserPasswordChangeView, UserForgotPasswordView, UserPasswordResetConfirmView, EmailConfirmationSentView,
-    UserConfirmEmailView, EmailConfirmedView, EmailConfirmationFailedView, UserLogoutView, FeedbackCreateView
+    UserConfirmEmailView, EmailConfirmedView, EmailConfirmationFailedView, UserLogoutView, FeedbackCreateView,
+    ProfileFollowingCreateView
 )
 
 urlpatterns = [
@@ -20,6 +21,12 @@ urlpatterns = [
     # При обращении по этому URL вызывается класс-представление ProfileDetailView.
     # Имя маршрута 'profile_detail'.
     path('user/<str:slug>/', ProfileDetailView.as_view(), name='profile_detail'),
+
+    # URL для создания и удаления подписки на профиль пользователя.
+    # В URL указывается параметр <str:slug>, который будет передан в представление как аргумент.
+    # При обращении по этому URL вызывается класс-представление ProfileFollowingCreateView.
+    # Имя маршрута 'follow'.
+    path('user/follow/<str:slug>/', ProfileFollowingCreateView.as_view(), name='follow'),
 
     # URL для авторизации пользователя.
     # При обращении по этому URL вызывается класс-представление UserLoginView.

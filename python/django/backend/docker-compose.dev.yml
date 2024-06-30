@@ -1,0 +1,98 @@
+version: '3.9'
+
+# Определение именованных томов для хранения данных PostgreSQL, статических и медиа файлов.
+volumes:
+  pgdata:
+  static:
+  media:
+
+services:
+
+  # Сервис Django, использующий Dockerfile из текущей директории для сборки образа.
+  django:
+    build:
+      context: .
+    ports:
+      - '8000:8000'  # Проброс порта 8000 контейнера Django на хост.
+    container_name: django
+    env_file:
+      - docker/env/.env.dev  # Подгружаем переменные окружения из .env.dev.
+    volumes:
+      - ./:/app  # Монтируем текущую директорию как /app внутри контейнера.
+      - static:/app/static  # Монтируем именованный том static для статических файлов.
+      - media:/app/media    # Монтируем именованный том media для медиа-файлов.
+    depends_on:
+      - postgres  # Зависимость от контейнера PostgreSQL.
+      - redis     # Зависимость от контейнера Redis.
+
+      # Команда для запуска сервера на всех интерфейсах.
+    command: >
+      sh -c "python manage.py collectstatic --no-input && 
+             python manage.py makemigrations && 
+             python manage.py migrate && 
+             python manage.py runserver 0.0.0.0:8000"  
+
+  # Сервис Nginx, использующий официальный образ Nginx для обработки запросов.
+  nginx:
+    container_name: nginx
+    working_dir: /app
+    image: nginx:stable-alpine
+    restart: always
+    ports:
+      - "80:80"  # Проброс порта 80 контейнера Nginx на хост.
+    volumes:
+      - static:/app/static  # Монтируем именованный том static для статических файлов.
+      - media:/app/media    # Монтируем именованный том media для медиа-файлов.
+      - ./docker/nginx/dev/:/etc/nginx/conf.d:ro  # Монтируем конфигурацию Nginx.
+    links:
+      - django  # Связываем с контейнером Django.
+    depends_on:
+      - django   # Зависимость от контейнера Django.
+
+  # Сервис PostgreSQL, использующий официальный образ PostgreSQL для хранения данных.
+  postgres:
+    image: postgres:alpine
+    container_name: postgres
+    restart: always
+    env_file:
+      - docker/env/.env.dev  # Подгружаем переменные окружения из .env.dev.
+    volumes:
+      - pgdata:/var/lib/postgresql/data/  # Монтируем именованный том pgdata для хранения данных.
+
+  # Сервис Redis, использующий официальный образ Redis для кеширования и брокеринга.
+  redis:
+    image: redis:alpine
+    container_name: redis
+    env_file:
+      - docker/env/.env.dev  # Подгружаем переменные окружения из .env.dev.
+    expose:
+      - 6379  # Открываем порт 6379 для внешних подключений.
+    volumes:
+      - ./docker/redis/data:/data  # Монтируем директорию для хранения данных Redis.
+
+  # Сервис Celery Worker, использующий Dockerfile из текущей директории для сборки образа.
+  celery-worker:
+    build: .
+    container_name: celery-worker
+    restart: always
+    env_file:
+      - docker/env/.env.dev  # Подгружаем переменные окружения из .env.dev.
+    volumes:
+      - ./:/app              # Монтируем текущую директорию как /app внутри контейнера.
+      - media:/app/media     # Монтируем именованный том media для медиа-файлов.
+    command: celery -A backend worker --loglevel=info --logfile=./docker/logs/celery-worker.log  # Команда для запуска Celery Worker.
+    depends_on:
+      - redis  # Зависимость от контейнера Redis.
+
+  # Сервис Celery Beat, использующий тот же Dockerfile, что и Celery Worker.
+  celery-beat:
+    build: .
+    container_name: celery-beat
+    env_file:
+      - docker/env/.env.dev  # Подгружаем переменные окружения из .env.dev.
+    depends_on:
+      - redis   # Зависимость от контейнера Redis.
+    command: celery -A backend beat --loglevel=info --logfile=./docker/logs/celery-beat.log  # Команда для запуска Celery Beat.
+    volumes:
+      - media:/app/media     # Монтируем именованный том media для медиа-файлов.
+      - ./:/app              # Монтируем текущую директорию как /app внутри контейнера.

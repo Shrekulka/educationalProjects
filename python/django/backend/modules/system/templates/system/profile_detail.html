@@ -3,6 +3,11 @@
 <!-- Наследуем основной шаблон 'main.html' для использования общего стиля и компонентов сайта -->
 {% extends 'main.html' %}
 
+<!-- Загружаем теги для работы с файлами статики (CSS, JavaScript) -->
+{% load static %}
+
+
+<!-- Определяем блок контента, который будет заменен на данный контент в основном шаблоне -->
 {% block content %}
     <!-- Карточка профиля пользователя -->
     <div class="card border-0">
@@ -30,18 +35,92 @@
                             <!-- Выводим имя и фамилию пользователя, если они указаны -->
                             {% if profile.user.get_full_name %}
                                 <li>Имя и фамилия: {{ profile.user.get_full_name }}</li> {% endif %}
-                            <!-- Выводим дату последнего входа пользователя -->
-                            <li>Заходил: {{ profile.user.last_login }}</li>
+                            <!-- Выводим дату последнего входа пользователя и его статус онлайн -->
+                            <li>Заходил: {{ profile.user.last_login }} | {% if profile.is_online %}Онлайн{% else %}Не в
+                                сети{% endif %}</li>
                             <!-- Выводим дату рождения пользователя -->
                             <li>Дата рождения: {{ profile.birth_date }}</li>
                             <!-- Выводим информацию о себе, указанную пользователем -->
                             <li>О себе: {{ profile.bio }}</li>
                         </ul>
-                        <!-- Кнопка для перехода к редактированию профиля -->
-                        <a href="{% url 'profile_edit' %}" class="btn btn-sm btn-primary">Редактировать профиль</a>
+                        <!-- Кнопки для подписки или отписки от пользователя -->
+                        {% if request.user.is_authenticated and request.user != profile.user %}
+                            {% if request.user.profile in profile.followers.all %}
+                                <!-- Кнопка для отписки, если текущий пользователь уже подписан на профиль -->
+                                <button class="btn btn-sm btn-danger btn-follow" data-slug="{{ profile.slug }}">
+                                    Отписаться от {{ profile.user.username }}
+                                </button>
+                            {% else %}
+                                <!-- Кнопка для подписки, если текущий пользователь не подписан на профиль -->
+                                <button class="btn btn-sm btn-primary btn-follow" data-slug="{{ profile.slug }}">
+                                    Подписаться на {{ profile.user.username }}
+                                </button>
+                            {% endif %}
+                        {% elif request.user == profile.user %}
+                            <!-- Ссылка для редактирования собственного профиля -->
+                            <a href="{% url 'profile_edit' %}" class="btn btn-sm btn-primary">Редактировать профиль</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-0">
+            <!-- Основное тело карточки -->
+            <div class="card-body">
+                <!-- Разметка для строки с двумя колонками -->
+                <div class="row">
+                    <!-- Левая колонка (подписки) -->
+                    <div class="col-md-6">
+                        <!-- Заголовок для блока подписок -->
+                        <h6 class="card-title">
+                            Подписки
+                        </h6>
+                        <div class="card-text">
+                            <!-- Разметка для ряда элементов -->
+                            <div class="row">
+                                {% for following in profile.following.all %}
+                                    <!-- Колонка для отображения подписок -->
+                                    <div class="col-md-2">
+                                        <!-- Ссылка на профиль подписки с изображением аватара -->
+                                        <a href="{{ following.get_absolute_url }}">
+                                            <img src="{{ following.get_avatar }}" class="img-fluid rounded-1"
+                                                 alt="{{ following }}"/>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Правая колонка (подписчики) -->
+                    <div class="col-md-6">
+                        <!-- Заголовок для блока подписчиков -->
+                        <h6 class="card-title">
+                            Подписчики
+                        </h6>
+                        <div class="card-text">
+                            <!-- Разметка для ряда элементов -->
+                            <div class="row followers-box">
+                                {% for follower in profile.followers.all %}
+                                    <!-- Колонка для отображения подписчиков -->
+                                    <div class="col-md-2" id="user-slug-{{ follower.slug }}">
+                                        <!-- Ссылка на профиль подписчика с изображением аватара -->
+                                        <a href="{{ follower.get_absolute_url }}">
+                                            <img src="{{ follower.get_avatar }}" class="img-fluid rounded-1"
+                                                 alt="{{ follower }}"/>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<!-- Окончание блока контента и начало блока скриптов -->
 {% endblock %}
+{% block script %}
+    <!-- Подключение внешнего JavaScript файла profile.js для работы с клиентской частью страницы -->
+    <script src="{% static 'js/custom/profile.js' %}"></script>
+{% endblock %}
+

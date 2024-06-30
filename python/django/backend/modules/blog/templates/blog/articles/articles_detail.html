@@ -1,21 +1,29 @@
 <!-- Файл шаблона расположен в папке backend/modules/blog/templates/blog/articles_detail.html -->
 
-<!-- Наследуемся от главной страницы, чтоб мы могли вставить контент в определенное место в шаблоне нашего сайта. -->
-{% extends 'main.html' %}
+{% extends 'main.html' %}  <!-- Наследуемся от основного шаблона 'main.html' -->
 
-{% load mptt_tags %}  <!-- Загрузка тегов mptt -->
+{% load mptt_tags static %}  <!-- Загрузка тегов mptt и static -->
 
-{% block content %}  <!-- Определение блока контента -->
+{% block content %}  <!-- Открываем блок content -->
+
     <div class="card mb-3 border-0 shadow-sm">  <!-- Открываем карточку статьи с использованием Bootstrap стилей -->
-        <div class="row">  <!-- Строка разметки -->
-            <div class="col-4">  <!-- Колонка с изображением -->
+
+        <div class="row">  <!-- Открываем строку разметки -->
+
+            <div class="col-4">  <!-- Колонка с изображением статьи -->
+
                 <!-- Изображение статьи -->
                 <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.title }}"/>
             </div>
+
             <div class="col-8">  <!-- Колонка с основным содержимым -->
-                <div class="card-body">  <!-- Тело карточки -->
+
+                <div class="card-body">  <!-- Открываем тело карточки -->
+
                     <h5>{{ article.title }}</h5>  <!-- Заголовок статьи -->
-                    <p class="card-text">{{ article.full_description|safe }}</p> <!-- Полное описание статьи -->
+
+                    <p class="card-text">{{ article.full_description|safe }}</p>
+                    <!-- Полное описание статьи, без экранирования HTML -->
 
                     <!-- Информация о категории, авторе и времени создания статьи -->
                     Категория: <a
@@ -24,39 +32,82 @@
 
                 </div>
             </div>
+
         </div>
+
         {% if article.tags.all %}  <!-- Проверяем, есть ли у статьи теги -->
+
             <div class="card-footer border-0">  <!-- Открываем нижнюю часть карточки без границ -->
+
                 Теги записи: {% for tag in article.tags.all %}  <!-- Начинаем цикл для вывода всех тегов статьи -->
+
                     <!-- Выводим ссылки на страницы со статьями по каждому тегу -->
                     <a href="{% url 'articles_by_tags' tag.slug %}">{{ tag }}</a>, {% endfor %}
+
             </div>
         {% endif %}
+
+        <div class="rating-buttons">  <!-- Блок кнопок для рейтинга -->
+
+            <!-- Кнопка "Лайк" с атрибутами data для передачи id статьи и значения рейтинга -->
+            <button class="btn btn-sm btn-primary" data-article="{{ article.id }}" data-value="1">Лайк</button>
+
+            <!-- Кнопка "Дизлайк" с атрибутами data для передачи id статьи и значения рейтинга -->
+            <button class="btn btn-sm btn-secondary" data-article="{{ article.id }}" data-value="-1">Дизлайк</button>
+
+            <!-- Элемент для отображения суммы рейтинга статьи -->
+            <button class="btn btn-sm btn-secondary rating-sum">{{ article.get_sum_rating }}</button>
+        </div>
+
     </div>
+
     <div class="card border-0">  <!-- Основной контейнер карточки для комментариев -->
+
         <div class="card-body">  <!-- Тело карточки -->
+
             <h5 class="card-title">  <!-- Заголовок карточки -->
                 Комментарии
             </h5>
-            {% include 'blog/comments/comments_list.html' %}  <!-- Вставка шаблона со списком комментариев -->
-        </div>
-    </div>
-{% endblock %}  <!-- Закрытие блока контента -->
 
-{% block sidebar %} <!-- Определение блока боковой панели -->
-    <div class="card mb-2 border-0"> <!-- Карточка для блока боковой панели -->
-        <div class="card-body"> <!-- Тело карточки -->
-            <div class="card-title"> <!-- Заголовок карточки -->
+            {% include 'blog/comments/comments_list.html' %}  <!-- Вставка шаблона со списком комментариев -->
+
+        </div>
+
+    </div>
+{% endblock %}  <!-- Закрытие блока content -->
+
+{% block script %}  <!-- Открываем блок script для вставки скрипта -->
+
+    <script src="{% static 'js/custom/ratings.js' %}"></script>  <!-- Подключаем скрипт для работы с рейтингами -->
+
+{% endblock %}  <!-- Закрываем блок script -->
+
+{% block sidebar %}  <!-- Открываем блок sidebar для боковой панели -->
+
+    <div class="card mb-2 border-0">  <!-- Карточка для блока боковой панели -->
+
+        <div class="card-body">  <!-- Тело карточки -->
+
+            <div class="card-title">  <!-- Заголовок карточки -->
                 Похожие статьи
             </div>
-            <div class="card-text"> <!-- Текст карточки -->
-                <ul class="similar-articles"> <!-- Список похожих статей -->
-                    {% for sim_article in similar_articles %} <!-- Цикл для отображения всех похожих статей -->
+
+            <div class="card-text">  <!-- Текст карточки -->
+
+                <ul class="similar-articles">  <!-- Список похожих статей -->
+
+                    {% for sim_article in similar_articles %}  <!-- Цикл для отображения всех похожих статей -->
+
                         <!-- Ссылка на похожую статью -->
                         <li><a href="{{ sim_article.get_absolute_url }}">{{ sim_article.title }}</a></li>
+
                     {% endfor %}
+
                 </ul>
+
             </div>
+
         </div>
+
     </div>
-{% endblock %} <!-- Закрытие блока боковой панели -->
+{% endblock %}  <!-- Закрываем блок sidebar -->

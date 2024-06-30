@@ -1,13 +1,20 @@
 # backend/modules/services/mixins.py
 
-from typing import Any
+from datetime import timedelta
+from typing import Any, Union
 
 from django.contrib import messages
 from django.contrib.auth.mixins import AccessMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
-from django.http import HttpRequest, HttpResponse
+from django.db.models import Model
+from django.http import HttpRequest
+from django.http import HttpResponse
 from django.shortcuts import redirect
+from django.utils import timezone
+
+from .utils import get_client_ip
+from ..blog.models import ViewCount
 
 
 class AuthorRequiredMixin(AccessMixin):
@@ -56,6 +63,8 @@ class AuthorRequiredMixin(AccessMixin):
         return super().dispatch(request, *args, **kwargs)
 
 
+########################################################################################################################
+
 class UserIsNotAuthenticated(UserPassesTestMixin):
     """
     Миксин для запрета доступа к странице для аутентифицированных пользователей.
@@ -98,3 +107,54 @@ class UserIsNotAuthenticated(UserPassesTestMixin):
         """
         # Перенаправляем пользователя на домашнюю страницу
         return redirect('home')
+
+
+########################################################################################################################
+class ViewCountMixin:
+    """
+        Миксин для увеличения счетчика просмотров статьи.
+
+        Этот миксин добавляет функциональность для отслеживания просмотров статьи,
+        увеличивая счетчик просмотров каждый раз, когда статья запрашивается.
+
+        Методы:
+            get_object() -> Union[Model, Any]: Возвращает объект статьи и увеличивает счетчик просмотров.
+    """
+
+    def get_object(self) -> Union[Model, Any]:
+        """
+            Получает объект статьи и увеличивает счетчик просмотров.
+
+            Метод переопределяет стандартный get_object, добавляя функционал
+            для учета просмотров статьи. Просмотр засчитывается, если с данного
+            IP-адреса не было просмотров этой статьи за последние 7 дней.
+
+            Returns:
+                Union[Model, Any]: Объект статьи.
+
+            Note:
+                Метод создает новую запись в модели ViewCount, если
+                для данного IP и статьи не было просмотров за последнюю неделю.
+        """
+        # Получаем статью по заданному slug
+        obj = super().get_object()
+
+        # Получаем IP-адрес пользователя
+        ip_address = get_client_ip(self.request)
+
+        # Получаем текущую дату и время
+        now = timezone.now()
+
+        # Вычисляем дату неделю назад
+        week_ago = now - timedelta(days=7)
+
+        # Создаем новую запись просмотра, если не было просмотров за последнюю неделю
+        ViewCount.objects.get_or_create(
+            article=obj,
+            ip_address=ip_address,
+            viewed_on__gte=week_ago
+        )
+
+        # Возвращаем объект статьи
+        return obj
+########################################################################################################################

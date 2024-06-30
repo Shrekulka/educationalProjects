@@ -5,25 +5,27 @@ from typing import Any, Dict
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordResetView, \
     PasswordResetConfirmView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.sites.shortcuts import get_current_site
-from django.core.mail import send_mail
 from django.db import transaction
-from django.http import HttpResponse, HttpRequest
+from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
+from django.http import JsonResponse
 from django.shortcuts import redirect
+from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.utils.encoding import force_bytes, force_str
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.decorators import method_decorator
+from django.utils.encoding import force_str
+from django.utils.http import urlsafe_base64_decode
 from django.views.generic import DetailView, UpdateView, CreateView, View, TemplateView
 
 from .forms import UserRegisterForm, UserLoginForm, UserPasswordChangeForm, UserForgotPasswordForm, \
     UserSetNewPasswordForm, UserUpdateForm, ProfileUpdateForm, FeedbackCreateForm
 from .models import Profile, Feedback
-from ..services.email import send_contact_email_message
 from ..services.mixins import UserIsNotAuthenticated
+from ..services.tasks import send_activate_email_message_task, send_contact_email_message_task
 from ..services.utils import get_client_ip
 
 User = get_user_model()
@@ -54,7 +56,7 @@ class UserRegisterView(UserIsNotAuthenticated, CreateView):
     # Имя шаблона, используемого для отображения формы регистрации
     template_name = 'system/registration/user_register.html'
 
-    def get_context_data(self, **kwargs) -> Dict[str, Any]:
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """
             Возвращает контекстные данные для шаблона.
 
@@ -71,15 +73,20 @@ class UserRegisterView(UserIsNotAuthenticated, CreateView):
         context['RECAPTCHA_PUBLIC_KEY'] = settings.RECAPTCHA_PUBLIC_KEY
         return context
 
-    def form_valid(self, form):
+    def form_valid(self, form: UserRegisterForm) -> HttpResponseRedirect:
         """
-        Обрабатывает успешную отправку формы регистрации.
+            Обрабатывает успешную отправку формы регистрации пользователя.
 
-        Аргументы:
-            form (UserRegisterForm): Форма регистрации нового пользователя.
+            Аргументы:
+                form (UserRegisterForm): Форма регистрации нового пользователя.
 
-        Возвращает:
-            HttpResponseRedirect: Перенаправление на страницу подтверждения отправки письма.
+            Возвращает:
+                HttpResponseRedirect: Перенаправление на страницу подтверждения отправки письма.
+
+            Действия:
+                - Сохраняет данные пользователя из формы, устанавливая его как неактивного.
+                - Запускает задачу Celery для отправки письма активации.
+                - Перенаправляет пользователя на страницу подтверждения отправки письма.
         """
         # Создаем нового пользователя, но не сохраняем его в базе данных
         user = form.save(commit=False)
@@ -88,22 +95,9 @@ class UserRegisterView(UserIsNotAuthenticated, CreateView):
         # Сохраняем пользователя в базе данных
         user.save()
 
-        # Генерируем токен для подтверждения email
-        token = default_token_generator.make_token(user)
-        # Кодируем идентификатор пользователя в base64
-        uid = urlsafe_base64_encode(force_bytes(user.pk))
-        # Формируем URL для подтверждения email
-        activation_url = reverse_lazy('confirm_email', kwargs={'uidb64': uid, 'token': token})
-        # Получаем текущий домен сайта
-        current_site = get_current_site(self.request).domain
-        # Отправляем письмо с ссылкой для подтверждения email
-        send_mail(
-            'Подтвердите свой электронный адрес',
-            f'Пожалуйста, перейдите по следующей ссылке, чтобы подтвердить свой адрес электронной почты: http://{current_site}{activation_url}',
-            'service.notehunter@gmail.com',
-            [user.email],
-            fail_silently=False,
-        )
+        # Запускаем задачу Celery для отправки письма активации асинхронно
+        send_activate_email_message_task.delay(user.id)
+
         # Перенаправляем пользователя на страницу подтверждения отправки письма
         return redirect('email_confirmation_sent')
 
@@ -176,7 +170,9 @@ class EmailConfirmationSentView(TemplateView):
             Возвращает:
                 Dict[str, Any]: Словарь контекстных данных для шаблона.
         """
-        context = super().get_
+        context = super().get_context_data(**kwargs)
+        # Ваш код для добавления дополнительных данных в контекст
+        return context
 
 
 ########################################################################################################################
@@ -354,7 +350,7 @@ class UserPasswordChangeView(SuccessMessageMixin, PasswordChangeView):
     # Сообщение, отображаемое после успешного изменения пароля
     success_message = 'Ваш пароль был успешно изменён!'
 
-    def get_context_data(self, **kwargs) -> Dict[str, Any]:
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """
             Возвращает контекстные данные для шаблона.
 
@@ -416,7 +412,7 @@ class UserForgotPasswordView(SuccessMessageMixin, PasswordResetView):
     # Указываем путь к шаблону, который будет использоваться для тела письма с инструкцией по восстановлению пароля
     email_template_name = 'system/email/password_reset_mail.html'
 
-    def get_context_data(self, **kwargs) -> dict:
+    def get_context_data(self, **kwargs: Any) -> dict:
         """
             Добавляет дополнительные данные в контекст.
 
@@ -458,7 +454,7 @@ class UserPasswordResetConfirmView(SuccessMessageMixin, PasswordResetConfirmView
     # Указываем сообщение об успешной смене пароля, которое будет отображаться пользователю
     success_message = 'Пароль успешно изменен. Можете авторизоваться на сайте.'
 
-    def get_context_data(self, **kwargs) -> dict:
+    def get_context_data(self, **kwargs: Any) -> dict:
         """
             Добавляет дополнительные данные в контекст.
 
@@ -484,7 +480,8 @@ class ProfileDetailView(DetailView):
            model (Profile): Модель профиля.
            context_object_name (str): Имя переменной контекста, содержащей объект профиля.
            template_name (str): Имя шаблона для отображения профиля.
-           queryset (QuerySet): Запрос для получения профиля с предварительно загруженными связанными объектами.
+           queryset (QuerySet): Запрос для получения профиля с предварительно загруженными связанными объектами,
+                                включая пользователей, подписчиков и подписки.
     """
     # Указываем модель, с которой работает представление
     model = Profile
@@ -492,10 +489,11 @@ class ProfileDetailView(DetailView):
     context_object_name = 'profile'
     # Указываем имя шаблона, который будет использоваться для отображения профиля
     template_name = 'system/profile_detail.html'
-    # Определяем запрос для получения всех профилей с предварительно загруженными связанными пользователями
-    queryset = model.objects.all().select_related('user')
+    # Определяем запрос для получения профиля с предварительно загруженными связанными объектами
+    queryset = model.objects.all().select_related('user').prefetch_related('followers', 'followers__user', 'following',
+                                                                           'following__user')
 
-    def get_context_data(self, **kwargs) -> dict:
+    def get_context_data(self, **kwargs: Any) -> dict:
         """
             Добавляет заголовок страницы в контекст.
 
@@ -537,15 +535,15 @@ class ProfileUpdateView(UpdateView):
         # Возвращает профиль текущего пользователя, используя атрибут request.user
         return self.request.user.profile
 
-    def get_context_data(self, **kwargs) -> dict:
+    def get_context_data(self, **kwargs: Any) -> dict:
         """
-        Добавляет форму обновления данных пользователя в контекст.
+            Добавляет форму обновления данных пользователя в контекст.
 
-        Args:
-            **kwargs: Дополнительные аргументы.
+            Args:
+                **kwargs: Дополнительные аргументы.
 
-        Returns:
-            dict: Контекст данных для шаблона.
+            Returns:
+                dict: Контекст данных для шаблона.
         """
         # Получаем базовый контекст с помощью вызова метода get_context_data родительского класса
         context = super().get_context_data(**kwargs)
@@ -561,15 +559,15 @@ class ProfileUpdateView(UpdateView):
             context['user_form'] = UserUpdateForm(instance=self.request.user)
         return context
 
-    def form_valid(self, form) -> HttpResponse:
+    def form_valid(self, form: ProfileUpdateForm) -> HttpResponse:
         """
-        Обрабатывает валидную форму.
+            Обрабатывает валидную форму.
 
-        Args:
-            form (ProfileUpdateForm): Форма для обновления профиля.
+            Args:
+                form (ProfileUpdateForm): Форма для обновления профиля.
 
-        Returns:
-            HttpResponse: Ответ сервера после успешного обновления профиля.
+            Returns:
+                HttpResponse: Ответ сервера после успешного обновления профиля.
         """
         # Получаем контекст данных для шаблона
         context = self.get_context_data()
@@ -592,10 +590,10 @@ class ProfileUpdateView(UpdateView):
 
     def get_success_url(self) -> str:
         """
-        Получает URL для перенаправления после успешного обновления профиля.
+            Получает URL для перенаправления после успешного обновления профиля.
 
-        Returns:
-            str: URL для перенаправления.
+            Returns:
+                str: URL для перенаправления.
         """
         # Возвращает URL для перенаправления на страницу деталей профиля с учетом его slug
         return reverse_lazy('profile_detail', kwargs={'slug': self.object.slug})
@@ -628,7 +626,7 @@ class FeedbackCreateView(SuccessMessageMixin, CreateView):
     extra_context = {'title': 'Контактная форма'}  # Дополнительный контекст для шаблона
     success_url = reverse_lazy('home')  # URL, на который будет выполнен редирект после успешной отправки формы
 
-    def form_valid(self, form) -> CreateView:
+    def form_valid(self, form: FeedbackCreateForm) -> CreateView:
         """
             Обрабатывает валидную форму.
 
@@ -650,16 +648,180 @@ class FeedbackCreateView(SuccessMessageMixin, CreateView):
             if self.request.user.is_authenticated:  # Если пользователь аутентифицирован
                 feedback.user = self.request.user  # Сохраняем пользователя в отзыве
 
-            # Отправляем электронное письмо с данными отзыва
-            send_contact_email_message(
-                subject=feedback.subject,
-                email=feedback.email,
-                content=feedback.content,
-                ip=feedback.ip_address,
-                user_id=feedback.user.id if feedback.user else None
+            # Отправляем электронное письмо с данными отзыва через Celery задачу
+            send_contact_email_message_task.delay(
+                feedback.subject,  # Передаем тему отзыва
+                feedback.email,  # Передаем email отправителя отзыва
+                feedback.content,  # Передаем содержимое отзыва
+                feedback.ip_address,  # Передаем IP-адрес отправителя отзыва
+                feedback.user_id  # Передаем идентификатор пользователя, если есть
             )
 
         return super().form_valid(form)  # Вызываем метод родительского класса для завершения обработки формы
 
+
 ########################################################################################################################
-#
+def tr_handler404(request: HttpRequest, exception: Exception) -> HttpResponse:
+    """
+        Обработка ошибки 404 (Страница не найдена)
+
+        Эта функция обрабатывает ошибку 404, возникающую, когда пользователь пытается
+        получить доступ к несуществующей странице. Она возвращает страницу с сообщением об ошибке.
+
+        Аргументы:
+        - request: HttpRequest объект, представляющий текущий запрос.
+        - exception: Исключение, вызвавшее ошибку 404.
+
+        Возвращает:
+        - HttpResponse объект, содержащий отрендеренную страницу с сообщением об ошибке 404.
+    """
+    # Рендерим шаблон 'system/errors/error_page.html' с контекстом для ошибки 404
+    return render(
+        request=request,
+        template_name='system/errors/error_page.html',
+        status=404,
+        context={
+            'title': 'Страница не найдена: 404',  # Заголовок страницы ошибки
+            'error_message': 'К сожалению такая страница была не найдена, или перемещена',  # Сообщение об ошибке
+        }
+    )
+
+
+def tr_handler500(request: HttpRequest) -> HttpResponse:
+    """
+        Обработка ошибки 500 (Внутренняя ошибка сервера)
+
+        Эта функция обрабатывает ошибку 500, возникающую в случае внутренней ошибки сервера.
+        Она возвращает страницу с сообщением об ошибке.
+
+        Аргументы:
+        - request: HttpRequest объект, представляющий текущий запрос.
+
+        Возвращает:
+        - HttpResponse объект, содержащий отрендеренную страницу с сообщением об ошибке 500.
+    """
+    # Рендерим шаблон 'system/errors/error_page.html' с контекстом для ошибки 500
+    return render(
+        request=request,
+        template_name='system/errors/error_page.html',
+        status=500,
+        context={
+            'title': 'Ошибка сервера: 500',  # Заголовок страницы ошибки
+            'error_message': 'Внутренняя ошибка сайта, вернитесь на главную страницу, отчет об ошибке мы направим администрации сайта',
+            # Сообщение об ошибке
+        }
+    )
+
+
+def tr_handler403(request: HttpRequest, exception: Exception) -> HttpResponse:
+    """
+        Обработка ошибки 403 (Доступ запрещен)
+
+        Эта функция обрабатывает ошибку 403, возникающую, когда пользователь пытается
+        получить доступ к странице, доступ к которой ограничен. Она возвращает страницу с сообщением об ошибке.
+
+        Аргументы:
+        - request: HttpRequest объект, представляющий текущий запрос.
+        - exception: Исключение, вызвавшее ошибку 403.
+
+        Возвращает:
+        - HttpResponse объект, содержащий отрендеренную страницу с сообщением об ошибке 403.
+    """
+    # Рендерим шаблон 'system/errors/error_page.html' с контекстом для ошибки 403
+    return render(
+        request=request,
+        template_name='system/errors/error_page.html',
+        status=403,
+        context={
+            'title': 'Ошибка доступа: 403',  # Заголовок страницы ошибки
+            'error_message': 'Доступ к этой странице ограничен',  # Сообщение об ошибке
+        }
+    )
+
+
+########################################################################################################################
+# Декоратор метода, который требует, чтобы пользователь был авторизован для доступа к данному представлению
+@method_decorator(login_required, name='dispatch')
+class ProfileFollowingCreateView(View):
+    """
+        Представление для создания и удаления подписки на пользователей.
+
+        Этот класс позволяет текущему пользователю подписываться или отписываться
+        от другого пользователя по его slug.
+
+        Атрибуты:
+            model (Type[Profile]): Модель профиля, используемая в представлении.
+
+        Методы:
+            is_ajax(self) -> bool:
+                Проверяет, является ли запрос AJAX-запросом.
+
+            post(self, request, slug) -> JsonResponse:
+                Обрабатывает POST-запрос для создания или удаления подписки.
+
+    """
+    # Присваиваем переменной model класс модели Profile, который будет использоваться в текущем контексте
+    model = Profile
+
+    def is_ajax(self) -> bool:
+        """
+            Проверяет, является ли запрос AJAX-запросом.
+
+            Returns:
+                bool: True, если запрос является AJAX-запросом, иначе False.
+        """
+        # Проверяет, если в заголовках запроса присутствует заголовок 'X-Requested-With' с значением 'XMLHttpRequest'
+        return self.request.headers.get('X-Requested-With') == 'XMLHttpRequest'
+
+    def post(self, request: HttpRequest, slug: str) -> JsonResponse:
+        """
+           Обрабатывает создание и удаление подписки на профиль пользователя.
+
+           Метод получает профиль пользователя по slug и проверяет, является ли
+           текущий пользователь уже подписчиком этого профиля. Затем он добавляет
+           или удаляет подписку соответственно.
+
+           Args:
+               request (HttpRequest): Объект запроса.
+               slug (str): Уникальный идентификатор профиля пользователя.
+
+           Returns:
+               JsonResponse: JSON-ответ с информацией о результате операции.
+
+           Ответ содержит:
+               - Информацию о пользователе, создающем или удаляющем подписку.
+               - Сообщение о результате операции.
+               - Флаг состояния для обновления пользовательского интерфейса.
+        """
+        # Получаем профиль пользователя, на которого подписываемся или отписываемся, по его slug
+        user = self.model.objects.get(slug=slug)
+
+        # Получаем профиль текущего пользователя
+        profile = request.user.profile
+
+        # Проверяем, если текущий пользователь уже подписан на этого пользователя
+        if profile in user.followers.all():
+            # Если подписан, удаляем из подписчиков
+            user.followers.remove(profile)
+            message = f'Подписаться на {user}'
+            status = False
+
+        # Если не подписан, добавляем в подписчики
+        else:
+            user.followers.add(profile)
+            message = f'Отписаться от {user}'
+            status = True
+
+        # Формируем данные для ответа в формате JSON
+        data = {
+            'username': profile.user.username,  # Имя пользователя текущего профиля
+            'get_absolute_url': profile.get_absolute_url(),  # URL текущего профиля
+            'slug': profile.slug,  # Slug текущего профиля
+            'avatar': profile.get_avatar,  # Аватар текущего профиля
+            'message': message,  # Сообщение о результате операции
+            'status': status,  # Статус подписки (подписан или нет)
+        }
+
+        # Возвращаем данные в формате JSON с HTTP-статусом 200 (OK)
+        return JsonResponse(data, status=200)
+########################################################################################################################
