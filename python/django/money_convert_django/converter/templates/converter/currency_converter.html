@@ -1,0 +1,84 @@
+<!-- money_convert_django/converter/templates/converter/currency_converter.html -->
+
+{% extends 'base.html' %}  <!-- Наследование от базового шаблона -->
+{% block content %}  <!-- Начало блока контента -->
+    <div class="container">  <!-- Основной контейнер -->
+        <div class="row">  <!-- Ряд для выравнивания -->
+            <div class="card box-shadow m-4 form-wrap">  <!-- Карточка с тенью и отступами -->
+                <div class="card-header text-center">  <!-- Заголовок карточки -->
+                    <h2>Денежный Креативатор</h2>  <!-- Название конвертера -->
+                </div>
+
+                {% if error_message %}  <!-- Проверка наличия сообщения об ошибке -->
+                    <div class="alert alert-danger" role="alert">  <!-- Блок для отображения ошибки -->
+                        {{ error_message }}  <!-- Вывод сообщения об ошибке -->
+                    </div>
+                {% endif %}
+
+                <form id="form" class="p-3" action='' method="POST">  <!-- Форма для конвертации -->
+                    {% csrf_token %}  <!-- CSRF-токен для защиты формы -->
+                    <div class="form-row">  <!-- Строка формы -->
+                        <!-- Поле для ввода суммы -->
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="{{ form.from_amount.id_for_label }}">Сумма*</label>
+                            {{ form.from_amount }}  <!-- Рендеринг поля from_amount -->
+                            {% if form.from_amount.errors %}  <!-- Проверка наличия ошибок в поле -->
+                                <div class="invalid-feedback d-block">
+                                    {{ form.from_amount.errors }}  <!-- Вывод ошибок поля -->
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Поле для выбора исходной валюты -->
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="{{ form.from_curr.id_for_label }}">Что уходит*</label>
+                            {{ form.from_curr }}  <!-- Рендеринг поля from_curr -->
+                            {% if form.from_curr.errors %}  <!-- Проверка наличия ошибок в поле -->
+                                <div class="invalid-feedback d-block">
+                                    {{ form.from_curr.errors }}  <!-- Вывод ошибок поля -->
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Поле для выбора целевой валюты -->
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="{{ form.to_curr.id_for_label }}">Что приходит*</label>
+                            {{ form.to_curr }}  <!-- Рендеринг поля to_curr -->
+                            {% if form.to_curr.errors %}  <!-- Проверка наличия ошибок в поле -->
+                                <div class="invalid-feedback d-block">
+                                    {{ form.to_curr.errors }}  <!-- Вывод ошибок поля -->
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <hr>  <!-- Горизонтальная линия-разделитель -->
+
+                    <!-- Вывод общих ошибок формы -->
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form.non_field_errors }}  <!-- Вывод общих ошибок формы -->
+                        </div>
+                    {% endif %}
+
+                    <!-- Блок с результатом конвертации -->
+                    {% if converted_amount is not None %}
+                        <div class="card col-8 p-0 m-auto">
+                            <div class="card-header text-center">
+                                <h4>Вот и результат обмена монеток:</h4>
+                            </div>
+                            <div class="card-body">
+                                <h5>Отдаем <b>{{ from_amount }} {{ from_curr }}</b></h5>
+                                <h5>Получаем <b>{{ converted_amount }} {{ to_curr }}</b></h5>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="submit-btn mt-3">  <!-- Контейнер для кнопки отправки -->
+                        <button type="submit" class="btn btn-primary">Подсчитать монетки</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}  <!-- Конец блока контента -->

@@ -1,0 +1,26 @@
+<!-- money_convert_django/templates/base.html -->
+
+{% load static %}  <!-- Загрузка тегов для работы со статическими файлами в Django -->
+
+<!DOCTYPE html>
+<html lang="ru">  <!-- Открываем тег html с указанием языка документа -->
+<head>
+    <meta charset="UTF-8">  <!-- Устанавливаем кодировку документа -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- Устанавливаем совместимость с последними версиями IE -->
+
+    <!-- Определяем настройки отображения на мобильных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключаем стили Bootstrap из локальных файлов -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+
+    <!-- Подключаем наши собственные статические стили через Django's staticfiles приложение -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Exchange App</title>  <!-- Устанавливаем заголовок страницы -->
+</head>
+<body>
+{% block content %}  <!-- Определяем блок content, который будет переопределяться в дочерних шаблонах -->
+{% endblock %}  <!-- Завершаем блок content -->
+</body>
+</html>

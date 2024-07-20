@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Меню</title>
+{% endblock %}
+
+{% block content %}
+<h1>Вот какие есть знаки зодиака:</h1>
+<ul>
+    <ol>
+        {% for zodiac in zodiacs %}
+            <h1 align="justify">
+                <li><a href="{% url 'horoscope-name' sign_zodiac=zodiac.name %}">{{ zodiac.name|title }}</a></li>
+            </h1>
+        {% endfor %}
+    </ol>
+</ul>
+{% endblock %}
