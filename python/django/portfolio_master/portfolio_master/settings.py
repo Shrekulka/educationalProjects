@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'portfolio.apps.PortfolioConfig',
     'debug_toolbar',                      # Приложение для отладочной панели Django Debug Toolbar
+    'django_ckeditor_5',  # Приложение для интеграции редактора CKEditor 5 с Django
 
 ]
 
@@ -52,6 +53,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Промежуточное ПО для интеграции отладочной панели Django Debug Toolbar в проект.
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio_master.urls'
@@ -135,4 +139,104 @@ MESSAGE_TAGS = {
         messages.SUCCESS: 'alert-success',
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
+}
+
+# Настройки для CKEditor
+########################################################################################################################
+# Определяем настраиваемую цветовую палитру для редактора
+customColorPalette = [
+    {
+        'color': 'hsl(4, 90%, 58%)',    # Красный цвет
+        'label': 'Red'                  # Метка цвета
+    },
+    {
+        'color': 'hsl(340, 82%, 52%)',  # Розовый цвет
+        'label': 'Pink'                 # Метка цвета
+    },
+    {
+        'color': 'hsl(291, 64%, 42%)',   # Фиолетовый цвет
+        'label': 'Purple'                # Метка цвета
+    },
+    {
+        'color': 'hsl(262, 52%, 47%)',   # Темно-фиолетовый цвет
+        'label': 'Deep Purple'           # Метка цвета
+    },
+    {
+        'color': 'hsl(231, 48%, 48%)',  # Индиго
+        'label': 'Indigo'               # Метка цвета
+    },
+    {
+        'color': 'hsl(207, 90%, 54%)',  # Синий цвет
+        'label': 'Blue'                 # Метка цвета
+    },
+]
+
+CKEDITOR_5_CUSTOM_CSS = 'path_to.css'                    # Путь к пользовательскому CSS (необязательно)
+# CKEDITOR_5_FILE_STORAGE = 'storage_app.CustomStorage'  # Путь к пользовательскому хранилищу файлов (необязательно)
+
+# Конфигурация CKEditor
+CKEDITOR_5_CONFIGS = {
+    'default': {                                                                   # Конфигурация по умолчанию
+        'toolbar': ['heading', '|', 'bold', 'italic', 'link',
+                    'bulletedList', 'numberedList', 'blockQuote', 'imageUpload'],  # Инструменты на панели
+    },
+    'extends': {                                              # Расширенная конфигурация
+        'blockToolbar': [
+            'paragraph', 'heading1', 'heading2', 'heading3',  # Блоки заголовков и параграфов
+            '|',
+            'bulletedList', 'numberedList',                   # Списки
+            '|',
+            'blockQuote',                                     # Цитата
+        ],
+        # Полный набор инструментов на панели
+        'toolbar': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
+                    'code', 'subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
+                    'bulletedList', 'numberedList', 'todoList', '|', 'blockQuote', 'imageUpload', '|',
+                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
+                    'insertTable'],
+        'image': {  # Конфигурация для изображений
+            'toolbar': ['imageTextAlternative', '|', 'imageStyle:alignLeft',
+                        'imageStyle:alignRight', 'imageStyle:alignCenter', 'imageStyle:side', '|'],
+            # Панель инструментов для изображений
+            'styles': [
+                'full',         # Полный размер
+                'side',         # Боковая
+                'alignLeft',    # Выровнять влево
+                'alignRight',   # Выровнять вправо
+                'alignCenter',  # Выровнять по центру
+            ]
+        },
+        'table': {  # Конфигурация для таблиц
+            'contentToolbar': ['tableColumn', 'tableRow', 'mergeTableCells',
+                               'tableProperties', 'tableCellProperties'],
+            # Панель инструментов для таблиц
+            'tableProperties': {
+                'borderColors': customColorPalette,     # Настраиваемые цвета границ таблиц
+                'backgroundColors': customColorPalette  # Настраиваемые цвета фона таблиц
+            },
+            'tableCellProperties': {
+                'borderColors': customColorPalette,     # Настраиваемые цвета границ ячеек таблиц
+                'backgroundColors': customColorPalette  # Настраиваемые цвета фона ячеек таблиц
+            }
+        },
+        'heading': {  # Конфигурация для заголовков
+            'options': [
+                # Параграф
+                {'model': 'paragraph', 'title': 'Paragraph', 'class': 'ck-heading_paragraph'},
+                # Заголовок 1
+                {'model': 'heading1', 'view': 'h1', 'title': 'Heading 1', 'class': 'ck-heading_heading1'},
+                # Заголовок 2
+                {'model': 'heading2', 'view': 'h2', 'title': 'Heading 2', 'class': 'ck-heading_heading2'},
+                # Заголовок 3
+                {'model': 'heading3', 'view': 'h3', 'title': 'Heading 3', 'class': 'ck-heading_heading3'}
+            ]
+        }
+    },
+    'list': {                      # Конфигурация для списков
+        'properties': {
+            'styles': 'true',      # Разрешить стили для списков
+            'startIndex': 'true',  # Разрешить изменение начального индекса списков
+            'reversed': 'true',    # Разрешить изменение порядка списков на обратный
+        }
+    }
 }

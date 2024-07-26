@@ -1,211 +1,236 @@
-from django.core.exceptions import ValidationError
+from ckeditor.fields import RichTextField
 from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
 
 
-# Базовая модель для отслеживания времени создания и обновления объектов
-class TimestampedModel(models.Model):
-    # Поле для автоматического добавления времени создания
-    created_at = models.DateTimeField(auto_now_add=True)
-    # Поле для автоматического обновления времени последнего изменения
-    updated_at = models.DateTimeField(auto_now=True)
-
-    # Указываем, что это абстрактная модель и не будет создана в базе данных
-    class Meta:
-        abstract = True
-
-
-# Модель для описания навыков (например, программирование, дизайн)
 class Skill(models.Model):
-    # Поле для названия навыка (например, Python, JavaScript)
-    name = models.CharField(max_length=30)
-    # Поле для уровня владения навыком с выбором значений
-    LEVEL_CHOICES = [
-        ('BEG', 'Beginner'),
-        ('INT', 'Intermediate'),
-        ('ADV', 'Advanced'),
-        ('EXP', 'Expert'),
-    ]
-    level = models.CharField(max_length=3, choices=LEVEL_CHOICES)
+    """
+    Модель для представления навыков автора.
 
-    # Метод для валидации уровня навыка
-    def clean(self):
-        if self.level not in dict(self.LEVEL_CHOICES):
-            raise ValidationError(f'Invalid level: {self.level}')
+    Attributes:
+        name (str): Название навыка.
+        level (str): Уровень владения навыком.
+    """
+    # Название навыка, ограничено 30 символами
+    name = models.CharField(max_length=30)
+    # Уровень владения навыком, ограничено 3 символами
+    level = models.CharField(max_length=3)
 
     class Meta:
-        # Сортировка по id по умолчанию
+        # Сортировка по id
         ordering = ['id']
-        # Человекочитаемое имя модели в единственном числе
+        # Человекочитаемое название модели в единственном числе
         verbose_name = 'Навык'
-        # Человекочитаемое имя модели во множественном числе
+        # Человекочитаемое название модели во множественном числе
         verbose_name_plural = 'Навыки'
 
-    # Метод для строкового представления объекта
-    def __str__(self):
+    def __str__(self) -> str:
+        # Строковое представление объекта (будет отображаться в админ-панели)
         return self.name
 
 
-# Модель для описания категорий работ (например, веб-разработка, графический дизайн)
 class Category(models.Model):
-    # Поле для английского названия категории с уникальным значением
-    engname = models.CharField(max_length=25, unique=True)
-    # Поле для русского названия категории с уникальным значением
-    rusname = models.CharField(max_length=25, unique=True)
+    """
+    Модель для представления категорий работ в портфолио.
+
+    Attributes:
+        engname (str): Название категории на английском языке.
+        rusname (str): Название категории на русском языке.
+    """
+
+    # Название категории на английском, ограничено 25 символами
+    engname = models.CharField(max_length=25)
+    # Название категории на русском, ограничено 25 символами
+    rusname = models.CharField(max_length=25)
 
     class Meta:
-        # Сортировка по id по умолчанию
         ordering = ['id']
-        # Человекочитаемое имя модели в единственном числе
         verbose_name = 'Категория'
-        # Человекочитаемое имя модели во множественном числе
         verbose_name_plural = 'Категории'
 
-    # Метод для строкового представления объекта
-    def __str__(self):
+    def __str__(self) -> str:
+        # Возвращает русское название категории
         return self.rusname
 
 
-# Модель для описания выполненных работ (например, проекты, задачи)
 class Work(models.Model):
-    # Поле для названия работы
+    """
+    Модель для представления отдельных работ в портфолио.
+
+    Attributes:
+        title (str): Заголовок работы.
+        slug (str): URL-совместимое имя работы.
+        category (Category): Связанная категория работы.
+        image (ImageField): Изображение работы.
+        description (str): Описание работы.
+        stack (str): Используемые технологии.
+        link (str): Ссылка на работу.
+    """
+
+    # Заголовок работы, ограничен 150 символами
     title = models.CharField(max_length=150)
-    # Поле для уникального slug (например, для URL)
+    # URL-совместимое имя, уникальное, ограничено 150 символами
     slug = models.SlugField(max_length=150, unique=True)
-    # Поле для связи с категорией (ForeignKey)
+    # Связь с моделью Category (многие к одному)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='works')
-    # Поле для изображения работы
+    # Изображение работы, сохраняется в папку 'works'
     image = models.ImageField(upload_to='works')
-    # Поле для описания работы
-    description = models.TextField()
-    # Поле для указания технологий, использованных в работе
-    stack = models.TextField()
-    # Поле для ссылки на работу
+    # Описание работы
+    description = RichTextField()
+    # Используемые технологии
+    stack = RichTextField()
+    # Ссылка на работу
     link = models.URLField(max_length=200)
 
     class Meta:
-        # Сортировка по id в обратном порядке по умолчанию
+        # Сортировка по id в обратном порядке (новые работы первыми)
         ordering = ['-id']
-        # Человекочитаемое имя модели в единственном числе
         verbose_name = 'Работа'
-        # Человекочитаемое имя модели во множественном числе
         verbose_name_plural = 'Работы'
 
-    # Метод для строкового представления объекта
-    def __str__(self):
+    def __str__(self) -> str:
         return self.title
 
 
-# Модель для описания сервисов (например, консультации, обучение)
 class Service(models.Model):
-    # Поле для названия сервиса
+    """
+    Модель для представления услуг, предоставляемых автором.
+
+    Attributes:
+        name (str): Название услуги.
+        icon (str): Название иконки для услуги.
+        description (str): Краткое описание услуги.
+    """
+    # Название услуги, ограничено 25 символами
     name = models.CharField(max_length=25)
-    # Поле для иконки сервиса
+    # Название иконки для услуги, ограничено 50 символами
     icon = models.CharField(max_length=50)
-    # Поле для описания сервиса
+    # Краткое описание услуги, ограничено 200 символами
     description = models.CharField(max_length=200)
 
     class Meta:
-        # Сортировка по id по умолчанию
         ordering = ['id']
-        # Человекочитаемое имя модели в единственном числе
         verbose_name = 'Сервис'
-        # Человекочитаемое имя модели во множественном числе
         verbose_name_plural = 'Виды сервиса'
 
-    # Метод для строкового представления объекта
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
 
 
-# Модель для описания инструментов, использующихся в сервисах (например, инструменты разработки, ПО)
 class Item(models.Model):
-    # Поле для названия инструмента
+    """
+    Модель для представления инструментов, связанных с услугами.
+
+    Attributes:
+        name (str): Название инструмента.
+        service (Service): Связанная услуга.
+    """
+    # Название инструмента, ограничено 150 символами
     name = models.CharField(max_length=150)
-    # Поле для связи с сервисом (ForeignKey)
+    # Связь с моделью Service (многие к одному)
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
 
     class Meta:
-        # Сортировка по id в обратном порядке по умолчанию
+        # Сортировка по id в обратном порядке
         ordering = ['-id']
-        # Человекочитаемое имя модели в единственном числе
         verbose_name = 'Инструмент'
-        # Человекочитаемое имя модели во множественном числе
         verbose_name_plural = 'Инструменты'
 
-    # Метод для строкового представления объекта
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
 
 
-# Модель для описания авторов (например, сотрудники, исполнители)
 class Author(models.Model):
-    # Поле для имени автора
+    """
+    Модель для представления информации об авторе портфолио.
+
+    Attributes:
+        name (str): Имя автора.
+        lastname (str): Фамилия автора.
+        about (str): Информация об авторе.
+        skills (ManyToManyField): Связь с моделью Skill.
+        image (ImageField): Фотография автора.
+    """
+    # Имя автора, ограничено 15 символами
     name = models.CharField(max_length=15)
-    # Поле для фамилии автора
+    # Фамилия автора, ограничена 15 символами
     lastname = models.CharField(max_length=15)
-    # Поле для описания автора
-    about = models.TextField()
-    # Поле для связи с навыками (ManyToManyField)
+    # Информация об авторе
+    about = CKEditor5Field()
+    # Связь многие-ко-многим с моделью Skill
     skills = models.ManyToManyField(Skill, related_name='author')
-    # Поле для изображения автора
+    # Фотография автора, сохраняется в папку 'author'
     image = models.ImageField(upload_to='author')
 
     class Meta:
-        # Сортировка по id в обратном порядке по умолчанию
         ordering = ['-id']
-        # Человекочитаемое имя модели в единственном числе
         verbose_name = 'Автор'
-        # Человекочитаемое имя модели во множественном числе
         verbose_name_plural = 'Авторы'
 
-    # Метод для строкового представления объекта
-    def __str__(self):
+    def __str__(self) -> str:
+        # Возвращает полное имя автора
         return f'{self.name} {self.lastname}'
 
 
-# Модель для описания сообщений, наследуется от TimestampedModel
-class Message(TimestampedModel):
-    # Поле для имени отправителя сообщения
+class Message(models.Model):
+    """
+    Модель для представления сообщений, отправленных через форму обратной связи.
+
+    Attributes:
+        name (str): Имя отправителя.
+        email (str): Email отправителя.
+        subject (str): Тема сообщения.
+        message (str): Текст сообщения.
+        created_at (datetime): Дата и время создания сообщения.
+    """
+    # Имя отправителя, ограничено 100 символами
     name = models.CharField(max_length=100)
-    # Поле для email отправителя
+    # Email отправителя
     email = models.EmailField()
-    # Поле для темы сообщения
+    # Тема сообщения, ограничена 100 символами
     subject = models.CharField(max_length=100)
-    # Поле для текста сообщения
+    # Текст сообщения
     message = models.TextField()
+    # Дата и время создания сообщения, заполняется автоматически
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        # Сортировка по дате создания в обратном порядке по умолчанию
+        # Сортировка по дате создания в обратном порядке (новые сообщения первыми)
         ordering = ['-created_at']
-        # Человекочитаемое имя модели в единственном числе
         verbose_name = 'Сообщение'
-        # Человекочитаемое имя модели во множественном числе
         verbose_name_plural = 'Сообщения'
 
-    # Метод для строкового представления объекта
-    def __str__(self):
+    def __str__(self) -> str:
+        # Возвращает краткую информацию о сообщении
         return f'Сообщение от {self.name}: {self.subject}'
 
 
-# Модель для описания отзывов заказчиков (например, отзывы клиентов)
 class Testimony(models.Model):
-    # Поле для имени заказчика
+    """
+    Модель для представления отзывов заказчиков.
+
+    Attributes:
+        name (str): Имя заказчика.
+        lastname (str): Фамилия заказчика.
+        image (ImageField): Фотография заказчика.
+        text (str): Текст отзыва.
+    """
+
+    # Имя заказчика, ограничено 15 символами
     name = models.CharField(max_length=15)
-    # Поле для фамилии заказчика
+    # Фамилия заказчика, ограничена 15 символами
     lastname = models.CharField(max_length=15)
-    # Поле для изображения заказчика
+    # Фотография заказчика, сохраняется в папку 'clients'
     image = models.ImageField(upload_to='clients')
-    # Поле для текста отзыва
+    # Текст отзыва
     text = models.TextField()
 
     class Meta:
-        # Сортировка по id в обратном порядке по умолчанию
+        # Сортировка по id в обратном порядке
         ordering = ['-id']
-        # Человекочитаемое имя модели в единственном числе
         verbose_name = 'Заказчик'
-        # Человекочитаемое имя модели во множественном числе
         verbose_name_plural = 'Заказчики'
 
-    # Метод для строкового представления объекта
-    def __str__(self):
+    def __str__(self) -> str:
+        # Возвращает полное имя заказчика
         return f'{self.name} {self.lastname}'

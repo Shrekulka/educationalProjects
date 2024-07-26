@@ -1,4 +1,6 @@
+from ckeditor.fields import RichTextField
 from django.contrib import admin
+from ckeditor.widgets import CKEditorWidget
 
 from .models import Skill, Category, Work, Service, Item, Author, Message, Testimony
 
@@ -23,6 +25,10 @@ class WorkAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'category')
     search_fields = ('title', 'category__rusname')
     prepopulated_fields = {'slug': ('title',)}
+    formfield_overrides = {
+        RichTextField: {'widget': CKEditorWidget()},
+    }
+
 
 
 # Регистрация модели Service в админке
@@ -45,6 +51,9 @@ class AuthorAdmin(admin.ModelAdmin):
     list_display = ('name', 'lastname')
     search_fields = ('name', 'lastname')
     filter_horizontal = ('skills',)
+    formfield_overrides = {
+        RichTextField: {'widget': CKEditorWidget()},
+    }
 
 
 # Регистрация модели Message в админке
@@ -61,7 +70,8 @@ class TestimonyAdmin(admin.ModelAdmin):
     list_display = ('name', 'lastname')
     search_fields = ('name', 'lastname')
 
-# Также можно использовать admin.site.register() для регистрации моделей, но использование @admin.register предпочтительнее.
+
+# # Также можно использовать admin.site.register() для регистрации моделей, но использование @admin.register предпочтительнее.
 # admin.site.register(Skill, SkillAdmin)
 # admin.site.register(Category, CategoryAdmin)
 # admin.site.register(Work, WorkAdmin)
