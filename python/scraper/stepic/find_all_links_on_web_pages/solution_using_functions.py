@@ -1,7 +1,12 @@
+# find_all_links_on_web_pages/solution_using_functions.py
+
+from typing import Tuple
+from urllib.parse import urlparse, urljoin, unquote
+
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urlparse, urljoin, unquote
-from typing import List, Tuple
+
+url = 'https://ru.wikipedia.org/wiki/Python'
 
 
 def get_html_content(url: str) -> bytes:

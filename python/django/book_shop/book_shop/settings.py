@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'social_django',
     "debug_toolbar",  # Приложение для отладочной панели Django Debug Toolbar
 
     'shop.apps.ShopConfig',
@@ -181,3 +182,16 @@ REST_FRAMEWORK = {
     )
 }
 ########################################################################################################################
+SOCIAL_AUTH_JSONFIELD_ENABLED = True
+
+SOCIAL_AUTH_GITHUB_KEY = 'Ov23lihl5Pz0QJ4Wr5bg'
+SOCIAL_AUTH_GITHUB_SECRET = '131f1d7efd7b57eb7c5006d14b654959f55d5f6a'
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.open_id.OpenIdAuth',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.google.GoogleOAuth',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)

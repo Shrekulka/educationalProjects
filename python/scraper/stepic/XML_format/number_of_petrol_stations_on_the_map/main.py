@@ -44,4 +44,3 @@ if response.status_code == 200:
 else:
     # Вывод сообщения, если получение XML-данных не удалось
     print("Failed to retrieve XML data.")
-#

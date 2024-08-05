@@ -1,3 +1,5 @@
+# book_shop/book_shop/urls.py
+
 """
 URL configuration for book_shop project.
 
@@ -15,12 +17,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.static import static
 from rest_framework.routers import SimpleRouter
 
-from shop.views import BookViewSet
+from shop.views import BookViewSet, auth
 
 router = SimpleRouter()
 
@@ -28,6 +30,11 @@ router.register(r'book', BookViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('social_django.urls', namespace='social')),
+    # Добавили импорт include, для включения urls.py из приложения shop, а также указали обработку юрлов, указав
+    # главную страницу
+    path('', include('shop.urls')),
+
 
 ]
 
