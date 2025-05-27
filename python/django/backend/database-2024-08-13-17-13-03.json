@@ -1,0 +1,2659 @@
+[
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add captcha store",
+        "content_type": [
+            "captcha",
+            "captchastore"
+        ],
+        "codename": "add_captchastore"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change captcha store",
+        "content_type": [
+            "captcha",
+            "captchastore"
+        ],
+        "codename": "change_captchastore"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete captcha store",
+        "content_type": [
+            "captcha",
+            "captchastore"
+        ],
+        "codename": "delete_captchastore"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view captcha store",
+        "content_type": [
+            "captcha",
+            "captchastore"
+        ],
+        "codename": "view_captchastore"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add tag",
+        "content_type": [
+            "taggit",
+            "tag"
+        ],
+        "codename": "add_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change tag",
+        "content_type": [
+            "taggit",
+            "tag"
+        ],
+        "codename": "change_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete tag",
+        "content_type": [
+            "taggit",
+            "tag"
+        ],
+        "codename": "delete_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view tag",
+        "content_type": [
+            "taggit",
+            "tag"
+        ],
+        "codename": "view_tag"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add tagged item",
+        "content_type": [
+            "taggit",
+            "taggeditem"
+        ],
+        "codename": "add_taggeditem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change tagged item",
+        "content_type": [
+            "taggit",
+            "taggeditem"
+        ],
+        "codename": "change_taggeditem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete tagged item",
+        "content_type": [
+            "taggit",
+            "taggeditem"
+        ],
+        "codename": "delete_taggeditem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view tagged item",
+        "content_type": [
+            "taggit",
+            "taggeditem"
+        ],
+        "codename": "view_taggeditem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Категория",
+        "content_type": [
+            "blog",
+            "category"
+        ],
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Категория",
+        "content_type": [
+            "blog",
+            "category"
+        ],
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Категория",
+        "content_type": [
+            "blog",
+            "category"
+        ],
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Категория",
+        "content_type": [
+            "blog",
+            "category"
+        ],
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Статья",
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "codename": "add_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Статья",
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "codename": "change_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Статья",
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "codename": "delete_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Статья",
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "codename": "view_article"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Комментарий",
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "codename": "add_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Комментарий",
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "codename": "change_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Комментарий",
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "codename": "delete_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Комментарий",
+        "content_type": [
+            "blog",
+            "comment"
+        ],
+        "codename": "view_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Рейтинг",
+        "content_type": [
+            "blog",
+            "rating"
+        ],
+        "codename": "add_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Рейтинг",
+        "content_type": [
+            "blog",
+            "rating"
+        ],
+        "codename": "change_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Рейтинг",
+        "content_type": [
+            "blog",
+            "rating"
+        ],
+        "codename": "delete_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Рейтинг",
+        "content_type": [
+            "blog",
+            "rating"
+        ],
+        "codename": "view_rating"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Просмотр",
+        "content_type": [
+            "blog",
+            "viewcount"
+        ],
+        "codename": "add_viewcount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Просмотр",
+        "content_type": [
+            "blog",
+            "viewcount"
+        ],
+        "codename": "change_viewcount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Просмотр",
+        "content_type": [
+            "blog",
+            "viewcount"
+        ],
+        "codename": "delete_viewcount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Просмотр",
+        "content_type": [
+            "blog",
+            "viewcount"
+        ],
+        "codename": "view_viewcount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Профиль",
+        "content_type": [
+            "system",
+            "profile"
+        ],
+        "codename": "add_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Профиль",
+        "content_type": [
+            "system",
+            "profile"
+        ],
+        "codename": "change_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Профиль",
+        "content_type": [
+            "system",
+            "profile"
+        ],
+        "codename": "delete_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Профиль",
+        "content_type": [
+            "system",
+            "profile"
+        ],
+        "codename": "view_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Обратная связь",
+        "content_type": [
+            "system",
+            "feedback"
+        ],
+        "codename": "add_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Обратная связь",
+        "content_type": [
+            "system",
+            "feedback"
+        ],
+        "codename": "change_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Обратная связь",
+        "content_type": [
+            "system",
+            "feedback"
+        ],
+        "codename": "delete_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Обратная связь",
+        "content_type": [
+            "system",
+            "feedback"
+        ],
+        "codename": "view_feedback"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$BmRg5L4VcIDgVCterTBryB$hYs79/kbfmrUckK+RuO2V5vcC+EEgbgrvII6Ozr7kEE=",
+        "last_login": "2024-06-18T14:13:51Z",
+        "is_superuser": false,
+        "username": "rrrrr",
+        "first_name": "Rrrrr",
+        "last_name": "Rrrrrrr",
+        "email": "rrrr@gmail.com",
+        "is_staff": false,
+        "is_active": false,
+        "date_joined": "2024-06-26T12:35:58Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$wm3SNdCsMjeeQdaoaEh1xx$aNMXQtbVg5Mt62E54dYPyR2X2XLBsYLRjl9uDtpUI6o=",
+        "last_login": "2024-06-29T14:21:36.532Z",
+        "is_superuser": true,
+        "username": "root",
+        "first_name": "Root",
+        "last_name": "Rootilow",
+        "email": "root@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-17T13:47:36Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$JYAN8h4ZsdsC1GDpGuyvN4$kuUHVq4jftr1MCq3eL3A7KRWjI2RADc4mOR1WPWJCB8=",
+        "last_login": "2024-06-24T03:00:00Z",
+        "is_superuser": false,
+        "username": "user_1",
+        "first_name": "User-1",
+        "last_name": "User_001",
+        "email": "user_1@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-10T14:15:04Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$Am9kbVyszfsJ8UwzV6NhLL$HE4q/jQ2sXoVCsaL0XJg4Q2jCcTfsKEGknvtnic14bI=",
+        "last_login": "2024-06-25T15:00:00Z",
+        "is_superuser": false,
+        "username": "user_2",
+        "first_name": "User_2",
+        "last_name": "User_002",
+        "email": "user_2@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-06-28T14:18:14Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$hDmkkSZVCoWfNidO0V2KhQ$rlRNxB454o4YOcSZOQ1yEpncXHEdIIyJSl3WDeIYPi4=",
+        "last_login": "2024-06-09T21:00:00Z",
+        "is_superuser": false,
+        "username": "root_1",
+        "first_name": "Root-1",
+        "last_name": "Root-001",
+        "email": "root_1@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-28T14:20:08Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$t7l8ZOKGuMnsnU3NgGPNa9$ikqD5kdmzRQA4bt8UnO98sZHatp7mvfw52Y1exI3xtI=",
+        "last_login": "2024-06-16T14:23:04Z",
+        "is_superuser": false,
+        "username": "pupok",
+        "first_name": "Pupok",
+        "last_name": "Pupochek",
+        "email": "pupok@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-28T14:22:23Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$N89AKKhs53NSGwSnCJ5s4f$gh1AynQxJMOobhdZoQctm/b6JDPKonhIqpobbSfhKyY=",
+        "last_login": "2024-04-12T06:40:57Z",
+        "is_superuser": true,
+        "username": "naf_naf",
+        "first_name": "Naf",
+        "last_name": "Naf",
+        "email": "naf_naf@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-28T14:24:46Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$XDJrOeNXQx6V7ZRTkkbToX$PlkRQnP0l6cDTDRZfuBHYlZzqSru2LhA2RDQ55x54oU=",
+        "last_login": "2024-06-21T14:27:18Z",
+        "is_superuser": true,
+        "username": "nif-nif",
+        "first_name": "Nif",
+        "last_name": "Nif",
+        "email": "nif_nif@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-28T14:26:48Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$pBc4s2oHIGdu04Ww02rfW6$0MqQId+gGpn6vdbPm37rLd09LN3zuCK6qI711Y21h7M=",
+        "last_login": "2024-06-27T21:00:00Z",
+        "is_superuser": true,
+        "username": "nuf-nuf",
+        "first_name": "Nuf",
+        "last_name": "Nuf",
+        "email": "nuf_nuf@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-28T14:28:55Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1bxoaqlp1lj41toabf62febw0nyfp21r",
+    "fields": {
+        "session_data": ".eJxVi70KwjAQgN8ls5QkXn7q6O7oHK6XCxFbC71mEPHdrdBB1-_npRK2taYmvKRbVidl1eGXDUh3fnzFNOc2snTylJWnbhfSXbfsMmcez3v691eUus2GCzD6oYBGJjJHRICMZDw5DMVGAhOL7sE6DwYLUdFZhxwYIvSO1PsD-6k4rA:1sNBxv:CNI0eQuuiAxaZVQkTVDSUyzQiZtgteeizbCRWwmsKNo",
+        "expire_date": "2024-07-12T13:48:39.573Z"
+    }
+},
+{
+    "model": "sites.site",
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 2,
+    "fields": {
+        "challenge": "10*9=",
+        "response": "90",
+        "hashkey": "1f7d5109e831530feb77bd96a440d13dcd62f89a",
+        "expiration": "2024-06-28T12:36:07.459Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 3,
+    "fields": {
+        "challenge": "8*5=",
+        "response": "40",
+        "hashkey": "d8919be50b6765337199034b0b0f162e650ed8f0",
+        "expiration": "2024-06-28T12:36:22.462Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 4,
+    "fields": {
+        "challenge": "7*8=",
+        "response": "56",
+        "hashkey": "5769f29bc7ce7ba58b222d5b5a9f25e319a2a698",
+        "expiration": "2024-06-28T12:36:45.003Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 8,
+    "fields": {
+        "challenge": "8-7=",
+        "response": "1",
+        "hashkey": "eda064b7c590f46f19b78768bc9b5a0e42233484",
+        "expiration": "2024-06-28T12:37:34.772Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 10,
+    "fields": {
+        "challenge": "9-8=",
+        "response": "1",
+        "hashkey": "9babb512da4f9224b89d8e41cc2171079cbc0940",
+        "expiration": "2024-06-28T13:45:05.501Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 11,
+    "fields": {
+        "challenge": "7-4=",
+        "response": "3",
+        "hashkey": "234b911eef0c3170ebb99e5ca2ee9106e64f7f0f",
+        "expiration": "2024-06-28T13:45:53.933Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 12,
+    "fields": {
+        "challenge": "7+5=",
+        "response": "12",
+        "hashkey": "8815b148742c1527327c8b2f0f90f331cff9abe6",
+        "expiration": "2024-06-28T13:46:02.287Z"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": {
+        "name": "NFT",
+        "slug": "nft"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": {
+        "name": "криптозвери",
+        "slug": "криптозвери"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 3,
+    "fields": {
+        "name": "криптомир",
+        "slug": "криптомир"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 4,
+    "fields": {
+        "name": "биткойн",
+        "slug": "биткойн"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 5,
+    "fields": {
+        "name": "заработок",
+        "slug": "заработок"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 6,
+    "fields": {
+        "name": "искусство",
+        "slug": "искусство"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 7,
+    "fields": {
+        "name": "картины",
+        "slug": "картины"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 8,
+    "fields": {
+        "name": "дедлайн",
+        "slug": "дедлайн"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 9,
+    "fields": {
+        "name": "программист",
+        "slug": "программист"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 10,
+    "fields": {
+        "name": "трудности",
+        "slug": "трудности"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 11,
+    "fields": {
+        "name": "энергия",
+        "slug": "энергия"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 12,
+    "fields": {
+        "name": "кофе",
+        "slug": "кофе"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 13,
+    "fields": {
+        "name": "паттерн",
+        "slug": "паттерн"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 14,
+    "fields": {
+        "name": "паттерны проектирования",
+        "slug": "паттерны-проектирования"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 15,
+    "fields": {
+        "name": "паттерны",
+        "slug": "паттерны"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 16,
+    "fields": {
+        "name": "законы",
+        "slug": "законы"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 17,
+    "fields": {
+        "name": "правила",
+        "slug": "правила"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 18,
+    "fields": {
+        "name": "юриспруденция",
+        "slug": "юриспруденция"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 19,
+    "fields": {
+        "name": "документы",
+        "slug": "документы"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 20,
+    "fields": {
+        "name": "суд",
+        "slug": "суд"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 21,
+    "fields": {
+        "name": "справедливость",
+        "slug": "справедливость"
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 1,
+    "fields": {
+        "tag": 1,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 2,
+    "fields": {
+        "tag": 2,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 3,
+    "fields": {
+        "tag": 3,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 4,
+    "fields": {
+        "tag": 3,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 5,
+    "fields": {
+        "tag": 4,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 6,
+    "fields": {
+        "tag": 5,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 7,
+    "fields": {
+        "tag": 1,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 8,
+    "fields": {
+        "tag": 3,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 9,
+    "fields": {
+        "tag": 5,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 10,
+    "fields": {
+        "tag": 6,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 11,
+    "fields": {
+        "tag": 7,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 12,
+    "fields": {
+        "tag": 8,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 4
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 13,
+    "fields": {
+        "tag": 9,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 4
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 14,
+    "fields": {
+        "tag": 10,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 4
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 15,
+    "fields": {
+        "tag": 9,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 5
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 16,
+    "fields": {
+        "tag": 11,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 5
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 17,
+    "fields": {
+        "tag": 12,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 5
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 18,
+    "fields": {
+        "tag": 13,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 6
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 19,
+    "fields": {
+        "tag": 14,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 6
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 20,
+    "fields": {
+        "tag": 15,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 6
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 21,
+    "fields": {
+        "tag": 16,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 7
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 22,
+    "fields": {
+        "tag": 17,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 7
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 23,
+    "fields": {
+        "tag": 18,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 7
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 24,
+    "fields": {
+        "tag": 16,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 8
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 25,
+    "fields": {
+        "tag": 18,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 8
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 26,
+    "fields": {
+        "tag": 19,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 8
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 27,
+    "fields": {
+        "tag": 18,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 9
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 28,
+    "fields": {
+        "tag": 20,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 9
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 29,
+    "fields": {
+        "tag": 21,
+        "content_type": [
+            "blog",
+            "article"
+        ],
+        "object_id": 9
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+        "title": "Программирование",
+        "slug": "programming",
+        "description": "Исследуйте мир программирования с нашей категорией 'Программирование'. Узнайте о ключевых концепциях, языках программирования, паттернах проектирования и советах по оптимизации кода. Глубже погружайтесь в магию создания программного обеспечения и делитесь своими открытиями с нашим сообществом! 🖥️💡",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+        "title": "Юридические штуки",
+        "slug": "legal-stuff",
+        "description": "Погрузитесь в мир юридических аспектов с нашей категорией 'Юридические штуки'. Узнайте о важных правовых моментах, процессах в суде, защите своих прав и обязанностях. Разберитесь в сложных юридических терминах и стратегиях, чтобы быть подготовленным к любым правовым вызовам! 👨‍⚖️📜",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 3,
+        "level": 0
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 3,
+    "fields": {
+        "title": "Криптомир",
+        "slug": "cryptoworld",
+        "description": "Погрузитесь в увлекательный мир криптовалют и цифровых активов с нашей категорией 'Криптомир'. Узнайте о тайнах криптозверей, их удивительных особенностях и потенциале. Исследуйте мир биткойнов, разберитесь в возможностях заработка и рисках. Погрузитесь в мир NFT и узнайте, как цифровые пиксели прев",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 1,
+    "fields": {
+        "title": "10 странных фактов о криптозверях 🦄👾",
+        "slug": "ten-weird-facts-about-cryptocurrencies",
+        "short_description": "<p>Здесь вы узнаете о том, как <i><strong><u>криптозвери</u></strong></i> обитают в мире блокчейн, питаются мемами и размножаются с помощью <i><strong>NFT</strong></i>. Удивительно, но факт: криптозвери могут менять свои цвета в зависимости от текущей цены <strong>биткойна</strong>! И это еще не все удивительные черты этих загадочных существ. Давайте погрузимся в мир <i><strong><u>криптозверей</u></strong></i> вместе! 🌈🚀</p>",
+        "full_description": "<p><strong>Добро пожаловать в мир криптозверей! 🌈🚀</strong></p><p>Друзья, сегодня мы отправимся в захватывающее путешествие по миру <i><strong><u>криптозверей</u></strong></i>. Эти загадочные существа обитают в просторах блокчейна, питаясь мемами и размножаясь с помощью <i><strong>NFT</strong></i>. Но это еще не все! Вот что самое удивительное: <i><strong><u>криптозвери</u></strong></i> могут менять свои цвета в зависимости от текущей цены биткойна! 😲</p><p>Вы, наверное, думаете: \"Что за чудеса?\" Да, именно так! Их мультицветная шкура прямо как индикатор финансового благополучия. Если биткойн взлетает до новых высот, <i><strong><u>криптозвери</u></strong></i> могут сверкать всеми цветами радуги, будто празднуют свой личный криптовалютный карнавал! 🎉</p><p>Но это еще не все удивительные черты этих существ. Они также известны своими капризами и предпочтениями. Некоторые любят хранить свои NFT в самых безопасных кошельках, другие предпочитают рисковать и делать ставки на новые токены. Но, как и в любом сообществе, есть и те, кто всегда хочет обсуждать последние тренды в мире криптовалют — они, конечно же, знакомы со всеми новыми <i><strong>ICO</strong></i> и <i><strong>DeFi</strong></i> проектами до того, как они станут мемами.</p><p>Так что давайте вместе погрузимся в этот удивительный мир <i><strong><u>криптозверей</u></strong></i> и узнаем, что еще они могут нам рассказать о блокчейне и финансовых рынках. Приготовьтесь к приключениям и шуткам, ведь с <i><strong><u>криптозверями</u></strong></i> никогда не бывает скучно! 💫</p>",
+        "thumbnail": "images/thumbnails/2024/06/28/cryptobeasts.jpeg",
+        "status": "published",
+        "time_create": "2024-06-28T14:37:39.099Z",
+        "time_update": "2024-06-28T14:37:39.099Z",
+        "author": [
+            "rrrrr"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 3
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 2,
+    "fields": {
+        "title": "Пик или пропасть? Ваш гид в мире биткойнов 📈📉",
+        "slug": "peak-or-precipice-your-guide-to-the-world-of-bitcoin",
+        "short_description": "<p>Добро пожаловать в мир биткойнов! Здесь вы найдете все, что нужно знать о динамичном мире криптовалют. От новых технологий до волнующих новостей - мы расскажем вам о всем, что происходит в этом захватывающем мире. Готовы ли вы стать следующим миллионером или потерять все свои сбережения? Узнайте правду о мире биткойнов с нами! 💰💥</p>",
+        "full_description": "<p><strong>Добро пожаловать в захватывающий мир биткойнов! 💰💥</strong></p><p>Друзья, сегодня мы отправимся в увлекательное путешествие по динамичному <i><strong><u>миру криптовалют</u></strong></i>. Здесь вы найдете все, что нужно знать о биткойнах — от новых технологий до самых свежих новостей. Готовы ли вы стать следующим <i><strong>миллионером</strong></i> или рискнуть потерять все свои сбережения? Вот вопрос!</p><p>Давайте начнем с самого начала. <strong>Биткойн</strong> — это не просто виртуальные монеты, это целая философия жизни! Если вы готовы принять вызов и стать частью этого финансового революционного движения, то добро пожаловать в наш кругозор. Мы расскажем вам о том, как <i><strong>биткойн</strong></i> меняет мир экономики, как инвестировать с умом и избегать финансовых подводных камней. И помните, несмотря на все волнения, в этом мире всегда найдется место для юмора и оптимизма! 😄</p><p>Что же касается <i>последних новостей,</i> то они так же быстро меняются, как <i>курс <strong>биткойна</strong></i> на <i><strong>криптобирже</strong></i>. В один день вы можете чувствовать себя как король мира криптовалют, а на следующий — как последний красный флаг на медвежьем рынке. Но не отчаивайтесь! Все это часть игры, где каждый ход может стать решающим. Или просто предлогом для новой шутки на форуме <i><strong>крипто-энтузиастов</strong></i>!</p><p>Так что приготовьтесь к приключениям, смеху и немного нервного сжатия кулаков. В <i><strong><u>мире биткойнов</u></strong></i> всегда есть место неожиданным поворотам событий и открытиям, которые могут изменить ваше представление о финансовых рынках. Вперед, к новым высотам и непознанным горизонтам! 🚀</p>",
+        "thumbnail": "images/thumbnails/2024/06/28/bitcoin.jpeg",
+        "status": "published",
+        "time_create": "2024-06-28T14:52:39.182Z",
+        "time_update": "2024-06-28T14:52:39.182Z",
+        "author": [
+            "root"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 3
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 3,
+    "fields": {
+        "title": "Картинки за миллионы: искусство или чудо? 🖼️💰",
+        "slug": "pictures_for_millions_art_or_miracle",
+        "short_description": "<p><strong>Давно прошли те времена, когда искусство ограничивалось холстами и кистями.&nbsp;</strong><br>Сегодня мир переживает настоящую революцию в искусстве благодаря технологии <i><strong><u>NFT</u></strong></i>. Картины, состоящие из пикселей, становятся объектами желания коллекционеров и достигают <i>невероятных цен </i>на аукционах. Узнайте, как пиксели становятся ценными шедеврами и зарабатывают <strong>миллионы</strong> долларов в мире <i><strong><u>NFT</u></strong></i>! 💎✨</p>",
+        "full_description": "<p><strong>Добро пожаловать в мир </strong><i><strong><u>NFT</u></strong></i><strong>! 💎✨</strong></p><p>Друзья, забудьте все, что вы знали об <i>искусстве</i>, потому что сейчас мы погружаемся в настоящую революцию — революцию в мире <i><strong><u>NFT</u></strong></i>! Давно прошли те времена, когда художники марли свои картины на холстах с помощью кистей. Сегодня <i>искусство</i> буквально состоит из пикселей, а коллекционеры готовы платить за них <i><strong>целое состояние</strong></i> на аукционах. Не верите? А вот и зря!</p><p>Картины, созданные из цифровых пикселей, становятся настоящими звездами <i><strong><u>NFT-рынка</u></strong></i>. Они не только красивы, но и могут быть совершенно уникальными и неповторимыми, как <i>последний тренд</i> на крипто-конференциях. И что самое интересное — они прямо как настоящие картины, только без той мазанины на палитре! 🎨</p><p>За кажущимися обычными пикселями скрываются настоящие шедевры, которые способны не только украсить вашу коллекцию, но и принести кучу денег, если вы выберете правильный <i><strong><u>NFT</u></strong></i> для инвестиций. Да, да, это не шутка! В мире <i><strong><u>NFT</u></strong></i> все возможно, даже если ваша искусственная картина покажет рост цены, как <i><strong>биткойн</strong></i> в свое время. 💰</p><p>Так что приготовьтесь к пиксельному веселью, аукционным захватам и взлетам космических цен на <i><strong><u>NFT</u></strong></i>. Вперед, к новым горизонтам и безумным экспериментам в мире цифрового искусства! <i><strong><u>Пиксели</u></strong></i> — это новое золото, и давайте вместе ограбим это кибербанк! 🚀</p>",
+        "thumbnail": "images/thumbnails/2024/06/28/nft.jpeg",
+        "status": "published",
+        "time_create": "2024-06-28T15:24:10.750Z",
+        "time_update": "2024-06-28T15:24:10.750Z",
+        "author": [
+            "root_1"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 3
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 4,
+    "fields": {
+        "title": "Иногда слёзы: как справиться с кодом и дедлайном? 😭",
+        "slug": "sometimes-tears-how-do-you-cope-with-code-and-deadlines",
+        "short_description": "<p><strong>Бывают моменты, когда код отказывается работать, а </strong><i><strong><u>дедлайн</u></strong></i><strong> стоит на пороге.&nbsp;</strong></p><p>В такие моменты нам хочется просто заплакать! Но не отчаивайтесь, в этой статье мы расскажем вам, как справиться с трудностями программирования и сжатыми сроками без потери мотивации и настроения. Узнайте, как сохранить спокойствие и сделать ваш код лучше вместе с нами! 💻⏰</p>",
+        "full_description": "<p><strong>Как пережить кризис программирования: смех вместо слез! 💻⏰</strong></p><p>Друзья, мы все знаем эти моменты, когда код отказывается работать, а дедлайн стоит уже у входа. В такие моменты хочется закрыть ноутбук и просто заплакать! Но не стоит отчаиваться, ведь мы здесь, чтобы вам помочь справиться с трудностями программирования без потери мотивации и настроения. Давайте вместе разберемся, как сохранить спокойствие и сделать ваш код лучше!</p><p><i><strong><u>Первое правило выживания в мире кода:</u></strong></i> сохраняйте чувство юмора! Не смотрите на ошибки как на конец света, а как на возможность поиграть в детектива и разгадать головоломку своего кода. Ведь иногда самый смешной баг может стать ключом к самому гениальному решению!</p><p><i><strong><u>Второе правило:</u></strong></i> не зацикливайтесь на проблеме, а сделайте перерыв. Выходите на свежий воздух, пообщайтесь с коллегами или просто закройте глаза и представьте, как ваш код работает безупречно. Ведь часто лучшие идеи приходят, когда вы меньше всего этого ожидаете!</p><p>И наконец, <i><strong><u>третье правило: </u></strong></i>не бойтесь просить помощи. <strong>Программирование </strong>— это командная игра, и поддержка коллег может стать вашим секретным оружием в борьбе с дедлайнами и багами.</p><p>Так что друзья, <i>держите улыбку на лице</i>, даже когда ваш код не хочет так, как вы хотите. В конце концов, <strong>программирование</strong> — это танец с багами под музыку дедлайнов! Вместе мы справимся с любыми трудностями, которые бросает нам IT-жизнь. Не отчаивайтесь и продолжайте кодить с улыбкой! 😄</p>",
+        "thumbnail": "images/thumbnails/2024/06/28/the_code_doesnt_work.jpeg",
+        "status": "published",
+        "time_create": "2024-06-28T15:31:42.931Z",
+        "time_update": "2024-06-28T15:32:08.772Z",
+        "author": [
+            "user_2"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 5,
+    "fields": {
+        "title": "Кофе решает всё: секрет успеха программиста! ☕💪",
+        "slug": "coffee-solves-everything-the-secret-of-programmer-success",
+        "short_description": "<p><strong>Каждый программист знает, что кофе - это не просто напиток, а настоящий мотиватор и источник энергии.&nbsp;</strong></p><p>В этой статье мы расскажем вам о магии <i><strong>кофе</strong></i> и его влиянии на <i><strong>процесс программирования</strong></i>. Потому что без <i><strong><u>кофе</u></strong></i> кодить вообще невозможно! ☕💪</p>",
+        "full_description": "<p><strong>Кофе и программирование: история вдохновения и безумных кодерских подвигов! ☕💪</strong></p><p>Друзья, давайте откроем для себя тайны <i><strong><u>магии кофе</u></strong></i> и его непревзойденного влияния на п<i><strong><u>роцесс программирования</u></strong></i>. В конце концов, кто из нас не знает, что <i><strong><u>кофе</u></strong></i> — это не просто напиток, это настоящий мотиватор и источник энергии, который делает наш код гораздо более продуктивным! ☕💻</p><p><i><strong><u>Первое правило: кофе </u></strong></i>— это не просто жидкость, это катализатор наших креативных мозговых штурмов. Без него мы как бы входим в режим \"печатания на автопилоте\", когда код пишется, но вы не уверены, что вы его написали. А с <strong>кофе</strong> — каждая строка кода словно написана под музыку творческого вдохновения!</p><p><i><strong><u>Второе правило: кофе </u></strong></i>— это не только энергетик для вашего кода, но и связующее звено между коллегами. Кто из нас не сидел ночью с товарищами по клавиатуре, разглагольствуя о последнем обновлении языка программирования, за чашкой ароматного эспрессо? Ведь именно в такие моменты рождаются не только <i><strong>идеи</strong></i>, но и <i><strong>новые проекты</strong></i>, которые меняют мир!</p><p>И наконец, т<i><strong><u>ретье правило: кофе</u></strong></i> — это наш талисман удачи и защитник от сонливости. Ведь только с ним мы можем написать код, который работает не только в теории, но и на практике. И пусть ваш кубик кофеинового магии всегда будет на вашем столе, чтобы помогать вам справиться с любыми программистскими вызовами!</p><p>Так что друзья, держите вашу чашку горячего эспрессо в руках и погружайтесь в мир бесконечных строк кода с улыбкой на лице и кофе в сердце! Ведь <i><strong><u>без кофе кодить</u></strong></i> — это как писать стихи без рифмы, а <i><strong>программирование</strong></i> — это искусство, которое требует своего <i>мастера-бариста</i>! 😄</p>",
+        "thumbnail": "images/thumbnails/2024/06/28/coffee_for_a_programmer.jpeg",
+        "status": "published",
+        "time_create": "2024-06-28T15:39:14.796Z",
+        "time_update": "2024-06-28T15:39:14.796Z",
+        "author": [
+            "pupok"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 6,
+    "fields": {
+        "title": "Хорошо, но не очень: как не запутаться в паттернах проектирования? 🤔",
+        "slug": "good-but-not-great-how-not-to-get-confused-by-design-patterns",
+        "short_description": "<p><strong>Паттерны проектирования могут быть как нашими лучшими друзьями, так и заклятыми врагами.&nbsp;</strong></p><p>В этой статье мы расскажем вам, как не потеряться в мире <i><strong>паттернов проектирования</strong></i> и использовать их на благо вашего проекта. Узнайте, как выбрать правильный <i><strong>паттерн</strong></i> и сделать ваш код еще лучше! 💡🔗</p>",
+        "full_description": "<p><strong>Паттерны проектирования: как превратить врагов в друзей! 💡🔗</strong></p><p>Друзья, давайте сегодня поговорим о <i><strong><u>паттернах проектирования</u></strong></i> — тех злобных врагах или верных друзьях, которые могут определить судьбу вашего проекта. В конце концов, кто из нас не знает, что они могут быть как нашими спасателями, так и загадочными коварными силами, которые затягивают нас в пучину <i>абстрактных классов</i> и <i>интерфейсов</i>?</p><p><i><strong><u>Первое правило выживания в мире паттернов: </u></strong></i>не пугайтесь названий! Хоть <i>\"Фабрика\"</i> и <i>\"Адаптер\" </i>звучат как персонажи из фантастического романа, на самом деле они просто наши надежные инструменты, которые помогут нам строить крепкий фундамент для нашего кода. Или, как минимум, дадут повод для новых шуток на код-ревью!</p><p><i><strong><u>Второе правило:</u></strong></i> экспериментируйте с <i><strong>паттернами</strong></i>, как с новыми рецептами в кулинарии. Иногда <i>\"Одиночка\"</i> будет вашим лучшим другом, когда нужно контролировать доступ к ресурсам, а иногда <i>\"Стратегия\"</i> окажется тем самым гениальным решением, которое спасет ваш проект от краха. Ведь жизнь без экспериментов — это просто череда if-else-ов!</p><p>И наконец, <i><strong><u>третье правило:</u></strong></i> не бойтесь ошибок, а учитесь на них. <i><strong><u>Паттерны проектирования</u></strong></i> — это как головоломка, где каждая новая ошибка — это шанс найти тот самый ключ к лучшему решению. И пусть ваш код станет не просто хорошим, а просто блестящим, как самый уморительный комментарий в коде!</p><p>Так что друзья, держите вашу голову полной идей и ваш код полным <i>паттернов проектирования</i>! Ведь в конечном итоге, самое главное — это не только сделать код лучше, но и наслаждаться каждым моментом программирования. <i><strong>Паттерны </strong></i>— это наши карманные знаки богатства в мире IT! 😄</p>",
+        "thumbnail": "images/thumbnails/2024/06/28/design_patterns.jpeg",
+        "status": "published",
+        "time_create": "2024-06-28T15:45:10.900Z",
+        "time_update": "2024-06-28T15:45:10.900Z",
+        "author": [
+            "naf_naf"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 7,
+    "fields": {
+        "title": "Юридический компас: как не заблудиться в море законов? 🧭⚖️",
+        "slug": "legal-compass-how-not-to-get-lost-in-a-sea-of-laws",
+        "short_description": "<p><span style=\"color:rgb(0,0,0);\"><strong>Законодательство может казаться бескрайним океаном, но не теряйте курс!&nbsp;</strong></span></p><p><span style=\"color:rgb(0,0,0);\">В этой статье мы дадим вам надежный компас для навигации в мире <i><strong>юриспруденции</strong></i>. Узнайте, как эффективно ориентироваться среди правовых норм и успешно достигать своих целей! 🚀📜</span></p>",
+        "full_description": "<p><strong>Друзья, приготовьтесь к увлекательному плаванию по бескрайнему океану законодательства!&nbsp;</strong></p><p>Этот мир может показаться таким же необъятным, как глубины Марианской впадины, но не бойтесь – у нас есть карта и компас!</p><p><i><strong><u>Первое правило моряка права:</u></strong></i> не теряйте из виду берег здравого смысла! Юридический язык может звучать как послание с другой планеты, но помните: за каждым словом скрывается логика. Если чувствуете, что тонете в терминологии, представьте, что вы капитан корабля, а каждый термин – это новый остров, который нужно исследовать!</p><p><i><strong><u>Второе правило: </u></strong></i>составьте свою карту сокровищ! Разделите законы по \"островам\" и \"архипелагам\". Создайте свой юридический атлас, где каждый раздел – это новая территория для изучения. Пусть ваш рабочий стол превратится в капитанский мостик, с которого вы будете управлять своим правовым путешествием!</p><p>И наконец, <i><strong><u>третье правило: </u></strong></i>не отказывайтесь от помощи опытных лоцманов! <i>Юридические консультанты </i>– это ваши верные штурманы в этом море законов. Они помогут проложить оптимальный курс и обойти все подводные камни.</p><p>Так что, друзья, поднимайте паруса вашего энтузиазма и держите штурвал уверенности крепко в руках! Ведь <i><strong>мир юриспруденции</strong></i> – это не просто свод правил, это захватывающее приключение, где каждый закон – это новый горизонт для открытий! 🌊📚</p>",
+        "thumbnail": "images/thumbnails/2024/06/28/confusing_laws_GsszHNd.jpeg",
+        "status": "published",
+        "time_create": "2024-06-28T15:51:10.511Z",
+        "time_update": "2024-06-28T16:12:16.366Z",
+        "author": [
+            "nif-nif"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 2
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 8,
+    "fields": {
+        "title": "Вечный лабиринт: как разобраться в мире законов и правил? 🌀🗺️",
+        "slug": "the-eternal-labyrinth-how-to-make-sense-of-the-world-of-laws-and-rules",
+        "short_description": "<p><strong>Законы и правила - это настоящий лабиринт, но не отчаивайтесь!&nbsp;</strong></p><p>В этой статье мы расскажем вам, как разобраться в мире <i><strong>законов</strong></i> и <i><strong>правил</strong></i>. Узнайте, как избежать запутывания и успешно навигировать в этом вечном <i><strong>лабиринте</strong></i>! 🌀🗺️</p>",
+        "full_description": "<p><strong>Законы и правила: как выжить в лабиринте юридических документов! 🌀🗺️</strong></p><p>Друзья, давайте сегодня вместе погрузимся в захватывающий мир <i><strong>законов</strong></i> и <i><strong>правил</strong></i> — тех загадочных лабиринтов, где одна запятая может изменить вашу жизнь так же, как поворот на перекрёстке! Ведь кто из нас не знает, что этот мир иногда кажется нам таким же запутанным, как инструкция по сборке мебели из Икеи?</p><p><i><strong><u>Первое правило:</u></strong></i> не пугайтесь букв! <i>Юридический язык</i> иногда кажется таким же понятным, как язык древних ацтеков, но не отчаивайтесь! Ведь главное — это не паниковать, а держать руку на пульсе каждого пункта и каждой запятой. И если вдруг чувствуете, что теряетесь, просто улыбнитесь и представьте, что вы в <i>гонках на выживание</i>, где каждый абзац — это новое испытание на выносливость!</p><p><i><strong><u>Второе правило: </u></strong></i>навигация по лабиринту. <i><strong>Законы и правила </strong></i>— это как карта сокровищ, где каждая глава и каждый параграф — это ваш путь к <i>юридическому Эльдорадо</i>. Организуйте свою работу так же, как путешественник в поисках потерянного города: заведите специальную папку для каждой темы, назовите их именами героев фильмов про юридические загадки, и пусть ваш стол станет атласом, который поможет вам не потеряться в этом мире законов!</p><p>И наконец, <i><strong><u>третье правило:</u></strong></i> не бойтесь консультироваться с экспертами! <i><strong>Юридический консультант</strong></i> — это ваш надёжный гид в этом юридическом лабиринте. Он поможет вам не только разобраться в замысловатых формулировках, но и найти тот самый ключ к успеху в мире законов и правил.</p><p>Так что друзья, держите вашу улыбку на лице и ваше чувство юмора на пределе! Ведь <i><strong>законы и правила</strong></i> — это не просто документы, это ваш путь к успеху и порой самым невероятным приключениям в мире юридических загадок! 😄</p>",
+        "thumbnail": "images/thumbnails/2024/06/28/labyrinth_of_laws_6RL6cJM.jpeg",
+        "status": "published",
+        "time_create": "2024-06-28T16:01:45.636Z",
+        "time_update": "2024-06-28T16:11:46.053Z",
+        "author": [
+            "nuf-nuf"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 2
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 9,
+    "fields": {
+        "title": "Объект против возражения: как выиграть судебную битву? ⚖️📢",
+        "slug": "object-vs-objection-how-to-win-the-court-battle",
+        "short_description": "<p><strong>Судебные прения могут быть настоящей битвой, но не отчаивайтесь!&nbsp;</strong></p><p>В этой статье мы расскажем вам, как выступить в суде и добиться своей победы в битве за справедливость. Узнайте, как правильно формулировать аргументы и убедить судью в своей правоте! ⚖️📢</p>",
+        "full_description": "<p><strong>Добро пожаловать в гладиаторскую арену правосудия, дорогие друзья! 🏛️⚔️</strong></p><p>Сегодня мы научимся, как выжить в <i><strong>судебных прениях </strong></i>и выйти победителем, не потеряв при этом чувство юмора (и, возможно, несколько нервных клеток). Итак, наденьте свои юридические доспехи, и вперёд, в бой за справедливость! 🛡️</p><p><i><strong><u>Первое правило судебного бойца:</u></strong></i> <i>подготовка</i> - это всё! 📚💪 Перед тем как ворваться в зал суда, словно рыцарь на белом коне, убедитесь, что ваши аргументы острее, чем меч короля Артура. Изучите законы так, будто это карта сокровищ, где Х отмечает место вашей победы. И помните, ночь перед судом - не лучшее время для марафона сериалов о юристах. Оставьте это для празднования победы! 🏆🍿</p><p><i><strong><u>Второе правило: </u></strong></i>говорите так, будто от этого зависит судьба галактики! 🌌🎤 Когда придёт ваше время выступать, представьте, что вы не в суде, а на сцене \"Голоса\". Судья - это Дима Билан, который вот-вот повернётся к вам. Ваши <i>аргументы</i> должны быть такими же гладкими, как его причёска, и такими же убедительными, как его хиты. Но не перестарайтесь - никому не нужны песни и танцы (если только это не поможет выиграть дело). 🕺💃</p><p><i><strong><u>Третье правило:</u></strong></i> <i>язык тела</i> - ваше секретное оружие! 🦸‍♂️🦸‍♀️ Стойте прямо, как будто проглотили не только свидетельские показания, но и швабру. Смотрите судье прямо в глаза, словно пытаетесь прочитать его мысли (но не слишком пристально, а то ещё решит, что вы в него влюбились). И самое главное - не чешите нос во время выступления. Это универсальный знак \"я вру\", даже если вы просто забыли утром умыться. 👃🚫</p><p><i><strong><u>Четвёртое правило:</u></strong></i> будьте готовы к неожиданностям! 🎭🃏 <i><strong>Судебный процесс </strong></i>- это как коробка шоколадных конфет: никогда не знаешь, что попадётся. Будьте готовы к тому, что оппонент может выкинуть туз из рукава или кролика из шляпы. В такие моменты главное - сохранять покерфейс и не забыть, где вы спрятали свой собственный туз (надеюсь, не в носке). 😐🃏</p><p>И наконец,<i><strong><u> пятое правило:</u></strong></i> не забывайте о чувстве <i>юмора</i>! 😂🤣 Даже если всё идёт наперекосяк, и вам кажется, что Фемида сняла повязку с глаз и подмигивает вашему оппоненту, не отчаивайтесь! Помните, что даже самый серьёзный судья - тоже человек. Может быть, ваша остроумная шутка (но только уместная, не перегибайте палку!) растопит лёд и склонит чашу весов в вашу пользу.</p><p>В конце концов, даже если вы проиграете это сражение, вы всё равно выиграете войну... ну, или хотя бы получите отличный материал для своего стендап-выступления! 🎭🏆</p><p>Так что вперёд, храбрые воины правосудия! Пусть ваши аргументы будут острыми, речь - пламенной, а удача - на вашей стороне. И помните: в суде, как в жизни, главное - не победа, а участие. Хотя, кого мы обманываем? Победа - это тоже очень важно! 🏅⚖️</p><p>Удачи в ваших юридических баталиях, и пусть Фемида будет к вам благосклонна (или хотя бы не слишком сурова)! 🙏😇</p>",
+        "thumbnail": "images/thumbnails/2024/06/29/justice_in_court.jpeg",
+        "status": "published",
+        "time_create": "2024-06-29T09:25:19.531Z",
+        "time_update": "2024-06-29T09:25:19.531Z",
+        "author": [
+            "nuf-nuf"
+        ],
+        "updater": null,
+        "fixed": false,
+        "category": 2
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 1,
+    "fields": {
+        "article": 9,
+        "author": [
+            "user_1"
+        ],
+        "content": "Уважаемые читатели! 📚👀\r\nНу что, готовы покорять юридические вершины с улыбкой на лице? 😄 Эта статья - настоящий путеводитель по джунглям судебных прений, только вместо мачете у нас остроумие и находчивость!\r\nАвтор блестяще сочетает полезные советы с искромётным юмором, превращая сухую юридическую тематику в увлекательное приключение. От сравнения судьи с Димой Биланом до советов по языку тела - каждый пункт не только информативен, но и вызывает улыбку. 😂\r\nОсобенно порадовало напоминание о важности чувства юмора в столь серьёзном деле. Ведь что может быть лучше, чем разрядить напряжённую атмосферу в зале суда удачной шуткой? (Главное, не переборщить, а то можем оказаться в другом зале суда - уже в качестве обвиняемого в неуважении к суду! 😅)\r\nКонечно, статья не заменит профессиональной юридической подготовки, но точно поможет взглянуть на судебный процесс под другим углом и, возможно, снизить уровень стресса перед важным выступлением.\r\nА вы, дорогие читатели, какие у вас есть забавные истории из зала суда? Поделитесь в комментариях! Только давайте без имён и явок, ладно? Мы же не хотим, чтобы наша дискуссия стала вещдоком! 🤐🕵️‍♂️\r\nСпасибо автору за отличный материал! Ждём новых юмористических экскурсов в мир юриспруденции! 👍👨‍⚖️",
+        "time_create": "2024-06-29T09:27:31.901Z",
+        "time_update": "2024-06-29T09:27:31.901Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 2,
+    "fields": {
+        "article": 9,
+        "author": [
+            "user_2"
+        ],
+        "content": "Дорогие друзья-комментаторы! 🎭🗣️\r\nОго-го, кажется, у нас тут зарождается целая комедийная юридическая вселенная! 🌟⚖️ Комментарий к комментарию? Это же как матрёшка, только вместо деревянных куколок у нас остроумные заметки о законе и порядке!\r\nАвтор комментария явно подхватил эстафету юмора от оригинальной статьи и пробежал с ней ещё пару кругов! 🏃‍♂️💨 Особенно порадовало предупреждение о том, чтобы не делиться слишком подробными историями из зала суда. А то ведь и правда, никогда не знаешь, когда твой забавный анекдот станет уликой! 😅🕵️‍♀️\r\nИнтересно, если мы продолжим комментировать комментарии к комментариям, не создадим ли мы случайно новую форму юридической практики? Представьте: \"Ваша честь, я хотел бы обратить ваше внимание на комментарий к комментарию статьи 'Как выиграть дело, рассмешив судью'...\" 🤔📜\r\nА если серьёзно, здорово видеть, как юмор помогает людям легче воспринимать сложные темы. Кто знает, может быть, следующим шагом станет создание стендап-шоу для юристов? \"Добрый вечер, дамы и господа присяжные заседатели!\" 🎤😂\r\nДавайте продолжать в том же духе! Кто знает, может наши комментарии когда-нибудь станут учебным пособием по юридическому юмору? Только представьте эти университетские лекции... 🎓🤡\r\nСпасибо автору комментария за отличное продолжение темы! Ждём ответного иска... то есть, комментария! 😉👨‍⚖️",
+        "time_create": "2024-06-29T09:28:02.474Z",
+        "time_update": "2024-06-29T09:28:02.474Z",
+        "status": "published",
+        "parent": 1,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 3,
+    "fields": {
+        "article": 9,
+        "author": [
+            "root"
+        ],
+        "content": "Уважаемый автор! 👨‍⚖️✍️\r\nНу вы и насмешили! 😂 Я прямо представил, как захожу в зал суда в доспехах, с мечом наперевес, готовый сразиться за справедливость! 🛡️⚔️ А судья в парике Димы Билана - это просто шедевр! 👨‍⚖️🎤\r\nВаша статья - настоящий глоток свежего воздуха в душном мире юриспруденции. Как говорится, в каждой шутке есть доля шутки, а остальное - чистая правда! 😉 Особенно полезными показались советы про язык тела. Теперь буду следить за своим носом как ястреб! 👃🦅\r\nА ваше сравнение судебного процесса с коробкой конфет - просто в яблочко! 🎯🍫 Только вот незадача: мне обычно достаются конфеты с самой невкусной начинкой. Надеюсь, в суде повезет больше! 🤞\r\nПосле прочтения вашей статьи я чувствую себя готовым к любым юридическим баталиям. Пойду практиковать свой покерфейс перед зеркалом и придумывать остроумные реплики. Кто знает, может, мое дело и правда решится благодаря удачной шутке! 😎\r\nСпасибо за отличное настроение и полезные советы! Теперь я знаю, что если карьера юриста не задастся, всегда можно податься в стендап. У меня уже есть отличный материал благодаря вам! 🎭🏆\r\nP.S. А можно еще статью о том, как правильно прятать тузы в рукаве? Прошу исключительно в образовательных целях, конечно же! 😇🃏",
+        "time_create": "2024-06-29T09:31:16.447Z",
+        "time_update": "2024-06-29T09:31:16.447Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 4,
+    "fields": {
+        "article": 8,
+        "author": [
+            "pupok"
+        ],
+        "content": "Отличная статья! 😄 Никогда не думал, что чтение о законах может быть таким забавным. Особенно порадовало сравнение с инструкцией из Икеи - очень точно! 👍",
+        "time_create": "2024-06-29T09:35:17.617Z",
+        "time_update": "2024-06-29T09:35:17.617Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 3,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 5,
+    "fields": {
+        "article": 8,
+        "author": [
+            "root"
+        ],
+        "content": "Спасибо за полезные советы! Идея с названием папок именами героев фильмов - просто гениально. Теперь мой рабочий стол будет выглядеть как съемочная площадка юридического блокбастера! 🎬⚖️",
+        "time_create": "2024-06-29T09:35:58.639Z",
+        "time_update": "2024-06-29T09:35:58.639Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 4,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 6,
+    "fields": {
+        "article": 8,
+        "author": [
+            "root_1"
+        ],
+        "content": "Интересный подход к сложной теме. Однако хотелось бы больше конкретных примеров и практических советов. Юмор хорош, но не заменяет фактической информации.",
+        "time_create": "2024-06-29T09:36:34.103Z",
+        "time_update": "2024-06-29T09:36:34.103Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 5,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 7,
+    "fields": {
+        "article": 8,
+        "author": [
+            "root_1"
+        ],
+        "content": "Автор явно талантлив в создании метафор! 'Юридическое Эльдорадо' - это нечто! 😂 Хотя, признаюсь, иногда шутки отвлекали от сути. Но в целом, приятное чтение.",
+        "time_create": "2024-06-29T09:36:55.198Z",
+        "time_update": "2024-06-29T09:36:55.198Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 6,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 8,
+    "fields": {
+        "article": 7,
+        "author": [
+            "naf_naf"
+        ],
+        "content": "Вау, какая креативная подача! 😃 Никогда не думал, что законы можно сравнить с морским путешествием. Теперь буду представлять себя капитаном, когда буду разбираться в договорах. Спасибо за вдохновляющую статью! 🚢⚖️",
+        "time_create": "2024-06-29T09:38:46.578Z",
+        "time_update": "2024-06-29T09:38:46.578Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 7,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 9,
+    "fields": {
+        "article": 7,
+        "author": [
+            "user_2"
+        ],
+        "content": "Рад, что статья вас вдохновила! 😊 Действительно, взгляд на юриспруденцию как на приключение может сделать работу с законами менее утомительной. Удачного вам плавания в море параграфов, капитан! 🎩⚓",
+        "time_create": "2024-06-29T09:39:23.148Z",
+        "time_update": "2024-06-29T09:39:23.148Z",
+        "status": "published",
+        "parent": 8,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 7,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 10,
+    "fields": {
+        "article": 7,
+        "author": [
+            "user_1"
+        ],
+        "content": "Интересная аналогия, но немного перегружена морской тематикой. Хотелось бы больше конкретных примеров применения этих 'правил' на практике. Тем не менее, идея с 'юридическим атласом' кажется полезной.",
+        "time_create": "2024-06-29T09:39:51.852Z",
+        "time_update": "2024-06-29T09:39:51.852Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 8,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 11,
+    "fields": {
+        "article": 7,
+        "author": [
+            "root_1"
+        ],
+        "content": "Спасибо за конструктивный отзыв! 🙏 Вы правы, конкретные примеры могли бы сделать статью еще полезнее. Возможно, автор подготовит продолжение с более практическими советами по навигации в юридических водах. 📚🔍",
+        "time_create": "2024-06-29T09:40:29.701Z",
+        "time_update": "2024-06-29T09:40:29.701Z",
+        "status": "published",
+        "parent": 10,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 8,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 12,
+    "fields": {
+        "article": 6,
+        "author": [
+            "rrrrr"
+        ],
+        "content": "Отличная статья! 😄 Никогда не думал, что о паттернах можно рассказывать так весело. Особенно понравилось сравнение с кулинарными рецептами. Теперь буду представлять себя шеф-поваром кода! 👨‍🍳💻",
+        "time_create": "2024-06-29T09:43:09.339Z",
+        "time_update": "2024-06-29T09:43:09.339Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 9,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 13,
+    "fields": {
+        "article": 6,
+        "author": [
+            "user_1"
+        ],
+        "content": "Интересный подход к объяснению паттернов, но не хватает конкретных примеров применения. Хотелось бы увидеть, как эти 'рецепты' работают на практике. Тем не менее, статья мотивирует изучать паттерны глубже.",
+        "time_create": "2024-06-29T09:43:34.920Z",
+        "time_update": "2024-06-29T09:43:34.920Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 10,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 14,
+    "fields": {
+        "article": 6,
+        "author": [
+            "user_1"
+        ],
+        "content": "Рад, что статья вас вдохновила! 🌟 Действительно, взгляд на программирование как на кулинарию может сделать процесс более творческим и увлекательным. Желаю вам создать немало 'вкусных' проектов! 🍽️🖥️",
+        "time_create": "2024-06-29T09:44:29.188Z",
+        "time_update": "2024-06-29T09:44:29.188Z",
+        "status": "published",
+        "parent": 12,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 9,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 15,
+    "fields": {
+        "article": 6,
+        "author": [
+            "user_2"
+        ],
+        "content": "Спасибо за конструктивный отзыв! 👍 Вы правы, практические примеры могли бы сделать материал еще полезнее. Возможно, автор подготовит продолжение с более детальным разбором каждого 'рецепта' паттернов. Следите за обновлениями! 📚🔍",
+        "time_create": "2024-06-29T09:44:53.730Z",
+        "time_update": "2024-06-29T09:44:53.730Z",
+        "status": "published",
+        "parent": 13,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 10,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 16,
+    "fields": {
+        "article": 5,
+        "author": [
+            "naf_naf"
+        ],
+        "content": "\"Отличная статья! 😄 Как программист со стажем, полностью согласен с каждым словом. Кофе - это действительно топливо для кода. Особенно понравилось сравнение программирования без кофе с написанием стихов без рифмы. Очень точно! ☕💻",
+        "time_create": "2024-06-29T09:46:32.619Z",
+        "time_update": "2024-06-29T09:46:32.619Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 11,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 17,
+    "fields": {
+        "article": 5,
+        "author": [
+            "nif-nif"
+        ],
+        "content": "Забавный взгляд на роль кофе в программировании. Хотя, как любитель чая, я бы поспорил с автором. Думаю, главное - не напиток, а настрой и увлеченность делом. Но статья написана с юмором, это подкупает. 😊",
+        "time_create": "2024-06-29T09:46:49.511Z",
+        "time_update": "2024-06-29T09:46:49.511Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 12,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 18,
+    "fields": {
+        "article": 5,
+        "author": [
+            "nuf-nuf"
+        ],
+        "content": "Интересная статья, но, кажется, автор слишком романтизирует кофе. Как врач, хочу напомнить о важности умеренности в потреблении кофеина. Здоровье программиста - тоже важный аспект продуктивности! 🩺",
+        "time_create": "2024-06-29T09:47:05.301Z",
+        "time_update": "2024-06-29T09:47:05.301Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 13,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 19,
+    "fields": {
+        "article": 5,
+        "author": [
+            "user_2"
+        ],
+        "content": "Весело написано! Узнаю себя в каждом слове. Особенно про ночные посиделки с коллегами за чашкой кофе. Именно так рождаются лучшие идеи! Спасибо автору за позитивный взгляд на нашу профессию. 👍",
+        "time_create": "2024-06-29T09:47:21.554Z",
+        "time_update": "2024-06-29T09:47:21.554Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 14,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 20,
+    "fields": {
+        "article": 4,
+        "author": [
+            "user_1"
+        ],
+        "content": "Отличная статья! 😄 Особенно понравилось сравнение программирования с танцем с багами под музыку дедлайнов. Очень точно! Буду теперь представлять себя танцором, когда код не работает. 💃💻",
+        "time_create": "2024-06-29T09:52:39.345Z",
+        "time_update": "2024-06-29T09:52:39.345Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 15,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 21,
+    "fields": {
+        "article": 4,
+        "author": [
+            "rrrrr"
+        ],
+        "content": "Хорошие советы, но хотелось бы больше конкретных техник для решения проблем. Юмор - это здорово, но иногда нужны и практические инструменты. Тем не менее, статья подняла настроение!",
+        "time_create": "2024-06-29T09:53:03.874Z",
+        "time_update": "2024-06-29T09:53:03.874Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 16,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 22,
+    "fields": {
+        "article": 4,
+        "author": [
+            "nuf-nuf"
+        ],
+        "content": "Спасибо за позитивный взгляд на трудности в программировании! Часто забываем, что ошибки - это часть процесса обучения. Статья напомнила, как важно сохранять оптимизм. 👍",
+        "time_create": "2024-06-29T09:53:23.390Z",
+        "time_update": "2024-06-29T09:53:23.390Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 17,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 23,
+    "fields": {
+        "article": 4,
+        "author": [
+            "rrrrr"
+        ],
+        "content": "Рад, что статья вас вдохновила! 🕺 Действительно, взгляд на программирование как на танец может сделать процесс более творческим и менее стрессовым. Надеюсь, ваши 'танцы с кодом' будут приносить вам радость и успех! 🎉💻",
+        "time_create": "2024-06-29T09:53:48.715Z",
+        "time_update": "2024-06-29T09:53:48.715Z",
+        "status": "published",
+        "parent": 20,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 15,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 24,
+    "fields": {
+        "article": 3,
+        "author": [
+            "naf_naf"
+        ],
+        "content": "\"Интересная статья! 🤔 NFT действительно открывают новые горизонты в искусстве. Однако хотелось бы более критического взгляда на эту тему. Не все так радужно на рынке NFT, как описано здесь. Тем не менее, спасибо за вводную информацию!",
+        "time_create": "2024-06-29T09:54:59.375Z",
+        "time_update": "2024-06-29T09:54:59.375Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 18,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 25,
+    "fields": {
+        "article": 3,
+        "author": [
+            "rrrrr"
+        ],
+        "content": "Ха-ха, отличный юмористический взгляд на NFT! 😂 Особенно понравилась фраза про 'ограбление кибербанка'. Хотя я скептически отношусь к NFT, статья заставила меня улыбнуться. Спасибо за позитив!",
+        "time_create": "2024-06-29T09:55:25.646Z",
+        "time_update": "2024-06-29T09:55:25.646Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 19,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 26,
+    "fields": {
+        "article": 3,
+        "author": [
+            "nif-nif"
+        ],
+        "content": "Вы подняли важный момент! 👍 Действительно, рынок NFT имеет свои риски и проблемы, которые стоит учитывать. Возможно, автору стоит написать продолжение с более глубоким анализом плюсов и минусов NFT-технологии. Это было бы полезно для читателей, желающих получить более полную картину. 🎨💻",
+        "time_create": "2024-06-29T09:55:57.790Z",
+        "time_update": "2024-06-29T09:55:57.790Z",
+        "status": "published",
+        "parent": 24,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 18,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 27,
+    "fields": {
+        "article": 2,
+        "author": [
+            "root_1"
+        ],
+        "content": "Забавная статья! 😄 Особенно понравилось сравнение с 'красным флагом на медвежьем рынке'. Хотя я не инвестор, теперь хотя бы понимаю, почему мои друзья-криптоэнтузиасты так эмоциональны. Спасибо за легкий подход к сложной теме!",
+        "time_create": "2024-06-29T10:26:14.465Z",
+        "time_update": "2024-06-29T10:26:14.465Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 20,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 28,
+    "fields": {
+        "article": 2,
+        "author": [
+            "user_1"
+        ],
+        "content": "Интересное введение в мир биткоина, но не хватает конкретики. Хотелось бы больше фактов и меньше шуток. Тем не менее, статья заинтересовала, буду искать более глубокую информацию по теме.",
+        "time_create": "2024-06-29T10:26:35.375Z",
+        "time_update": "2024-06-29T10:26:35.375Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 21,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 29,
+    "fields": {
+        "article": 2,
+        "author": [
+            "rrrrr"
+        ],
+        "content": "Рад, что статья вас развеселила! 😊 Действительно, мир криптовалют может быть очень эмоциональным. Возможно, эта статья поможет вам лучше понимать ваших друзей-энтузиастов и даже присоединиться к их обсуждениям с долей юмора!",
+        "time_create": "2024-06-29T10:27:09.924Z",
+        "time_update": "2024-06-29T10:27:09.924Z",
+        "status": "published",
+        "parent": 27,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 20,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 30,
+    "fields": {
+        "article": 2,
+        "author": [
+            "user_1"
+        ],
+        "content": "Спасибо за обратную связь! 👍 Вы правы, тема биткоина заслуживает более глубокого рассмотрения. Возможно, автор планирует серию статей, где будет больше конкретной информации. А пока эта статья может служить легким введением для новичков в мире криптовалют.",
+        "time_create": "2024-06-29T10:27:34.808Z",
+        "time_update": "2024-06-29T10:27:34.808Z",
+        "status": "published",
+        "parent": 28,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 21,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 31,
+    "fields": {
+        "article": 1,
+        "author": [
+            "naf_naf"
+        ],
+        "content": "Какая забавная статья! 😂 Никогда не думал, что можно так весело описать мир криптовалют. Особенно понравилась идея о криптозверях, меняющих цвет в зависимости от курса биткоина. Теперь буду представлять это каждый раз, проверяя котировки!",
+        "time_create": "2024-06-29T10:29:03.311Z",
+        "time_update": "2024-06-29T10:29:03.311Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 22,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 32,
+    "fields": {
+        "article": 1,
+        "author": [
+            "nif-nif"
+        ],
+        "content": "Интересный подход к объяснению криптовалют, но, честно говоря, немного детский. Хотелось бы больше реальной информации и меньше выдуманных существ. Тема серьезная, и такое легкомысленное отношение может ввести новичков в заблуждение.",
+        "time_create": "2024-06-29T10:29:20.762Z",
+        "time_update": "2024-06-29T10:29:20.762Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 23,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 33,
+    "fields": {
+        "article": 1,
+        "author": [
+            "nuf-nuf"
+        ],
+        "content": "Креативно! Хотя я давно в крипте, такого еще не видел. Может, стоит сделать настоящих NFT-криптозверей? Уверен, они бы стали хитом на рынке. Автору респект за оригинальность! 👍",
+        "time_create": "2024-06-29T10:29:38.253Z",
+        "time_update": "2024-06-29T10:29:38.253Z",
+        "status": "published",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 24,
+        "level": 0
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 34,
+    "fields": {
+        "article": 1,
+        "author": [
+            "user_2"
+        ],
+        "content": "Рад, что статья подарила вам улыбку! 😊 Иногда взгляд на серьезные вещи через призму юмора помогает лучше понять и запомнить информацию. Кто знает, может быть благодаря этим воображаемым криптозверям вы заинтересуетесь миром криптовалют глубже!",
+        "time_create": "2024-06-29T10:30:02.843Z",
+        "time_update": "2024-06-29T10:30:02.843Z",
+        "status": "published",
+        "parent": 31,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 22,
+        "level": 1
+    }
+},
+{
+    "model": "blog.comment",
+    "pk": 35,
+    "fields": {
+        "article": 1,
+        "author": [
+            "user_1"
+        ],
+        "content": "Отличная идея насчет NFT-криптозверей! 🚀 Кто знает, может быть автор статьи уже работает над этим проектом. В мире криптовалют и NFT часто самые необычные идеи становятся успешными. Будем следить за развитием событий!",
+        "time_create": "2024-06-29T10:30:33.640Z",
+        "time_update": "2024-06-29T10:30:33.640Z",
+        "status": "published",
+        "parent": 33,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 24,
+        "level": 1
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 3,
+    "fields": {
+        "article": 8,
+        "user": [
+            "root"
+        ],
+        "value": 1,
+        "time_create": "2024-06-29T10:31:25.503Z",
+        "ip_address": "192.168.65.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 4,
+    "fields": {
+        "article": 9,
+        "user": [
+            "root"
+        ],
+        "value": -1,
+        "time_create": "2024-06-29T10:31:30.639Z",
+        "ip_address": "192.168.65.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 5,
+    "fields": {
+        "article": 7,
+        "user": [
+            "root"
+        ],
+        "value": 1,
+        "time_create": "2024-06-29T10:31:38.135Z",
+        "ip_address": "192.168.65.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 6,
+    "fields": {
+        "article": 6,
+        "user": [
+            "root"
+        ],
+        "value": 1,
+        "time_create": "2024-06-29T10:31:42.378Z",
+        "ip_address": "192.168.65.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 7,
+    "fields": {
+        "article": 5,
+        "user": [
+            "root"
+        ],
+        "value": -1,
+        "time_create": "2024-06-29T10:31:47.851Z",
+        "ip_address": "192.168.65.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 8,
+    "fields": {
+        "article": 4,
+        "user": [
+            "root"
+        ],
+        "value": 1,
+        "time_create": "2024-06-29T10:31:49.470Z",
+        "ip_address": "192.168.65.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 9,
+    "fields": {
+        "article": 3,
+        "user": [
+            "root"
+        ],
+        "value": 1,
+        "time_create": "2024-06-29T10:31:52.722Z",
+        "ip_address": "192.168.65.1"
+    }
+},
+{
+    "model": "blog.rating",
+    "pk": 10,
+    "fields": {
+        "article": 1,
+        "user": [
+            "root"
+        ],
+        "value": 1,
+        "time_create": "2024-06-29T10:31:57.538Z",
+        "ip_address": "192.168.65.1"
+    }
+},
+{
+    "model": "blog.viewcount",
+    "pk": 1,
+    "fields": {
+        "article": 1,
+        "ip_address": "192.168.65.1",
+        "viewed_on": "2024-06-28T14:37:50.209Z"
+    }
+},
+{
+    "model": "blog.viewcount",
+    "pk": 2,
+    "fields": {
+        "article": 2,
+        "ip_address": "192.168.65.1",
+        "viewed_on": "2024-06-28T14:52:57.135Z"
+    }
+},
+{
+    "model": "blog.viewcount",
+    "pk": 3,
+    "fields": {
+        "article": 9,
+        "ip_address": "192.168.65.1",
+        "viewed_on": "2024-06-29T09:28:18.015Z"
+    }
+},
+{
+    "model": "blog.viewcount",
+    "pk": 4,
+    "fields": {
+        "article": 3,
+        "ip_address": "192.168.65.1",
+        "viewed_on": "2024-06-29T10:32:05.865Z"
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "rrrrr"
+        ],
+        "slug": "rrrrr",
+        "avatar": "images/avatars/2024/06/28/2.png",
+        "bio": "Просто посетитель...",
+        "birth_date": "1972-08-13",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "root"
+        ],
+        "slug": "root",
+        "avatar": "images/avatars/2024/06/28/10.png",
+        "bio": "Самый главный парень!",
+        "birth_date": "1991-06-01",
+        "following": [
+            1
+        ]
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "user_1"
+        ],
+        "slug": "user1",
+        "avatar": "images/avatars/2024/06/28/1.png",
+        "bio": "Пользователь № 1",
+        "birth_date": "1985-02-07",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "user_2"
+        ],
+        "slug": "user2",
+        "avatar": "images/avatars/2024/06/28/3.png",
+        "bio": "Пользователь №2",
+        "birth_date": "2001-10-24",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "root_1"
+        ],
+        "slug": "root1",
+        "avatar": "images/avatars/2024/06/28/5.png",
+        "bio": "Главный, но не сильно",
+        "birth_date": "1989-10-18",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "pupok"
+        ],
+        "slug": "pupok",
+        "avatar": "images/avatars/2024/06/28/6.png",
+        "bio": "Главный, на втором плане",
+        "birth_date": "1968-01-03",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "naf_naf"
+        ],
+        "slug": "nafnaf",
+        "avatar": "images/avatars/2024/06/28/8.png",
+        "bio": "Очень крут",
+        "birth_date": "1994-04-17",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "nif-nif"
+        ],
+        "slug": "nif-nif",
+        "avatar": "images/avatars/2024/06/28/4.png",
+        "bio": "Крут, но не очень",
+        "birth_date": "2004-06-13",
+        "following": []
+    }
+},
+{
+    "model": "system.profile",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "nuf-nuf"
+        ],
+        "slug": "nuf-nuf",
+        "avatar": "images/avatars/default.jpg",
+        "bio": "Классный чувак",
+        "birth_date": "1996-06-27",
+        "following": []
+    }
+}
+]
