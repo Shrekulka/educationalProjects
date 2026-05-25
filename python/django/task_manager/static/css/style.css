@@ -1,0 +1,112 @@
+/* Светлый фон страницы */
+body {
+    background: linear-gradient(135deg, #f5a623 0%, #f0c040 50%, #d4a017 100%);
+    min-height: 100vh;
+}
+
+/* Карточки проектов */
+.project-block {
+    background-color: #eef2f8;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* Заголовок проекта */
+.project-block .card-header {
+    background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%) !important;
+    border-radius: 0;
+    padding: 12px 16px;
+}
+
+/* Тело карточки — светло-голубое */
+.project-block .card-body {
+    background: #dce8f8;
+}
+
+/* Строка задачи */
+.task-item {
+    background: #dce8f8;
+    border-bottom: 1px solid #c5d8f0 !important;
+    padding: 10px 12px !important;
+    transition: background-color 0.2s ease;
+}
+
+.task-item:hover {
+    background: #cfdff5;
+}
+
+.task-item .task-actions {
+    visibility: hidden; /* Скрываем, но место сохраняется */
+    opacity: 0;         /* Делаем полностью прозрачным */
+    display: flex;      /* Оставляем flex для layout */
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s ease, visibility 0.2s ease; /* Плавное появление */
+}
+
+.task-item:hover .task-actions {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.task-item .task-priority {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.task-item:hover .task-priority {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Чекбокс */
+.task-item .form-check-input {
+    border-radius: 3px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Иконка блокнотика */
+.task-item .task-icon {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.task-item {
+    background: #ffffff !important; /* Белые строки */
+    border-bottom: 1px solid #e3e9f0 !important;
+    margin-bottom: 0;
+    padding: 12px !important;
+}
+
+.task-item:hover {
+    background: #f8fafc !important;
+}
+
+/* Отступ для иконки */
+.task-item .task-icon {
+    font-size: 1.2rem;
+}
+
+
+/* Кнопка Add TODO List */
+.btn-add-project {
+    background: #5b9bd5;
+    color: white;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
+    display: block;
+    margin: 20px auto;
+}
+
+
+.card-body, .project-block .card-body, .tasks-wrapper, .tasks-list {
+    background: #eef2f8 !important; /* Убираем тёмный фон */
+}

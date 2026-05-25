@@ -1,4 +1,4 @@
-# client_streaming_average_calculator /logger_config.py
+# grpc_example /logger_config.py
 
 import logging
 import traceback

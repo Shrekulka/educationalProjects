@@ -1,9 +1,11 @@
 # fast_api_post_manager/schemas/post_schema.py
 
-from pydantic import BaseModel, validator, Field
+from pydantic import BaseModel, validator, Field, field_validator
 import uuid
 from datetime import datetime
 from typing import Optional
+
+from pydantic_core.core_schema import ValidationInfo
 
 from utils.validation import validate_text, validate_status
 
@@ -17,16 +19,21 @@ class PostBase(BaseModel):
         title (str, optional): Optional title for the post.
         status (str, optional): Status of the post (draft or published).
     """
-    text: str = Field(..., description="Post content text, limited to 1MB")
+    text: str = Field(...,
+                      description="Post content text, limited to 1MB",
+                      min_length=1,
+                      max_length=1048576)
     title: Optional[str] = Field(None, max_length=100, description="Optional post title")
     status: Optional[str] = Field("draft", description="Post status (draft or published)")
 
-    @validator('text')
-    def validate_text_size(cls, text):
-        return validate_text(text)
+    @field_validator('text')
+    @classmethod
+    def validate_text_size(cls, value: str, info: ValidationInfo) -> str:
+        return validate_text(value)
 
-    @validator('status')
-    def validate_status(cls, status):
+    @field_validator('status')
+    @classmethod
+    def validate_status(cls, status, info: ValidationInfo) -> str:
         return validate_status(status)
 
 

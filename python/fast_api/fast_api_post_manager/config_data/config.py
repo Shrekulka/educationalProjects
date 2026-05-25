@@ -1,42 +1,43 @@
 # fast_api_post_manager/config_data/config.py
 
+import os
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import SecretStr
 
-from pydantic.v1 import BaseSettings, SecretStr
 
-
-# Определение класса Settings, наследующегося от BaseModel, для хранения конфигурационных данных
 class Settings(BaseSettings):
     """
-        Class for storing configuration data.
-
-        Attributes:
-            mysql_host (str): MySQL database host.
-            mysql_user (str): MySQL database user.
-            mysql_password (SecretStr): Password for accessing the MySQL database.
-            mysql_db (str): MySQL database name.
-            secret_key (SecretStr): Secret key for data encryption.
-            algorithm (str): Encryption algorithm.
+    Класс для хранения конфигурационных данных.
     """
-    mysql_host: str            # Хост базы данных MySQL.
-    mysql_user: str            # Пользователь базы данных MySQL.
-    mysql_password: SecretStr  # Пароль для доступа к базе данных MySQL. (Скрытый)
-    mysql_db: str              # Имя базы данных MySQL.
-    secret_key: SecretStr      # Секретный ключ для шифрования данных. (Скрытый)
-    algorithm: str             # Алгоритм шифрования.
+    # Используем те же имена переменных, как в .env
+    POSTGRES_USER: str
+    POSTGRES_PASSWORD: SecretStr
+    POSTGRES_HOST: str
+    DB_PORT: int
+    POSTGRES_DB: str
+    SECRET_KEY: SecretStr
+    ALGORITHM: str
 
-    # Вложенный класс Config для определения настроек Pydantic
-    class Config:
+    # Настройка конфигурации через SettingsConfigDict
+    model_config = SettingsConfigDict(
+        env_file=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"),
+        env_file_encoding="utf-8"
+    )
+
+    def get_db_url(self):
         """
-            Nested class for defining Pydantic settings.
-
-            Attributes:
-                env_file (str): File to load environment variables from.
-                env_file_encoding (str): Encoding of the file to load environment variables from.
+        Генерирует URL для подключения к базе данных PostgreSQL.
         """
-        env_file = ".env"             # Указание файла .env для загрузки переменных окружения
-        env_file_encoding = "utf-8"   # Указание кодировки файла .env
+        return (f"postgresql://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD.get_secret_value()}@"
+                f"{self.POSTGRES_HOST}:{self.DB_PORT}/{self.POSTGRES_DB}")
+
+    def get_async_db_url(self):
+        """
+        Генерирует URL для асинхронного подключения к базе данных PostgreSQL.
+        """
+        return (f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD.get_secret_value()}@"
+                f"{self.POSTGRES_HOST}:{self.DB_PORT}/{self.POSTGRES_DB}")
 
 
-# Создание экземпляра класса Settings для хранения конфигурационных данных
-config: Settings = Settings()
-
+# Создание экземпляра класса Settings
+config = Settings()

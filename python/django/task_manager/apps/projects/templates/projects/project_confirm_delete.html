@@ -1,0 +1,31 @@
+<!-- task_manager/projects/templates/projects/project_confirm_delete.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Delete Project{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">⚠️ Delete Project</h4>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Are you sure you want to delete the project <strong>"{{ object.name }}"</strong>?</p>
+                    <p class="text-muted">This will also delete all tasks inside this project.</p>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ object.get_absolute_url }}" class="btn btn-secondary">Cancel</a>
+                            <button type="submit" class="btn btn-danger">Yes, Delete Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

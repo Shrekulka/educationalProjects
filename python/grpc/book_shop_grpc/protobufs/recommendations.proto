@@ -1,0 +1,40 @@
+// book_shop_grpc/recommendations.proto
+
+// Определяем версию синтаксиса Protocol Buffers
+syntax = "proto3";
+
+// Определяем пространство имен для наших сообщений и сервисов
+package recommendations;
+
+// Категории книг
+enum BookCategory {
+  MYSTERY = 0;
+  SCIENCE_FICTION = 1;
+  SELF_HELP = 2;
+}
+
+// Запрос рекомендаций
+message RecommendationRequest {
+  int32 user_id = 1; // id пользователя для персонализации рекомендаций.
+  BookCategory category = 2; // Категории книг.
+  int32 max_results = 3; // Не хотим подгружать все книги, поэтому добавим ограничение на запрос.
+}
+
+// Для каждой книги будут предоставлены следующие данные.
+message BookRecommendation {
+  int32 id = 1; // Уникальный числовой идентификатор книги.
+  string title = 2; // Название книги.
+}
+
+// Ответ с рекомендациями
+message RecommendationResponse {
+  // Определяем новый тип BookRecommendation для рекомендации книги.
+  repeated BookRecommendation recommendations = 1;
+}
+
+// Определение gRPC сервиса под названием Recommendations
+service Recommendations {
+  // Определяем метод Recommend, который является унарным RPC методом
+  // Этот метод принимает RecommendationRequest и возвращает RecommendationResponse
+  rpc Recommend(RecommendationRequest) returns (RecommendationResponse);
+}

@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<nav>
+    <a href="{% url 'horoscope-index' %}">Главная</a>
+    <a href="https://www.homeenglish.ru/OtherGoroscop.htm">Источник</a>
+    {% if zodiacs %}
+        <br><br>
+        {% for zodiac in zodiacs %}
+            <a style="color: {% if forloop.counter|divisibleby:2 %}red{% else %}green{% endif %};"
+               href="{% url 'horoscope-name' sign_zodiac=zodiac.name %}">
+                {{ zodiac.name|title }}
+            </a>
+        {% endfor %}
+
+    {% endif %}
+</nav>

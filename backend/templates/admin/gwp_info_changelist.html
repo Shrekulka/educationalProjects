@@ -1,0 +1,22 @@
+{% extends "admin/change_list.html" %}
+{% block content %}
+    <h2>Информация о GWP</h2>
+    <form method="get">
+        <label for="device_id">Выберите устройство:</label>
+        <select name="device_id" onchange="this.form.submit()">
+            {% for device in devices %}
+                <option value="{{ device.param.3.value }}"
+                        {% if device.param.3.value == device_id %}selected{% endif %}>
+                    {{ device.param.5.value }} (ID: {{ device.param.3.value }})
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+    {% if gwp_info %}
+        <h3>Информация о GWP для устройства {{ device_id }}</h3>
+        <pre>{{ gwp_info|safe }}</pre>
+    {% else %}
+        <p>{{ gwp_info }}</p>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

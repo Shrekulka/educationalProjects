@@ -1,0 +1,244 @@
+<!-- task_manager/tasks/templates/tasks/task_list_container.html -->
+
+{% load static %}
+
+<div class="tasks-wrapper">
+    <!-- Фильтрация по статусу -->
+    <div class="p-2 border-bottom">
+        <div class="btn-group btn-group-sm" role="group">
+            <a href="#"
+               hx-get="{% url 'task_list_container' project.id %}"
+               hx-target="#tasks-container-{{ project.id }}"
+               class="btn {% if not selected_status %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                All
+            </a>
+            {% for status_value, status_label in statuses %}
+                <a href="#"
+                   hx-get="{% url 'task_list_container' project.id %}?status={{ status_value }}"
+                   hx-target="#tasks-container-{{ project.id }}"
+                   class="btn {% if selected_status == status_value %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                    {{ status_label }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Список задач -->
+    <div id="tasks-list-{{ project.id }}" class="tasks-list" x-data="taskManager('tasks-list-{{ project.id }}')" @drop="handleDrop($event)" @dragover="$event.preventDefault()">
+        {% for task in tasks %}
+            <div class="d-flex align-items-center p-2 border-bottom task-item"
+                 draggable="true"
+                 @dragstart="draggedTask = {{ task.id }}"
+                 data-task-id="{{ task.id }}"
+                 :class="{ 'opacity-75': draggedTask === {{ task.id }} }">
+
+                <!-- Иконка блокнотика + разделитель -->
+                <div class="d-flex align-items-center me-2">
+                    <span class="task-icon text-muted me-1">📄</span>
+                </div>
+
+                <!-- Чекбокс -->
+                <div class="form-check me-2">
+                    <input type="checkbox"
+                           class="form-check-input"
+                           id="task-{{ task.id }}"
+                           {% if task.status == 'completed' %}checked{% endif %}
+                           hx-post="{% url 'task_toggle_status' task.id %}"
+                           hx-trigger="click"
+                           hx-swap="outerHTML"
+                           hx-target="closest .task-item">
+                </div>
+
+                <!-- Название -->
+                <span class="flex-grow-1 {% if task.status == 'completed' %}text-decoration-line-through text-muted{% endif %}">
+                    {{ task.name }}
+                </span>
+
+                <!-- Блок действий и приоритета -->
+                <div class="task-actions ms-2">
+                    <span class="task-priority me-1">
+                        <span class="badge {% if task.priority == 3 %}bg-danger{% elif task.priority == 2 %}bg-warning{% else %}bg-info{% endif %}">
+                            {{ task.get_priority_display }}
+                        </span>
+                    </span>
+                    <a href="{% url 'task_update' task.id %}" class="text-muted me-1 text-decoration-none">✏️</a>
+                    <a href="#" class="text-muted text-danger text-decoration-none"
+                       hx-delete="{% url 'task_delete' task.id %}"
+                       hx-confirm="Are you sure?"
+                       hx-target="closest .task-item"
+                       hx-swap="outerHTML swap:1s">🗑️</a>
+                </div>
+
+                <!-- Дедлайн -->
+                {% if task.deadline %}
+                    <small class="text-muted me-2">
+                        📅 {{ task.deadline|date:"M d" }}
+                        {% if task.is_overdue %}
+                            <span class="badge bg-danger">Overdue!</span>
+                        {% endif %}
+                    </small>
+                {% endif %}
+            </div>
+        {% empty %}
+            <div class="p-3 text-muted">No tasks yet.</div>
+        {% endfor %}
+    </div>
+</div>
+
+{#{% load static %}#}
+{##}
+{#<div class="tasks-wrapper">#}
+{#    <!-- Фильтрация по статусу -->#}
+{#    <div class="p-2 border-bottom">#}
+{#        <div class="btn-group btn-group-sm" role="group">#}
+{#            <a href="#"#}
+{#               hx-get="{% url 'task_list_container' project.id %}"#}
+{#               hx-target="#tasks-container-{{ project.id }}"#}
+{#               class="btn {% if not selected_status %}btn-primary{% else %}btn-outline-primary{% endif %}">#}
+{#                All#}
+{#            </a>#}
+{#            {% for status_value, status_label in statuses %}#}
+{#                <a href="#"#}
+{#                   hx-get="{% url 'task_list_container' project.id %}?status={{ status_value }}"#}
+{#                   hx-target="#tasks-container-{{ project.id }}"#}
+{#                   class="btn {% if selected_status == status_value %}btn-primary{% else %}btn-outline-primary{% endif %}">#}
+{#                    {{ status_label }}#}
+{#                </a>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <!-- Список задач -->#}
+{#    <div id="tasks-list-{{ project.id }}" class="tasks-list" x-data="taskManager('tasks-list-{{ project.id }}')" @drop="handleDrop($event)" @dragover="$event.preventDefault()">#}
+{#        {% for task in tasks %}#}
+{#            <div class="d-flex align-items-center p-2 border-bottom task-item"#}
+{#                 draggable="true"#}
+{#                 @dragstart="draggedTask = {{ task.id }}"#}
+{#                 data-task-id="{{ task.id }}"#}
+{#                 :class="{ 'opacity-75': draggedTask === {{ task.id }} }">#}
+{##}
+{#                <!-- Чекбокс -->#}
+{#                <div class="form-check me-2">#}
+{#                    <input type="checkbox"#}
+{#                           class="form-check-input"#}
+{#                           id="task-{{ task.id }}"#}
+{#                           {% if task.status == 'completed' %}checked{% endif %}#}
+{#                           hx-post="{% url 'task_toggle_status' task.id %}"#}
+{#                           hx-trigger="click"#}
+{#                           hx-swap="outerHTML"#}
+{#                           hx-target="closest .task-item">#}
+{#                </div>#}
+{##}
+{#                <!-- Название -->#}
+{#                <span class="flex-grow-1 {% if task.status == 'completed' %}text-decoration-line-through text-muted{% endif %}">#}
+{#                    {{ task.name }}#}
+{#                </span>#}
+{##}
+{#                <!-- Блок действий и приоритета (скрыт по умолчанию, виден при наведении) -->#}
+{#                <div class="task-actions">#}
+{#                    <span class="task-priority">#}
+{#                        <span class="badge {% if task.priority == 3 %}bg-danger{% elif task.priority == 2 %}bg-warning{% else %}bg-info{% endif %} me-2">#}
+{#                            {{ task.get_priority_display }}#}
+{#                        </span>#}
+{#                    </span>#}
+{#                    <a href="{% url 'task_update' task.id %}" class="text-muted me-2 text-decoration-none">✏️</a>#}
+{#                    <a href="#" class="text-muted text-danger text-decoration-none"#}
+{#                       hx-delete="{% url 'task_delete' task.id %}"#}
+{#                       hx-confirm="Are you sure?"#}
+{#                       hx-target="closest .task-item"#}
+{#                       hx-swap="outerHTML swap:1s">🗑️</a>#}
+{#                </div>#}
+{##}
+{#                <!-- Дедлайн (всегда виден) -->#}
+{#                {% if task.deadline %}#}
+{#                    <small class="text-muted me-2">#}
+{#                        📅 {{ task.deadline|date:"M d" }}#}
+{#                        {% if task.is_overdue %}#}
+{#                            <span class="badge bg-danger">Overdue!</span>#}
+{#                        {% endif %}#}
+{#                    </small>#}
+{#                {% endif %}#}
+{#            </div>#}
+{#        {% empty %}#}
+{#            <div class="p-3 text-muted">No tasks yet.</div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}
+
+{#{% load static %}#}
+{##}
+{#<div class="tasks-wrapper">#}
+{#    <!-- Фильтрация по статусу -->#}
+{#    <div class="p-2 border-bottom">#}
+{#        <div class="btn-group btn-group-sm" role="group">#}
+{#            <a href="#"#}
+{#               hx-get="{% url 'task_list_container' project.id %}"#}
+{#               hx-target="#tasks-container-{{ project.id }}"#}
+{#               class="btn {% if not selected_status %}btn-primary{% else %}btn-outline-primary{% endif %}">#}
+{#                All#}
+{#            </a>#}
+{#            {% for status_value, status_label in statuses %}#}
+{#                <a href="#"#}
+{#                   hx-get="{% url 'task_list_container' project.id %}?status={{ status_value }}"#}
+{#                   hx-target="#tasks-container-{{ project.id }}"#}
+{#                   class="btn {% if selected_status == status_value %}btn-primary{% else %}btn-outline-primary{% endif %}">#}
+{#                    {{ status_label }}#}
+{#                </a>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <!-- Список задач (с drag-and-drop Alpine.js) -->#}
+{#    <div id="tasks-list-{{ project.id }}" class="tasks-list" x-data="taskManager('tasks-list-{{ project.id }}')" @drop="handleDrop($event)" @dragover="$event.preventDefault()">#}
+{#        {% for task in tasks %}#}
+{#            <div class="d-flex align-items-center p-2 border-bottom task-item"#}
+{#                 draggable="true"#}
+{#                 @dragstart="draggedTask = {{ task.id }}"#}
+{#                 data-task-id="{{ task.id }}"#}
+{#                 :class="{ 'opacity-75': draggedTask === {{ task.id }} }">#}
+{##}
+{#                <!-- Checkbox для отметки "выполнено" -->#}
+{#                <div class="form-check me-2">#}
+{#                    <input type="checkbox"#}
+{#                           class="form-check-input"#}
+{#                           id="task-{{ task.id }}"#}
+{#                           {% if task.status == 'completed' %}checked{% endif %}#}
+{#                           hx-post="{% url 'task_toggle_status' task.id %}"#}
+{#                           hx-trigger="click"#}
+{#                           hx-swap="outerHTML"#}
+{#                           hx-target="closest .task-item">#}
+{#                </div>#}
+{##}
+{#                <!-- Название задачи -->#}
+{#                <span class="flex-grow-1 {% if task.status == 'completed' %}text-decoration-line-through text-muted{% endif %}">#}
+{#                    {{ task.name }}#}
+{#                </span>#}
+{##}
+{#                <!-- Приоритет -->#}
+{#                <span class="badge {% if task.priority == 3 %}bg-danger{% elif task.priority == 2 %}bg-warning{% else %}bg-info{% endif %} me-2">#}
+{#                    {{ task.get_priority_display }}#}
+{#                </span>#}
+{##}
+{#                <!-- Дедлайн -->#}
+{#                {% if task.deadline %}#}
+{#                    <small class="text-muted me-2">#}
+{#                        📅 {{ task.deadline|date:"M d" }}#}
+{#                        {% if task.is_overdue %}#}
+{#                            <span class="badge bg-danger">Overdue!</span>#}
+{#                        {% endif %}#}
+{#                    </small>#}
+{#                {% endif %}#}
+{##}
+{#                <!-- Кнопки действий (исправлено: убраны data-bs-toggle и data-bs-target) -->#}
+{#                <a href="{% url 'task_update' task.id %}" class="text-muted me-2 text-decoration-none">✏️</a>#}
+{#                <a href="#" class="text-muted text-danger text-decoration-none"#}
+{#                   hx-delete="{% url 'task_delete' task.id %}"#}
+{#                   hx-confirm="Are you sure?"#}
+{#                   hx-target="closest .task-item"#}
+{#                   hx-swap="outerHTML swap:1s">🗑️</a>#}
+{#            </div>#}
+{#        {% empty %}#}
+{#            <div class="p-3 text-muted">No tasks yet.</div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</div>#}

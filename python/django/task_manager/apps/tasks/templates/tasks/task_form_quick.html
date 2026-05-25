@@ -1,0 +1,39 @@
+<!-- task_manager/tasks/templates/tasks/task_form_quick.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Create Task{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">➕ Quick Add Task</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" class="validate-required"
+                          hx-post="{{ request.path }}"
+                          hx-target="#tasks-list-{{ project.id }}"
+                          hx-swap="afterbegin">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="{{ form.name.id_for_label }}" class="form-label">Task Name *</label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="invalid-feedback d-block">{{ form.name.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ request.META.HTTP_REFERER|default:'/' }}" class="btn btn-secondary">Cancel</a>
+                            <button type="submit" class="btn btn-success">Add Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

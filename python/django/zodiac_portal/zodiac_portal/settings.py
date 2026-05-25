@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    "debug_toolbar",  # Приложение для отладочной панели Django Debug Toolbar
     'horoscope.apps.HoroscopeConfig',  # Пользовательское приложение для Horoscope
 ]
 
@@ -49,6 +50,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ###############################################################
+
+    # Промежуточное ПО для интеграции отладочной панели Django Debug Toolbar в проект.
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'zodiac_portal.urls'
@@ -56,8 +61,7 @@ ROOT_URLCONF = 'zodiac_portal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,22 +107,44 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
+# Настройки интернационализации и локализации в Django.
+########################################################################################################################
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-Ru'    # Код языка для сайта, указывающий на русский язык и его региональные особенности.
+TIME_ZONE = 'Europe/Kiev'  # Часовой пояс сайта, установленный на время Киева в Европе.
+USE_I18N = True            # Указывает на необходимость использования интернационализации для поддержки различных языков
+USE_TZ = True              # Указывает на использование часовых поясов в приложении, используя заданный TIME_ZONE.
+########################################################################################################################
 
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
+# Настройка статических и медиафайлов (CSS, JavaScript, Images)
+########################################################################################################################
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# URL-путь для обслуживания статических файлов на веб-сайте.
+STATIC_URL = '/static/'
+
+# Директория, куда будут собираться статические файлы для развертывания веб-сайта.
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Дополнительные директории, где Django будет искать статические файлы.
+STATICFILES_DIRS = [BASE_DIR / 'static',]
+
+# Директория, где будут сохраняться загруженные медиафайлы (изображения, видео и т.д.).
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# URL-путь для доступа к загруженным медиафайлам на веб-сайте.
+MEDIA_URL = '/media/'
+########################################################################################################################
+
+# Список внутренних IP-адресов, с которых будет доступен отладочный панель.
+########################################################################################################################
+INTERNAL_IPS: list[str] = [
+    # Добавляем локальный IP-адрес, который обычно используется при разработке на локальной машине.
+    "127.0.0.1",
+    # Дополнительные IP-адреса могут быть добавлены сюда по мере необходимости.
+]
+########################################################################################################################
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

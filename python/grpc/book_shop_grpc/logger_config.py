@@ -1,4 +1,4 @@
-# unary_grpc_calculator/logger_config.py
+# book_shop_grpc/logger_config.py
 
 import logging
 import traceback

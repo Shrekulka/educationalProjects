@@ -15,23 +15,24 @@ def index(request: HttpRequest):
     context = {
         'zodiacs': zodiacs
     }
-    return render(request, 'horoscope/index.html', context=context)
+    return render(request=request, template_name='horoscope/index.html', context=context)
 
 
 def get_info_about_sign_zodiac(request: HttpRequest, sign_zodiac: str):
     # Получаем объект знака зодиака по его имени
     description = zodiac_signs.get_sign(sign_zodiac)
+    zodiacs = zodiac_signs.get_all_signs()
     if description:
         data = {
             'description_zodiac': description,
-            # 'sign': sign_zodiac,
+            'sign': sign_zodiac,
+            'zodiacs': zodiacs,
         }
         # Если знак найден, возвращаем HttpResponse с информацией о знаке
-        return render(request, 'horoscope/info_zodiac.html', context=data)
+        return render(request=request, template_name='horoscope/info_zodiac.html', context=data)
     else:
         # Если знак не найден, возвращаем HttpResponseNotFound с сообщением об ошибке
         return HttpResponseNotFound(f"Неизвестный знак зодиака - {sign_zodiac}")
-
 
 
 def get_info_about_sign_zodiac_by_number(request: HttpRequest,
@@ -53,7 +54,7 @@ def get_info_about_sign_zodiac_by_number(request: HttpRequest,
     # Проверяем, был ли найден знак зодиака
     if sign:
         # Если знак найден, создаем URL для перенаправления на страницу с информацией о знаке
-        redirect_url = reverse("horoscope-name", args=[sign.name])
+        redirect_url = reverse(viewname="horoscope-name", args =[sign.name])
         # Возвращаем HttpResponseRedirect для перенаправления пользователя на новый URL
         return HttpResponseRedirect(redirect_url)
     else:
@@ -103,7 +104,7 @@ def get_zodiac_types(request: HttpRequest) -> HttpResponse:
     li_elements = ''
     # Формируем HTML список ссылок для каждого типа знаков зодиака
     for type_name in types:
-        redirect_path = reverse("horoscope-element", args=[type_name])
+        redirect_path = reverse(viewname="horoscope-element", args=[type_name])
         li_elements += f"<li><a href='{redirect_path}'>{type_name.title()}</a></li>"
     # Формируем HTML ответ с списком типов знаков зодиака
     response = f"<ul>{li_elements}</ul>"
@@ -130,7 +131,7 @@ def get_signs_by_element(request: HttpRequest, element: str) -> HttpResponse | H
         li_elements = ''
         # Формируем HTML список ссылок для каждого знака зодиака
         for sign in signs:
-            redirect_path = reverse("horoscope-name", args=[sign.name])
+            redirect_path = reverse(viewname="horoscope-name", args=[sign.name])
             li_elements += f"<li><a href='{redirect_path}'>{sign.name.title()}</a></li>"
         # Формируем HTML ответ с заголовком элемента и списком знаков зодиака
         response = f"<h2>{element.title()} signs:</h2><ul>{li_elements}</ul>"

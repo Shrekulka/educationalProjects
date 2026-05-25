@@ -27,7 +27,7 @@ def unique_slugify(instance: Model, slug: str) -> str:
         Returns:
             str: Уникальный SLUG.
     """
-    model = instance.__class__  # Получаем класс модели из экземпляра
+    model = instance.__class__   # Получаем класс модели из экземпляра
     unique_slug = slugify(slug)  # Преобразуем исходный SLUG в URL-подобный формат
 
     # Проверяем, существует ли объект с таким SLUG в базе данных

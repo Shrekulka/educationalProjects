@@ -1,0 +1,40 @@
+<!-- task_manager/projects/templates/projects/project_list_partial.html-->
+
+{% load static %}
+
+<div id="project-list">
+    {% for project in projects %}
+        <div class="card mb-4 project-block">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">{{ project.name }}</h4>
+                <div>
+                    <a href="{% url 'project_update' project.id %}" class="text-white me-2" title="Edit">✏️</a>
+                    <a href="{% url 'project_delete' project.id %}" class="text-white" title="Delete">🗑️</a>
+                </div>
+            </div>
+
+            <div class="card-body p-0">
+                <form class="p-3 border-bottom validate-required"
+                      hx-post="{% url 'task_create' project.id %}"
+                      hx-target="#tasks-container-{{ project.id }}"
+                      hx-swap="beforeend"
+                      _="on htmx:afterRequest reset() me">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="text" name="name" class="form-control"
+                               placeholder="Start typing here to create a task..." required>
+                        <button class="btn btn-success" type="submit" style="background-color: #70ad47;">Add Task
+                        </button>
+                    </div>
+                </form>
+
+                <div id="tasks-container-{{ project.id }}">
+                    {% include 'tasks/task_list_container.html' with project=project selected_status=selected_status statuses=statuses %}                </div>
+            </div>
+        </div>
+    {% empty %}
+        <div class="alert alert-info">
+            <p>No projects found.</p>
+        </div>
+    {% endfor %}
+</div>

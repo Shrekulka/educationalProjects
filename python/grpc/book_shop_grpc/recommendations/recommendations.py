@@ -1,4 +1,4 @@
-# book_shop_grpc/recommendations.py
+# book_shop_grpc/recommendations/recommendations.py
 import random
 import traceback
 from concurrent import futures
@@ -56,7 +56,7 @@ class RecommendationService(pb2_grpc.RecommendationsServicer):
         books_to_recommend = random.sample(books_for_category, num_results)
 
         # Возвращается RecommendationResponse со списком рекомендаций книг.
-        return pb2_grpc.RecommendationResponse(recommendations=books_to_recommend)
+        return pb2.RecommendationResponse(recommendations=books_to_recommend)
 
 
 def serve():

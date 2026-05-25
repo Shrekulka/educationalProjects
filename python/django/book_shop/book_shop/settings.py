@@ -184,8 +184,8 @@ REST_FRAMEWORK = {
 ########################################################################################################################
 SOCIAL_AUTH_JSONFIELD_ENABLED = True
 
-SOCIAL_AUTH_GITHUB_KEY = 'example'
-SOCIAL_AUTH_GITHUB_SECRET = 'example'
+SOCIAL_AUTH_GITHUB_KEY = 'test'
+SOCIAL_AUTH_GITHUB_SECRET = 'test'
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.open_id.OpenIdAuth',

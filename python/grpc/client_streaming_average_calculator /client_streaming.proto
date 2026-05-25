@@ -1,0 +1,23 @@
+// client_streaming_average_calculator/client_streaming.proto
+
+// Определяем версию синтаксиса Protocol Buffers
+syntax = "proto3";
+
+// Определяем пространство имен для наших сообщений и сервисов
+package average_calculator;
+
+// Сообщение для отправки числа в потоке
+message NumberRequest {
+    double number = 1;
+}
+
+// Сообщение с результатом вычисления среднего значения
+message AverageResponse {
+    double average = 1;
+}
+
+// Сервис для вычисления среднего значения
+service AverageCalculator {
+    // Метод для клиентского потокового RPC
+    rpc CalculateAverage(stream NumberRequest) returns (AverageResponse) {}
+}

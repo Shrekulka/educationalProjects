@@ -82,3 +82,4 @@
 │                                             
 └── requirements.txt                         # Список зависимостей Python проекта           
 ```
+Ссылка на источник: https://www.youtube.com/playlist?list=PLQAt0m1f9OHvGM7Y7jAQP8TKbBd3up4K2

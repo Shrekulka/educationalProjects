@@ -1,0 +1,113 @@
+<!-- task_manager/tasks/templates/tasks/task_item.html -->
+
+{% load static %}
+
+<div class="d-flex align-items-center p-2 border-bottom task-item"
+     draggable="true"
+     @dragstart="draggedTask = {{ task.id }}"
+     data-task-id="{{ task.id }}">
+
+    <!-- 1. Иконка блокнотика -->
+    <div class="d-flex align-items-center me-2">
+        <span class="text-muted task-icon me-1" style="font-size: 1.1rem;">📄</span>
+    </div>
+
+    <!-- 2. Чекбокс -->
+    <div class="form-check me-2">
+        <input type="checkbox"
+               class="form-check-input"
+               id="task-{{ task.id }}"
+               {% if task.status == 'completed' %}checked{% endif %}
+               hx-post="{% url 'task_toggle_status' task.id %}"
+               hx-trigger="click"
+               hx-swap="outerHTML"
+               hx-target="closest .task-item">
+    </div>
+
+    <!-- 3. Название задачи -->
+    <span class="flex-grow-1 {% if task.status == 'completed' %}text-decoration-line-through text-muted{% endif %}">
+        {{ task.name }}
+    </span>
+
+    <!-- 4. Дата создания/обновления (добавлено) -->
+    <div class="text-muted small me-2">
+        Создано: {{ task.created_at|date:"d.m.Y H:i" }}
+        {% if task.updated_at != task.created_at %}
+            <br>Обновлено: {{ task.updated_at|date:"d.m.Y H:i" }}
+        {% endif %}
+    </div>
+
+    <!-- 5. Блок действий (приоритет + кнопки), обёрнутый в task-actions -->
+    <div class="task-actions ms-2">
+        <span class="task-priority me-1">
+            <span class="badge {% if task.priority == 3 %}bg-danger{% elif task.priority == 2 %}bg-warning{% else %}bg-info{% endif %} me-2">
+                {{ task.get_priority_display }}
+            </span>
+        </span>
+        <a href="{% url 'task_update' task.id %}" class="text-muted me-2 text-decoration-none">✏️</a>
+        <a href="#" class="text-muted text-danger text-decoration-none"
+           hx-delete="{% url 'task_delete' task.id %}"
+           hx-confirm="Are you sure?"
+           hx-target="closest .task-item"
+           hx-swap="outerHTML swap:1s">🗑️</a>
+    </div>
+
+    <!-- 6. Дедлайн (всегда виден) -->
+    {% if task.deadline %}
+        <small class="text-muted me-2">
+            📅 {{ task.deadline|date:"M d" }}
+            {% if task.is_overdue %}
+                <span class="badge bg-danger">Overdue!</span>
+            {% endif %}
+        </small>
+    {% endif %}
+</div>
+
+{#{% load static %}#}
+{##}
+{#<div class="d-flex align-items-center p-2 border-bottom task-item"#}
+{#     draggable="true"#}
+{#     @dragstart="draggedTask = {{ task.id }}"#}
+{#     data-task-id="{{ task.id }}"#}
+{#     :class="{ 'opacity-75': draggedTask === {{ task.id }}, 'bg-light': false }">#}
+{##}
+{#    <!-- Checkbox -->#}
+{#    <div class="form-check me-2">#}
+{#        <input type="checkbox"#}
+{#               class="form-check-input"#}
+{#               id="task-{{ task.id }}"#}
+{#               {% if task.status == 'completed' %}checked{% endif %}#}
+{#               hx-post="{% url 'task_toggle_status' task.id %}"#}
+{#               hx-trigger="click"#}
+{#               hx-swap="outerHTML"#}
+{#               hx-target="closest .task-item">#}
+{#    </div>#}
+{##}
+{#    <!-- Название -->#}
+{#    <span class="flex-grow-1 {% if task.status == 'completed' %}text-decoration-line-through text-muted{% endif %}">#}
+{#        {{ task.name }}#}
+{#    </span>#}
+{##}
+{#    <!-- Приоритет -->#}
+{#    <span class="badge {% if task.priority == 3 %}bg-danger{% elif task.priority == 2 %}bg-warning{% else %}bg-info{% endif %} me-2">#}
+{#        {{ task.get_priority_display }}#}
+{#    </span>#}
+{##}
+{#    <!-- Дедлайн -->#}
+{#    {% if task.deadline %}#}
+{#        <small class="text-muted me-2">#}
+{#            📅 {{ task.deadline|date:"M d" }}#}
+{#            {% if task.is_overdue %}#}
+{#                <span class="badge bg-danger">Overdue!</span>#}
+{#            {% endif %}#}
+{#        </small>#}
+{#    {% endif %}#}
+{##}
+{#    <!-- Действия -->#}
+{#    <a href="{% url 'task_update' task.id %}" class="text-muted me-2 text-decoration-none">✏️</a>#}
+{#    <a href="#" class="text-muted text-danger text-decoration-none"#}
+{#       hx-delete="{% url 'task_delete' task.id %}"#}
+{#       hx-confirm="Are you sure?"#}
+{#       hx-target="closest .task-item"#}
+{#       hx-swap="outerHTML swap:1s">🗑️</a>#}
+{#</div>#}

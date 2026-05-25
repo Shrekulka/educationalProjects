@@ -1,0 +1,32 @@
+ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    list-style-type: none;
+    background-color: #f1f1f1;
+    width: 90%;
+    max-width: 35rem;
+    border-radius: 20px;
+    margin: 2rem auto;
+    padding: 1px;
+}
+
+ul li {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 2rem 0.2rem;
+}
+
+ul a:hover, ul a:active {
+    color: #eca8b5;
+}
+
+
+h1 {
+    color: gold;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: 48px;
+    text-decoration: underline;
+}

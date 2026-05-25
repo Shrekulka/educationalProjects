@@ -31,11 +31,7 @@ router.register(r'book', BookViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('social_django.urls', namespace='social')),
-    # Добавили импорт include, для включения urls.py из приложения shop, а также указали обработку юрлов, указав
-    # главную страницу
-    path('', include('shop.urls')),
-
-
+    path('auth/', auth),
 ]
 
 urlpatterns += router.urls

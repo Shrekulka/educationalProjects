@@ -1,1 +1,44 @@
-[{"model": "blog.category", "pk": 1, "fields": {"title": "Программирование", "slug": "programmirovanie", "description": "Мир, где кофе ☕ и код 💻 правят балом.", "parent": null, "lft": 1, "rght": 2, "tree_id": 2, "level": 0}}, {"model": "blog.category", "pk": 2, "fields": {"title": "Юридические штуки", "slug": "legal-stuff", "description": "Здесь всё строго, запутанно и всегда с печатью. 📜🔍", "parent": null, "lft": 1, "rght": 2, "tree_id": 3, "level": 0}}, {"model": "blog.category", "pk": 3, "fields": {"title": "Криптомир", "slug": "crypto-world", "description": "Место, где биткойны летают, а NFT восхищают. 🌐💸", "parent": null, "lft": 1, "rght": 2, "tree_id": 1, "level": 0}}]
+[
+  {
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+      "title": "Программирование",
+      "slug": "programmirovanie",
+      "description": "Мир, где кофе ☕ и код 💻 правят балом.",
+      "parent": null,
+      "lft": 1,
+      "rght": 2,
+      "tree_id": 2,
+      "level": 0
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+      "title": "Юридические штуки",
+      "slug": "legal-stuff",
+      "description": "Здесь всё строго, запутанно и всегда с печатью. 📜🔍",
+      "parent": null,
+      "lft": 1,
+      "rght": 2,
+      "tree_id": 3,
+      "level": 0
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 3,
+    "fields": {
+      "title": "Криптомир",
+      "slug": "crypto-world",
+      "description": "Место, где биткойны летают, а NFT восхищают. 🌐💸",
+      "parent": null,
+      "lft": 1,
+      "rght": 2,
+      "tree_id": 1,
+      "level": 0
+    }
+  }
+]

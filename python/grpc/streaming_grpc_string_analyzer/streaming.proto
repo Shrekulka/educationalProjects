@@ -1,0 +1,24 @@
+// streaming_grpc_string_analyzer/streaming.proto
+
+// Определяем версию синтаксиса Protocol Buffers
+syntax = "proto3";
+
+// Определяем пространство имен для наших сообщений и сервисов
+package string_analyzer;
+
+// Определение сообщения запроса для метода StreamData
+message StreamDataRequest {
+  string input_text = 1; // Входная строка для анализа
+}
+
+// Определение сообщения ответа для метода StreamData
+message StreamDataResponse {
+  string type = 1;      // Тип результата (например, "palindrome", "word_count")
+  string result = 2;    // Результат анализа
+}
+
+// Определение сервиса StreamingService
+service StreamingService {
+  // Метод StreamData принимает строку и возвращает поток результатов анализа строки
+  rpc StreamData(StreamDataRequest) returns (stream StreamDataResponse) {}
+}

@@ -1,0 +1,26 @@
+# Pre-commit hooks конфигурация
+# Запускает проверки перед каждым коммитом
+
+repos:
+  # Ruff - быстрый linter
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.2
+    hooks:
+      - id: ruff
+        args: [--fix]
+
+  # Black - форматер кода
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        language_version: python3.13
+
+  # Проверка YAML, JSON и форматирования
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace

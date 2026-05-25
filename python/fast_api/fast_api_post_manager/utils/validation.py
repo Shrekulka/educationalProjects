@@ -7,15 +7,6 @@ import uuid
 def validate_id(value):
     """
     Validate that the value is a valid UUID.
-
-    Args:
-        value: Value to validate
-
-    Returns:
-        UUID object if valid
-
-    Raises:
-        ValueError: If value is not a valid UUID
     """
     try:
         return uuid.UUID(str(value))
@@ -26,15 +17,6 @@ def validate_id(value):
 def validate_name(value):
     """
     Validate that the name is a valid string.
-
-    Args:
-        value: Value to validate
-
-    Returns:
-        Original value if valid
-
-    Raises:
-        ValueError: If name is invalid
     """
     if not value or not value.strip():
         raise ValueError("Name cannot be empty")
@@ -48,15 +30,6 @@ def validate_name(value):
 def validate_empty(value):
     """
     Validate that the value is not empty.
-
-    Args:
-        value: Value to validate
-
-    Returns:
-        Original value if valid
-
-    Raises:
-        ValueError: If value is empty
     """
     if not value or not str(value).strip():
         raise ValueError("Value cannot be empty")
@@ -66,15 +39,6 @@ def validate_empty(value):
 def validate_password(value):
     """
     Validate password complexity.
-
-    Args:
-        value: Password to validate
-
-    Returns:
-        Original password if valid
-
-    Raises:
-        ValueError: If password does not meet complexity requirements
     """
     if len(value) < 8:
         raise ValueError("Password must be at least 8 characters long")
@@ -90,15 +54,6 @@ def validate_password(value):
 def validate_email(email: str) -> str:
     """
     Validate email format.
-
-    Args:
-        email: Email string to validate.
-
-    Returns:
-        The email if valid.
-
-    Raises:
-        ValueError: If email format is invalid.
     """
     email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     if not re.match(email_regex, email):

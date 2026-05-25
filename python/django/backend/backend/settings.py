@@ -306,7 +306,7 @@ CAPTCHA_FOREGROUND_COLOR = '#008000'                            # Цвет пе�
 CAPTCHA_BACKGROUND_COLOR = '#FFFFFF'                            # Цвет фона CAPTCHA.
 
 # Тип вызова CAPTCHA
-CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'          # Математическое задание для CAPTCHA.
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'            # Математическое задание для CAPTCHA.
 # CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'   # Случайные символы в качестве задания CAPTCHA.
 # CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.word_challenge'          # Слова в качестве задания CAPTCHA.
 ########################################################################################################################

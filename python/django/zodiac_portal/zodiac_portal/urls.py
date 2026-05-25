@@ -16,10 +16,26 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),      # Маршрут для страницы администрирования.
     path('', include('horoscope.urls')),  # Включаем маршруты из приложения horoscope.
 ]
+
+# Настройки отладки
+########################################################################################################################
+# Проверяем, находится ли проект в режиме отладки.
+if settings.DEBUG:
+    # Если проект находится в режиме отладки, добавляем URL-пути для отладочной панели веб-инструментов.
+    # Добавляем путь для debug_toolbar в начало списка urlpatterns.
+    urlpatterns = [path('__debug__/', include('debug_toolbar.urls'))] + urlpatterns
+
+    # Затем добавляем URL-пути для медиафайлов к urlpatterns.
+    # Это нужно для того, чтобы в режиме отладки Django мог обслуживать медиафайлы.
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+########################################################################################################################

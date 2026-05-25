@@ -1,0 +1,66 @@
+// grpc_example/protos/todo.proto
+
+// Определяем версию синтаксиса Protocol Buffers
+syntax = "proto3";
+
+// Определяем пространство имен для наших сообщений и сервисов
+package todo;
+
+message Todo {
+  uint32 id = 1;
+  string name = 2;
+  bool completed = 3;
+  uint32 day = 4;
+}
+
+message CreateTodoRequest {
+  string name = 1;
+  bool completed = 2;
+  uint32 day = 3;
+}
+
+message CreateTodoResponse {
+  Todo todo = 1;
+}
+
+message ReadTodoRequest {
+  string name = 1;
+  bool completed = 2;
+  uint32 day = 3;
+}
+
+message ReadTodoResponse {
+  Todo todo = 1;
+}
+
+message UpdateTodoRequest {
+  string name = 1;
+  bool completed = 2;
+  uint32 day = 3;
+}
+
+message UpdateTodoResponse {
+  Todo todo = 1;
+}
+
+message DeleteTodoRequest {
+  uint32 id = 1;
+}
+
+message DeleteTodoResponse {
+  bool success = 1;
+}
+
+message ListTodoRequest {}
+
+message ListTodoResponse {
+  repeated Todo todo = 1;
+}
+
+service TodoService {
+  rpc CreateTodo(CreateTodoRequest) returns (CreateTodoResponse);
+  rpc ReadTodo(ReadTodoRequest) returns (ReadTodoResponse);
+  rpc UpdateTodo(UpdateTodoRequest) returns (UpdateTodoResponse);
+  rpc DeleteTodo(DeleteTodoRequest) returns (DeleteTodoResponse);
+  rpc ListTodo(ListTodoRequest) returns (ListTodoResponse);
+}

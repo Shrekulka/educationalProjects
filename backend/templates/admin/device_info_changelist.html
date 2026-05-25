@@ -1,0 +1,7 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+<h2>Информация об устройствах</h2>
+<pre>{{ device_info|safe }}</pre>
+{{ block.super }}
+{% endblock %}

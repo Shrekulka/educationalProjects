@@ -1,14 +1,14 @@
 # fast_api_post_manager/database/init_db.py
 
-from database.database import engine
-
+from database.database import async_engine
 from utils.logger_config import logger
 
-def initialize_database():
+async def initialize_database():
     try:
-        from models.models import Base, User, Post
-        Base.metadata.create_all(bind=engine)
+        from models.models import Base
+        async with async_engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
         logger.info("Database tables created successfully")
     except Exception as e:
-        logger.error(f"Failed to create database tables: {str(e)}")
-        raise
+        logger.error(f"Failed to create database tables: {e}")
+        raise SystemExit(f"Database initialization failed: {e}")

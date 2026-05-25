@@ -1,125 +1,83 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 
 import os
 import sys
+import traceback
 from datetime import datetime
 
-from docx import Document
-from docx.enum.style import WD_STYLE_TYPE
-from matplotlib import font_manager
+from document_processor import process_document
+from font_utils import get_handwriting_fonts, load_fonts
 
 
-def load_fonts(font_name):
-    if is_font_installed(font_name):
-        return
+def main() -> None:
+    """Основная функция программы.
 
-    font_dir = 'fonts'
-    font_file = get_font_file(font_name)
-    if font_file:
-        font_path = os.path.join(font_dir, font_file)
-        font_manager.fontManager.addfont(font_path)
-        font_manager._load_fontmanager(try_read_cache=False)
-        print(f"Шрифт {font_name} загружен из локальных файлов.")
-    else:
-        print(f"Шрифт {font_name} не найден в локальных файлах.")
+    Эта функция выполняет следующие действия:
+    1. Проверяет наличие аргумента командной строки (входной файл).
+    2. Создает выходной файл с уникальным именем на основе временной метки.
+    3. Выводит список доступных рукописных шрифтов для выбора пользователем.
+    4. Обрабатывает выбранный пользователем шрифт и применяет его к входному документу.
+    5. Сохраняет изменённый документ в указанной директории.
 
-
-def get_font_file(font_name):
-    font_files = {
-        'Segoe Script': 'segoe_script.ttf',
-        'Brush Script MT': 'brush_script_mt.otf',
-        'Mistral': 'mistral_regular.ttf',
-        'Bradley Hand': 'bradleys_pen.ttf',
-        'Ink Free': 'ink_free.ttf',
-    }
-    return os.path.join('fonts', font_files.get(font_name, ''))
-
-
-def is_font_installed(font_name):
-    try:
-        font_path = font_manager.findfont(font_name)
-        return font_path is not None and font_path != ''
-    except:
-        return False
-
-
-def get_font_path(font_name):
-    if is_font_installed(font_name):
-        return font_name  # Возвращаем имя шрифта, если он установлен в системе
-    else:
-        local_font_path = get_font_file(font_name)
-        if os.path.exists(local_font_path):
-            return local_font_path
-        else:
-            print(f"Шрифт {font_name} не найден ни в системе, ни локально. Используется шрифт по умолчанию.")
-            return 'Calibri'
-
-
-def process_document(input_file, output_file, font_choice):
-    doc = Document(input_file)
-
-    handwriting_fonts = {
-        '1': 'Segoe Script',
-        '2': 'Brush Script MT',
-        '3': 'Mistral',
-        '4': 'Bradley Hand',
-        '5': 'Ink Free',
-    }
-
-    font_name = handwriting_fonts[font_choice]
-    font_path = get_font_path(font_name)
-
-    style = doc.styles.add_style(f'Handwriting_{font_choice}', WD_STYLE_TYPE.PARAGRAPH)
-    style.font.name = font_path
-
-    for paragraph in doc.paragraphs:
-        paragraph.style = style
-
-    doc.save(output_file)
-
-
-def main():
+    Возвращает:
+        None: Функция ничего не возвращает.
+    """
+    # Проверяем, что передан один аргумент командной строки (имя файла)
     if len(sys.argv) != 2:
         print("Использование: python script.py <имя_файла>")
-        sys.exit(1)
+        sys.exit(1)  # Завершаем программу с кодом 1 (ошибка)
 
+    # Получаем имя входного файла из аргументов командной строки
     input_file = sys.argv[1]
+    # Получаем текущую временную метку для уникального имени выходного файла
     timestamp = str(round(datetime.now().timestamp()))
-
     # Создаем директорию для сохранения обновленных документов, если она не существует
     output_dir = 'updated_documents'
     os.makedirs(output_dir, exist_ok=True)
 
-    output_file = os.path.join(output_dir,
-                               f"updated_{os.path.splitext(os.path.basename(input_file))[0]}_{timestamp}.docx")
+    # Формируем имя выходного файла, включая путь к директории и временную метку
+    output_file = os.path.join(
+        output_dir,
+        f"updated_{os.path.splitext(os.path.basename(input_file))[0]}_{timestamp}.docx"
+    )
 
+    # Выводим список доступных рукописных шрифтов для выбора
     print("Выберите рукописный шрифт:")
-    print("1. Segoe Script")
-    print("2. Brush Script MT")
-    print("3. Mistral")
-    print("4. Bradley Hand")
-    print("5. Ink Free")
+    handwriting_fonts = get_handwriting_fonts()  # Получаем шрифты из новой функции
 
-    font_choice = input("Введите номер шрифта (1-5): ")
+    for key, value in handwriting_fonts.items():
+        print(f"{key}. {value}")
+    print("6. Выход")
 
-    handwriting_fonts = {
-        '1': 'Segoe Script',
-        '2': 'Brush Script MT',
-        '3': 'Mistral',
-        '4': 'Bradley Hand',
-        '5': 'Ink Free',
-    }
+    # Запрашиваем у пользователя номер шрифта, пока не будет введен корректный номер
+    while True:
+        font_choice = input("Введите номер шрифта (1-6): ")
 
-    if font_choice not in handwriting_fonts:
-        print("Неверный выбор. Используется шрифт по умолчанию (Segoe Script).")
-        font_choice = '1'
+        # Проверяем, что выбранный шрифт корректен или пользователь хочет выйти
+        if font_choice == '6':
+            print("Выход из программы.")
+            sys.exit(0)  # Завершаем программу с кодом 0 (успешно)
+        elif font_choice in handwriting_fonts:
+            break  # Выход из цикла, если выбор корректен
+        else:
+            print("Неверный выбор. Пожалуйста, попробуйте снова.")
 
+    # Получаем имя шрифта на основе выбора пользователя
     font_name = handwriting_fonts[font_choice]
+    # Загружаем выбранный шрифт (если необходимо)
     load_fonts(font_name)
-
+    # Обрабатываем документ, изменяем шрифт и сохраняем его под новым именем
     process_document(input_file, output_file, font_choice)
-    print(f"Документ обработан и сохранен как {output_file}")
+    print(f"Документ обработан и сохранен как {output_file}")  # Информируем пользователя о завершении
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        # Запускаем основную функцию программы
+        main()
+    except KeyboardInterrupt:
+        print("Приложение прервано пользователем")
+    except Exception as error:
+        # Обрабатываем и выводим любые неожиданные ошибки
+        detailed_error = traceback.format_exc()
+        print(f"Неожиданная ошибка приложения: {error}\n{detailed_error}")

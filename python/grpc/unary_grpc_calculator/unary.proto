@@ -1,0 +1,39 @@
+// unary_grpc_calculator/unary.proto
+
+// Определяем версию синтаксиса Protocol Buffers
+syntax = "proto3";
+
+// Определяем пространство имен для наших сообщений и сервисов
+package calculator;
+
+// Определение перечисления Operation для задания типа операции
+enum Operation
+{
+  ADD = 0;      // Операция сложения
+  SUBTRACT = 1; // Операция вычитания
+  MULTIPLY = 2; // Операция умножения
+  DIVIDE = 3;   // Операция деления
+}
+
+// Определение сообщения запроса для метода Calculate
+message CalculationRequest
+{
+  float num1 = 1;          // Первое число для математической операции
+  float num2 = 2;          // Второе число для математической операции
+  Operation operation = 3; // Тип операции, которую нужно выполнить (сложение, вычитание и т.д.)
+}
+
+// Определение сообщения ответа для метода Calculate
+message CalculationResponse
+{
+  float result = 1;         // Результат выполненной операции
+  string error_message = 2; // Сообщение об ошибке, если операция не удалась (например, деление на ноль)
+}
+
+// Определение gRPC сервиса под названием Calculator
+service Calculator
+{
+  // Определяем метод Calculate, который является унарным RPC методом
+  // Этот метод принимает CalculationRequest и возвращает CalculationResponse
+  rpc Calculate(CalculationRequest) returns (CalculationResponse) {}
+}

@@ -1,14 +1,32 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'horoscope/css/index.css' %}">
+{% endblock %}
+
+
 {% block title %}
     Меню
 {% endblock %}
 
 {% block content %}
-    <h2>Content from index.html</h2>
+    {% include "includes/nav_bar.html" %}
+    <h1>Приложение гороскоп:</h1>
     <ul>
         {% for zodiac in zodiacs %}
-            <li><a href="{% url 'horoscope-name' sign_zodiac=zodiac.name %}">{{ zodiac.name|title }}</a></li>
+            {% if forloop.counter|divisibleby:2 %}
+                <li><a style="color:red"
+                       href="{% url 'horoscope-name' sign_zodiac=zodiac.name %}">{{ zodiac.name|title }}</a></li>
+            {% else %}
+                <li><a style="color:green"
+                       href="{% url 'horoscope-name' sign_zodiac=zodiac.name %}">{{ zodiac.name|title }}</a></li>
+            {% endif %}
+        {% empty %}
+            <li>Sorry, no athletes in this list.</li>
         {% endfor %}
     </ul>
+    {% include "includes/nav_bar.html" %}
+
 {% endblock %}
