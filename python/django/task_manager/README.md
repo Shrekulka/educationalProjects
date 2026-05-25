@@ -48,8 +48,8 @@
 ### 1. Клонирование репозитория
 
 ```bash
-git clone <repository-url>
-cd task_manager
+git clone https://github.com/Shrekulka/educationalProjects.git
+cd educationalProjects/python/django/task_manager
 ```
 
 ### 2. Создание `.env`
