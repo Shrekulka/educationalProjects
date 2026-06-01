@@ -1,171 +1,449 @@
-python -m uvicorn main_api:app --host 127.0.0.1 --port 8000
+# Межбиржевой Арбитражный Бот (Inter-Exchange Arbitrage Bot)
 
-Команда	                    | Описание
-brew services start tor	    | Запустить Tor. Эта команда запускает Tor и регистрирует его как службу, которая будет автоматически стартовать при входе в систему.
-brew services stop tor	    | Остановить Tor. Останавливает фоновую службу.
-brew services restart tor	| Перезапустить Tor. Это самая полезная для вас команда. Она останавливает и снова запускает Tor, заставляя его построить новую цепочку узлов и получить новый IP-адрес.
-brew services list	        | Проверить статус. Показывает список всех служб Homebrew и их состояние (started, stopped, error).
+Профессиональное модульное приложение на базе **FastAPI** и **Aiogram v3** для автоматического поиска и анализа межбиржевых арбитражных возможностей на спотовом рынке криптовалют с интеграцией искусственного интеллекта (AI) для фундаментального анализа новостного фона.
 
-## Структура проекта:
+Система поддерживает работу с крупными биржами (Binance, Bybit, OKX, KuCoin, YoBit) через библиотеку **CCXT**, использует асинхронный движок базы данных **SQLAlchemy/PostgreSQL**, фоновый планировщик задач **APScheduler**, а также надёжные инструменты обхода ограничений (Rate Limits) — ротацию прокси-серверов и **Tor-сеть** в качестве резервного шлюза.
+
+---
+
+## 💻 Системные требования
+
+- **CPU**: 2 ядра (рекомендуется 4 для ресурсоёмкой «Разведки»)
+- **RAM**: минимум 2 ГБ, рекомендуется 4 ГБ
+- **Storage**: 1 ГБ свободного места (логи, графики плотностей)
+- **OS**: Linux (Ubuntu 20.04+), macOS, Windows (WSL2)
+
+---
+
+## ✨ Основные возможности
+
+- 🔍 **Автоматический поиск арбитража** – периодическое сканирование спредов между биржами.
+- 💹 **Исполнение сделок** с учётом комиссий, ликвидности и проскальзывания (анализ стаканов).
+- 📊 **Технический анализ** (RSI, MACD, объёмы, тренд-графики) для улучшения оценки сигналов.
+- 🤖 **Telegram-бот** с удобным интерфейсом (главное меню, настройки, отчёты, новости, админ-панель).
+- 🛡️ **Скринер плотностей (Depth Screener)** – анализ стаканов ордеров для поиска сильных уровней поддержки/сопротивления.
+- 📰 **Агрегатор новостей** из 7+ источников (CoinMarketCap, CryptoPanic, NewsAPI, AlphaVantage и др.) с AI-аналитикой.
+- 🔐 **Встроенная смена IP** (ротация HTTP/HTTPS прокси и Tor) для обхода гео-блокировок и rate‑лимитов.
+- 🗄️ **PostgreSQL** для хранения истории сделок, настроек пользователей и системных состояний.
+- 📈 **Подробные отчёты** по исполненным сделкам (P&L, причины неудач, детализация).
+- 👑 **Админ-панель** – управление исключёнными парами, статистика кэша, ручная «разведка» рынка.
+
+---
+
+## 📁 Структура проекта
+
 ```bash
-📁 inter_exchange_arbitrage_bot/   # Корневая директория всего проекта
+📁 inter_exchange_arbitrage_bot/          # Корневая директория всего проекта
 │
-├── 📁 alembic/ ...                 
+├── 📁 alembic/                           # Инструмент миграций базы данных Alembic
+│   ├── 📁 versions/                      # Папка с файлами отдельных миграций
+│   ├── env.py                            # Скрипт окружения Alembic (асинхронный URL)
+│   └── script.py.mako                    # Шаблон генерации новых файлов миграций
 │
-├── 📁 logs/                       # Логи приложения
-│   └── __init__.py
+├── 📁 logs/                              # Логи приложения (ротация ежедневная)
+│   └── __init__.py                       # Маркер пакета
 │
-├── 📁 scripts/                    # Скрипты для автоматизации
-│   ├── __init__.py
-│   ├── test-bybit-system.sh 
-│   └── deployment.sh
+├── 📁 scripts/                           # Скрипты автоматизации и тестирования
+│   ├── __init__.py                       # Маркер пакета
+│   ├── test-bybit-system.sh              # Bash-скрипт проверки API-ключей Bybit (Testnet/Mainnet)
+│   └── deployment.sh                     # Скрипт автоматизации развертывания на сервере
 │
-├── 📁 src/                        # Основная директория с исходным кодом приложения
-│   ├── __init__.py
+├── 📁 src/                               # Основной исходный код приложения
+│   ├── __init__.py                       # Маркер пакета
 │   │
-│   ├── 📁 api/                    # API маршруты и схемы
-│   │   ├── __init__.py
-│   │   ├── api_router.py
-│   │   ├── dependencies.py
-│   │   ├── market_intel_router.py
-│   │   ├── middleware.py
-│   │   ├── news_router.py
-│   │   ├── schemas.py  
-│   │   └── system_router.py
+│   ├── 📁 api/                           # Слой REST API (FastAPI)
+│   │   ├── __init__.py                   # Экспорт роутеров и схем
+│   │   ├── api_router.py                 # Маршруты управления сканером (/start, /stop, /reconnaissance)
+│   │   ├── dependencies.py               # Защита эндпоинтов по заголовку X-API-KEY
+│   │   ├── market_intel_router.py        # Роутер аналитики рынка (CoinGecko)
+│   │   ├── middleware.py                 # Проверка готовности сервисов перед обработкой запросов
+│   │   ├── news_router.py                # Эндпоинты агрегации новостей
+│   │   ├── schemas.py                    # Схемы валидации запросов/ответов Pydantic
+│   │   └── system_router.py              # Системные маршруты: баланс, кэш, ассеты, /health
 │   │   
-├── 📁 bot/                        # Telegram бот
-│   │   ├── __init__.py
+│   ├── 📁 bot/                           # Telegram-бот (Aiogram v3)
+│   │   ├── __init__.py                   # Маркер пакета
 │   │   │ 
-│   │   ├── 📁 filters/            # Фильтры для обработчиков
-│   │   │   ├── __init__.py
-│   │   │   └── admin_filter.py
+│   │   ├── 📁 filters/                   # Фильтры для обработчиков
+│   │   │   ├── __init__.py               # Маркер пакета
+│   │   │   └── admin_filter.py           # Ограничение доступа (только ADMIN_IDS)
 │   │   │ 
-│   │   ├── 📁 handlers/           # Обработчики команд и callback'ов
-│   │   │   ├── __init__.py
-│   │   │   ├── admin_handlers.py 
-│   │   │   ├── news_handlers.py 
-│   │   │   ├── scanner_handlers.py      
-│   │   │   ├── settings_handlers.py  
-│   │   │   └── user_handlers.py
+│   │   ├── 📁 handlers/                  # Обработчики команд и callback'ов
+│   │   │   ├── __init__.py               # Маркер пакета
+│   │   │   ├── admin_handlers.py         # Управление кэшем, исключение/добавление пар
+│   │   │   ├── news_handlers.py          # Получение новостей и ИИ-анализа по монетам
+│   │   │   ├── scanner_handlers.py       # Запуск/остановка сканера, ручная "Разведка"
+│   │   │   ├── settings_handlers.py      # Изменение торговой суммы и порогов прибыли
+│   │   │   └── user_handlers.py          # Меню балансов, отчеты P&L, скринер плотностей
 │   │   │ 
-│   │   ├── 📁 keyboards/          # Инлайн клавиатуры
-│   │   │   ├── __init__.py
-│   │   │   ├── admin_keyboards.py
-│   │   │   ├── balance_keyboard.py
-│   │   │   ├── coin_keyboards.py
-│   │   │   ├── density_screener_keyboards.py
-│   │   │   ├── main_menu_keyboard.py
-│   │   │   ├── news_keyboards.py
-│   │   │   ├── pagination_keyboard.py
-│   │   │   ├── report_keyboards.py
-│   │   │   ├── scanner_keyboard.py 
-│   │   │   └── settings_keyboard.py
+│   │   ├── 📁 keyboards/                 # Инлайн-клавиатуры
+│   │   │   ├── __init__.py               # Маркер пакета
+│   │   │   ├── admin_keyboards.py        # Клавиатуры админ-панели
+│   │   │   ├── balance_keyboard.py       # Клавиатура меню балансов
+│   │   │   ├── coin_keyboards.py         # Универсальный выбор монет (пагинация, поиск)
+│   │   │   ├── density_screener_keyboards.py # Клавиатуры скринера плотностей
+│   │   │   ├── main_menu_keyboard.py     # Главное меню бота
+│   │   │   ├── news_keyboards.py         # Клавиатуры меню новостей
+│   │   │   ├── pagination_keyboard.py    # Универсальная пагинация
+│   │   │   ├── report_keyboards.py       # Клавиатуры отчётов по сделкам
+│   │   │   ├── scanner_keyboard.py       # Клавиатуры управления сканером
+│   │   │   └── settings_keyboard.py      # Клавиатуры настроек
 │   │   │ 
-│   │   ├── 📁 lexicon/            # Словари с текстами
-│   │   │   ├── __init__.py
-│   │   │   └── lexicon_ru.py
+│   │   ├── 📁 lexicon/                   # Текстовые шаблоны (локализация)
+│   │   │   ├── __init__.py               # Маркер пакета
+│   │   │   └── lexicon_ru.py             # Русскоязычные фразы для бота и API
 │   │   │ 
-│   │   ├── 📁 logic/              # Бизнес-логика бота
-│   │   │   ├── __init__.py
-│   │   │   ├── admin_logic.py
-│   │   │   ├── balance_logic.py    
-│   │   │   ├── density_logic.py
-│   │   │   ├── greeting_logic.py
-│   │   │   ├── menu_logic.py
-│   │   │   ├── news_logic.py
-│   │   │   ├── recon_logic.py
-│   │   │   ├── report_maps.py
-│   │   │   └── settings_logic.py
+│   │   ├── 📁 logic/                     # Бизнес-логика, отделённая от хендлеров
+│   │   │   ├── __init__.py               # Маркер пакета
+│   │   │   ├── admin_logic.py            # Логика административной панели
+│   │   │   ├── balance_logic.py          # Обработка и отправка балансов
+│   │   │   ├── density_logic.py          # Форматирование отчётов по плотностям
+│   │   │   ├── greeting_logic.py         # Динамические приветствия по времени суток
+│   │   │   ├── menu_logic.py             # Отображение главного меню
+│   │   │   ├── news_logic.py             # Группировка новостей, вызов AI-советника
+│   │   │   ├── recon_logic.py            # Построение отчёта "Разведки" (HTML-экранирование)
+│   │   │   ├── report_maps.py            # Маппинг enum в эмодзи для отчётов
+│   │   │   └── settings_logic.py         # Логика отображения настроек
 │   │   │ 
-│   │   └── 📁 states/             # FSM состояния
-│   │       ├── __init__.py
-│   │       └── user_states.py
+│   │   ├── 📁 middlewares/               # Промежуточные слои (middleware)
+│   │   │   ├── __init__.py               # Маркер пакета
+│   │   │   └── readiness_middleware.py   # Проверка готовности системы перед обработкой
+│   │   │ 
+│   │   └── 📁 states/                    # Машины состояний FSM
+│   │       ├── __init__.py               # Маркер пакета
+│   │       └── user_states.py            # Состояния выбора монет, настройки сумм/порогов
 │   │    
-│   ├── 📁 constants/              # Константы приложения
-│   │   ├── __init__.py
-│   │   ├── api_constants.py   
-│   │   ├── prompts.py
-│   │   ├── rate_limiting_constants.py
-│   │   ├── service_constants.py
-│   │   ├── system_constants.py
-│   │   ├── telegram_constants.py 
-│   │   ├── trading_constants.py       
-│   │   └── trading_greetings.py  
+│   ├── 📁 constants/                     # Глобальные неизменяемые параметры
+│   │   ├── __init__.py                   # Экспорт всех констант
+│   │   ├── api_constants.py              # Таймауты, эндпоинты, HTTP-константы
+│   │   ├── assets_constants.py           # Пути к изображениям графических паттернов
+│   │   ├── emoji_constants.py            # Словари эмодзи для торговых действий, паттернов, новостей
+│   │   ├── prompts.py                    # Системные промпты для AI-моделей
+│   │   ├── rate_limiting_constants.py    # Настройки лимитов и retry-политик для бирж
+│   │   ├── service_constants.py          # Специфичные настройки новостей и прокси
+│   │   ├── system_constants.py           # Ключи состояний в БД (например, 'scanner_status')
+│   │   ├── telegram_constants.py         # Лимиты сообщений, UI/UX параметры, спиннеры
+│   │   ├── trading_constants.py          # Дефолтные суммы, допуски, комиссии, настройки графиков
+│   │   └── trading_greetings.py          # Фразы для приветствий по времени суток
 │   │    
-│   ├── 📁 core/                   # Основные конфигурации
-│   │   ├── __init__.py
-│   │   ├── config.py      
-│   │   ├── database.py   
-│   │   ├── enhanced_ai_resilience.py
-│   │   ├── resilience.py
-│   │   ├── scheduler.py
-│   │   └── state.py
+│   ├── 📁 core/                          # Ядро конфигурации и утилиты
+│   │   ├── __init__.py                   # Маркер пакета
+│   │   ├── config.py                     # Валидация переменных окружения (environs)
+│   │   ├── database.py                   # Асинхронное подключение SQLAlchemy (asyncpg)
+│   │   ├── enhanced_ai_resilience.py     # Управление токенами и каскадный failover AI-провайдеров
+│   │   ├── resilience.py                 # Паттерн Circuit Breaker и экспоненциальный Backoff
+│   │   ├── scheduler.py                  # Конфигурация планировщика APScheduler
+│   │   └── state.py                      # Глобальное изменяемое состояние (синглтоны сервисов)
 │   │   
-│   ├── 📁 models/                 # Модели данных
-│   │   ├── __init__.py
-│   │   ├── arbitrage_attempt.py
-│   │   ├── screener_models.py
-│   │   ├── system_models.py    
-│   │   ├── user_models.py   
-│   │   └── user_settings.py
+│   ├── 📁 models/                        # SQLAlchemy модели (таблицы БД)
+│   │   ├── __init__.py                   # Экспорт моделей
+│   │   ├── arbitrage_attempt.py          # Логи попыток арбитража (статусы, P&L, причины сбоев)
+│   │   ├── screener_models.py            # Схемы данных для скринера плотностей
+│   │   ├── system_models.py              # Таблица ключ-значение системных состояний
+│   │   ├── user_models.py                # Избранные монеты пользователей (user_coins)
+│   │   └── user_settings.py              # Пользовательские настройки (сумма, порог ROI)
 │   │   
-│   ├── 📁 services/               # Сервисы для работы с внешними API
-│   │   ├── __init__.py
-│   │   ├── ai_trade_advisor_service.py
-│   │   ├── api_health_checker.py
-│   │   ├── arbitrage_report_service.py
-│   │   ├── balance_service.py      
-│   │   ├── blacklist_manager.py
-│   │   ├── data_enricher_service.py
-│   │   ├── density_chart_service.py
-│   │   ├── density_screener_service.py
-│   │   ├── dynamic_pairs_manager.py  
-│   │   ├── enhanced_ai_processor_service.py
-│   │   ├── exchange_service.py     
-│   │   ├── market_data_service.py
-│   │   ├── market_intelligence_service.py
-│   │   ├── news_aggregator_service.py
-│   │   ├── news_service.py
-│   │   ├── notifier_service.py 
-│   │   ├── proxy_manager.py
-│   │   ├── reconnaissance_service.py
-│   │   ├── report_formatter.py
-│   │   ├── scanner_api_service.py     
-│   │   ├── scanner_state_service.py
-│   │   ├── service_manager.py   
-│   │   └──📁 news_providers/                 
-│   │      ├── __init__.py
-│   │      ├── alphavantage_provider.py
-│   │      ├── base_provider.py
-│   │      ├── coincap_provider.py   
-│   │      ├── coinmarketcap_provider.py
-│   │      ├── cryptocompare_provider.py
-│   │      ├── cryptopanic_provider.py
-│   │      ├── diagnostic_wrapper.py
-│   │      ├── messari_provider.py
-│   │      └── newsapi_provider.py
+│   ├── 📁 services/                      # Слой бизнес-сервисов (интеграции)
+│   │   ├── __init__.py                   # Экспорт сервисов
+│   │   ├── ai_trade_advisor_service.py   # Генератор торговых рекомендаций на основе промптов
+│   │   ├── api_health_checker.py         # Проверка готовности FastAPI бэкенда
+│   │   ├── arbitrage_report_service.py   # Агрегатор логов для P&L отчётов
+│   │   ├── balance_service.py            # Анализ балансов, расчёт безопасных сумм
+│   │   ├── blacklist_manager.py          # Динамический блэклист бирж без пакетных запросов
+│   │   ├── data_enricher_service.py      # Обогащение связок данными CMC, теханализом
+│   │   ├── density_chart_service.py      # Построение блочных графиков плотностей (Matplotlib)
+│   │   ├── density_screener_service.py   # Поиск крупных "стен" в стаканах (адаптивный)
+│   │   ├── dynamic_pairs_manager.py      # Автоматическое управление жизненным циклом пар
+│   │   ├── enhanced_ai_processor_service.py # Параллельная обработка новостей через воркеры
+│   │   ├── exchange_service.py           # Обёртка над CCXT клиентами (лимиты, точность)
+│   │   ├── market_data_service.py        # Поставщик рыночных цен (CoinGecko / CoinCap fallback)
+│   │   ├── market_intelligence_service.py # Тренды, лидеры роста/падения (CoinGecko)
+│   │   ├── news_aggregator_service.py    # Комплексная агрегация новостей + события + цены
+│   │   ├── news_service.py               # Менеджер новостных провайдеров
+│   │   ├── notifier_service.py           # Отправка уведомлений в Telegram
+│   │   ├── proxy_manager.py              # Валидатор списков прокси и Tor в реальном времени
+│   │   ├── reconnaissance_service.py     # Оркестратор ручной "Разведки" рынка
+│   │   ├── report_formatter.py           # Преобразование моделей БД в HTML-текст
+│   │   ├── scanner_api_service.py        # Клиент связи бота с собственным FastAPI
+│   │   ├── scanner_state_service.py      # Управление статусом сканера в БД
+│   │   ├── service_manager.py            # Жизненный цикл CCXT клиентов (кэш рынков)
+│   │   │
+│   │   └── 📁 news_providers/            # Интеграции с новостными API
+│   │       ├── __init__.py               # Экспорт провайдеров
+│   │       ├── alphavantage_provider.py  # Провайдер AlphaVantage
+│   │       ├── base_provider.py          # Базовый класс с ротацией прокси/Tor и API-ключей
+│   │       ├── coincap_provider.py       # Провайдер CoinCap
+│   │       ├── coinmarketcap_provider.py # Провайдер CoinMarketCap
+│   │       ├── cryptocompare_provider.py # Провайдер CryptoCompare
+│   │       ├── cryptopanic_provider.py   # Провайдер CryptoPanic
+│   │       ├── diagnostic_wrapper.py     # Обёртка с таймаутом для проблемных провайдеров
+│   │       ├── messari_provider.py       # Провайдер Messari
+│   │       └── newsapi_provider.py       # Провайдер NewsAPI
 │   │    
-│   ├── 📁 strategies/             # Торговые стратегии
-│   │   ├── __init__.py
-│   │   ├── arbitrage_strategy.py 
-│   │   ├── base_strategy.py 
-│   │   └── enums.py
+│   ├── 📁 strategies/                    # Торговые алгоритмы
+│   │   ├── __init__.py                   # Экспорт стратегий
+│   │   ├── arbitrage_strategy.py         # Алгоритм межбиржевого арбитража (анализ стаканов, исполнение)
+│   │   ├── base_strategy.py              # Базовый класс стратегии (задел на будущее)
+│   │   └── enums.py                      # Перечисления сигналов, трендов, рисков
 │   │    
-│   └── 📁 utils/                  
-│       ├── __init__.py
-│       ├── api_error_handler.py
-│       ├── app_lifecycle.py
-│       ├── chat_actions.py  
-│       ├── decorators.py
-│       ├── exceptions.py
-│       ├── helpers.py
-│       ├── logger.py
-│       └── metrics.py            
+│   └── 📁 utils/                         # Вспомогательные инструменты
+│       ├── __init__.py                   # Экспорт утилит
+│       ├── api_error_handler.py          # Декоратор обработки ошибок API в хендлерах бота
+│       ├── app_lifecycle.py              # Управление запуском и graceful shutdown
+│       ├── chat_actions.py               # Индикатор "печатает", безопасное редактирование сообщений
+│       ├── decorators.py                 # Декоратор проверки наличия API-ключа
+│       ├── exceptions.py                 # Пользовательские исключения (APINotReadyError и др.)
+│       ├── helpers.py                    # Парсеры дат, форматирование точности, прогресс-бары, список бирж
+│       ├── logger.py                     # Цветное логирование в консоль и ротация в файлы
+│       ├── metrics.py                    # Интеграция с Prometheus (метрики спредов, ошибок, времени Recon)
+│       └── response_formatter.py         # Форматирование AI-ответов с эмодзи и изображениями паттернов
 │   
-├── .env.sample                    # Образец переменных окружения
-├── .gitignore                     # Исключения для Git
-├── alembic.ini
-├── main_api.py                    # Точка входа для бота и API
-├── requirements.txt               # Зависимости проекта
-└── README.md                      # Документация
- ```
+├── .env.sample                           # Образец переменных окружения
+├── .gitignore                            # Исключения для Git
+├── alembic.ini                           # Основной файл конфигурации Alembic
+├── main_api.py                           # Точка входа ASGI-приложения FastAPI
+├── requirements.txt                      # Зависимости проекта (с точными версиями)
+└── README.md                             # Документация проекта
+```
+
+---
+
+## 🛠 Технологический стек
+
+| Компонент | Технологии |
+| :--- | :--- |
+| **Язык** | Python 3.10+ |
+| **Веб-фреймворк** | FastAPI + Uvicorn |
+| **Telegram-бот** | Aiogram v3 (Long Polling) |
+| **Биржи** | CCXT Pro (асинхронный) |
+| **HTTP-клиенты** | httpx, aiohttp |
+| **База данных** | PostgreSQL + asyncpg |
+| **ORM / Миграции** | SQLAlchemy 2.0 + Alembic |
+| **Аналитика** | NumPy, Pandas, Pandas-TA (опционально TA-Lib) |
+| **Графики плотностей** | Matplotlib |
+| **Мониторинг** | Prometheus FastAPI Instrumentator |
+| **Ротация IP** | HTTP/SOCKS5 прокси + Tor (через `httpx_socks` / `aiohttp_socks`) |
+| **Загрузка переменных**| environs (python-dotenv) |
+
+---
+
+## 🔧 Полный список переменных окружения
+
+| Группа | Переменная | Описание |
+| :--- | :--- | :--- |
+| **Telegram** | `BOT_TOKEN` | Токен бота от `@BotFather` |
+| | `ADMIN_IDS` | ID администраторов через запятую (например, `123456,789012`) |
+| **Безопасность**| `INTERNAL_API_KEY` | Ключ для защиты API (генерация: `openssl rand -hex 32`) |
+| | `ALLOWED_IP` | Ваш внешний статический IP (должен быть в белом списке бирж) |
+| **Биржи** | `BYBIT_API_KEY` / `BYBIT_API_SECRET` | Ключи Bybit (спотовые права) |
+| | `BYBIT_TESTNET` | `True` для тестовой сети Bybit |
+| | `BINANCE_API_KEY` / `BINANCE_API_SECRET` | Ключи Binance |
+| | `BINANCE_TESTNET` | `True` для тестовой сети Binance |
+| | `KUCOIN_API_KEY` / `KUCOIN_API_SECRET` / `KUCOIN_API_PASSPHRASE` | Ключи KuCoin и фраза-пароль |
+| | `KUCOIN_TESTNET` | `True` для тестовой сети KuCoin |
+| | `YOBIT_API_KEY` / `YOBIT_API_SECRET` | Ключи YoBit |
+| **База данных** | `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_ENGINE` | Параметры подключения к PostgreSQL |
+| **Новостные API**| `COINGECKO_API_KEY` | CoinGecko (демо‑ключ, 10 000 вызовов/месяц) |
+| | `CRYPTOPANIC_API_KEY` | CryptoPanic |
+| | `NEWSAPI_API_KEY` | NewsAPI |
+| | `ALPHAVANTAGE_API_KEY` | AlphaVantage |
+| | `CRYPTOCOMPARE_API_KEY` | CryptoCompare |
+| | `COINMARKETCAP_API_KEY` | CoinMarketCap (Pro) |
+| | `COINCAP_API_KEY` | CoinCap |
+| | `MESSARI_API_KEY` | Messari (2 запроса в день) |
+| **AI-провайдеры**| `GEMINI_API_KEYS` | Список ключей Gemini через запятую |
+| | `GEMINI_MODELS` | Модели Gemini (`gemini-2.0-flash,gemini-1.5-flash`) |
+| | `GROQ_API_KEYS` | Список ключей Groq через запятую |
+| | `GROQ_MODELS` | Модели Groq (`llama-3.1-8b-instant,mixtral-8x7b-32768`) |
+| | `OPENROUTER_API_KEYS` | Список ключей OpenRouter через запятую |
+| | `OPENROUTER_MODELS` | Модели OpenRouter (`mistralai/mistral-7b-instruct:free`) |
+| **Ротация IP** | `IP_ROTATION_ENABLED` | `True` для включения ротации IP |
+| | `IP_ROTATION_STRATEGY` | Стратегии через запятую (`proxy_fallback,tor_fallback`) |
+| | `PROXY_SOURCES` | URL‑ы со списками прокси (через запятую) |
+| | `PROXY_CHECK_URL` | URL для проверки работоспособности прокси |
+| | `PROXY_CHECK_TIMEOUT` | Таймаут проверки прокси в секундах |
+| | `PROXY_REFRESH_INTERVAL_SECONDS` | Интервал обновления списка прокси (1800 = 30 минут) |
+| | `TOR_PROXY_ENABLED` | `true` для использования Tor (требуется установленный Tor) |
+| | `TOR_PROXY_URL` | `socks5://127.0.0.1:9050` (по умолчанию) |
+
+*Примечание: Все параметры `*_API_KEYS` поддерживают перечисление нескольких ключей через запятую для обеспечения автоматического бесперебойного переключения (failover).*
+
+---
+
+## 🚀 Быстрый старт: установка и настройка
+
+### 1. Подготовка окружения
+Убедитесь, что установлены Python 3.10+, PostgreSQL (создана база данных) и Tor:
+
+```bash
+# macOS
+brew install tor
+brew install ta-lib
+
+# Ubuntu/Debian
+sudo apt update && sudo apt install tor build-essential wget -y
+
+# Ручная сборка и установка системной C-библиотеки TA-Lib
+wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+tar -xzf ta-lib-0.4.0-src.tar.gz
+cd ta-lib/
+./configure --prefix=/usr
+make
+sudo make install
+cd .. && rm -rf ta-lib*
+```
+
+### 2. Клонирование и виртуальное окружение
+```bash
+git clone https://github.com/your-username/inter_exchange_arbitrage_bot.git
+cd inter_exchange_arbitrage_bot
+
+python3 -m venv .venv
+source .venv/bin/activate        # Linux/macOS
+# .venv\Scripts\activate         # Windows
+
+pip install -r requirements.txt
+```
+*Примечание по TA-Lib: Если вы хотите использовать ускоренные вычисления технического анализа, библиотека `ta-lib` должна быть установлена в систему до выполнения команды `pip install`.*
+
+### 3. Конфигурация .env
+Скопируйте шаблон и настройте параметры:
+```bash
+cp .env.sample .env
+nano .env
+```
+Минимально необходимо заполнить:
+- `BOT_TOKEN`, `ADMIN_IDS`
+- `INTERNAL_API_KEY`, `ALLOWED_IP`
+- API-ключи как минимум одной биржи (рекомендуется Bybit)
+- Параметры PostgreSQL подключения (`DB_*`)
+
+Для бесперебойной работы новостей и ИИ-аналитики настоятельно рекомендуется заполнить ключи `COINGECKO_API_KEY`, `CRYPTOPANIC_API_KEY` и хотя бы одного AI-провайдера (`GEMINI_API_KEYS` или `GROQ_API_KEYS`).
+
+### 4. Миграции базы данных
+Alembic используется для развёртывания таблиц базы данных. Выполните команду наката миграций:
+```bash
+alembic upgrade head
+```
+Будут созданы все необходимые таблицы: `user_coins`, `user_settings`, `arbitrage_attempts`, `system_states`.
+
+---
+
+## 🏃 Инструкция по запуску
+
+### Управление Tor (если включён в ротации)
+```bash
+brew services start tor      # Запустить Tor
+brew services stop tor       # Остановить
+brew services restart tor    # Перезапустить (получить новый IP)
+brew services list           # Проверить статус
+```
+
+### Запуск основного приложения
+```bash
+python -m uvicorn main_api:app --host 127.0.0.1 --port 8000 --reload
+```
+
+После старта:
+1. Инициализируется Телеграм-бот на прием входящих сообщений.
+2. Внутренний планировщик APScheduler активирует фоновое сканирование рынка (интервал по умолчанию — 60 секунд).
+3. Интерактивная Swagger-документация API станет доступна по адресу `http://127.0.0.1:8000/docs`.
+
+Для корректного выключения системы нажмите `Ctrl+C` в терминале. Приложение выполнит graceful shutdown, остановит задачи и плавно закроет все соединения.
+
+---
+
+## 🤖 Использование Telegram-бота
+
+Найдите созданного бота в Telegram и отправьте команду `/start`. Главное меню содержит следующие разделы:
+
+| Раздел | Описание функции |
+| :--- | :--- |
+| **💰 Баланс** | Просмотр активов на всех биржах. Поддерживает два режима: «Избранные монеты» (настраиваются в меню «Настройки») и «Все активы» (весь спотовый портфель). |
+| **📈 Сканер** | Управление фоновым поиском арбитража: запуск, остановка, проверка текущего статуса. Также доступна ручная **«Разведка»** — ресурсоёмкий режим, который сканирует все спотовые активы, анализирует стаканы, комиссии, проскальзывание, RSI/MACD и выдаёт подробный AI-отчёт. |
+| **🛡️ Скринер плотностей**| Поиск крупных «стен» в стаканах ордеров на глубину до 100 уровней. Режимы: топ-10 монет, избранное, ручной выбор. Результат отправляется в чат в виде PNG-графика (Matplotlib) с уровнями поддержки и сопротивления. |
+| **📰 Новости** | Агрегация новостей по выбранным монетам (топ-10, избранные или ручной ввод) с автоматическим переводом на русский, оценкой тональности и AI-торговой рекомендацией по 7-уровневой шкале. |
+| **📊 Отчёт по сделкам**| Краткая сводка P&L за 24 часа или детальный список всех попыток арбитража (успешные, убыточные, неудачные) с причинами и деталями. |
+| **⚙️ Настройки** | - **Сумма сделки** – умная установка объёма в USDT (с учётом лимитов бирж и балансов).<br>- **Порог прибыли** – минимальный ROI для фильтрации связок (0.1% – 20%).<br>- **Мои монеты** – добавление / удаление монет в избранное (с поиском по тикеру). |
+| **👑 Админ-панель** | Доступ только для владельца — статистика кэша пар, исключение / включение торговых пар, просмотр полных списков. |
+
+---
+
+## 🔐 Безопасность и отказоустойчивость
+
+- **Паттерн Circuit Breaker**: Автоматически и временно отключает проблемные или находящиеся на обслуживании биржи при возникновении ошибок API, не блокируя работу остальных модулей.
+- **Token-Optimized Batches**: AI-запросы к новостям автоматически дробятся на оптимальные по токенам батчи, предотвращая ошибки переполнения контекста.
+- **IP-ротация и анти-429**: Запросы к новостным API проходят через проверенные прокси. При достижении лимитов система переключает API-ключи или шлюзует трафик через Tor.
+- **Graceful shutdown**: Все открытые веб-сокеты, соединения с биржами, HTTP-клиенты и планировщик корректно закрываются при остановке (`Ctrl+C`), не оставляя зависших сессий.
+
+---
+
+## 📊 Мониторинг и логи
+
+- **Логи**: Пишутся в файл `logs/bot.log` с ежедневной ротацией (7 дней хранения). В консоли логи дублируются в цветном формате.
+- **Prometheus метрики**: Доступны по эндпоинту `/metrics`. Метрики интегрированы через `prometheus-fastapi-instrumentator`.
+- **Heartbeat**: Бот периодически отправляет администраторам сообщение о работе сканера, подтверждая стабильность работы фонового процесса.
+
+---
+
+## 🧯 Устранение неполадок
+
+| Проблема | Возможная причина | Способ решения |
+| :--- | :--- | :--- |
+| **Бот не отвечает** | Ошибка токена или отсутствие подключения. | Проверьте `BOT_TOKEN` и интернет-соединение. Убедитесь, что ID занесен в `ADMIN_IDS`. |
+| **Ошибка CCXT: `AuthenticationError`** | Неверные API-ключи биржи. | Проверьте `*_API_KEY` и `*_API_SECRET`. Для Bybit убедитесь, что включены спотовые права. |
+| **Ошибка подключения к PostgreSQL** | Сервер базы данных недоступен. | Убедитесь, что сервер PostgreSQL запущен, и в `.env` указаны правильные параметры подключения. |
+| **Таймауты при «Разведке»** | Сетевые задержки при обработке всех пар. | Увеличьте `RECONNAISSANCE_TIMEOUT_SECONDS` в `src/constants/api_constants.py`. |
+| **Tor не запускается** | Tor не установлен или занят порт. | Проверьте, установлен ли Tor. Запустите вручную: `tor &` или выполните перезапуск службы. |
+| **AI не отвечает (ошибка 429 или 401)** | Превышение лимитов или неверный ключ. | Проверьте ключи в `.env`. Система автоматически переключит ключ или провайдера при наличии нескольких. |
+| **Не удаётся получить баланс с биржи** | Отсутствуют права или IP заблокирован. | Убедитесь, что API-ключи имеют права на чтение баланса. Добавьте `ALLOWED_IP` в белый список биржи. |
+| **Графики плотностей не сохраняются**| Ошибка рендеринга matplotlib. | Папка `temp_charts` создаётся автоматически. Убедитесь, что `matplotlib` установлен и у процесса есть права на запись в папку. |
+
+---
+
+## 📝 Дополнительные рекомендации
+
+- Перед запуском bash-скриптов дайте им права на исполнение:
+  ```bash
+  chmod +x scripts/*.sh
+  ```
+- Убедитесь, что база данных PostgreSQL использует кодировку UTF-8 для корректного сохранения русскоязычных новостей.
+- Просмотр логов в реальном времени:
+  ```bash
+  tail -f logs/bot.log
+  ```
+- Для продакшена запускайте приложение без флага `--reload` и с несколькими воркерами:
+  ```bash
+  python -m uvicorn main_api:app --host 0.0.0.0 --port 8000 --workers 2
+  ```
+- Скрипт `deployment.sh` предназначен для автоматического развёртывания на сервере (например, по SSH). Пример использования:
+  ```bash
+  ./scripts/deployment.sh user@your-server /path/to/app
+  ```
+
+---
+
+## 🤝 Как внести вклад
+
+1. Сделайте форк репозитория.
+2. Создайте ветку `feature/your-feature`.
+3. Внесите изменения, следуя общему стилю кода проекта.
+4. Убедитесь, что приложение запускается без ошибок и проходит все проверки.
+5. Оформите Pull Request с подробным описанием ваших изменений.
+
+---
+
+## 📄 Лицензия
+
+Проект распространяется под свободной лицензией **MIT**. Подробнее в файле `LICENSE`.
+
+---
+
+## 🙏 Благодарности
+
+Приложение использует открытые библиотеки: **CCXT**, **Aiogram**, **FastAPI**, **SQLAlchemy**, **Pandas**, **Matplotlib**, **httpx**, **aiohttp** и другие. Выражаем благодарность сообществам разработчиков данных инструментов.
+
+* **Версия**: `1.0.0`
+* **Автор Arbitrage Bot Team**: *Shtefanesa Roman*
+
+Удачных арбитражей! 📈

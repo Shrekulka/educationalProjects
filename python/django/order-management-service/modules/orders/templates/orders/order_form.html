@@ -1,0 +1,27 @@
+<!-- order-management-service/modules/orders/templates/orders/order_form.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Створення замовлення — K2 ERP{% endblock %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'orders/css/order_form.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Нове замовлення</h1>
+        <form id="order-form">
+            <div class="form-group">
+                <label for="client">Клієнт</label>
+                <select id="client" required></select>
+            </div>
+            <div id="items-container"></div>
+            <button type="button" id="add-item" class="btn btn-add">Додати товар</button>
+            <button type="submit" class="btn btn-primary">Створити замовлення</button>
+        </form>
+        <div id="message" class="message" style="display: none;"></div>
+    </div>
+    <script src="{% static 'orders/js/order_form.js' %}"></script>
+{% endblock %}
