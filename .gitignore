@@ -191,4 +191,5 @@ celerybeat.pid
 .env
 *.env
 !.env.example
-!.env.samplestaticfiles/
+!.env.sample
+staticfiles/
