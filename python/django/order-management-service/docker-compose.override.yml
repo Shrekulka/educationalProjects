@@ -1,5 +1,0 @@
-services:
-  web:
-    volumes:
-      - .:/app
-    command: ["sh", "entrypoint.sh"]   # runserver
